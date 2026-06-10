@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import TopBar from "@/components/TopBar";
 import { getEvaluateSessions, getGenerateSessions, computeDashboardStats } from "@/lib/storage";
 import { Session, EvaluateSession, Deduction } from "@/lib/types";
@@ -26,7 +26,13 @@ export default function Dashboard() {
     loadData();
   }, []);
 
-  if (!isClient || !stats) return null; // Avoid hydration mismatch
+  if (!isClient || !stats) {
+    return (
+      <div className="min-h-screen flex items-center justify-center pb-12">
+        <div className="w-8 h-8 border-4 border-[#e8590c] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   const subjectProgress: { subject: string, avg: number }[] = stats.subjectPerformance.map((p: any) => ({
     subject: p.subject,
