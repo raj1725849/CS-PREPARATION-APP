@@ -64,7 +64,7 @@ export default function Sidebar() {
         {user && (
           <div className="mb-4 p-3 bg-white/5 rounded-lg border border-white/10">
             <p className="text-xs text-[#94a3b8] mb-1">Logged in as</p>
-            <p className="text-sm font-medium text-white truncate" title={user.email}>
+            <p className="text-sm font-medium text-white truncate" title={user.email || undefined}>
               {user.email}
             </p>
           </div>
