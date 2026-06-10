@@ -36,17 +36,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => unsubscribe();
   }, [pathname, router]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#f8f9fa] dark:bg-[#0a0a0a]">
-        <div className="w-8 h-8 border-4 border-[#e8590c] border-t-transparent rounded-full animate-spin"></div>
-      </div>
-    );
-  }
-
   return (
     <AuthContext.Provider value={{ user, loading }}>
-      {children}
+      {loading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#f8f9fa] dark:bg-[#0a0a0a]">
+          <div className="w-8 h-8 border-4 border-[#e8590c] border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+      <div style={{ display: loading ? 'none' : 'block' }} className="h-full w-full">
+        {children}
+      </div>
     </AuthContext.Provider>
   );
 }
