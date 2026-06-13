@@ -4,9 +4,14 @@ let keyIndex = 0
 
 function getGenAI(): GoogleGenerativeAI {
   const keys = [
+    process.env.GEMINI_API_KEY,
+    process.env.GEMINI_API_KEY1,
     process.env.gemini_api_key1,
+    process.env.GEMINI_API_KEY2,
     process.env.gemini_api_key2,
+    process.env.GEMINI_API_KEY3,
     process.env.gemini_api_key3,
+    process.env.GEMINI_API_KEY4,
     process.env.gemini_api_key4
   ].filter(Boolean) as string[]
 
@@ -38,9 +43,14 @@ export function getFlashModel(): GenerativeModel {
 
 export function getGeminiKeyCount(): number {
   return [
+    process.env.GEMINI_API_KEY,
+    process.env.GEMINI_API_KEY1,
     process.env.gemini_api_key1,
+    process.env.GEMINI_API_KEY2,
     process.env.gemini_api_key2,
+    process.env.GEMINI_API_KEY3,
     process.env.gemini_api_key3,
+    process.env.GEMINI_API_KEY4,
     process.env.gemini_api_key4
   ].filter(Boolean).length || 1;
 }
