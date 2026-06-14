@@ -31,7 +31,7 @@ function getGenAI(): GoogleGenerativeAI {
 
 export function getFlashModel(): GenerativeModel {
   return getGenAI().getGenerativeModel({
-    model: "gemini-2.0-flash",
+    model: "gemini-2.5-flash",
     generationConfig: {
       temperature: 0.7,
       topP: 0.9,
@@ -57,7 +57,7 @@ export function getGeminiKeyCount(): number {
 
 export function getEvalModel(): GenerativeModel {
   return getGenAI().getGenerativeModel({
-    model: "gemini-2.0-flash",
+    model: "gemini-2.5-flash",
     generationConfig: {
       temperature: 0.2,
       topP: 0.8,

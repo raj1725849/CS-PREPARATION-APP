@@ -28,7 +28,7 @@ export async function generateWithOpenRouter(prompt: string, systemInstruction?:
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "moonshotai/kimi-k2.6:free",
+      model: "meta-llama/llama-3.3-70b-instruct:free",
       messages,
       temperature: 0.7
     })
@@ -72,7 +72,7 @@ export async function evaluateWithOpenRouter(
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "moonshotai/kimi-k2.6:free",
+      model: "meta-llama/llama-3.3-70b-instruct:free",
       messages: [
         { role: "system", content: systemInstruction },
         { role: "user", content }
