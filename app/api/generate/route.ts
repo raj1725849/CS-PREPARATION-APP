@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getFlashModel } from "@/lib/gemini"
+import { getFlashModel, getGeminiKeyCount } from "@/lib/gemini"
 import { readSubjectPdf } from "@/lib/pdf-utils"
 import { buildGeneratePrompt } from "@/lib/prompts"
 import { GenerateRequest, GenerateResponse, GenerateError } from "@/lib/types"
@@ -46,8 +46,25 @@ export async function POST(req: NextRequest) {
   })
 
   try {
-    const model = getFlashModel()
-    const result = await model.generateContent(prompt)
+    let result;
+    let lastGeminiErr;
+    const maxRetries = getGeminiKeyCount();
+
+    for (let i = 0; i < maxRetries; i++) {
+      try {
+        const model = getFlashModel()
+        result = await model.generateContent(prompt)
+        break; // Success!
+      } catch (err: any) {
+        lastGeminiErr = err;
+        console.warn(`Gemini attempt ${i + 1}/${maxRetries} failed:`, err.message);
+      }
+    }
+
+    if (!result) {
+      throw lastGeminiErr;
+    }
+
     const paper = result.response.text()
 
     if (!paper?.trim()) {
