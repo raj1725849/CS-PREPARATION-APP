@@ -1,14 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { BookOpen, LayoutDashboard, FileText, CheckSquare, FolderOpen, LogOut } from "lucide-react";
 import { useAuth } from "@/components/AuthProvider";
 import { auth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
+import UpgradeModal from "./UpgradeModal";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
 
   const navItems = [
     { name: "My Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -17,7 +20,7 @@ export default function Sidebar() {
     { name: "Study Material", href: "/admin", icon: FolderOpen },
   ];
 
-  const { user } = useAuth();
+  const { user, plan } = useAuth();
   const router = useRouter();
 
   const handleLogout = async () => {
@@ -64,9 +67,23 @@ export default function Sidebar() {
         {user && (
           <div className="mb-4 p-3 bg-white/5 rounded-lg border border-white/10">
             <p className="text-xs text-[#94a3b8] mb-1">Logged in as</p>
-            <p className="text-sm font-medium text-white truncate" title={user.email || undefined}>
+            <p className="text-sm font-medium text-white truncate mb-2" title={user.email || undefined}>
               {user.email}
             </p>
+            <div className="flex items-center justify-between border-t border-white/5 pt-2 mt-2">
+              <div>
+                <span className="text-[10px] text-[#94a3b8] block uppercase tracking-wider">Plan</span>
+                <span className="text-xs font-semibold text-white capitalize">{plan} Tier</span>
+              </div>
+              {plan === "free" && (
+                <button
+                  onClick={() => setIsUpgradeOpen(true)}
+                  className="bg-[#e8590c] hover:bg-[#c94d0a] text-white text-[10px] font-bold px-2.5 py-1 rounded-md transition-colors"
+                >
+                  Upgrade
+                </button>
+              )}
+            </div>
           </div>
         )}
         
@@ -82,6 +99,8 @@ export default function Sidebar() {
           ICSI Executive Programme
         </p>
       </div>
+
+      <UpgradeModal isOpen={isUpgradeOpen} onClose={() => setIsUpgradeOpen(false)} />
     </div>
   );
 }

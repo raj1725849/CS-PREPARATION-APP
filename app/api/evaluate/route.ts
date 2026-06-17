@@ -6,6 +6,8 @@ import {
 } from "@/lib/prompts"
 import { EvaluateRequest, EvaluateResponse, EvaluateError } from "@/lib/types"
 import { evaluateWithOpenRouter } from "@/lib/openrouter"
+import { resolveSubjectName } from "@/lib/subject-map"
+import { retrieveRubric } from "@/lib/rubric-retriever"
 
 export const maxDuration = 60
 
@@ -29,6 +31,19 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  // Resolve the subject and retrieve the rubric
+  const resolvedSubject = resolveSubjectName(subject);
+  const rubric = retrieveRubric(resolvedSubject, question);
+
+  // If the rubric has its own marks definition, we can use it, or fallback to request marks
+  const finalMarks = rubric.matched && rubric.marks ? rubric.marks : marks;
+
+  if (rubric.matched) {
+    console.log(`Matched rubric: "${rubric.question_text}" (Sub-question: ${rubric.sub_question}, Similarity: ${rubric.similarity.toFixed(2)}, Marks: ${rubric.marks})`);
+  } else {
+    console.log(`No rubric matched for: "${question}" (Subject: ${resolvedSubject})`);
+  }
+
   if (!images?.length || !mimeTypes?.length) {
     return NextResponse.json<EvaluateError>(
       { error: "At least one answer image is required", code: "NO_IMAGES" },
@@ -50,7 +65,12 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const userPrompt = buildEvaluateUserPrompt({ subject, question, marks })
+  const userPrompt = buildEvaluateUserPrompt({
+    subject: resolvedSubject,
+    question: rubric.matched && rubric.question_text ? rubric.question_text : question,
+    marks: finalMarks,
+    rubric
+  });
 
   const parts = [
     { text: userPrompt },
@@ -149,7 +169,7 @@ export async function POST(req: NextRequest) {
 
       const parseResult = (rawObj: any): EvaluateResponse => ({
         marks_awarded: rawObj.marks_awarded ?? 0,
-        total_marks: rawObj.total_marks ?? marks,
+        total_marks: rawObj.total_marks ?? finalMarks,
         score_percentage: Math.round(scorePercent * 10) / 10,
         verdict,
         deductions: rawObj.deductions ?? [],
@@ -205,7 +225,7 @@ export async function POST(req: NextRequest) {
 
       const parsed: EvaluateResponse = {
         marks_awarded: rawObj.marks_awarded ?? 0,
-        total_marks: rawObj.total_marks ?? marks,
+        total_marks: rawObj.total_marks ?? finalMarks,
         score_percentage: Math.round(scorePercent * 10) / 10,
         verdict,
         deductions: rawObj.deductions ?? [],

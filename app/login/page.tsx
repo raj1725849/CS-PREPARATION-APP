@@ -1,18 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "@/lib/firebase";
+import { updateUserProfile } from "@/lib/storage";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState<"free" | "monthly" | "quarterly" | "yearly">("free");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("signup") === "true") {
+        setIsLogin(false);
+      }
+      const planParam = params.get("plan");
+      if (planParam && ["free", "monthly", "quarterly", "yearly"].includes(planParam)) {
+        setSelectedPlan(planParam as any);
+      }
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +40,15 @@ export default function AuthPage() {
       } else {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(userCredential.user, { displayName: name });
+        await updateUserProfile({
+          uid: userCredential.user.uid,
+          email: userCredential.user.email,
+          displayName: name,
+          plan: selectedPlan,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          sessions: [] // Initialize empty sessions list
+        } as any);
       }
       
       // router.push is handled by AuthProvider automatically
@@ -177,6 +201,64 @@ export default function AuthPage() {
                   </div>
                 )}
               </div>
+
+              {!isLogin && (
+                <div className="space-y-3 pt-2">
+                  <label className="font-label-md text-label-md text-on-surface-variant px-1 uppercase block">
+                    Choose Your Plan
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPlan("free")}
+                      className={`flex flex-col items-start p-3 rounded-lg border text-left transition-all ${
+                        selectedPlan === "free"
+                          ? "border-[#e8590c] bg-[#e8590c]/10 shadow-sm"
+                          : "border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low"
+                      }`}
+                    >
+                      <span className="font-semibold text-sm">Free Tier</span>
+                      <span className="text-xs text-on-surface-variant mt-1">1 paper & eval / day</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPlan("monthly")}
+                      className={`flex flex-col items-start p-3 rounded-lg border text-left transition-all ${
+                        selectedPlan === "monthly"
+                          ? "border-[#e8590c] bg-[#e8590c]/10 shadow-sm"
+                          : "border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low"
+                      }`}
+                    >
+                      <span className="font-semibold text-sm">Monthly Plan</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹299/mo (Unlimited)</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPlan("quarterly")}
+                      className={`flex flex-col items-start p-3 rounded-lg border text-left transition-all ${
+                        selectedPlan === "quarterly"
+                          ? "border-[#e8590c] bg-[#e8590c]/10 shadow-sm"
+                          : "border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low"
+                      }`}
+                    >
+                      <span className="font-semibold text-sm">Quarterly Plan</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹799/3 mo (Unlimited)</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPlan("yearly")}
+                      className={`flex flex-col items-start p-3 rounded-lg border text-left transition-all ${
+                        selectedPlan === "yearly"
+                          ? "border-[#e8590c] bg-[#e8590c]/10 shadow-sm"
+                          : "border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low"
+                      }`}
+                    >
+                      <span className="font-semibold text-sm">Yearly Plan</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹2499/yr (Unlimited)</span>
+                    </button>
+                  </div>
+                </div>
+              )}
 
               {!isLogin && (
                 <div className="flex items-start gap-3 py-2">

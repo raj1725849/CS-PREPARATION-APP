@@ -5,6 +5,7 @@ export type SubjectName =
   | "Company Accounts & Auditing Practices"
   | "Capital Markets & Securities Laws"
   | "Industrial, Labour & General Laws"
+  | "Jurisprudence, Interpretation & General Laws"
 
 export type ModuleNumber = "Module 1" | "Module 2"
 
@@ -172,3 +173,22 @@ export interface DashboardStats {
   scoreTrend: number[]            // last 20 evaluate session scores
   recentSessions: Session[]       // last 10 sessions
 }
+
+export type BillingPlan = "free" | "monthly" | "quarterly" | "yearly"
+
+export interface UserUsage {
+  date: string // YYYY-MM-DD
+  generateCount: number
+  evaluateCount: number
+}
+
+export interface UserProfile {
+  uid: string
+  email: string | null
+  displayName: string | null
+  plan: BillingPlan
+  createdAt: string // ISO timestamp
+  updatedAt: string // ISO timestamp
+  usage?: UserUsage
+}
+

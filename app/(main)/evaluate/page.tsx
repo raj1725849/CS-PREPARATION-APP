@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import TopBar from "@/components/TopBar";
 import { CheckSquare, FileWarning, Book, AlignLeft, Key, CheckCircle2, XCircle } from "lucide-react";
-import { saveSession } from "@/lib/storage";
+import { saveSession, checkAndIncrementUsage } from "@/lib/storage";
 import { EvaluateSession, EnhancedDeduction } from "@/lib/types";
 import ImageUploader, { UploadedImage } from "@/components/ImageUploader";
+import UpgradeModal from "@/components/UpgradeModal";
 
 const SUBJECTS = [
   "Company Law", "Economic Laws", "Tax Laws", 
-  "Company Accounts", "Capital Markets", "Industrial Laws"
+  "Company Accounts", "Capital Markets", "Industrial Laws",
+  "Jurisprudence, Interpretation & General Laws"
 ];
 
 const LOADING_MESSAGES = [
@@ -26,6 +28,7 @@ export default function EvaluatePage() {
   const [question, setQuestion] = useState("");
   const [marks, setMarks] = useState("5");
   const [uploadedImages, setUploadedImages] = useState<UploadedImage[]>([]);
+  const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
   
   const [loading, setLoading] = useState(false);
   const [loadingMsgIdx, setLoadingMsgIdx] = useState(0);
@@ -51,6 +54,13 @@ export default function EvaluatePage() {
       return alert("Please wait for all images to finish processing, and remove any with errors.");
     }
     
+    // Check and enforce daily usage limit
+    const usageCheck = await checkAndIncrementUsage("evaluate");
+    if (!usageCheck.allowed && usageCheck.limitReached) {
+      setIsUpgradeOpen(true);
+      return;
+    }
+
     setLoading(true);
     setResult(null);
     setLoadingMsgIdx(0);
@@ -397,6 +407,7 @@ export default function EvaluatePage() {
           </div>
         )}
       </div>
+      <UpgradeModal isOpen={isUpgradeOpen} onClose={() => setIsUpgradeOpen(false)} />
     </div>
   );
 }

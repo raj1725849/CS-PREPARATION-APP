@@ -7,7 +7,9 @@ import {
   DashboardStats,
   SubjectPerformance,
   MistakePattern,
-  SubjectName
+  SubjectName,
+  UserProfile,
+  BillingPlan
 } from "./types"
 import { ALL_SUBJECTS } from "./subject-map"
 import { auth, db } from "./firebase"
@@ -220,3 +222,108 @@ export async function computeDashboardStats(): Promise<DashboardStats> {
     recentSessions: allSessions.slice(0, 10)
   }
 }
+
+export async function getUserProfile(): Promise<UserProfile | null> {
+  const user = auth.currentUser;
+  if (!user) return null;
+
+  try {
+    const docRef = doc(db, "users", user.uid);
+    const snap = await getDoc(docRef);
+    if (snap.exists()) {
+      const data = snap.data();
+      return {
+        uid: user.uid,
+        email: user.email || data.email || null,
+        displayName: user.displayName || data.displayName || null,
+        plan: (data.plan || "free") as BillingPlan,
+        createdAt: data.createdAt || new Date().toISOString(),
+        updatedAt: data.updatedAt || new Date().toISOString(),
+        usage: data.usage
+      };
+    }
+    
+    // Default profile if user doc doesn't exist yet but user is logged in
+    const defaultProfile: UserProfile = {
+      uid: user.uid,
+      email: user.email,
+      displayName: user.displayName,
+      plan: "free",
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    return defaultProfile;
+  } catch (err) {
+    console.error("Failed to fetch user profile from Firestore:", err);
+    return null;
+  }
+}
+
+export async function updateUserProfile(data: Partial<UserProfile>): Promise<void> {
+  const user = auth.currentUser;
+  if (!user) return;
+
+  try {
+    const docRef = doc(db, "users", user.uid);
+    await setDoc(docRef, { ...data, updatedAt: new Date().toISOString() }, { merge: true });
+  } catch (err) {
+    console.error("Failed to update user profile in Firestore:", err);
+  }
+}
+
+export async function checkAndIncrementUsage(
+  type: "generate" | "evaluate"
+): Promise<{ allowed: boolean; limitReached: boolean }> {
+  const user = auth.currentUser;
+  if (!user) return { allowed: false, limitReached: false };
+
+  try {
+    const profile = await getUserProfile();
+    if (!profile) return { allowed: false, limitReached: false };
+
+    // Premium users have unlimited access
+    if (profile.plan !== "free") {
+      return { allowed: true, limitReached: false };
+    }
+
+    // Get current local date in YYYY-MM-DD
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    const dateStr = `${year}-${month}-${day}`;
+
+    let usage = profile.usage;
+    if (!usage || usage.date !== dateStr) {
+      // Reset daily counts for today
+      usage = {
+        date: dateStr,
+        generateCount: 0,
+        evaluateCount: 0
+      };
+    }
+
+    if (type === "generate") {
+      if (usage.generateCount >= 1) {
+        return { allowed: false, limitReached: true };
+      }
+      usage.generateCount++;
+    } else {
+      if (usage.evaluateCount >= 1) {
+        return { allowed: false, limitReached: true };
+      }
+      usage.evaluateCount++;
+    }
+
+    // Save back to Firestore
+    const docRef = doc(db, "users", user.uid);
+    await setDoc(docRef, { usage, updatedAt: new Date().toISOString() }, { merge: true });
+
+    return { allowed: true, limitReached: false };
+  } catch (err) {
+    console.error("Failed to check or increment usage in Firestore:", err);
+    // Allow as a fallback in case of db issues
+    return { allowed: true, limitReached: false };
+  }
+}
+

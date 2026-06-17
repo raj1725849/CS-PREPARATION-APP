@@ -289,8 +289,65 @@ export function buildEvaluateUserPrompt(params: {
   subject: SubjectName
   question: string
   marks: number
+  rubric?: any
 }): string {
-  const { subject, question, marks } = params
+  const { subject, question, marks, rubric } = params;
+
+  if (rubric && rubric.matched) {
+    const caseContextText = rubric.case_context
+      ? `\nCASE CONTEXT:\n${rubric.case_context}\n`
+      : "";
+
+    const keyPointsText = rubric.expected_answer.key_points
+      .map((kp: string, idx: number) => `${idx + 1}. ${kp}`)
+      .join("\n");
+
+    const legalProvisionsText = rubric.expected_answer.legal_provisions
+      .map((lp: string) => `• ${lp}`)
+      .join("\n");
+
+    return `EXAMINATION DETAILS:
+Subject: ${subject}
+Programme: ICSI Executive Programme
+Total Marks: ${marks}
+
+QUESTION TO EVALUATE AGAINST:
+"${question}"
+${caseContextText}
+═══════════════════════════════════════
+OFFICIAL EVALUATION RUBRIC (RETRIEVED FROM PAPERS):
+═══════════════════════════════════════
+
+MANDATORY LEGAL PROVISIONS TO BE CITED:
+${legalProvisionsText || "Not specified."}
+
+EXPECTED KEY POINTS IN THE ANSWER:
+${keyPointsText}
+
+EXPECTED ANSWER SUMMARY:
+"${rubric.expected_answer.full_answer_summary}"
+
+OFFICIAL GRADING CRITERIA FOR AWARDING MARKS:
+- Full Marks (${marks}/${marks}): ${rubric.evaluation_criteria.full_marks}
+- Good/Above Average: ${rubric.evaluation_criteria.good}
+- Partial/Average: ${rubric.evaluation_criteria.partial}
+- Minimal/Below Average: ${rubric.evaluation_criteria.minimal}
+
+═══════════════════════════════════════
+TASK:
+═══════════════════════════════════════
+The student's handwritten answer sheet image(s) are attached.
+Read every word carefully. Identify all content the student has written.
+Evaluate strictly against the Rubric above.
+
+CRITICAL EVALUATION INSTRUCTIONS:
+1. Verify if the student cited the mandatory legal provisions (acts and section numbers) listed in the rubric. If they are missing or wrong, make a deduction.
+2. Check which of the expected key points are present, incomplete, or missing.
+3. Grade the student's answer strictly based on the grading criteria (Full Marks / Good / Partial / Minimal).
+4. Identify any wrong statements or incorrect facts and list them under deductions.
+5. Provide the structured JSON output showing the score, detailed deductions, keywords/sections/acts found and missing, and the examiner note.`;
+  }
+
   return `EXAMINATION DETAILS:
 Subject: ${subject}
 Programme: ICSI Executive Programme
@@ -321,5 +378,5 @@ missing keyword, wrong threshold, skipped procedural step.
 The student must prove legal knowledge — 
 vague answers lose marks.
 
-STEP 5 — Output the JSON evaluation result.`
+STEP 5 — Output the JSON evaluation result.`;
 }

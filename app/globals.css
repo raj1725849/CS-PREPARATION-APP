@@ -36,6 +36,22 @@
   --color-secondary: #ffb598;
   --spacing-margin_mobile: 16px;
   --spacing-margin_desktop: 64px;
+  /* Landing Page Tokens */
+  --color-lp-bg: #0B0E1A;
+  --color-lp-bg-card: #10142B;
+  --color-lp-bg-alt: #0D1020;
+  --color-lp-accent: #4F6EF7;
+  --color-lp-accent-hover: #3D57DC;
+  --color-lp-text: #F4F6FF;
+  --color-lp-muted: #8A9BC8;
+  --color-lp-dim: #6475A0;
+  --color-lp-verydim: #4D5E8A;
+  --color-lp-border-subtle: rgba(79, 110, 247, 0.1);
+  --color-lp-border-medium: rgba(79, 110, 247, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +59,16 @@ body {
   color: var(--color-text-primary);
   font-family: var(--font-sans);
 }
+
+/* Explicit Custom Landing Page Utilities for Contrast */
+.text-lp-text { color: var(--color-lp-text) !important; }
+.text-lp-muted { color: var(--color-lp-muted) !important; }
+.text-lp-dim { color: var(--color-lp-dim) !important; }
+.text-lp-verydim { color: var(--color-lp-verydim) !important; }
+.bg-lp-bg { background-color: var(--color-lp-bg) !important; }
+.bg-lp-bg-card { background-color: var(--color-lp-bg-card) !important; }
+.bg-lp-bg-alt { background-color: var(--color-lp-bg-alt) !important; }
+.text-lp-accent { color: var(--color-lp-accent) !important; }
 
 .reveal {
   opacity: 0;

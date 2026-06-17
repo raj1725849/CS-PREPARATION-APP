@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import TopBar from "@/components/TopBar";
 import { Sparkles, Copy, CheckCircle2 } from "lucide-react";
-import { saveSession } from "@/lib/storage";
+import { saveSession, checkAndIncrementUsage } from "@/lib/storage";
 import { GenerateSession } from "@/lib/types";
+import UpgradeModal from "@/components/UpgradeModal";
 
 const SUBJECTS = [
   "Company Law", "Economic Laws", "Tax Laws", 
-  "Company Accounts", "Capital Markets", "Industrial Laws"
+  "Company Accounts", "Capital Markets", "Industrial Laws",
+  "Jurisprudence, Interpretation & General Laws"
 ];
 
 const LOADING_MESSAGES = [
@@ -25,6 +27,7 @@ export default function GeneratePage() {
   const [types, setTypes] = useState({ descriptive: true, shortnotes: true, casestudy: true });
   const [marks, setMarks] = useState("100");
   const [difficulty, setDifficulty] = useState("Standard (ICSI Level)");
+  const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
   
   const [loading, setLoading] = useState(false);
   const [loadingMsgIdx, setLoadingMsgIdx] = useState(0);
@@ -43,6 +46,14 @@ export default function GeneratePage() {
 
   const handleGenerate = async (e: React.MouseEvent) => {
     e.preventDefault();
+    
+    // Check and enforce daily usage limit
+    const usageCheck = await checkAndIncrementUsage("generate");
+    if (!usageCheck.allowed && usageCheck.limitReached) {
+      setIsUpgradeOpen(true);
+      return;
+    }
+
     setLoading(true);
     setPaper("");
     setLoadingMsgIdx(0);
@@ -261,6 +272,7 @@ export default function GeneratePage() {
           </div>
         )}
       </div>
+      <UpgradeModal isOpen={isUpgradeOpen} onClose={() => setIsUpgradeOpen(false)} />
     </div>
   );
 }

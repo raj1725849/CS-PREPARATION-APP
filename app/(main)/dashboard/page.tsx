@@ -6,8 +6,12 @@ import { getEvaluateSessions, getGenerateSessions, computeDashboardStats } from 
 import { Session, EvaluateSession, Deduction } from "@/lib/types";
 import { ArrowUpRight, ArrowDownRight, TrendingUp, AlertCircle, FileText, CheckSquare, Target } from "lucide-react";
 import Link from "next/link";
+import { useAuth } from "@/components/AuthProvider";
+import UpgradeModal from "@/components/UpgradeModal";
 
 export default function Dashboard() {
+  const { plan } = useAuth();
+  const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [evalSessions, setEvalSessions] = useState<EvaluateSession[]>([]);
   const [genSessions, setGenSessions] = useState<any[]>([]);
@@ -69,6 +73,21 @@ export default function Dashboard() {
             valueClass="text-red-600 text-lg"
           />
         </div>
+
+        {plan === "free" && (
+          <div className="bg-gradient-to-r from-[#0f2640] to-[#1e3e62] rounded-xl border border-[#1a3a5c] p-6 shadow-md text-white flex flex-col md:flex-row justify-between items-center gap-4 reveal">
+            <div className="space-y-1">
+              <h3 className="text-lg font-bold font-playfair tracking-tight">Unlock Unlimited Exam Preparation</h3>
+              <p className="text-sm text-[#94a3b8]">You are on the Free Tier (limited to 1 paper generation & evaluation per day). Upgrade to unlock unlimited access.</p>
+            </div>
+            <button
+              onClick={() => setIsUpgradeOpen(true)}
+              className="bg-[#e8590c] hover:bg-[#c94d0a] text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-md active:scale-95 whitespace-nowrap"
+            >
+              Upgrade Plan
+            </button>
+          </div>
+        )}
 
         {/* TWO COLUMN ROW: Progress & Mistakes */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 reveal stagger-2">
@@ -233,8 +252,8 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
       </div>
+      <UpgradeModal isOpen={isUpgradeOpen} onClose={() => setIsUpgradeOpen(false)} />
     </div>
   );
 }
