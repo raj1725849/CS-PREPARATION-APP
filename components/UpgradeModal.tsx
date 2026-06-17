@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useAuth } from "@/components/AuthProvider";
 import { updateUserProfile } from "@/lib/storage";
 import { X, Check } from "lucide-react";
+import { loadRazorpayScript, RazorpayResponse } from "@/lib/payment";
 
 interface UpgradeModalProps {
   isOpen: boolean;
@@ -11,7 +12,7 @@ interface UpgradeModalProps {
 }
 
 export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
-  const { refreshPlan, plan } = useAuth();
+  const { refreshPlan, plan, user } = useAuth();
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
@@ -20,16 +21,104 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
   const handleUpgrade = async (selectedPlan: "monthly" | "quarterly" | "yearly") => {
     setLoadingPlan(selectedPlan);
     try {
-      await updateUserProfile({ plan: selectedPlan });
-      await refreshPlan();
-      setSuccess(true);
-      setTimeout(() => {
-        setSuccess(false);
-        onClose();
-      }, 1500);
-    } catch (err) {
+      // 1. Load the Razorpay checkout script
+      const scriptLoaded = await loadRazorpayScript();
+      if (!scriptLoaded) {
+        alert("Failed to load Razorpay payment gateway. Please check your connection.");
+        setLoadingPlan(null);
+        return;
+      }
+
+      // 2. Fetch the client key config
+      const configRes = await fetch("/api/payment/config");
+      if (!configRes.ok) {
+        throw new Error("Failed to load payment configuration");
+      }
+      const { key } = await configRes.json();
+
+      // 3. Create the payment order on server
+      const orderRes = await fetch("/api/payment/create-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plan: selectedPlan })
+      });
+
+      if (!orderRes.ok) {
+        const errData = await orderRes.json();
+        throw new Error(errData.error || "Failed to initiate payment order");
+      }
+      const { order } = await orderRes.json();
+
+      // 4. Set up Razorpay Checkout Options
+      const options = {
+        key,
+        amount: order.amount,
+        currency: order.currency,
+        name: "CS Prep",
+        description: `${
+          selectedPlan === "monthly" ? "Monthly" : selectedPlan === "quarterly" ? "6-Month" : "Annual"
+        } Premium Subscription`,
+        order_id: order.id,
+        theme: {
+          color: "#e8590c"
+        },
+        prefill: {
+          name: user?.displayName || "",
+          email: user?.email || ""
+        },
+        handler: async function (response: RazorpayResponse) {
+          setLoadingPlan(selectedPlan);
+          try {
+            // 5. Verify the payment on the server
+            const verifyRes = await fetch("/api/payment/verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature
+              })
+            });
+
+            if (!verifyRes.ok) {
+              throw new Error("Payment signature verification failed");
+            }
+
+            const verifyData = await verifyRes.json();
+            if (verifyData.verified) {
+              // 6. Update user's Firestore plan upon successful verification
+              await updateUserProfile({ plan: selectedPlan });
+              await refreshPlan();
+              setSuccess(true);
+              setTimeout(() => {
+                setSuccess(false);
+                onClose();
+              }, 1500);
+            } else {
+              alert("Payment verification failed. Please try again or contact support.");
+            }
+          } catch (verifyErr) {
+            console.error("Signature verification error:", verifyErr);
+            alert("Error verifying payment signature. Please contact support.");
+          } finally {
+            setLoadingPlan(null);
+          }
+        },
+        modal: {
+          ondismiss: function () {
+            setLoadingPlan(null);
+          }
+        }
+      };
+
+      // 5. Open Razorpay Checkout modal
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const rzp = new (window as any).Razorpay(options);
+      rzp.open();
+    } catch (err: unknown) {
       console.error("Failed to upgrade plan:", err);
-    } finally {
+      const message = err instanceof Error ? err.message : "An unexpected error occurred during checkout.";
+      alert(message);
       setLoadingPlan(null);
     }
   };
@@ -38,49 +127,54 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
     {
       id: "monthly" as const,
       name: "Monthly Plan",
-      price: "₹299",
+      price: "₹699",
       period: "month",
       savings: null,
       features: [
-        "Unlimited Question Paper Generation",
-        "Unlimited Answer Sheet Evaluation",
-        "Detailed Statutory Section Analysis",
-        "Deduction severity reporting",
-        "Cancel online anytime",
+        "30 AI Question Papers per month",
+        "40 Answer Evaluations per month",
+        "100 Doubt Questions per month",
+        "Performance Analytics",
+        "Progress Tracking",
+        "Access to All Core Features"
       ],
-      popular: false,
+      popular: false
     },
     {
       id: "quarterly" as const,
-      name: "Quarterly Plan",
-      price: "₹799",
-      period: "3 months",
-      savings: "Save 11%",
+      name: "Exam Pass Plan",
+      price: "₹3,199",
+      period: "6 months",
+      savings: "Most Popular",
       features: [
-        "Unlimited Question Paper Generation",
-        "Unlimited Answer Sheet Evaluation",
-        "Detailed Statutory Section Analysis",
-        "Deduction severity reporting",
-        "Priority AI model access",
+        "250 AI Question Papers",
+        "300 Answer Evaluations",
+        "1,000 Doubt Questions",
+        "Performance Analytics",
+        "Progress Tracking",
+        "Weak Topic Analysis",
+        "Full Access Until Next Exam Attempt",
+        "Priority Support"
       ],
-      popular: true,
+      popular: true
     },
     {
       id: "yearly" as const,
-      name: "Yearly Plan",
-      price: "₹2499",
+      name: "Annual Plan",
+      price: "₹6,499",
       period: "year",
-      savings: "Save 30%",
+      savings: "Save 22%",
       features: [
-        "Unlimited Question Paper Generation",
-        "Unlimited Answer Sheet Evaluation",
-        "Detailed Statutory Section Analysis",
-        "Deduction severity reporting",
-        "Priority AI model access",
-        "Dedicated study metrics support",
+        "600 AI Question Papers",
+        "750 Answer Evaluations",
+        "2,500 Doubt Questions",
+        "Advanced Analytics",
+        "Priority Processing",
+        "Access to New Features",
+        "Full Platform Access"
       ],
-      popular: false,
-    },
+      popular: false
+    }
   ];
 
   return (
@@ -100,7 +194,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
             </div>
             <h2 className="text-2xl font-bold text-white tracking-tight">Upgrade Successful!</h2>
             <p className="text-slate-400 max-w-xs">
-              Welcome to your new plan. Unlimited access has been unlocked.
+              Welcome to your new plan. Premium access has been successfully unlocked.
             </p>
           </div>
         ) : (
@@ -110,7 +204,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
                 Upgrade to Premium
               </h2>
               <p className="text-slate-400 mt-2">
-                Accelerate your CS Exam preparation with unlimited practice tests and real-time evaluations.
+                Accelerate your CS Exam preparation with custom AI mock tests and real-time detailed evaluations.
               </p>
             </div>
 
@@ -135,7 +229,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
 
                     <div className="mb-4">
                       <h3 className="text-lg font-bold text-white">{p.name}</h3>
-                      {p.savings && (
+                      {p.savings && !p.popular && (
                         <span className="inline-block bg-green-500/20 border border-green-500/30 text-green-400 text-[10px] font-bold px-2 py-0.5 rounded-md mt-1">
                           {p.savings}
                         </span>

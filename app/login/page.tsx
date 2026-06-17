@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { updateUserProfile } from "@/lib/storage";
+import { loadRazorpayScript } from "@/lib/payment";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -24,7 +25,7 @@ export default function AuthPage() {
       }
       const planParam = params.get("plan");
       if (planParam && ["free", "monthly", "quarterly", "yearly"].includes(planParam)) {
-        setSelectedPlan(planParam as any);
+        setSelectedPlan(planParam as "free" | "monthly" | "quarterly" | "yearly");
       }
     }
   }, []);
@@ -40,20 +41,122 @@ export default function AuthPage() {
       } else {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(userCredential.user, { displayName: name });
-        await updateUserProfile({
-          uid: userCredential.user.uid,
-          email: userCredential.user.email,
-          displayName: name,
-          plan: selectedPlan,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          sessions: [] // Initialize empty sessions list
-        } as any);
+
+        if (selectedPlan === "free") {
+          await updateUserProfile({
+            uid: userCredential.user.uid,
+            email: userCredential.user.email,
+            displayName: name,
+            plan: "free",
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+          });
+        } else {
+          // Paid plan checkout
+          try {
+            const scriptLoaded = await loadRazorpayScript();
+            if (!scriptLoaded) {
+              throw new Error("Failed to load Razorpay payment gateway.");
+            }
+
+            const configRes = await fetch("/api/payment/config");
+            if (!configRes.ok) {
+              throw new Error("Failed to fetch payment configuration.");
+            }
+            const { key } = await configRes.json();
+
+            const orderRes = await fetch("/api/payment/create-order", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ plan: selectedPlan })
+            });
+
+            if (!orderRes.ok) {
+              const errData = await orderRes.json();
+              throw new Error(errData.error || "Failed to create payment order.");
+            }
+            const { order } = await orderRes.json();
+
+            await new Promise((resolve, reject) => {
+              const options = {
+                key,
+                amount: order.amount,
+                currency: order.currency,
+                name: "CS Prep",
+                description: `${
+                  selectedPlan === "monthly" ? "Monthly" : selectedPlan === "quarterly" ? "6-Month" : "Annual"
+                } Premium Signup`,
+                order_id: order.id,
+                theme: {
+                  color: "#e8590c"
+                },
+                prefill: {
+                  name,
+                  email
+                },
+                handler: async function (response: RazorpayResponse) {
+                  try {
+                    const verifyRes = await fetch("/api/payment/verify", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_order_id: response.razorpay_order_id,
+                        razorpay_signature: response.razorpay_signature
+                      })
+                    });
+
+                    if (!verifyRes.ok) {
+                      throw new Error("Payment signature verification failed");
+                    }
+
+                    const verifyData = await verifyRes.json();
+                    if (verifyData.verified) {
+                      await updateUserProfile({
+                        uid: userCredential.user.uid,
+                        email: userCredential.user.email,
+                        displayName: name,
+                        plan: selectedPlan,
+                        createdAt: new Date().toISOString(),
+                        updatedAt: new Date().toISOString()
+                      });
+                      resolve(true);
+                    } else {
+                      reject(new Error("Signature verification failed."));
+                    }
+                  } catch (vErr) {
+                    reject(vErr);
+                  }
+                },
+                modal: {
+                  ondismiss: function () {
+                    reject(new Error("Payment window closed. Account registered on Free Tier."));
+                  }
+                }
+              };
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              const rzp = new (window as any).Razorpay(options);
+              rzp.open();
+            });
+          } catch (checkoutErr: unknown) {
+            // Fallback: create Free profile so their user account is initialized
+            await updateUserProfile({
+              uid: userCredential.user.uid,
+              email: userCredential.user.email,
+              displayName: name,
+              plan: "free",
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            });
+            throw checkoutErr;
+          }
+        }
       }
       
       // router.push is handled by AuthProvider automatically
-    } catch (err: any) {
-      setError(err.message.replace("Firebase: ", ""));
+    } catch (err: unknown) {
+      const errMsg = err instanceof Error ? err.message : String(err);
+      setError(errMsg.replace("Firebase: ", ""));
     } finally {
       setLoading(false);
     }
