@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { updateUserProfile } from "@/lib/storage";
-import { loadRazorpayScript } from "@/lib/payment";
+import { loadRazorpayScript, RazorpayResponse } from "@/lib/payment";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -39,6 +39,9 @@ export default function AuthPage() {
       if (isLogin) {
         await signInWithEmailAndPassword(auth, email, password);
       } else {
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("signing_up", "true");
+        }
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(userCredential.user, { displayName: name });
 
@@ -51,6 +54,10 @@ export default function AuthPage() {
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString()
           });
+          if (typeof window !== "undefined") {
+            sessionStorage.removeItem("signing_up");
+          }
+          router.push("/dashboard");
         } else {
           // Paid plan checkout
           try {
@@ -120,6 +127,10 @@ export default function AuthPage() {
                         createdAt: new Date().toISOString(),
                         updatedAt: new Date().toISOString()
                       });
+                      if (typeof window !== "undefined") {
+                        sessionStorage.removeItem("signing_up");
+                      }
+                      router.push("/dashboard");
                       resolve(true);
                     } else {
                       reject(new Error("Signature verification failed."));
@@ -148,6 +159,10 @@ export default function AuthPage() {
               createdAt: new Date().toISOString(),
               updatedAt: new Date().toISOString()
             });
+            if (typeof window !== "undefined") {
+              sessionStorage.removeItem("signing_up");
+            }
+            router.push("/dashboard");
             throw checkoutErr;
           }
         }
@@ -333,7 +348,7 @@ export default function AuthPage() {
                       }`}
                     >
                       <span className="font-semibold text-sm">Monthly Plan</span>
-                      <span className="text-xs text-on-surface-variant mt-1">₹299/mo (Unlimited)</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹699/mo (Unlimited)</span>
                     </button>
                     <button
                       type="button"
@@ -344,8 +359,8 @@ export default function AuthPage() {
                           : "border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low"
                       }`}
                     >
-                      <span className="font-semibold text-sm">Quarterly Plan</span>
-                      <span className="text-xs text-on-surface-variant mt-1">₹799/3 mo (Unlimited)</span>
+                      <span className="font-semibold text-sm">6-Month Plan</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹3,199/6 mo (Unlimited)</span>
                     </button>
                     <button
                       type="button"
@@ -357,7 +372,7 @@ export default function AuthPage() {
                       }`}
                     >
                       <span className="font-semibold text-sm">Yearly Plan</span>
-                      <span className="text-xs text-on-surface-variant mt-1">₹2499/yr (Unlimited)</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹6,499/yr (Unlimited)</span>
                     </button>
                   </div>
                 </div>

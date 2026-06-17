@@ -49,9 +49,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setLoading(false);
       
       // We only want to handle redirects for the main app routes, not the root level or login
+      const isSigningUp = typeof window !== "undefined" && sessionStorage.getItem("signing_up") === "true";
       if (!user && pathname !== "/login" && pathname !== "/") {
         router.push("/login");
-      } else if (user && pathname === "/login") {
+      } else if (user && pathname === "/login" && !isSigningUp) {
         router.push("/dashboard");
       }
     });
