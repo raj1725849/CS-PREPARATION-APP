@@ -6,6 +6,7 @@ import { Sparkles, Copy, CheckCircle2 } from "lucide-react";
 import { saveSession, checkAndIncrementUsage } from "@/lib/storage";
 import { GenerateSession } from "@/lib/types";
 import UpgradeModal from "@/components/UpgradeModal";
+import { auth } from "@/lib/firebase";
 
 const SUBJECTS = [
   "Company Law", "Economic Laws", "Tax Laws", 
@@ -64,9 +65,14 @@ export default function GeneratePage() {
       .join(", ");
 
     try {
+      const idToken = await auth.currentUser?.getIdToken();
+
       const res = await fetch("/api/generate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": idToken ? `Bearer ${idToken}` : ""
+        },
         body: JSON.stringify({
           subject,
           scope: scope === "Specific Topic" ? "topic" : "full",

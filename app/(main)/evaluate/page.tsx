@@ -7,6 +7,7 @@ import { saveSession, checkAndIncrementUsage } from "@/lib/storage";
 import { EvaluateSession, EnhancedDeduction } from "@/lib/types";
 import ImageUploader, { UploadedImage } from "@/components/ImageUploader";
 import UpgradeModal from "@/components/UpgradeModal";
+import { auth } from "@/lib/firebase";
 
 const SUBJECTS = [
   "Company Law", "Economic Laws", "Tax Laws", 
@@ -66,9 +67,14 @@ export default function EvaluatePage() {
     setLoadingMsgIdx(0);
 
     try {
+      const idToken = await auth.currentUser?.getIdToken();
+
       const res = await fetch("/api/evaluate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": idToken ? `Bearer ${idToken}` : ""
+        },
         body: JSON.stringify({
           subject,
           question,

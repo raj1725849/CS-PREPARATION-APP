@@ -8,10 +8,21 @@ import { EvaluateRequest, EvaluateResponse, EvaluateError } from "@/lib/types"
 import { evaluateWithOpenRouter } from "@/lib/openrouter"
 import { resolveSubjectName } from "@/lib/subject-map"
 import { retrieveRubric } from "@/lib/rubric-retriever"
+import { verifyUserAndEnforceLimit } from "@/lib/firebase-server"
 
 export const maxDuration = 60
 
 export async function POST(req: NextRequest) {
+  try {
+    await verifyUserAndEnforceLimit(req, "evaluate");
+  } catch (err: any) {
+    const status = err.statusCode || 500;
+    return NextResponse.json<EvaluateError>(
+      { error: err.message || "Unauthorized", code: "UNKNOWN" },
+      { status }
+    );
+  }
+
   let body: EvaluateRequest
   try {
     body = await req.json()

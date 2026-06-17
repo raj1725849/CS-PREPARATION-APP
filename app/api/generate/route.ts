@@ -4,10 +4,21 @@ import { readSubjectPdf } from "@/lib/pdf-utils"
 import { buildGeneratePrompt } from "@/lib/prompts"
 import { GenerateRequest, GenerateResponse, GenerateError } from "@/lib/types"
 import { generateWithOpenRouter } from "@/lib/openrouter"
+import { verifyUserAndEnforceLimit } from "@/lib/firebase-server"
 
 export const maxDuration = 60
 
 export async function POST(req: NextRequest) {
+  try {
+    await verifyUserAndEnforceLimit(req, "generate");
+  } catch (err: any) {
+    const status = err.statusCode || 500;
+    return NextResponse.json<GenerateError>(
+      { error: err.message || "Unauthorized", code: "INVALID_REQUEST" },
+      { status }
+    );
+  }
+
   let body: GenerateRequest
   try {
     body = await req.json()

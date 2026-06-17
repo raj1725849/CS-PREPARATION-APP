@@ -30,7 +30,68 @@ export default function Dashboard() {
     loadData();
   }, []);
 
-  if (!isClient || !stats) {
+  if (!isClient) {
+    return (
+      <div className="min-h-screen flex items-center justify-center pb-12">
+        <div className="w-8 h-8 border-4 border-[#e8590c] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  if (plan === "free") {
+    return (
+      <div className="min-h-screen pb-12 flex flex-col">
+        <TopBar 
+          title="My Dashboard" 
+          subtitle="Track your progress and identify weak areas" 
+          breadcrumbs={[{ label: "Home" }, { label: "Dashboard", href: "/dashboard" }]} 
+        />
+        <div className="flex-grow flex items-center justify-center p-8">
+          <div className="w-full max-w-2xl bg-white border border-[#e2e8f0] rounded-2xl p-8 md:p-10 shadow-xl text-center space-y-6">
+            <div className="w-16 h-16 bg-[#e8590c]/10 border border-[#e8590c]/30 rounded-full flex items-center justify-center text-[#e8590c] mx-auto">
+              <TrendingUp className="w-8 h-8" />
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0f2640] font-playfair tracking-tight">
+                Premium Access Required
+              </h2>
+              <p className="text-sm text-[#64748b] max-w-md mx-auto leading-relaxed">
+                Performance analytics, progress tracking, average scores, and weak-topic analysis are exclusive premium features. 
+              </p>
+            </div>
+            <div className="bg-[#f8f9fa] border border-[#e2e8f0] rounded-xl p-4 text-left max-w-md mx-auto">
+              <h4 className="text-xs font-bold text-[#0f2640] uppercase tracking-wider mb-2">
+                What you unlock with Premium:
+              </h4>
+              <ul className="space-y-2 text-xs text-[#64748b]">
+                <li className="flex items-center gap-2">✓ Unlimited AI Question Papers</li>
+                <li className="flex items-center gap-2">✓ Unlimited Answer Sheet Evaluations</li>
+                <li className="flex items-center gap-2">✓ Detailed performance progress charts</li>
+                <li className="flex items-center gap-2">✓ Automated mistake pattern recognition</li>
+              </ul>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <button
+                onClick={() => setIsUpgradeOpen(true)}
+                className="w-full sm:w-auto bg-[#e8590c] hover:bg-[#c94d0a] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-md active:scale-95 whitespace-nowrap"
+              >
+                Upgrade to Premium
+              </button>
+              <Link
+                href="/generate"
+                className="w-full sm:w-auto border border-[#1a3a5c] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white px-8 py-3 rounded-xl font-semibold text-sm transition-colors text-center"
+              >
+                Try Free Practice
+              </Link>
+            </div>
+          </div>
+        </div>
+        <UpgradeModal isOpen={isUpgradeOpen} onClose={() => setIsUpgradeOpen(false)} />
+      </div>
+    );
+  }
+
+  if (!stats) {
     return (
       <div className="min-h-screen flex items-center justify-center pb-12">
         <div className="w-8 h-8 border-4 border-[#e8590c] border-t-transparent rounded-full animate-spin"></div>
@@ -73,21 +134,6 @@ export default function Dashboard() {
             valueClass="text-red-600 text-lg"
           />
         </div>
-
-        {plan === "free" && (
-          <div className="bg-gradient-to-r from-[#0f2640] to-[#1e3e62] rounded-xl border border-[#1a3a5c] p-6 shadow-md text-white flex flex-col md:flex-row justify-between items-center gap-4 reveal">
-            <div className="space-y-1">
-              <h3 className="text-lg font-bold font-playfair tracking-tight">Unlock Unlimited Exam Preparation</h3>
-              <p className="text-sm text-[#94a3b8]">You are on the Free Tier (limited to 1 paper generation & evaluation per day). Upgrade to unlock unlimited access.</p>
-            </div>
-            <button
-              onClick={() => setIsUpgradeOpen(true)}
-              className="bg-[#e8590c] hover:bg-[#c94d0a] text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-md active:scale-95 whitespace-nowrap"
-            >
-              Upgrade Plan
-            </button>
-          </div>
-        )}
 
         {/* TWO COLUMN ROW: Progress & Mistakes */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 reveal stagger-2">
