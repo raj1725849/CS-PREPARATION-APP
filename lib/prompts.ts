@@ -289,9 +289,10 @@ export function buildEvaluateUserPrompt(params: {
   subject: SubjectName
   question: string
   marks: number
+  studentAnswer: string
   rubric?: any
 }): string {
-  const { subject, question, marks, rubric } = params;
+  const { subject, question, marks, studentAnswer, rubric } = params;
 
   if (rubric && rubric.matched) {
     const caseContextText = rubric.case_context
@@ -334,11 +335,14 @@ OFFICIAL GRADING CRITERIA FOR AWARDING MARKS:
 - Minimal/Below Average: ${rubric.evaluation_criteria.minimal}
 
 ═══════════════════════════════════════
+STUDENT'S CONFIRMED ANSWER TEXT:
+═══════════════════════════════════════
+${studentAnswer}
+
+═══════════════════════════════════════
 TASK:
 ═══════════════════════════════════════
-The student's handwritten answer sheet image(s) are attached.
-Read every word carefully. Identify all content the student has written.
-Evaluate strictly against the Rubric above.
+Evaluate the student's answer text strictly against the Rubric above.
 
 CRITICAL EVALUATION INSTRUCTIONS:
 1. Verify if the student cited the mandatory legal provisions (acts and section numbers) listed in the rubric. If they are missing or wrong, make a deduction.
@@ -356,27 +360,26 @@ Total Marks: ${marks}
 QUESTION TO EVALUATE AGAINST:
 "${question}"
 
+STUDENT'S CONFIRMED ANSWER TEXT:
+${studentAnswer}
+
 TASK:
-The student's handwritten answer is in the attached image(s).
+Evaluate the student's answer text against the question parameters.
 
 STEP 1 — Analyze the question above.
 Determine: what acts, sections, keywords, 
 procedures and case laws this question requires.
 
-STEP 2 — Read ALL handwritten text in the images carefully.
-Even if handwriting is messy — read every word.
+STEP 2 — Read the student's answer text carefully.
+Identify all content the student has written.
 Note every section number, every act name, 
 every keyword, every procedural step written.
 
-STEP 3 — If multiple answers are visible on the sheet,
-identify which answer corresponds to this question
-by matching the question number or content context.
-
-STEP 4 — Evaluate strictly.
+STEP 3 — Evaluate strictly.
 Deduct for every missing section, wrong act name,
 missing keyword, wrong threshold, skipped procedural step.
 The student must prove legal knowledge — 
 vague answers lose marks.
 
-STEP 5 — Output the JSON evaluation result.`;
+STEP 4 — Output the JSON evaluation result.`;
 }

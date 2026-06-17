@@ -165,3 +165,55 @@ export async function verifyUserAndEnforceLimit(
 
   return { uid, plan };
 }
+
+export async function verifyUserAuth(
+  req: NextRequest
+): Promise<VerificationResult> {
+  const authHeader = req.headers.get("Authorization");
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    const authErr = new Error("Missing or invalid Authorization header");
+    (authErr as any).statusCode = 401;
+    throw authErr;
+  }
+
+  const idToken = authHeader.substring(7);
+  const payload = decodeJwt(idToken);
+  if (!payload || !payload.sub) {
+    const malformedErr = new Error("Invalid or malformed ID token");
+    (malformedErr as any).statusCode = 401;
+    throw malformedErr;
+  }
+
+  const now = Math.floor(Date.now() / 1000);
+  if (payload.exp && payload.exp < now) {
+    const expErr = new Error("ID token has expired");
+    (expErr as any).statusCode = 401;
+    throw expErr;
+  }
+
+  const uid = payload.sub;
+
+  const firestoreRes = await fetch(
+    `https://firestore.googleapis.com/v1/projects/cs-prep-dashboard-v1/databases/(default)/documents/users/${uid}`,
+    {
+      headers: {
+        Authorization: `Bearer ${idToken}`
+      }
+    }
+  );
+
+  if (!firestoreRes.ok) {
+    const errText = await firestoreRes.text();
+    console.error("Firestore authentication verification failed:", errText);
+    const verifyErr = new Error("Failed to verify user profile with authentication provider");
+    (verifyErr as any).statusCode = firestoreRes.status === 401 || firestoreRes.status === 403 ? 401 : 500;
+    throw verifyErr;
+  }
+
+  const docData = await firestoreRes.json();
+  const fields = docData.fields || {};
+  const plan = fields.plan ? parseFirestoreValue(fields.plan) : "free";
+
+  return { uid, plan };
+}
+

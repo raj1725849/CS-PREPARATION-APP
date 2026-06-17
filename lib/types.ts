@@ -53,8 +53,7 @@ export interface EvaluateRequest {
   question: string
   questionNumber?: string         // e.g. "Q3" or "Q3(b)" — optional
   marks: number                   // 5 | 7 | 10 | 15 | 20
-  images: string[]                // base64 encoded image strings
-  mimeTypes: string[]             // corresponding MIME types
+  studentAnswer: string           // Verified student answer text
 }
 
 export interface Deduction {
@@ -142,6 +141,9 @@ export interface EvaluateSession {
   acts_found?: string[]
   acts_missing?: string[]
   examiner_note?: string
+  originalImages?: string[]       // Compressed thumbnails for auditing
+  originalExtractedText?: string
+  studentCorrectedText?: string
 }
 
 export type Session = GenerateSession | EvaluateSession

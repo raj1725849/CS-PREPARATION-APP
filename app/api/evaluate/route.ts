@@ -33,11 +33,11 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const { subject, question, marks, images, mimeTypes } = body
+  const { subject, question, marks, studentAnswer } = body
 
-  if (!subject || !question?.trim() || !marks) {
+  if (!subject || !question?.trim() || !marks || !studentAnswer?.trim()) {
     return NextResponse.json<EvaluateError>(
-      { error: "Missing required fields: subject, question, marks", code: "INVALID_REQUEST" },
+      { error: "Missing required fields: subject, question, marks, studentAnswer", code: "INVALID_REQUEST" },
       { status: 400 }
     )
   }
@@ -55,42 +55,16 @@ export async function POST(req: NextRequest) {
     console.log(`No rubric matched for: "${question}" (Subject: ${resolvedSubject})`);
   }
 
-  if (!images?.length || !mimeTypes?.length) {
-    return NextResponse.json<EvaluateError>(
-      { error: "At least one answer image is required", code: "NO_IMAGES" },
-      { status: 400 }
-    )
-  }
-
-  if (images.length !== mimeTypes.length) {
-    return NextResponse.json<EvaluateError>(
-      { error: "images and mimeTypes arrays must be same length", code: "INVALID_REQUEST" },
-      { status: 400 }
-    )
-  }
-
-  if (images.length > 10) {
-    return NextResponse.json<EvaluateError>(
-      { error: "Maximum 10 images allowed per evaluation", code: "INVALID_REQUEST" },
-      { status: 400 }
-    )
-  }
-
   const userPrompt = buildEvaluateUserPrompt({
     subject: resolvedSubject,
     question: rubric.matched && rubric.question_text ? rubric.question_text : question,
     marks: finalMarks,
+    studentAnswer,
     rubric
   });
 
   const parts = [
-    { text: userPrompt },
-    ...images.map((imageBase64, i) => ({
-      inlineData: {
-        data: imageBase64,
-        mimeType: mimeTypes[i] || "image/jpeg"
-      }
-    }))
+    { text: userPrompt }
   ]
 
   try {
@@ -221,7 +195,7 @@ export async function POST(req: NextRequest) {
     
     try {
       const systemInstruction = buildEvaluateSystemPrompt()
-      const rawText = await evaluateWithOpenRouter(userPrompt, images, mimeTypes, systemInstruction)
+      const rawText = await evaluateWithOpenRouter(userPrompt, [], [], systemInstruction)
       
       const jsonStart = rawText.indexOf('{');
       const jsonEnd = rawText.lastIndexOf('}');
