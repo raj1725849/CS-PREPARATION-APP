@@ -99,6 +99,26 @@ export interface EvaluateResponse {
   acts_found: string[]
   acts_missing: string[]
   examiner_note: string
+  evaluation_summary: string
+  correctly_covered_points: string[]
+  missing_points: string[]
+  missing_keywords: string[]
+  irrelevant_content: string[]
+  mark_deduction_analysis: string[]
+  icsi_examiner_feedback: string[]
+  what_you_should_add: string[]
+  what_you_should_remove: string[]
+  writing_analysis: {
+    structure: string
+    presentation: string
+    relevance: string
+    legal_language: string
+    use_of_keywords: string
+    completeness: string
+  }
+  strengths: string[]
+  weaknesses: string[]
+  improvement_plan: string[]
 }
 
 export interface EvaluateError {
@@ -144,6 +164,26 @@ export interface EvaluateSession {
   originalImages?: string[]       // Compressed thumbnails for auditing
   originalExtractedText?: string
   studentCorrectedText?: string
+  evaluation_summary?: string
+  correctly_covered_points?: string[]
+  missing_points?: string[]
+  missing_keywords?: string[]
+  irrelevant_content?: string[]
+  mark_deduction_analysis?: string[]
+  icsi_examiner_feedback?: string[]
+  what_you_should_add?: string[]
+  what_you_should_remove?: string[]
+  writing_analysis?: {
+    structure: string
+    presentation: string
+    relevance: string
+    legal_language: string
+    use_of_keywords: string
+    completeness: string
+  }
+  strengths?: string[]
+  weaknesses?: string[]
+  improvement_plan?: string[]
 }
 
 export type Session = GenerateSession | EvaluateSession
