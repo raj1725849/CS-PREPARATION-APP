@@ -1,0 +1,742 @@
+{
+  "subject_code": "SBEC",
+  "subject_name": "Setting Up Of Business",
+  "questions": [
+    {
+      "question_id": "SBILL_DEC2023_2022_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 3,
+      "question_text": "Write down the characteristics of a private company under the Companies Act, 2013 as described by K to R.",
+      "model_answer": "Characteristics of a Private Company: • Restricts the right to transfer its shares. • Minimum two members are required in private company. • Limits the number of its members to two hundred. • Prohibits any invitation to the public to subscribe for any securities of the company. • Shareholders in the company have limited liability. • There is no risk of takeover as transfer of shares is restricted. • As private companies cannot raise funds from public and hence legal compliances are comparatively less. • A private company have perpetual succession. Which means that company continue to exist even after death of owners.",
+      "legal_provisions": [
+        {
+          "act": "Companies Act, 2013",
+          "section": "General",
+          "description": "Definition and characteristics of a private company"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Private Company",
+        "Transfer of shares",
+        "Minimum members",
+        "Limited liability",
+        "Perpetual succession"
+      ],
+      "expected_structure": [
+        "List of characteristics",
+        "Explanation of key terms"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Restriction on transfer of shares",
+            "marks": 1
+          },
+          {
+            "point": "Minimum 2 members and maximum 200 members limit",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Prohibition on public invitation for securities",
+            "marks": 0.5
+          }
+        ],
+        "optional_points": [
+          {
+            "point": "Limited liability, perpetual succession, or lower compliance requirements",
+            "marks": 0.5
+          }
+        ],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBILL_DEC2023_2022_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 3,
+      "question_text": "Describe the common reasons on the basis of which RoC, Delhi has rejected the name reservation application of R with the proposed name, R Holding Pvt. Ltd.",
+      "model_answer": "Section 4(2) of the Companies Act, 2013 read with rule 8 and 8A of the Companies (Incorporation) Rules, 2014, provides that the name: (i) shall not be identical with or resemble too nearly to the name of an existing company; (ii) shall not constitute an offence under any law for the time being in force; or (iii) is not undesirable in the opinion of the Central Government. Further, a company shall not be registered with a name which contains: (a) any word or expression which is likely to give the impression that the company is in any way connected with, or having the patronage of, the Central Government, any State Government, or any local authority, corporation or body constituted by the Central Government or any State Government under any law for the time being in force; or (b) such word or expression, as may be prescribed, unless the previous approval of the Central Government has been obtained for the use of any such word or expression. Section 4(5)(ii) of the Companies Act, 2013 states that where after reservation of name, it is found that name was applied by furnishing wrong or incorrect information, then the reserved name shall be cancelled and the person making application shall be liable to a penalty which may extend to one lakh rupees.",
+      "legal_provisions": [
+        {
+          "act": "Companies Act, 2013",
+          "section": "Section 4(2) and 4(5)(ii)",
+          "description": "Provisions for reservation and rejection of company names"
+        },
+        {
+          "act": "Companies (Incorporation) Rules, 2014",
+          "section": "Rule 8 and 8A",
+          "description": "Criteria for undesirable names"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Name reservation",
+        "RoC",
+        "Undesirable name",
+        "Government patronage",
+        "Identical name"
+      ],
+      "expected_structure": [
+        "Statutory Provisions",
+        "Conditions for rejection"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Name identical or resembling existing company",
+            "marks": 1
+          },
+          {
+            "point": "Name constitutes an offence or is undesirable",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Implying connection with Central/State Govt/Local authority without approval",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBILL_DEC2023_2022_Q1C",
+      "question_number": "1(c)",
+      "max_marks": 3,
+      "question_text": "State the utility of PAN for R Cloth Trading Pvt. Ltd.",
+      "model_answer": "Utility of PAN: • This number is unique to each cardholder and helps identify the income tax payer. • PAN enables the department to identify/ link all transactions of the PAN holder with the department. These transactions include tax payments, TDS/TCS credits, returns of income, specified transactions, correspondence etc, and so on. • It facilitates easy retrieval of information of PAN holder and matching of various investments, borrowings and other business activities of PAN holder. • It also serves as an identity proof for a large number of purposes e.g. sale or purchase, by any person, of shares of a company or sale or purchase of any immovable property.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "PAN",
+        "Unique identification",
+        "Taxpayer",
+        "Transaction linking",
+        "Identity proof"
+      ],
+      "expected_structure": [
+        "Utility points"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Unique identification of taxpayer",
+            "marks": 1
+          },
+          {
+            "point": "Linking transactions (TDS, tax payments, returns)",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Identity proof for major business activities (sale/purchase/investment)",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBILL_DEC2023_2022_Q1D",
+      "question_number": "1(d)",
+      "max_marks": 3,
+      "question_text": "Why does K advise R to go for “Composition Scheme” under the GST Act, 2017 ?",
+      "model_answer": "Composition Scheme under the GST Act, 2017: The composition levy is an alternative method of levy of tax designed for small taxpayers whose turnover is up to Rs. 1.5 Crores (Rs. 75 lakhs in case of few States). The objective of composition scheme is to bring simplicity and to reduce the compliance cost for the small taxpayers. Moreover, it is optional and the eligible person opting to pay tax under this scheme can pay tax at a prescribed percentage of his turnover every quarter, instead of paying tax at normal rate. Composition Scheme is now made available to service providers as well, whose aggregate annual turnover does not exceed Rs.50 lakhs. Both exclusive service providers and mixed service providers of goods and services can opt for this scheme. K advises R to opt for composition scheme as R is a small businessman starting his company afresh and normal GST registration can burdensome him with major compliances, which will not be in case of GST Composition Scheme.",
+      "legal_provisions": [
+        {
+          "act": "GST Act, 2017",
+          "section": "General",
+          "description": "Composition Scheme provisions"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Composition Scheme",
+        "Small taxpayers",
+        "Reduced compliance",
+        "Turnover limit",
+        "GST"
+      ],
+      "expected_structure": [
+        "Definition of scheme",
+        "Advantages",
+        "Application to case"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Alternative tax method for small taxpayers with limited turnover",
+            "marks": 1
+          },
+          {
+            "point": "Simplicity and reduced compliance cost",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Optional scheme to pay tax at prescribed percentage quarterly",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBILL_DEC2023_2022_Q1E",
+      "question_number": "1(e)",
+      "max_marks": 3,
+      "question_text": "Discuss the privileges available to ST Finvest Ltd. to process loan to R Cloth Trading Pvt. Ltd. quickly at a very competitive rate of interest as compared to the banks.",
+      "model_answer": "A Non-Banking Financial Company (NBFC) engaged in the business of loans and advances, acquisition of shares/stocks/bonds/debentures/securities issued by Government or local authority or other marketable securities of a like nature, leasing, hire-purchase, insurance business, chit business etc. The privileges available to the NBFC are listed below: 1. Competitive Interest Rates: Rate of interest is one of the main aspects of all types of loans. NBFC are having interest rates either equal to bank lending rates or at times even lower to bank rates. 2. Quick processing: At banks, it is very important that the applicant should fulfil the eligibility criteria but NBFC are lenient in this aspect. This makes loan approval easier, smother process and quicker. 3. Less Rules and Regulations: As NBFC are incorporated under the Companies Act, (though regulated by the Reserve Bank of India), the rules and regulations for lending are not as stringent as banks. This helps borrowers to get loans easily. 4. Last Resort of Borrowing: NBFCs are the largest propellants of ushering finance into the country. They are the last resorts of borrowing. Further, Agility is a key feature for NBFCs as it sets the banks apart. 5. Caters Customer needs: Another major advantage of NBFCs is the ground level understanding of their customer's profile and the need for their credit, which gives them an edge, as their ability to customize their products according to client needs. 6. Loan available for Individuals with Poor Credit Rating: Loans will be offered to individuals with low credit score by NBFCs but most of the time the interest rates for such borrowers will be higher than market rates. 7. Broder customer base & enhance customer trust on NBFC ultimately increase brand value of the NBFC.",
+      "legal_provisions": [
+        {
+          "act": "Companies Act/RBI Act",
+          "section": "General",
+          "description": "Regulation of NBFCs"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "NBFC",
+        "Loan processing",
+        "Interest rates",
+        "Regulations",
+        "Customer-centric"
+      ],
+      "expected_structure": [
+        "Definition of NBFC",
+        "List of advantages/privileges"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Less stringent rules and regulations compared to banks",
+            "marks": 1
+          },
+          {
+            "point": "Quick processing and lenient eligibility criteria",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Competitive interest rates and ability to customize/cater to specific needs",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBEC_DEC2023_2017_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 5,
+      "question_text": "Alok Nidhi Ltd., a Nidhi Company, desires to appoint M as the Director of the company. M has been convicted of an offence involving moral turpitude and sentenced to imprisonment for a period of six months, 4 years ago. Alok Nidhi Ltd. seeks your advice for appointment of M as Director of the Company. Referring the provisions for appointment of Directors in a Nidhi Company under Nidhi Rules, 2014, advise Alok Nidhi Ltd.",
+      "model_answer": "Rules relating to directors of Nidhi Company have been given in Rule 17 of Nidhi Rules 2014. As per Rule 17(5), the person to be appointed as director shall comply with requirements of Sub-section (4) of Section 152 of the Companies Act, 2013 and shall not have been disqualified from appointment as provided in Section 164 of the Companies Act, 2013. As per Section 164(1)(d) of the Companies Act, 2013, a person shall not be eligible for appointment as a director of a company if such person has been convicted by a court of any offence, whether involving moral turpitude or otherwise, and sentenced in respect thereof to imprisonment for not less than six months and a period of five years has not elapsed from the date of expiry of the sentence. Provided that if a person has been convicted of any offence and sentenced in respect thereof to imprisonment for a period of seven years or more, he shall not be eligible to be appointed as a director in any company. Since M has been convicted of an offence involving moral turpitude and sentenced to imprisonment for a period of six months and a period of five years has not elapsed from the date of expiry of the sentence, M is not eligible for appointment as director of Alok Nidhi Ltd.",
+      "legal_provisions": [
+        {
+          "act": "Nidhi Rules, 2014",
+          "section": "Rule 17(5)",
+          "description": "Requirements for appointment of director in a Nidhi Company"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "Section 152(4)",
+          "description": "Compliance requirement for directors"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "Section 164(1)(d)",
+          "description": "Disqualification for appointment as director due to conviction"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Nidhi Company",
+        "Director Appointment",
+        "Disqualification",
+        "Section 164(1)(d)",
+        "Moral Turpitude"
+      ],
+      "expected_structure": [
+        "Provision for Nidhi Directors",
+        "Provision for Disqualification",
+        "Application to Case",
+        "Conclusion"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Reference to Rule 17(5) of Nidhi Rules 2014",
+            "marks": 1
+          },
+          {
+            "point": "Reference to Section 164(1)(d) regarding conviction and 5-year cooling period",
+            "marks": 2
+          },
+          {
+            "point": "Correct analysis that 4 years is less than the 5-year requirement",
+            "marks": 1
+          },
+          {
+            "point": "Conclusion that M is ineligible",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "SBEC_DEC2023_2017_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 5,
+      "question_text": "KC Pvt., Ltd. has been incorporated recently under the Companies Act, 2013. The Directors of KC Pvt. Ltd. seeks your advice on the requirement in context of ‘publication of name and address of the company’. Referring the provisions of section 12(3) of the Companies Act, 2013, advise KC Pvt. Ltd.",
+      "model_answer": "According to Section 12(3) of the Companies Act, 2013, the company shall — (a) paint or affix its name, and the address of its registered office, and keep the same painted or affixed, on the outside of every office or place in which its business is carried on, in a conspicuous position, in legible letters, and if the characters employed therefore are not those of the language or of one of the languages in general use in that locality, also in the characters of that language or of one of those languages; (b) have its name engraved in legible characters on its seal, if any; (c) get its name, address of its registered office and the Corporate Identity Number along with telephone number, fax number, if any, e-mail and website addresses, if any, printed in all its business letters, billheads, letter papers and in all its notices and other official publications; and (d) have its name printed on negotiable instruments such as hundies, promissory notes, bills of exchange and such other document as may be prescribed. According to Rule 26 of the Companies (Incorporation) Rules, 2014, every company which has a website for conducting online business or otherwise, shall disclose/publish its name, address of its registered office, the Corporate Identity Number, Telephone number, fax number if any, email and the name of the person who may be contacted in case of any queries or grievances on the landing/home page of the said website. The Central Government may as and when required, notify the other documents on which the name of the company shall be printed. However, where a company has changed its name or names during the last two years, it shall paint or affix or print, as the case may be, along with its name, the former name or names so changed during the last two years. Further, in case of One Person Company, the words “One Person Company” shall be mentioned in brackets below the name of such company, wherever its name is printed, affixed or engraved. Ministry of Corporate Affairs (MCA) has clarified that display of its name in English in addition to the display in the local language will be a sufficient compliance with the requirements of the section. If any default is made in complying with the requirements of Section 12 of the Companied Act, 2013, the company and every officer who is in default shall be liable to a penalty of one thousand rupees for every day during which the default continues but not exceeding one lakh rupees. Accordingly, KC Pvt. Ltd. may be advised to comply with the above-mentioned provisions.",
+      "legal_provisions": [
+        {
+          "act": "Companies Act, 2013",
+          "section": "12(3)",
+          "description": "Publication of name and address of registered office"
+        },
+        {
+          "act": "Companies (Incorporation) Rules, 2014",
+          "section": "Rule 26",
+          "description": "Publication of details on website"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Section 12(3)",
+        "Registered Office",
+        "Publication of Name",
+        "Penalty",
+        "Website disclosure"
+      ],
+      "expected_structure": [
+        "Statutory requirements for name display",
+        "Website disclosure norms",
+        "Requirement for former name",
+        "Consequence of default"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Mentioning requirements under Sec 12(3)(a) to (d)",
+            "marks": 2
+          },
+          {
+            "point": "Requirement for website disclosure under Rule 26",
+            "marks": 1
+          },
+          {
+            "point": "Mention of penalty provisions",
+            "marks": 1
+          },
+          {
+            "point": "Mentioning name change requirement (last 2 years)",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "SBEC_DEC2023_2017_Q1C",
+      "question_number": "1(c)",
+      "max_marks": 5,
+      "question_text": "KPS Trust is a trust registered under the Indian Trusts Act, 1882. The trust desires to register itself as a Company Limited by Guarantee under Section 8 of the Companies Act, 2013. Describe the documents required to be submitted by KPS Trust for registration as a company limited by guarantee under Section 8 of the Companies Act, 2013.",
+      "model_answer": "In accordance with Section 366 of the Companies Act, 2013 read with Rule 3 of the Companies (Authorised to Registered) Rules, 2014, the following documents are required in case an application is made by a trust for registration as a company limited by guarantee under section 8 of the Companies Act, 2013- (i) a list showing the names, addresses and occupations of all persons, who on a day, not being more than six clear days before the day of seeking registration, were trustees of the trust with proof thereof; (ii) a list showing the particulars of persons proposed as the first directors of the company, along with DIN, passport number, if any, with expiry date, residential addresses and their interests in other firm or body corporate along with their consent to act as directors of the company; (iii) a certified copy of the certificate of registration of the trust and the trust deed; (iv) No Objection Certificate from secured creditor along with charge holder, if applicable; (v) details of the objects of the company along with a declaration from all the members that the restrictions and prohibitions as mentioned in clause (b) and clause (c) of sub-section (1) of section 8 of the Companies Act, 2013 shall be complied. An undertaking from all the trustees providing that in the event of registration as a company under Part I of Chapter XXI of the Companies Act, 2013, necessary documents or papers shall be submitted to the registering or other authority with which the company was earlier registered, for its dissolution. The list of members and directors and any other particulars relating to the company which are required to be delivered to the Registrar shall be duly verified by the declaration of any two or more proposed directors. Accordingly, KPS Trust is advised to submit the above-mentioned documents for registration as a company limited by guarantee under Section 8 of the Companies Act, 2013.",
+      "legal_provisions": [
+        {
+          "act": "Companies Act, 2013",
+          "section": "Section 366",
+          "description": "Registration of existing companies"
+        },
+        {
+          "act": "Companies (Authorised to Registered) Rules, 2014",
+          "section": "Rule 3",
+          "description": "Documents for registration of trust"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Section 8 Company",
+        "Trust registration",
+        "Section 366",
+        "Company Limited by Guarantee",
+        "Documents required"
+      ],
+      "expected_structure": [
+        "List of trustees",
+        "Details of directors",
+        "Registration certificates",
+        "NOC",
+        "Objects declaration"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Listing of trustees with details",
+            "marks": 1
+          },
+          {
+            "point": "Listing of proposed directors with DIN/consent",
+            "marks": 1
+          },
+          {
+            "point": "Submission of Trust deed and registration certificate",
+            "marks": 1
+          },
+          {
+            "point": "NOC from creditors",
+            "marks": 1
+          },
+          {
+            "point": "Objects and compliance declaration",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "SBEC_DEC2023_2017_Q1D",
+      "question_number": "1(d)",
+      "max_marks": 5,
+      "question_text": "Karan and Rajdeep two friends decided to start a business of Biryani Chain, it’s a start up with some blend of technology for which they aim to collect funding from Venture Capitalists. While Karan is of the opinion to incorporate Limited Liability partnership, Rajdeep wants to go ahead with formation of Private Limited Company. As a Professional Consultant, you are required to advise on the basis of merits of both the proposals as which type of organization is most suitable as per the requirement ?",
+      "model_answer": "Private Companies: A Private Limited company is legally recognized and generally favoured by investors. Private Limited Company can bring significant benefits to startups. Firstly, it offers limited liability protection, shielding the personal assets of the founders from the company’s liabilities and financial risks. This provides a sense of security and encourages entrepreneurs to take calculated business risks including, a Private Limited Company enjoys a separate legal entity status, instilling credibility and trust among investors, partners, and customers. Startups often require external funding, and being a registered company enhances their chances of attracting investors and securing financial support. However, it has stricter compliance and may have a higher cost of incorporation. Limited Liability Partnership: Whereas LLP is easier to start and manage and the process has fewer formalities. It has a lesser cost of registration as compared to a Company. LLP have its separate existence other than its partners. LLP can be started with minimum capital. The partners would have limited liability to their agreed contribution in the LLP. A LLP whose turnover does not exceed, in any financial year, forty lakh rupees, or whose contribution does not exceed twenty-five lakh rupees shall not be required to get its accounts audited. However, the main drawback of an LLP is that if a partner wants to transfer his ownership rights, then he has to obtain the consent of all the partners. A limited liability partnership must have at least two members. If one member chooses to leave the partnership, the LLP may have to be dissolved (in case mentioned in the LLP Agreement). It is also important to note that FDI in LLP is allowed only with the prior approval of the Reserve Bank of India (RBI). Perpetual existence of a Private Limited Company ensures the continuity of the startup’s operations, even if the founders change or new investors join. This stability is crucial for long-term planning, execution, and sustainable growth, flexibility of raising capital is another advantage for startups, Private Limited Companies can issue shares, bring in investors, and access various funding options like bank loans or venture capital, enables startups to obtain the necessary financial resources for expansion and market penetration. Hence, the registration of a Private Limited Company provides startups with a strong legal framework, access to funding, credibility, and growth opportunities.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Start-up",
+        "Private Limited Company",
+        "LLP",
+        "Venture Capital",
+        "Funding"
+      ],
+      "expected_structure": [
+        "Merits of Private Limited Company",
+        "Merits of LLP",
+        "Drawbacks of LLP",
+        "Comparison in context of funding/investors",
+        "Final recommendation"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Advantage of Private Limited for investors/venture capital",
+            "marks": 2
+          },
+          {
+            "point": "Discussion of limited liability for both",
+            "marks": 1
+          },
+          {
+            "point": "Discussion of LLP drawbacks (consent for transfer, FDI approval)",
+            "marks": 1
+          },
+          {
+            "point": "Recommendation for Private Limited Company for high-growth/funding",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "SBEC_JUNE2023_2017_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 5,
+      "question_text": "SPM Ltd. is engaged in the business of manufacturing of coins made of gold, silver and other precious metals. The company has not raised any money from the public. The company has recently imported the plating technology from Germany and it is desiring to enter into the business of manufacturing of ornaments, jewellery and souvenirs using the plating technology. However, the proposed business is not covered in the objects clause of Memorandum of Association (MOA) of the company. Advise the company the procedure to be followed by it for alteration of objects clause of MOA in accordance with the provisions of the Companies Act, 2013.",
+      "model_answer": "1. Issue not less than 7 days’ notice and agenda of Board Meeting, or a shorter notice in case of urgent business, in writing to every director of the company at his address registered with the company and call a Board Meeting to consider the proposal of alteration of objects clause of Memorandum of Association of company [Section 173(3)]. 2. Hold a meeting of Board of Directors: a. To pass the Board Resolution for approving the proposed amendments to the objects clause of MOA subject to approval of shareholders. b. To delegate authority to any one director of the company to sign, certify and file the requisite forms with ROC. c. To fix day, date, time and venue for holding the general meeting of the Company for passing a special resolution as required by section 13. d. To approve the draft notice of general meeting along with explanatory statement as per Section 102. e. To authorize the Director or Company Secretary to sign and issue notice of the general meeting. 3. Send notice of the General meeting proposing the aforementioned special resolution to all shareholders, directors, auditors and other persons entitled to receive it, by giving not less than clear 21 days' notice (or shorter notice if consent for shorter notice is given by at least 95% of members entitled to vote as per Section 101). 4. Hold a shareholders meeting and pass the Special Resolution for altering the object clause of Memorandum of Association by 3/4th majority in accordance with Section 114 (2). Special Resolution shall be passed by means of Postal ballot, if company has more than 200 members or the company has raised money from public through prospectus and still has any unutilized amount. 5. Follow the procedure for preparing, signing and compiling of minutes of General Meeting. 6. File a certified copy of special resolution with the Registrar in form MGT-14 under Section 117 within 30 days along with attachments: (a) Copy of Special Resolution passed along with explanatory statement; (b) Notice for convening the General Meeting; (c) Altered Memorandum of Association; (d) Shorter Notice Consent Letters; (e) Other necessary attachments. 7. The Registrar shall register the alteration and certify the registration within 30 days from filing [Section 13(9)]. 8. Every Alteration made shall be noted in every copy of the Memorandum of Association [Section 15(1)].",
+      "legal_provisions": [
+        {
+          "act": "Companies Act, 2013",
+          "section": "13",
+          "description": "Alteration of Memorandum of Association"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "101",
+          "description": "Notice of meeting"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "102",
+          "description": "Explanatory statement"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "114",
+          "description": "Ordinary and special resolutions"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "117",
+          "description": "Resolutions and agreements to be filed"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "173",
+          "description": "Meetings of Board"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Memorandum of Association",
+        "Alteration of Objects",
+        "Special Resolution",
+        "MGT-14",
+        "ROC",
+        "Section 13"
+      ],
+      "expected_structure": [
+        "Board Meeting Procedure",
+        "General Meeting Procedure",
+        "Filing with ROC",
+        "Registration"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Board Meeting for approval and fixing General Meeting date",
+            "marks": 1
+          },
+          {
+            "point": "Passing of Special Resolution in General Meeting by 3/4th majority",
+            "marks": 2
+          },
+          {
+            "point": "Filing of form MGT-14 with ROC within 30 days",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Notice of GM under Section 101 and Explanatory Statement under Section 102",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBEC_JUNE2023_2017_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 5,
+      "question_text": "J is a B.Tech. in Computer Science from Indian Institute of Technology, Roorkee. J has invented a new procedure for making of battery having long life as compared to lithium battery available in the market. The invention has been patented by J. J has made an online application over the portal setup by the Government of India for initial funding under start-up. In the online application, J observed that there is a column for seed funding. Advise J on the meaning and importance of Seed Capital.",
+      "model_answer": "Start-up business needs the nurturing of finance to explore and grow. The funding done at the nascent stage is called seed funding and the capital is known as a seed capital. Technically, seed capital is the initial capital used at the time of starting the business. This capital can come from the founders, families or friends. It is required for the market research, product development, and other initial stage operations. Seed funding permits exploration of the business idea and converting it into a viable product or service that further attracts venture capitalists. A business founder must be clear on how to utilise seed capital in the most optimum manner to ensure smooth transition to the advanced stage of the business. Seed funding is a risky investment option, as most funding agencies would like to adopt a wait and watch approach to see whether the idea has a business potential. From the founder's point of view, the option of obtaining seed funding has to be carefully utilised as obtaining seed funding may result in dilution of ownership of the founder. The paperwork involved in seed funding is relatively less and straightforward, compared to advanced rounds of funding. Even the legal fees required are also quite less. The interest rates too are usually lower and there are mostly no restrictions in the manner of business working as it is still in the nascent stage. Financing is generally of two types i.e.(a) equity financing, or (b) debt-financing.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Seed Capital",
+        "Seed Funding",
+        "Start-up",
+        "Equity Financing",
+        "Debt Financing"
+      ],
+      "expected_structure": [
+        "Definition of Seed Capital",
+        "Purpose/Importance",
+        "Sources",
+        "Risks",
+        "Types of Financing"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Definition of Seed Capital (Initial capital for startup)",
+            "marks": 1
+          },
+          {
+            "point": "Importance (Market research, product development, exploration of idea)",
+            "marks": 2
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Risks involved (Wait and watch approach)",
+            "marks": 1
+          },
+          {
+            "point": "Types of financing (Equity vs Debt)",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "SBEC_JUNE2023_2017_Q1C",
+      "question_number": "1(c)",
+      "max_marks": 5,
+      "question_text": "Agarwal Enterprises Ltd. (AEL) is a resident company in India for the last 15 years. The company is operating in various sectors e.g. power, infrastructure, ports, oil, telecommunications and IT etc. Now, the company is planning to make an investment of ₹ 10,000 crore in Australia based solar power projects through the joint venture in Australia. The latest audited financial statements of the company revealed the following data as on 31st March, 2023 : Paid up Share Capital : ₹ 2,000 crore Reserve & Surplus : ₹ 1,000 crore Long-term Borrowings : ₹ 1,500 crore Creditors :₹ 300 crore Referring to the provisions of Foreign Exchange Management (Transfer or Issue of any Foreign Security) Regulations, 2004 and Notifications issued by the Reserve Bank of India, advise whether the company can make desired investment under the automatic route in the financial year 2023-24 (Assume USD 1 =₹ 80).",
+      "model_answer": "In terms of Regulation 6 of the Notification No. FEMA 120/RB-2004, an Indian Party is permitted to make investment / undertake financial commitment (FC) in overseas JV/WOS. Financial commitment up to USD 1 billion is under automatic approval. The eligible limit of investment is 400% of the net worth of the Indian Party as per the last audited balance sheet. Financial commitment exceeding USD 1 billion requires prior approval of the Reserve Bank. Net worth includes paid-up share capital + reserves created out of profits + securities premium account + debit/credit balance of P&L - accumulated losses/deferred expenditure/miscellaneous expenditure not written off. In the given case, Net worth of AEL = Paid up Share Capital (₹ 2,000 crore) + Reserve & Surplus (₹ 1,000 crore) = ₹ 3,000 crore. Eligible limit = 400% of ₹ 3,000 crore = ₹ 12,000 crore (equivalent to USD 1.5 billion). Proposed investment = ₹ 10,000 crore (equivalent to USD 1.25 billion). Although the investment is within the 400% limit (USD 1.5 billion), it exceeds the individual threshold of USD 1 billion for the automatic route. Therefore, the company cannot make investment under the automatic route.",
+      "legal_provisions": [
+        {
+          "act": "FEMA (Transfer or Issue of any Foreign Security) Regulations, 2004",
+          "section": "Regulation 6",
+          "description": "Investment/Financial commitment in overseas JV/WOS"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "2(57)",
+          "description": "Definition of Net Worth"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Automatic Route",
+        "Financial Commitment",
+        "Net Worth",
+        "Overseas Joint Venture",
+        "FEMA"
+      ],
+      "expected_structure": [
+        "Applicable Provision",
+        "Calculation of Net Worth",
+        "Calculation of Investment Limit",
+        "Conclusion"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct identification of Net Worth (3000 crore)",
+            "marks": 1
+          },
+          {
+            "point": "Calculation of 400% Limit (12000 crore / 1.5 Billion USD)",
+            "marks": 1
+          },
+          {
+            "point": "Identification of the USD 1 Billion ceiling for automatic route",
+            "marks": 2
+          },
+          {
+            "point": "Final Conclusion that automatic route is not applicable",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "strict"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": [
+        {
+          "description": "Net Worth Calculation",
+          "formula": "Paid up Share Capital + Reserve & Surplus",
+          "value": "2000 + 1000 = 3000 crore"
+        },
+        {
+          "description": "Investment Limit Calculation",
+          "formula": "400% of Net Worth",
+          "value": "3000 * 4 = 12000 crore (1.5 Billion USD)"
+        },
+        {
+          "description": "Proposed Investment",
+          "formula": "10000 / 80",
+          "value": "1.25 Billion USD"
+        }
+      ]
+    },
+    {
+      "question_id": "SBEC_JUNE2023_2017_Q1D",
+      "question_number": "1(d)",
+      "max_marks": 5,
+      "question_text": "Durgesh is working as a driver in a cab provider company. One day, a passenger advised him that he can own a car by availing financial assistance under Pradhan Mantri Mudra Yojna (PMMY). He seeks your advice regarding the procedure for availing the Transport Vehicle Loan for commercial use from MUDRA Bank. Advise Durgesh.",
+      "model_answer": "Mudra loan is extended for income generation and employment creation, including transport vehicle loans for commercial use. Procedure: 1. Identify business idea and category (Shishu, Kishor, or Tarun). 2. Contact the nearest public/private sector bank (list available on MUDRA portal). 3. Submit application form along with documents: (a) Proof of Identity (Voter ID, Aadhaar, etc.), (b) Proof of Residence (Bill, ID, etc.), (c) Recent Photograph, (d) Quotation of Machinery/Vehicle, (e) Name of Supplier, (f) Proof of Business Address, (g) Proof of Category (SC/ST/OBC/Minority). Additional points: Banks do not charge processing fees or ask for collateral. Repayment period up to 5 years. Applicant must not be a defaulter. MUDRA is not a separate bank but a refinancing scheme operating through banks, NBFCs, and MFIs.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "MUDRA Loan",
+        "PMMY",
+        "Transport Vehicle Loan",
+        "Refinancing",
+        "Business Categories"
+      ],
+      "expected_structure": [
+        "Eligible Categories",
+        "Application Procedure",
+        "Required Documents",
+        "Conditions (No Collateral/Fees)"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Mentioning the category selection (Shishu, Kishor, Tarun)",
+            "marks": 1
+          },
+          {
+            "point": "List of key required documents (Identity, Address, Quotation)",
+            "marks": 2
+          },
+          {
+            "point": "Key features (No collateral/processing fee, Repayment period)",
+            "marks": 2
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "subject_code": "CAFM",
+  "subject_name": "Corporate Accounting",
+  "questions": [
+    {
+      "question_id": "CAFM_DEC2023_2022_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 8,
+      "question_text": "Pass the necessary journal entries to record the above transactions.",
+      "model_answer": "Bank A/c Dr. 36,00,000 to Share Application and Allotment A/c 36,00,000. Share Application and Allot. A/c Dr. 26,40,000 to Share Capital A/c 15,00,000, to Securities Premium A/c 9,00,000, to Bank A/c 2,40,000. Equity Share first and Final Call A/c Dr. 21,00,000 to Share Capital A/c 15,00,000, to Securities Premium A/c 6,00,000. Bank A/c Dr. 11,34,300, Share Application and Allot. A/c Dr. 9,60,000 to Equity Share first and Final Call A/c 20,94,300. Equity Share Capital A/c Dr. 15,000, Securities Premium A/c Dr. 3,000 to Equity Share first and Final Call A/c 5,700, to Share Forfeited A/c 12,300. Bank A/c Dr. 18,000 to Equity Share Capital A/c 15,000, to Securities Premium A/c 3,000. Share Forfeited A/c Dr. 12,300 to Capital Reserve A/c 12,300.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Journal Entries",
+        "Forfeiture",
+        "Reissue",
+        "Pro-rata",
+        "Securities Premium"
+      ],
+      "expected_structure": [
+        "Application Money Received",
+        "Allotment/Transfer Entry",
+        "Call Money Due",
+        "Call Money Received",
+        "Forfeiture Entry",
+        "Reissue Entry",
+        "Transfer to Capital Reserve"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct calculation and entry for application money",
+            "marks": 2
+          },
+          {
+            "point": "Correct entry for forfeiture and adjustment of calls in arrears",
+            "marks": 3
+          },
+          {
+            "point": "Correct entry for reissue and capital reserve transfer",
+            "marks": 3
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "high"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": [
+        "Calls in arrears: Mr. X (300*21 - 2400 = 3900), Mr. Y (200*21 - 2400 = 1800)",
+        "Total Calls in arrears: 5700",
+        "Bank amount on call: (100000 * 21) - (40000 * 24) - 5700 = 11,34,300"
+      ]
+    },
+    {
+      "question_id": "CAFM_DEC2023_2022_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 3,
+      "question_text": "Assuming opening bank balance of ₹ 1,25,000, prepare the Bank account of the company in the light of above transactions.",
+      "model_answer": "Bank Account: Debit sides include To Balance b/d 1,25,000, To Share Application and Allotment A/c 36,00,000, To Equity Share first and Final Call A/c 11,34,300, To Equity Share Capital A/c 15,000, To Securities Premium A/c 3,000. Credit sides include By Share Application and Allotment A/c 2,40,000, By Balance c/d 46,37,300. Total 48,77,300.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Bank Account",
+        "Cash Book"
+      ],
+      "expected_structure": [
+        "Opening Balance",
+        "Receipts",
+        "Payments",
+        "Closing Balance"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Accurate recording of bank receipts and payments from Question 1(a)",
+            "marks": 2
+          },
+          {
+            "point": "Correct balancing",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "high"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": [
+        "Closing Balance = 1,25,000 + 36,00,000 + 11,34,300 + 15,000 + 3,000 - 2,40,000 = 46,37,300"
+      ]
+    },
+    {
+      "question_id": "CAFM_DEC2023_2022_Q1C",
+      "question_number": "1(c)",
+      "max_marks": 4,
+      "question_text": "What are the restrictions on use of Securities Premium Account as per provisions of the Companies Act, 2013? What is the implication if a company violates these provisions?",
+      "model_answer": "As per Section 52 of Companies Act, 2013, Securities Premium Account can only be used for: 1. Issuing fully paid bonus shares. 2. Writing off preliminary expenses. 3. Writing off expenses, commission, or discount on issue of shares/debentures. 4. Providing premium payable on redemption of redeemable preference shares or debentures. 5. Purchase of own shares (buy-back) u/s 68. Violation attracts provisions relating to reduction of share capital under section 66.",
+      "legal_provisions": [
+        {
+          "act": "Companies Act, 2013",
+          "section": "52",
+          "description": "Application of Securities Premium"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "66",
+          "description": "Reduction of Share Capital"
+        },
+        {
+          "act": "Companies Act, 2013",
+          "section": "68",
+          "description": "Power of company to purchase its own securities"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Securities Premium Account",
+        "Companies Act 2013",
+        "Reduction of Capital"
+      ],
+      "expected_structure": [
+        "Statutory Provision",
+        "Permitted Uses",
+        "Consequence of Contravention"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Listing of at least 4 permitted uses of Securities Premium",
+            "marks": 2
+          },
+          {
+            "point": "Mentioning the implication/contravention result (Section 66)",
+            "marks": 2
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "subject_code": "SLCM",
+  "subject_name": "Securities Law",
+  "questions": [
+    {
+      "question_id": "CMSL_DEC2023_2022_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 5,
+      "question_text": "What do you mean by ‘Screen based trading’ ? When was it started ? How fund raising from offer for subscription is different from prospectus ? How the two securities market mentioned in the case are different from each other ? Elaborate.",
+      "model_answer": "Screen based trading : It is a form of trading that uses modern telecommunication and computer technology to combine information transmission with trading in financial markets. Investors, who are desirous of buying securities, purchase them through registered broker/sub-broker of the stock exchange. Screen based trading has started since 1995. Offer for subscription to securities to the public is a public offer. All public offers must be made through prospectus. Prospectus is the offer documents that is filed with the regulators like SEBI, RoC and stock exchanges when the company goes for a public issue. Difference between two securities market i.e. Primary and Secondary Market: Primary market is the market place for issuing fresh securities and the secondary market is the market place for trading already issued securities. Primary market is to raise fund whereas secondary market is for buying, selling, or dealing in already issued securities. Primary market includes issuance of new securities through Initial Public Offer (IPO) whereas secondary market includes the further trading of securities already offered to the public. The primary market is also known as new issue market / IPO Market and secondary market is known as After issue market. In primary market investors can purchase securities directly from the Company and in secondary market purchase and sale of securities is done by the investors among themselves. Primary market provides funds to new and old companies for their expansion and diversification whereas secondary market does not provide funding to companies. The parties to transactions are Company and Investors in primary market whereas Investors among themselves are parties in secondary market. Major Intermediaries in primary market is underwriter whereas in secondary market, Brokers are major intermediaries. In primary market, price is provided in the offer document /red herring prospectus whereas in secondary market price fluctuates i.e. depends on demand and supply forces. Fund gained from primary market becomes the capital of the company whereas Fund received from secondary market becomes income of investors.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Screen based trading",
+        "Primary Market",
+        "Secondary Market",
+        "Prospectus",
+        "Offer for subscription"
+      ],
+      "expected_structure": [
+        "Definition",
+        "Timeline",
+        "Concept differentiation",
+        "Comparison table/points"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct definition of Screen based trading and start date (1995)",
+            "marks": 1
+          },
+          {
+            "point": "Explanation of distinction between Offer for subscription and Prospectus",
+            "marks": 1
+          },
+          {
+            "point": "At least 3 core differences between Primary and Secondary Market",
+            "marks": 3
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [
+          "Screen based trading",
+          "Primary Market",
+          "Secondary Market"
+        ],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "CMSL_DEC2023_2022_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 5,
+      "question_text": "State the penalties against persons who might be found guilty of offences under section 23 of the Securities Contract (Regulation) Act, 1956. (i) Any person who fails to maintain books of accounts or records, as per the listing agreement or conditions, or bye-laws of a recognised Stock Exchange. (ii) If any issuer make an excess dematerialisation or delivery of unlisted securities.",
+      "model_answer": "In accordance with Section 23 of the Securities Contracts (Regulation) Act, 1956, any person who might be found guilty of offences under section 23 of the Securities Contracts (Regulation) Act, 1956, shall, without prejudice to any award of penalty by the Adjudicating Officer or the SEBI under the Securities Contracts (Regulation) Act, 1956, on conviction, be punishable with imprisonment for a term which may extend to ten years or with fine, which may extend to twenty five crore rupees, or with both. (i) According to Section 23A (b) of the Securities Contracts (Regulation) Act, 1956 Contravention : Any person who fails to maintain books of account or records, as per the listing agreement or conditions, or bye laws of a recognized stock exchange. Penalty : Penalty shall be not less than 1 lakh rupees but may extend to 1 lakh rupees for each day during which such failure continues, subject to a maximum of 1 crore rupees. (ii) According to Section 23 F of the Securities Contracts (Regulation) Act, 1956 Contravention : If any issuer makes an excess dematerialization or delivery of unlisted securities. Penalty : Penalty shall not be less than 5 lakh rupees which may extend to 25 crores rupees.",
+      "legal_provisions": [
+        {
+          "act": "Securities Contracts (Regulation) Act, 1956",
+          "section": "23",
+          "description": "General penalties"
+        },
+        {
+          "act": "Securities Contracts (Regulation) Act, 1956",
+          "section": "23A(b)",
+          "description": "Penalty for failure to maintain books/records"
+        },
+        {
+          "act": "Securities Contracts (Regulation) Act, 1956",
+          "section": "23F",
+          "description": "Penalty for excess dematerialisation"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Section 23",
+        "Penalty",
+        "Books of account",
+        "Excess dematerialisation"
+      ],
+      "expected_structure": [
+        "General Penalty Provision",
+        "Specific penalty for failure to maintain books",
+        "Specific penalty for excess dematerialisation"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Mentioning General Penalty under Section 23 (10 years / 25 Crore)",
+            "marks": 1
+          },
+          {
+            "point": "Penalty for Section 23A(b) - 1 lakh per day, max 1 crore",
+            "marks": 2
+          },
+          {
+            "point": "Penalty for Section 23F - 5 lakh to 25 crore",
+            "marks": 2
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [
+          "Section 23A",
+          "Section 23F"
+        ],
+        "strictness": "high"
+      }
+    },
+    {
+      "question_id": "CMSL_DEC2023_2022_Q1C",
+      "question_number": "1(c)",
+      "max_marks": 5,
+      "question_text": "(i) What is the objective for which SAT is established ? (ii) State the composition of Securities Appellate Tribunal ? (iii) Does a Civil Court have jurisdiction to entertain any suit in respect of any matter for which an Adjudicating Officer appointed under the SEBI Act ? (iv) Mention the time period for filing an appeal with Supreme Court. (v) Why are special courts established by the Central Government ?",
+      "model_answer": "i. Securities Appellate Tribunal (SAT) was established to consider appeal against order of the SEBI or by an order made by an adjudicating officer or by an order of the Insurance Regulatory and Development Authority or the Pension Fund Regulatory and Development Authority. ii. According to Section 15L of the SEBI Act, 1992, the Securities Appellate Tribunal shall consist of a Presiding Officer and such number of Judicial Members and Technical Members as the Central Government may determine. iii. Section 15Y of the SEBI Act, 1992 lays down that no civil court has jurisdiction to entertain any suit or proceeding in respect of any matter for which an Adjudication Officer has been appointed under the SEBI Act, 1992. iv. Section 15Z lays down that any person aggrieved by any decision or order of the Securities Appellate Tribunal may file an appeal to the Supreme Court within 60 days from the date of communication of the decision or order. v. Special courts are established by the Central Government under Section 26A of the SEBI Act, 1992 for providing speedy trial of offences.",
+      "legal_provisions": [
+        {
+          "act": "SEBI Act, 1992",
+          "section": "15L",
+          "description": "Composition of SAT"
+        },
+        {
+          "act": "SEBI Act, 1992",
+          "section": "15Y",
+          "description": "Exclusion of Civil Court jurisdiction"
+        },
+        {
+          "act": "SEBI Act, 1992",
+          "section": "15Z",
+          "description": "Appeal to Supreme Court"
+        },
+        {
+          "act": "SEBI Act, 1992",
+          "section": "26A",
+          "description": "Special Courts"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "SAT",
+        "Composition",
+        "Jurisdiction",
+        "Supreme Court appeal",
+        "Special Courts"
+      ],
+      "expected_structure": [
+        "Objective",
+        "Composition",
+        "Jurisdiction status",
+        "Time limit",
+        "Purpose of Special Courts"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct objective and composition of SAT",
+            "marks": 1
+          },
+          {
+            "point": "Correct jurisdiction status (No civil court jurisdiction)",
+            "marks": 1
+          },
+          {
+            "point": "Time period 60 days",
+            "marks": 1
+          },
+          {
+            "point": "Correct purpose of special courts",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Mentioning specific sections",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "SLCM_DEC2023_2017_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 5,
+      "question_text": "Compute the value of the portfolio and NAV for Edelweiss Mutual Fund.",
+      "model_answer": "Stock No. of Shares Price in (₹) Total Price in (₹) Reliance 1,10,000 1548.24 17,03,06,400 Tata 2,57,000 548.65 14,10,03,050 Suzlon 5,05,000 329.51 16,64,02,550 Wipro 4,75,000 913.67 43,39,93,250 Richard 3,20,000 517.29 16,55,32,800 Value of Portfolio 1,07,72,38,050. NAV per unit = (Investment + Recoverable + Accrued Income – Liabilities – Accrued expenses) / No. of units. NAV = (1,07,72,38,050 - 25,00,000) / 8,65,63,000 = 1,07,47,38,050 / 8,65,63,000 = ₹ 12.415 per unit.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Portfolio Value",
+        "NAV",
+        "Mutual Fund",
+        "Units Outstanding"
+      ],
+      "expected_structure": [
+        "Calculation Table",
+        "Formula",
+        "Result"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct calculation of total value for each stock",
+            "marks": 2
+          },
+          {
+            "point": "Correct total portfolio value",
+            "marks": 1
+          },
+          {
+            "point": "Correct deduction of liabilities",
+            "marks": 1
+          },
+          {
+            "point": "Final correct NAV per unit",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "high"
+      },
+      "calculations": [
+        {
+          "description": "Portfolio Value",
+          "value": "1,07,72,38,050"
+        },
+        {
+          "description": "NAV per unit",
+          "value": "12.415"
+        }
+      ]
+    },
+    {
+      "question_id": "SLCM_DEC2023_2017_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 5,
+      "question_text": "Calculate the amount to be deposited at the time of opening Escrow account and mention the date of opening of Escrow account as per the provisions of the SEBI (Delisting of Equity Shares) Regulations, 2021.",
+      "model_answer": "As per SEBI (Delisting of Equity Shares) Regulations, 2021, the acquirer shall open an interest-bearing escrow account not later than seven working days from the date of obtaining the shareholders’ approval. The amount to be deposited is 25% of the total consideration. Total consideration = Public Shares * Higher of Floor/Indicative Price. Indicative price (₹97) is higher than Floor price (₹90). Total Consideration = 28,60,65,200 * ₹97 = ₹27,74,83,24,400. 25% of total consideration = 0.25 * 27,74,83,24,400 = ₹6,93,70,81,100. Date of approval: 18th March 2023. Escrow deadline: Not later than 26th March 2023.",
+      "legal_provisions": [
+        {
+          "act": "SEBI (Delisting of Equity Shares) Regulations, 2021",
+          "section": "General Provision",
+          "description": "Requirements for Escrow account for delisting"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Escrow Account",
+        "Delisting",
+        "Floor Price",
+        "Indicative Price",
+        "Public Shareholding"
+      ],
+      "expected_structure": [
+        "Legal Provision",
+        "Calculation",
+        "Deadline Calculation"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Identification of higher price (₹97)",
+            "marks": 1
+          },
+          {
+            "point": "Correct calculation of total consideration",
+            "marks": 1
+          },
+          {
+            "point": "Correct calculation of 25% amount",
+            "marks": 1
+          },
+          {
+            "point": "Correct timeline calculation (7 working days)",
+            "marks": 1
+          },
+          {
+            "point": "Reference to SEBI Delisting Regulations 2021",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "high"
+      },
+      "calculations": [
+        {
+          "description": "Total Consideration",
+          "value": "27,74,83,24,400"
+        },
+        {
+          "description": "Escrow Amount (25%)",
+          "value": "6,93,70,81,100"
+        }
+      ]
+    }
+  ]
+}

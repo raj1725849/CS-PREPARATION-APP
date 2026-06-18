@@ -1,0 +1,76 @@
+{
+  "subject_code": "TLP",
+  "subject_name": "Tax Laws",
+  "questions": [
+    {
+      "question_id": "TLP_DEC2023_2022_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 5,
+      "question_text": "Determine residential status of Vijay for the assessment year 2023-24, along with detailed workings.",
+      "model_answer": "Mr. Vijay has stayed in India for 349 days during the previous year 2022-23 (365 days - 16 days). He satisfies the basic condition of being in India for 182 days or more. He also satisfies the additional conditions of being a resident in 2 out of the 10 preceding previous years and staying for 730 days or more in the 7 preceding previous years. Therefore, Mr. Vijay is resident and ordinarily resident in India for the Assessment Year 2023-24.",
+      "legal_provisions": [
+        {
+          "act": "Income-tax Act, 1961",
+          "section": "Section 6",
+          "description": "Determines the residential status of an individual."
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Residential Status",
+        "Resident and Ordinarily Resident",
+        "Basic condition",
+        "Additional conditions"
+      ],
+      "expected_structure": [
+        "Calculation of days of stay",
+        "Checking basic condition",
+        "Checking additional conditions",
+        "Conclusion"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct calculation of days stay in India for PY 2022-23 (349 days).",
+            "marks": 2
+          },
+          {
+            "point": "Checking of basic condition under section 6(1).",
+            "marks": 1
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Checking of additional conditions under section 6(6).",
+            "marks": 1
+          }
+        ],
+        "optional_points": [
+          {
+            "point": "Detailed table showing residential status for preceding years.",
+            "marks": 1
+          }
+        ],
+        "keyword_weightage": [
+          {
+            "keyword": "Resident and Ordinarily Resident",
+            "weight": 1
+          }
+        ],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": [
+        {
+          "description": "Calculation of stay in India for 2022-23",
+          "details": "365 total days - 16 days absent = 349 days"
+        },
+        {
+          "description": "Summary of stay in previous 7 years",
+          "details": "Total stay of 854 days across 7 years"
+        }
+      ]
+    }
+  ]
+}

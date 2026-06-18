@@ -1,0 +1,350 @@
+{
+  "subject_code": "EBCL",
+  "subject_name": "Economic Commercial Laws",
+  "questions": [
+    {
+      "question_id": "ECIPL_DEC2023_2022_Q1I",
+      "question_number": "1(i)",
+      "max_marks": 5,
+      "question_text": "Can Siya be treated as a consumer as she is not the person who purchased the laptop?",
+      "model_answer": "As per Section 2(7) of the Consumer Protection Act, 2019, Consumer means any person who— (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Thus, even if Siya has not purchased the laptop but she uses it with the approval of Tiya, her sister, so according to the definition Siya can be treated as a Consumer.",
+      "legal_provisions": [
+        {
+          "act": "Consumer Protection Act, 2019",
+          "section": "Section 2(7)",
+          "description": "Definition of Consumer including users with approval."
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Consumer",
+        "Approval",
+        "User",
+        "Consideration",
+        "Purchase"
+      ],
+      "expected_structure": [
+        "Provision",
+        "Analysis",
+        "Conclusion"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Cite Section 2(7) of Consumer Protection Act, 2019",
+            "marks": 2
+          },
+          {
+            "point": "Explain that 'consumer' includes a user of goods with approval of the buyer",
+            "marks": 2
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Apply definition to Siya's situation",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [
+          "Consumer",
+          "User",
+          "Approval"
+        ],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "ECIPL_DEC2023_2022_Q1II",
+      "question_number": "1(ii)",
+      "max_marks": 5,
+      "question_text": "If this laptop was purchased through amazon, explain the duty of the e-commerce giant in case of grievance.",
+      "model_answer": "According to the Consumer Protection (E-commerce) Rules 2020, every ecommerce entity shall establish an adequate grievance redressal mechanism having regard to the number of grievances ordinarily received by such entity from India, and shall appoint a grievance officer for consumer grievance redressal and shall display the name, contact details, designation of such officer. Further, every e-commerce entity shall ensure that the grievance officer acknowledge the receipt of any consumer complaint within forty-eight hours and redresses the complaint within one month from the date of receipt of the complaint.",
+      "legal_provisions": [
+        {
+          "act": "Consumer Protection (E-commerce) Rules, 2020",
+          "section": "General Rules",
+          "description": "E-commerce entity obligations regarding grievance redressal."
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Grievance Redressal",
+        "Grievance Officer",
+        "E-commerce entity",
+        "Acknowledgment",
+        "Complaint"
+      ],
+      "expected_structure": [
+        "Provision",
+        "Duties",
+        "Timelines"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Obligation to appoint a Grievance Officer and establish a mechanism",
+            "marks": 2
+          },
+          {
+            "point": "Acknowledgement of complaint within 48 hours",
+            "marks": 2
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Redressal of complaint within one month",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [
+          "Grievance Officer",
+          "48 hours",
+          "One month"
+        ],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "ECIPL_DEC2023_2022_Q1III",
+      "question_number": "1(iii)",
+      "max_marks": 5,
+      "question_text": "Had a mediator been appointed to settle the issue, what is the procedure of mediation as given in provision.",
+      "model_answer": "Section 79 of Consumer Protection Act, 2019 states that the mediation shall be held in the consumer mediation cell attached to the District Commission, the State Commission or the National Commission as the case may be. Where a consumer dispute is referred for mediation by the district commission or the State commission or the National commission, as the case may be, the mediator nominated by such commission shall have regard to the rights and obligations of the parties, the usage of trade, if any, the circumstances giving rise to the consumer dispute and such other relevant factors, as he may deem necessary and shall be guided by the principle of natural justice while carrying out mediation. The mediator so nominated shall conduct mediation within such time and in such manner as may be specified by regulations.",
+      "legal_provisions": [
+        {
+          "act": "Consumer Protection Act, 2019",
+          "section": "Section 79",
+          "description": "Procedure for consumer mediation."
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Mediation cell",
+        "Mediator",
+        "Natural justice",
+        "Commission",
+        "Consumer dispute"
+      ],
+      "expected_structure": [
+        "Provision",
+        "Mediation Cell Location",
+        "Mediator Duties"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Mediation occurs in a cell attached to District/State/National Commission",
+            "marks": 2
+          },
+          {
+            "point": "Mediator must follow principles of natural justice",
+            "marks": 2
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Factors to consider: trade usage, rights/obligations, circumstances",
+            "marks": 1
+          }
+        ],
+        "optional_points": [],
+        "keyword_weightage": [
+          "Section 79",
+          "Natural justice"
+        ],
+        "strictness": "medium"
+      }
+    },
+    {
+      "question_id": "EBCL_DEC2023_2017_Q1A",
+      "question_number": "1(a)",
+      "max_marks": 5,
+      "question_text": "Discuss the provision of RBI related to constitution of ‘‘Monetary Policy Committee’’ under the Reserve Bank of India Act, 1934.",
+      "model_answer": "Section 45ZB of the Reserve Bank of India Act, 1934 states that: (1) The Central Government may, by notification in the official Gazette, constitute a committee to be called the Monetary Policy Committee of the bank. (2) The Monetary Policy Committee shall consist of the following members, namely: (a) The Governor of the Bank — Chairperson, ex-officio; (b) Deputy Governor of the Bank, in charge of Monetary Policy- Member, ex-officio; (c) One officer of the bank to be nominated by the Central Board- Member, ex-officio; and (d) Three persons to be appointed by the Central Government- Members. (3) The Monetary Policy Committee shall determine the policy rate required to achieve the inflation target. (4) The decision of the Monetary Policy Committee shall be binding on the Bank.",
+      "legal_provisions": [
+        {
+          "act": "Reserve Bank of India Act, 1934",
+          "section": "45ZB",
+          "description": "Constitution and composition of the Monetary Policy Committee"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "Monetary Policy Committee",
+        "RBI Act 1934",
+        "Section 45ZB",
+        "Inflation target",
+        "Policy rate"
+      ],
+      "expected_structure": [
+        "Provision for constitution",
+        "Composition of the committee",
+        "Primary function",
+        "Binding nature of decisions"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Correct citation of Section 45ZB",
+            "marks": 1
+          },
+          {
+            "point": "Listing all 6 members of the committee",
+            "marks": 2
+          }
+        ],
+        "important_points": [
+          {
+            "point": "Mentioning the function to determine policy rate for inflation target",
+            "marks": 1
+          }
+        ],
+        "optional_points": [
+          {
+            "point": "Mentioning the binding nature of decisions on the Bank",
+            "marks": 1
+          }
+        ],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "EBCL_DEC2023_2017_Q1B",
+      "question_number": "1(b)",
+      "max_marks": 5,
+      "question_text": "What are the various conditions which are to be satisfied by Non-Banking Financial Company (NBFC) to the satisfaction of Reserve Bank of India for registration?",
+      "model_answer": "The Reserve Bank of India, for the purpose of considering the application for registration of non-Banking Financial Company (NBFC) may require to be satisfied by an inspection of the books of the non-banking financial company or otherwise that the following conditions are fulfilled: a) that the non-banking financial company is or shall be in a position to pay its present or future depositors in full as and when their claims accrue; b) that the affairs of the non-banking financial company are not being or are not likely to be conducted in a manner detrimental to the interest of its present or future depositors; c) that the general character of the management or the proposed management of the non-banking financial company shall not be prejudicial to the public interest or the interests of its depositors; d) that the non-banking financial company has adequate capital structure and earning prospects; e) that the public interest shall be served by the grant of certificate of registration to the non-banking financial company to commence or to carry on the business of India; f) that the grant of certificate of registration shall not be prejudicial to the operation and consolidation of the financial sector consistent with monetary stability, and economic growth considering such other relevant factors which the Reserve Bank of India may, by notification in the Official Gazette, specify; and g) any other condition, fulfilment of which in the opinion of the Reserve Bank of India, shall be necessary to ensure that the commencement of or carrying on of the business in India by a non-banking financial company shall not be prejudicial to the public interest or in the interests of the depositors.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "NBFC",
+        "Registration",
+        "RBI",
+        "Depositors' interest",
+        "Capital structure"
+      ],
+      "expected_structure": [
+        "Introduction",
+        "List of conditions"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Capability to pay present/future depositors",
+            "marks": 1
+          },
+          {
+            "point": "Affairs not detrimental to interest of depositors",
+            "marks": 1
+          },
+          {
+            "point": "Management not prejudicial to public interest",
+            "marks": 1
+          },
+          {
+            "point": "Adequate capital structure and earning prospects",
+            "marks": 1
+          },
+          {
+            "point": "Public interest and financial sector stability",
+            "marks": 1
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "EBCL_DEC2023_2017_Q1C",
+      "question_number": "1(c)",
+      "max_marks": 5,
+      "question_text": "Foreign Venture Capital Investment is the investment made by non-resident investors by purchasing securities or units issued by Indian entities. List the sectors in which Foreign Venture Capital Investor is allowed to invest.",
+      "model_answer": "List of sectors in which Foreign Venture Capital Investor is allowed to invest is as follows: a) Biotechnology; b) IT related or hardware and software development; c) Nanotechnology; d) Seed research and development; e) Research and development of new chemical entities in pharmaceutical sector; f) Dairy industry; g) Poultry industry; h) Production of bio-fuels; i) Hotel-cum-convention centres with seating capacity of more than three thousand; j) Infrastructure sector.",
+      "legal_provisions": [],
+      "case_laws": [],
+      "keywords": [
+        "Foreign Venture Capital Investor",
+        "Sectors",
+        "Investment"
+      ],
+      "expected_structure": [
+        "List of sectors"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Listing at least 8-10 sectors correctly",
+            "marks": 5
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "high"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    },
+    {
+      "question_id": "EBCL_DEC2023_2017_Q1D",
+      "question_number": "1(d)",
+      "max_marks": 5,
+      "question_text": "Explain the coverage of Export Promotion of Capital Goods (EPCG) Scheme in Foreign Trade Policy, 2023.",
+      "model_answer": "a. Export Promotion Capital Goods (EPCG) scheme covers manufacturer exporters with or without supporting manufacturer(s), merchant exporters tied to supporting manufacturer(s) and service providers. Name of supporting manufacturer(s) shall be endorsed on the EPCG Authorisation before installation of the capital goods in the factory / premises of the supporting manufacturer(s). In case of any change in supporting manufacturer(s), the RA shall intimate such change to jurisdictional Customs Authority of existing as well as changed supporting manufacturer(s) and the Customs at port of registration of Authorisation. b. EPCG Scheme also covers a service provider who is certified as a Common Service Provider (CSP) by the DGFT - HQs, Department of Commerce in a Town of Export Excellence or Prime Minister Mega Integrated Textile Region and Apparel Parks (PM MITRA) subject to provisions of Foreign Trade Policy/Handbook of Procedures with the following conditions: i. Common utility services like providing Electricity, Water, Gas, Sanitation, Sewerage, Telecommunication, Transportation etc. shall not be considered for benefit of CSP; ii. Export by users of the common service shall be counted towards fulfilment of EO of the CSP provided the EPCG Authorisation details of the CSP is mentioned in the respective Shipping bills and concerned RA must be informed about the details of the users prior to such export; iii. Such export will not count towards fulfilment of specific export obligation in respect of other EPCG Authorisations of the user; iv. Authorisation holder shall be required to submit Bank Guarantee (BG) which shall be equivalent to the duty saved. BG can be given by CSP or by any one of the users or a combination thereof, at the option of the CSP; and v. Capital goods shall be installed within a Town of Export Excellence or PM MITRA.",
+      "legal_provisions": [
+        {
+          "act": "Foreign Trade Policy, 2023",
+          "section": "EPCG Scheme",
+          "description": "Coverage of the EPCG Scheme"
+        }
+      ],
+      "case_laws": [],
+      "keywords": [
+        "EPCG Scheme",
+        "Foreign Trade Policy 2023",
+        "Common Service Provider",
+        "Export Obligation"
+      ],
+      "expected_structure": [
+        "Coverage of entities",
+        "Coverage of Common Service Providers",
+        "Conditions for CSPs"
+      ],
+      "evaluation_rubric": {
+        "must_have_points": [
+          {
+            "point": "Mention coverage of manufacturers and service providers",
+            "marks": 2
+          },
+          {
+            "point": "Mention coverage of Common Service Providers (CSP)",
+            "marks": 1
+          },
+          {
+            "point": "Conditions related to CSPs (e.g., Bank Guarantee, installation location)",
+            "marks": 2
+          }
+        ],
+        "important_points": [],
+        "optional_points": [],
+        "keyword_weightage": [],
+        "strictness": "medium"
+      },
+      "alternate_answers": [],
+      "illustrations": [],
+      "calculations": []
+    }
+  ]
+}
