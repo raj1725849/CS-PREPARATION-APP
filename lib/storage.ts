@@ -15,6 +15,10 @@ import { ALL_SUBJECTS } from "./subject-map"
 import { auth, db } from "./firebase"
 import { doc, getDoc, setDoc } from "firebase/firestore"
 
+function sanitizeForFirestore<T>(data: T): T {
+  return JSON.parse(JSON.stringify(data));
+}
+
 export async function getAllSessions(): Promise<Session[]> {
   const user = auth.currentUser;
   if (!user) return [];
@@ -42,9 +46,25 @@ export async function saveSession(session: Session): Promise<void> {
   
   try {
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, { sessions: trimmed }, { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ sessions: trimmed }), { merge: true });
   } catch (err) {
     console.error("Failed to save session to Firestore:", err);
+  }
+}
+
+export async function updateSession(updatedSession: Session): Promise<void> {
+  const sessions = await getAllSessions();
+  const idx = sessions.findIndex(s => s.id === updatedSession.id);
+  if (idx !== -1) {
+    sessions[idx] = updatedSession;
+    const user = auth.currentUser;
+    if (!user) return;
+    try {
+      const docRef = doc(db, "users", user.uid);
+      await setDoc(docRef, sanitizeForFirestore({ sessions }), { merge: true });
+    } catch (err) {
+      console.error("Failed to update session in Firestore:", err);
+    }
   }
 }
 
@@ -62,7 +82,7 @@ export async function deleteSession(id: string): Promise<void> {
   
   try {
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, { sessions: newSessions }, { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ sessions: newSessions }), { merge: true });
   } catch (err) {
     console.error("Failed to delete session:", err);
   }
@@ -74,7 +94,7 @@ export async function clearAllHistory(): Promise<void> {
   
   try {
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, { sessions: [] }, { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ sessions: [] }), { merge: true });
   } catch (err) {
     console.error("Failed to clear history:", err);
   }
@@ -175,7 +195,7 @@ export async function computeDashboardStats(): Promise<DashboardStats> {
     ? subjectPerformance.reduce((a, b) => a.avgScore < b.avgScore ? a : b)
     : null
 
-  const allDeductions = evaluations.flatMap(s => s.deductions)
+  const allDeductions = evaluations.flatMap(s => s.deductions || [])
   const mistakeMap: Record<string, { type: string; frequency: number }> = {}
 
   allDeductions.forEach(d => {
@@ -265,7 +285,7 @@ export async function updateUserProfile(data: Partial<UserProfile>): Promise<voi
 
   try {
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, { ...data, updatedAt: new Date().toISOString() }, { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ ...data, updatedAt: new Date().toISOString() }), { merge: true });
   } catch (err) {
     console.error("Failed to update user profile in Firestore:", err);
   }
@@ -317,7 +337,7 @@ export async function checkAndIncrementUsage(
 
     // Save back to Firestore
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, { usage, updatedAt: new Date().toISOString() }, { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ usage, updatedAt: new Date().toISOString() }), { merge: true });
 
     return { allowed: true, limitReached: false };
   } catch (err) {

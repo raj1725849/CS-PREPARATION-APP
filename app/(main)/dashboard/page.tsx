@@ -224,7 +224,9 @@ export default function Dashboard() {
                     </td>
                     <td className="py-3">
                       {session.type === 'evaluate' ? (
-                        <button className="text-[#1a3a5c] hover:text-[#e8590c] font-medium transition-colors">View Feedback</button>
+                        <Link href={`/evaluate?sessionId=${session.id}`} className="text-[#1a3a5c] hover:text-[#e8590c] font-medium transition-colors">
+                          View Feedback
+                        </Link>
                       ) : (
                         <button className="text-[#1a3a5c] hover:text-[#e8590c] font-medium transition-colors">Regenerate</button>
                       )}

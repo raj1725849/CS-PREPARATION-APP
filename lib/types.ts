@@ -86,29 +86,33 @@ export interface EvaluateResponse {
   total_marks: number
   verdict: "Pass" | "Borderline Pass" | "Fail"
   score_percentage: number
-  deductions: EnhancedDeduction[]
-  model_answer: string
+  chapter: string
+  improvement_suggestion: string
+  questionId?: string
+  questionNumber?: string
+  deductions?: EnhancedDeduction[]
+  model_answer?: string
   evaluated_at: string            // ISO timestamp
-  question_analysis: QuestionAnalysis
-  answer_found: boolean
-  answer_identification_note: string
-  keywords_found: string[]
-  keywords_missing: string[]
-  sections_found: string[]
-  sections_missing: string[]
-  acts_found: string[]
-  acts_missing: string[]
-  examiner_note: string
-  evaluation_summary: string
-  correctly_covered_points: string[]
-  missing_points: string[]
-  missing_keywords: string[]
-  irrelevant_content: string[]
-  mark_deduction_analysis: string[]
-  icsi_examiner_feedback: string[]
-  what_you_should_add: string[]
-  what_you_should_remove: string[]
-  writing_analysis: {
+  question_analysis?: QuestionAnalysis
+  answer_found?: boolean
+  answer_identification_note?: string
+  keywords_found?: string[]
+  keywords_missing?: string[]
+  sections_found?: string[]
+  sections_missing?: string[]
+  acts_found?: string[]
+  acts_missing?: string[]
+  examiner_note?: string
+  evaluation_summary?: string
+  correctly_covered_points?: string[]
+  missing_points?: string[]
+  missing_keywords?: string[]
+  irrelevant_content?: string[]
+  mark_deduction_analysis?: string[]
+  icsi_examiner_feedback?: string[]
+  what_you_should_add?: string[]
+  what_you_should_remove?: string[]
+  writing_analysis?: {
     structure: string
     presentation: string
     relevance: string
@@ -117,8 +121,8 @@ export interface EvaluateResponse {
     completeness: string
   }
   strengths: string[]
-  weaknesses: string[]
-  improvement_plan: string[]
+  weaknesses?: string[]
+  improvement_plan?: string[]
 }
 
 export interface EvaluateError {
@@ -149,8 +153,12 @@ export interface EvaluateSession {
   marks_awarded: number
   score_percentage: number
   verdict: "Pass" | "Borderline Pass" | "Fail"
-  deductions: EnhancedDeduction[]
-  model_answer: string
+  chapter: string
+  improvement_suggestion: string
+  questionId?: string
+  questionNumber?: string
+  deductions?: EnhancedDeduction[]
+  model_answer?: string
   question_analysis?: QuestionAnalysis
   answer_found?: boolean
   answer_identification_note?: string

@@ -75,7 +75,10 @@ JSON format:
       try {
         const model = getFlashModel()
         result = await model.generateContent({
-          contents: [{ role: "user", parts }]
+          contents: [{ role: "user", parts }],
+          generationConfig: {
+            responseMimeType: "application/json"
+          }
         })
         break; // Success!
       } catch (err: any) {
@@ -100,19 +103,41 @@ JSON format:
     let unclear = false;
 
     try {
-      const jsonStart = responseText.indexOf('{');
-      const jsonEnd = responseText.lastIndexOf('}');
+      let cleanJson = responseText.trim();
+      // Strip markdown code block wrappers if present
+      if (cleanJson.startsWith("```")) {
+        cleanJson = cleanJson.replace(/^```(json)?/, "").trim();
+        cleanJson = cleanJson.replace(/```$/, "").trim();
+      }
+
+      const jsonStart = cleanJson.indexOf('{');
+      const jsonEnd = cleanJson.lastIndexOf('}');
       if (jsonStart !== -1 && jsonEnd !== -1) {
-        const cleanJson = responseText.substring(jsonStart, jsonEnd + 1);
-        const parsed = JSON.parse(cleanJson);
-        text = parsed.text || "";
-        unclear = !!parsed.unclear;
+        try {
+          const parsed = JSON.parse(cleanJson.substring(jsonStart, jsonEnd + 1));
+          text = parsed.text || "";
+          unclear = !!parsed.unclear;
+        } catch (parseErr) {
+          console.warn("Standard JSON parse failed in /api/extract, using regex fallback:", parseErr);
+          // Regex fallback to extract text field value from malformed JSON
+          const textMatch = cleanJson.substring(jsonStart, jsonEnd + 1).match(/"text"\s*:\s*"([\s\S]*?)"\s*,\s*"unclear"\s*:/);
+          const unclearMatch = cleanJson.substring(jsonStart, jsonEnd + 1).match(/"unclear"\s*:\s*(true|false)/);
+          
+          if (textMatch && textMatch[1]) {
+            text = textMatch[1]
+              .replace(/\\n/g, "\n")
+              .replace(/\\"/g, '"')
+              .replace(/\\\\/g, '\\');
+            unclear = unclearMatch ? unclearMatch[1] === "true" : false;
+          } else {
+            throw parseErr; // Re-throw if regex fails as well
+          }
+        }
       } else {
-        // Fallback if no JSON structure
         text = responseText.trim();
       }
-    } catch {
-      // Fallback on JSON parse error
+    } catch (err) {
+      console.warn("All JSON parsing attempts failed in /api/extract:", err);
       text = responseText.trim();
     }
 

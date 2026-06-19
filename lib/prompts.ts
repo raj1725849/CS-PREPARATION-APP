@@ -147,18 +147,9 @@ OUTPUT FORMAT:
 Respond ONLY with a valid JSON object. No markdown. No backticks. No explanations before or after. Start with { and end with }. Keep string values concise and under 300 chars.
 
 {
-  "question_analysis": {
-    "question_type": "string — one of: descriptive | case_study | short_note | procedural",
-    "relevant_acts": ["max 4 acts"],
-    "mandatory_sections": ["max 6 sections — e.g., Section 149(3) Companies Act 2013"],
-    "mandatory_keywords": ["max 8 keywords"],
-    "expected_case_laws": ["max 3 case laws or empty array"],
-    "expected_structure": "One sentence describing the expected answer structure"
-  },
-  "answer_found": true,
-  "answer_identification_note": "Brief note under 100 chars",
-  "marks_awarded": 0,
-  "total_marks": 0,
+  "chapter": "Name of the chapter from the ICSI syllabus, e.g. 'General Meetings' or 'Board Constitution'",
+  "marks_awarded": 0.0,
+  "total_marks": 0.0,
   "score_percentage": 0.0,
   "verdict": "Pass | Borderline Pass | Fail",
   "deductions": [
@@ -171,49 +162,16 @@ Respond ONLY with a valid JSON object. No markdown. No backticks. No explanation
       "severity": "critical | major | minor"
     }
   ],
-  "keywords_found": ["max 6 items"],
-  "keywords_missing": ["max 6 items"],
-  "sections_found": ["max 6 items"],
-  "sections_missing": ["max 6 items"],
-  "acts_found": ["max 4 items"],
-  "acts_missing": ["max 4 items"],
-  
-  "evaluation_summary": "Summary of overall answer quality and compliance with exam standards.",
-  "correctly_covered_points": ["Point 1 covered", "Point 2 covered"],
-  "missing_points": ["Point 1 missing", "Point 2 missing"],
-  "missing_keywords": ["Legal term 1 missing", "Provision citation 2 missing"],
-  "irrelevant_content": ["Any details written outside the scope of the question or empty array"],
-  "mark_deduction_analysis": ["Exact reason for deduction 1", "Exact reason for deduction 2"],
-  
-  "icsi_examiner_feedback": [
-    "Feedback point 1 (e.g. Concept understood but lacked structure)",
-    "Feedback point 2 (e.g. Proper legal terminology not used)"
-  ],
-  
-  "writing_analysis": {
-    "structure": "Evaluation of answer structure",
-    "presentation": "Evaluation of presentation (point-wise, headers)",
-    "relevance": "Evaluation of content relevance",
-    "legal_language": "Evaluation of professional legal language",
-    "use_of_keywords": "Evaluation of legal keywords",
-    "completeness": "Evaluation of completeness of all sub-parts"
-  },
-  
   "strengths": [
-    "Good conceptual understanding of XYZ",
-    "Correct interpretation of the question case facts"
+    "Brief strength description (under 100 chars)"
   ],
-  "weaknesses": [
-    "Missing key legal keywords",
-    "Failure to cite specific sections"
+  "missing_points": [
+    "Brief description of missing point (under 120 chars)"
   ],
-  "improvement_plan": [
-    "Practice writing in numbered points instead of paragraphs",
-    "Highlight and underline key legal terms",
-    "Memorize specific threshold limits"
+  "keywords_missing": [
+    "Specific legal keyword or term missed"
   ],
-  
-  "examiner_note": "Brief overall comment under 150 chars"
+  "improvement_suggestion": "Brief overall comment for improvement under 150 chars"
 }
 
 STRICT JSON CONFIGURATION:
@@ -270,49 +228,50 @@ export function buildEvaluateUserPrompt(params: {
       .map((lp: string) => `• ${lp}`)
       .join("\n");
 
+    const keywordsText = rubric.expected_answer.keywords && rubric.expected_answer.keywords.length > 0
+      ? rubric.expected_answer.keywords.map((kw: string) => `• ${kw}`).join("\n")
+      : "Not specified.";
+
     return `EXAMINATION DETAILS:
 Subject: ${subject}
 Programme: ICSI Executive Programme
 Total Marks: ${marks}
 
-QUESTION TO EVALUATE AGAINST:
+1. QUESTION TO EVALUATE AGAINST:
 "${question}"
 ${caseContextText}
-═══════════════════════════════════════
-OFFICIAL EVALUATION RUBRIC (RETRIEVED FROM PAPERS):
-═══════════════════════════════════════
 
-MANDATORY LEGAL PROVISIONS TO BE CITED:
-${legalProvisionsText || "Not specified."}
-
-EXPECTED KEY POINTS IN THE ANSWER:
-${keyPointsText}
-
-EXPECTED ANSWER SUMMARY:
+2. OFFICIAL GUIDELINE ANSWER:
 "${rubric.expected_answer.full_answer_summary}"
 
-OFFICIAL GRADING CRITERIA FOR AWARDING MARKS:
-- Full Marks (${marks}/${marks}): ${rubric.evaluation_criteria.full_marks}
-- Good/Above Average: ${rubric.evaluation_criteria.good}
-- Partial/Average: ${rubric.evaluation_criteria.partial}
-- Minimal/Below Average: ${rubric.evaluation_criteria.minimal}
+3. EXPECTED KEY POINTS & LEGAL PROVISIONS:
+MANDATORY LEGAL PROVISIONS:
+${legalProvisionsText || "Not specified."}
 
-═══════════════════════════════════════
-STUDENT'S CONFIRMED ANSWER TEXT:
-═══════════════════════════════════════
+EXPECTED KEY POINTS:
+${keyPointsText}
+
+4. EXPECTED LEGAL KEYWORDS:
+${keywordsText}
+
+5. STUDENT'S CONFIRMED ANSWER TEXT:
 ${studentAnswer}
 
 ═══════════════════════════════════════
-TASK:
+TASK & INSTRUCTIONS:
 ═══════════════════════════════════════
-Evaluate the student's answer text strictly against the Rubric above.
+Evaluate the student's answer text strictly against the Guideline Answer, Key Points, and Keywords above.
 
-CRITICAL EVALUATION INSTRUCTIONS:
-1. Verify if the student cited the mandatory legal provisions (acts and section numbers) listed in the rubric. If they are missing or wrong, make a deduction.
-2. Check which of the expected key points are present, incomplete, or missing.
-3. Grade the student's answer strictly based on the grading criteria (Full Marks / Good / Partial / Minimal).
-4. Identify any wrong statements or incorrect facts and list them under deductions.
-5. Provide the structured JSON output showing the score, detailed deductions, keywords/sections/acts found and missing, and the examiner note.`;
+CRITICAL GRADING INSTRUCTIONS:
+1. Do NOT try to evaluate based on generic AI expectations. Be strictly guided by the provided guidelines.
+2. Verify if the student cited the mandatory legal provisions and matched the expected key points. If a key point or mandatory provision is missing, make a deduction.
+3. Check if the student's answer contains the expected keywords. If an important keyword is missing, record it under keywords_missing.
+4. Grade the student's answer strictly based on the grading criteria:
+   - Full Marks (${marks}/${marks}): ${rubric.evaluation_criteria.full_marks}
+   - Good/Above Average: ${rubric.evaluation_criteria.good}
+   - Partial/Average: ${rubric.evaluation_criteria.partial}
+   - Minimal/Below Average: ${rubric.evaluation_criteria.minimal}
+5. Provide the structured JSON output matching the requested schema.`;
   }
 
   return `EXAMINATION DETAILS:
@@ -390,4 +349,86 @@ ${studentAnswer}
 
 TASK:
 Generate the ideal point-wise model answer for this question and list what the student should add to or remove from their answer.`;
+}
+
+export function buildFormatIdealAnswerSystemPrompt(): string {
+  return `You are an experienced, strict ICSI (Institute of Company Secretaries of India) Senior Examiner.
+Your task is to take the provided raw guideline/reference answer and format it into a clean, exam-ready model answer.
+
+GUIDELINES:
+1. Do NOT write or regenerate the answer from scratch. Use the facts, legal provisions, case laws, and arguments provided in the guideline answer.
+2. Structure the answer professionally using clear headings, numbered points, or tables where appropriate.
+3. Use bolding to highlight key legal terms, sections, and act names.
+4. Keep it concise, structured, and easy for an examiner to grade.
+
+OUTPUT FORMAT:
+Respond ONLY with a valid JSON object. No markdown. No backticks. No explanations before or after. Start with { and end with }.
+
+{
+  "model_answer": "Ideal structured exam-ready version of the guideline answer. Format with \\n for line breaks. Max 600 words."
+}
+
+STRICT JSON CONFIGURATION:
+- No unescaped newline characters inside string values. Use \\n to represent line breaks.
+- No raw double quotes inside string values. Use single quotes or escape them.
+- Do not add any preamble or markdown formatting like \`\`\`json. Return pure JSON string.`;
+}
+
+export function buildFormatIdealAnswerUserPrompt(params: {
+  subject: string;
+  question: string;
+  marks: number;
+  guidelineAnswer: string;
+}): string {
+  return `EXAMINATION DETAILS:
+Subject: ${params.subject}
+Total Marks: ${params.marks}
+
+QUESTION:
+"${params.question}"
+
+RAW GUIDELINE/REFERENCE ANSWER TO FORMAT:
+"${params.guidelineAnswer}"
+
+TASK:
+Format this raw guideline answer into a clean, exam-ready model answer matching the system instructions.`;
+}
+
+export function buildGenerateIdealAnswerSystemPrompt(): string {
+  return `You are an experienced, strict ICSI (Institute of Company Secretaries of India) Senior Examiner.
+Your task is to draft the official model answer for the given question from scratch.
+
+GUIDELINES:
+1. Draft a pointwise, topper-level model answer.
+2. Cite the exact relevant sections and acts (e.g. Companies Act 2013).
+3. Use clear headings, numbered lists, and bullet points.
+4. Keep the wording professional, precise, and structured.
+
+OUTPUT FORMAT:
+Respond ONLY with a valid JSON object. No markdown. No backticks. No explanations before or after. Start with { and end with }.
+
+{
+  "model_answer": "Point-wise model answer. Use clear headings, numbered lists, and bullet points. Format with \\n for line breaks. Max 600 words."
+}
+
+STRICT JSON CONFIGURATION:
+- No unescaped newline characters inside string values. Use \\n to represent line breaks.
+- No raw double quotes inside string values. Use single quotes or escape them.
+- Do not add any preamble or markdown formatting like \`\`\`json. Return pure JSON string.`;
+}
+
+export function buildGenerateIdealAnswerUserPrompt(params: {
+  subject: string;
+  question: string;
+  marks: number;
+}): string {
+  return `EXAMINATION DETAILS:
+Subject: ${params.subject}
+Total Marks: ${params.marks}
+
+QUESTION:
+"${params.question}"
+
+TASK:
+Generate the ideal pointwise model answer from scratch for this question.`;
 }

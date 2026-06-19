@@ -5,6 +5,7 @@ export interface RubricExpectedAnswer {
   key_points: string[];
   legal_provisions: string[];
   full_answer_summary: string;
+  keywords?: string[];
 }
 
 export interface RubricEvaluationCriteria {
@@ -15,6 +16,7 @@ export interface RubricEvaluationCriteria {
 }
 
 export interface RubricSubQuestion {
+  question_id?: string;
   sub_question: string;
   question_text: string;
   marks: number;
@@ -25,6 +27,7 @@ export interface RubricSubQuestion {
 
 export interface RubricMatchResult {
   matched: boolean;
+  question_id?: string;
   sub_question?: string;
   question_text?: string;
   marks?: number;
@@ -54,6 +57,18 @@ function computeSimilarity(text1: string, text2: string): number {
   const intersection = new Set([...set1].filter((x) => set2.has(x)));
   const union = new Set([...set1, ...set2]);
   return intersection.size / union.size;
+}
+
+export function extractQuestionNumber(text: string): string | null {
+  // Matches patterns like "1(a)", "q1(a)", "q 1(a)", "question 1(a)", "1a", "q1a", "question 1a"
+  const regex = /(?:question|q)?\s*(\d+)\s*\(?([a-g])\)?/i;
+  const match = text.match(regex);
+  if (match) {
+    const num = match[1];
+    const letter = match[2].toLowerCase();
+    return `${num}(${letter})`;
+  }
+  return null;
 }
 
 // Convert subject string to its slug folder name
@@ -166,14 +181,27 @@ export function retrieveRubric(
           if (item.sub_questions && Array.isArray(item.sub_questions)) {
             const caseContext = item.case_context || "";
             for (const subQ of item.sub_questions) {
-              const sim = computeSimilarity(questionText, subQ.question_text);
+              const qNumInput = extractQuestionNumber(questionText);
+              const qNumItem = subQ.sub_question ? extractQuestionNumber(subQ.sub_question) : null;
+              
+              let sim = 0;
+              if (qNumInput && qNumItem && qNumInput === qNumItem) {
+                sim = 1.0;
+              } else {
+                sim = computeSimilarity(questionText, subQ.question_text);
+              }
+              
               if (sim > maxSimilarity) {
                 maxSimilarity = sim;
                 bestMatch = {
+                  question_id: item.question_id,
                   sub_question: subQ.sub_question,
                   question_text: subQ.question_text,
                   marks: subQ.marks,
-                  expected_answer: subQ.expected_answer,
+                  expected_answer: {
+                    ...subQ.expected_answer,
+                    keywords: subQ.expected_answer.keywords || []
+                  },
                   evaluation_criteria: subQ.evaluation_criteria,
                   case_context: caseContext || undefined,
                 };
@@ -183,7 +211,16 @@ export function retrieveRubric(
           } 
           // New flat structure (each item is a sub-question itself)
           else if (item.question_text) {
-            const sim = computeSimilarity(questionText, item.question_text);
+            const qNumInput = extractQuestionNumber(questionText);
+            const qNumItem = item.question_number ? extractQuestionNumber(item.question_number) : null;
+            
+            let sim = 0;
+            if (qNumInput && qNumItem && qNumInput === qNumItem) {
+              sim = 1.0;
+            } else {
+              sim = computeSimilarity(questionText, item.question_text);
+            }
+            
             if (sim > maxSimilarity) {
               maxSimilarity = sim;
 
@@ -226,6 +263,7 @@ export function retrieveRubric(
               }
 
               bestMatch = {
+                question_id: item.question_id,
                 sub_question: item.question_number || "",
                 question_text: item.question_text,
                 marks: item.max_marks || 0,
@@ -233,6 +271,7 @@ export function retrieveRubric(
                   key_points: keyPoints,
                   legal_provisions: provList,
                   full_answer_summary: item.model_answer || "",
+                  keywords: item.keywords || []
                 },
                 evaluation_criteria: {
                   full_marks: fullMarksDesc,
@@ -256,6 +295,7 @@ export function retrieveRubric(
   if (bestMatch && maxSimilarity >= 0.25) {
     return {
       matched: true,
+      question_id: bestMatch.question_id,
       sub_question: bestMatch.sub_question,
       question_text: bestMatch.question_text,
       marks: bestMatch.marks,

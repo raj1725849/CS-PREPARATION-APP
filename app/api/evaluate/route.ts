@@ -2,9 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { getEvalModel, getGeminiKeyCount } from "@/lib/gemini"
 import {
   buildEvaluateSystemPrompt,
-  buildEvaluateUserPrompt,
-  buildModelAnswerSystemPrompt,
-  buildModelAnswerUserPrompt
+  buildEvaluateUserPrompt
 } from "@/lib/prompts"
 import { EvaluateRequest, EvaluateResponse, EvaluateError } from "@/lib/types"
 import { evaluateWithOpenRouter } from "@/lib/openrouter"
@@ -13,6 +11,17 @@ import { retrieveRubric } from "@/lib/rubric-retriever"
 import { verifyUserAndEnforceLimit } from "@/lib/firebase-server"
 
 export const maxDuration = 60
+
+function getQuestionHashId(questionText: string): string {
+  let hash = 0;
+  const normalized = questionText.toLowerCase().replace(/[^\w]/g, "");
+  for (let i = 0; i < normalized.length; i++) {
+    const char = normalized.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash;
+  }
+  return "Q_" + Math.abs(hash).toString(36);
+}
 
 async function generateJSONWithFallback(
   systemInstruction: string,
@@ -72,38 +81,108 @@ async function generateJSONWithFallback(
     try {
       parsedObj = JSON.parse(cleanJson);
     } catch (err) {
-      console.warn(`Direct JSON parsing failed for ${callName}, attempting repair...`);
+      console.warn(`Direct JSON parsing failed for ${callName}, attempting robust repair...`);
     }
   }
 
-  // Repair attempt
-  if (!parsedObj) {
-    const openBraces = (rawText.match(/\{/g) || []).length;
-    const closeBraces = (rawText.match(/\}/g) || []).length;
+  // Robust repair attempt
+  if (!parsedObj && jsonStart !== -1) {
+    const s = rawText.substring(jsonStart);
+    let inString = false;
+    let isEscaped = false;
+    const stack: ('{' | '[')[] = [];
+    let lastValidIndex = 0;
 
-    if (openBraces > closeBraces) {
-      console.warn(`Attempting JSON repair for ${callName}. Open/close braces: ${openBraces}/${closeBraces}. Length: ${rawText.length}`);
-      const stack: string[] = [];
-      const scanStart = jsonStart === -1 ? 0 : jsonStart;
-      for (let i = scanStart; i < rawText.length; i++) {
-        const char = rawText[i];
-        if (char === '{') stack.push('}');
-        else if (char === '[') stack.push(']');
-        else if (char === '}' && stack[stack.length - 1] === '}') stack.pop();
-        else if (char === ']' && stack[stack.length - 1] === ']') stack.pop();
+    for (let i = 0; i < s.length; i++) {
+      const char = s[i];
+      if (isEscaped) {
+        isEscaped = false;
+        continue;
       }
-      const repairSuffix = stack.reverse().join("");
-      const repaired = rawText + repairSuffix;
-      const repairedStart = repaired.indexOf('{');
-      const repairedEnd = repaired.lastIndexOf('}');
-      if (repairedStart !== -1 && repairedEnd !== -1) {
-        const cleanRepaired = repaired.substring(repairedStart, repairedEnd + 1);
-        try {
-          parsedObj = JSON.parse(cleanRepaired);
-          console.log(`JSON repair succeeded for ${callName} using stack traversal`);
-        } catch (repairErr) {
-          console.error(`Stack-based JSON repair failed for ${callName}:`, repairErr);
+      if (char === '\\') {
+        isEscaped = true;
+        continue;
+      }
+      if (char === '"') {
+        inString = !inString;
+        if (!inString) {
+          lastValidIndex = i + 1;
         }
+        continue;
+      }
+      if (!inString) {
+        if (char === '{' || char === '[') {
+          stack.push(char);
+          lastValidIndex = i + 1;
+        } else if (char === '}') {
+          if (stack[stack.length - 1] === '{') {
+            stack.pop();
+            lastValidIndex = i + 1;
+          }
+        } else if (char === ']') {
+          if (stack[stack.length - 1] === '[') {
+            stack.pop();
+            lastValidIndex = i + 1;
+          }
+        } else if (char === ',') {
+          lastValidIndex = i; // comma boundary is safe
+        }
+      }
+    }
+
+    // Attempt 1: Direct close of current string and braces
+    let repaired1 = s;
+    if (inString) {
+      repaired1 += '"';
+    }
+    let suffix1 = "";
+    for (let j = stack.length - 1; j >= 0; j--) {
+      suffix1 += stack[j] === '{' ? '}' : ']';
+    }
+    repaired1 += suffix1;
+
+    try {
+      parsedObj = JSON.parse(repaired1);
+      console.log(`Robust JSON repair (Attempt 1: Direct Close) succeeded for ${callName}`);
+    } catch (err) {
+      console.warn(`Robust JSON repair (Attempt 1) failed, attempting backtrack...`);
+    }
+
+    // Attempt 2: Backtrack to last safe boundary
+    if (!parsedObj && lastValidIndex > 0) {
+      const cleanSub = s.substring(0, lastValidIndex);
+      const subStack: ('{' | '[')[] = [];
+      let subInString = false;
+      let subEscaped = false;
+
+      for (let i = 0; i < cleanSub.length; i++) {
+        const char = cleanSub[i];
+        if (subEscaped) { subEscaped = false; continue; }
+        if (char === '\\') { subEscaped = true; continue; }
+        if (char === '"') { subInString = !subInString; continue; }
+        if (!subInString) {
+          if (char === '{' || char === '[') subStack.push(char);
+          else if (char === '}') { if (subStack[subStack.length - 1] === '{') subStack.pop(); }
+          else if (char === ']') { if (subStack[subStack.length - 1] === '[') subStack.pop(); }
+        }
+      }
+
+      let repaired2 = cleanSub.trim();
+      if (repaired2.endsWith(',')) {
+        repaired2 = repaired2.slice(0, -1).trim();
+      }
+
+      let suffix2 = "";
+      for (let j = subStack.length - 1; j >= 0; j--) {
+        suffix2 += subStack[j] === '{' ? '}' : ']';
+      }
+      repaired2 += suffix2;
+
+      try {
+        parsedObj = JSON.parse(repaired2);
+        console.log(`Robust JSON repair (Attempt 2: Backtrack) succeeded for ${callName}`);
+      } catch (err2) {
+        console.error(`Robust JSON repair (Attempt 2) failed as well for ${callName}:`, err2);
       }
     }
   }
@@ -181,20 +260,7 @@ export async function POST(req: NextRequest) {
       rubric
     });
 
-    const systemInstructionModel = buildModelAnswerSystemPrompt();
-    const userPromptModel = buildModelAnswerUserPrompt({
-      subject: resolvedSubject,
-      question: rubric.matched && rubric.question_text ? rubric.question_text : question,
-      marks: finalMarks,
-      studentAnswer,
-      rubric
-    });
-
-    // Run both calls in parallel!
-    const [evalData, modelData] = await Promise.all([
-      generateJSONWithFallback(systemInstructionEval, userPromptEval, "Evaluation", finalMarks),
-      generateJSONWithFallback(systemInstructionModel, userPromptModel, "ModelAnswer", finalMarks)
-    ]);
+    const evalData = await generateJSONWithFallback(systemInstructionEval, userPromptEval, "Evaluation", finalMarks);
 
     const scorePercent = (evalData.marks_awarded / evalData.total_marks) * 100
     const verdict = scorePercent >= 60
@@ -203,51 +269,24 @@ export async function POST(req: NextRequest) {
       ? "Borderline Pass"
       : "Fail"
 
+    const resolvedQuestionId = rubric.matched && rubric.question_id
+      ? rubric.question_id
+      : getQuestionHashId(question);
+
     const parsed: EvaluateResponse = {
       marks_awarded: evalData.marks_awarded ?? 0,
       total_marks: evalData.total_marks ?? finalMarks,
       score_percentage: Math.round(scorePercent * 10) / 10,
       verdict,
+      chapter: evalData.chapter ?? "General",
+      improvement_suggestion: evalData.improvement_suggestion ?? "",
+      questionId: resolvedQuestionId,
+      questionNumber: rubric.matched ? rubric.sub_question : undefined,
       deductions: evalData.deductions ?? [],
-      model_answer: modelData.model_answer ?? "",
-      evaluated_at: new Date().toISOString(),
-      question_analysis: evalData.question_analysis ?? {
-        question_type: "Unknown",
-        relevant_acts: [],
-        mandatory_sections: [],
-        mandatory_keywords: [],
-        expected_case_laws: [],
-        expected_structure: ""
-      },
-      answer_found: evalData.answer_found ?? true,
-      answer_identification_note: evalData.answer_identification_note ?? "",
-      keywords_found: evalData.keywords_found ?? [],
-      keywords_missing: evalData.keywords_missing ?? [],
-      sections_found: evalData.sections_found ?? [],
-      sections_missing: evalData.sections_missing ?? [],
-      acts_found: evalData.acts_found ?? [],
-      acts_missing: evalData.acts_missing ?? [],
-      examiner_note: evalData.examiner_note ?? "",
-      evaluation_summary: evalData.evaluation_summary ?? "",
-      correctly_covered_points: evalData.correctly_covered_points ?? [],
-      missing_points: evalData.missing_points ?? [],
-      missing_keywords: evalData.missing_keywords ?? [],
-      irrelevant_content: evalData.irrelevant_content ?? [],
-      mark_deduction_analysis: evalData.mark_deduction_analysis ?? [],
-      icsi_examiner_feedback: evalData.icsi_examiner_feedback ?? [],
-      what_you_should_add: modelData.what_you_should_add ?? [],
-      what_you_should_remove: modelData.what_you_should_remove ?? [],
-      writing_analysis: evalData.writing_analysis ?? {
-        structure: "",
-        presentation: "",
-        relevance: "",
-        legal_language: "",
-        use_of_keywords: "",
-        completeness: ""
-      },
       strengths: evalData.strengths ?? [],
-      weaknesses: evalData.weaknesses ?? [],
-      improvement_plan: evalData.improvement_plan ?? []
+      missing_points: evalData.missing_points ?? [],
+      keywords_missing: evalData.keywords_missing ?? [],
+      evaluated_at: new Date().toISOString()
     };
 
     return NextResponse.json(parsed, { status: 200 })
