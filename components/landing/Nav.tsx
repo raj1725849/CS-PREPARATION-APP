@@ -12,7 +12,7 @@ export default function Nav() {
   const background = useTransform(
     scrollY,
     [0, 60],
-    ["rgba(11, 14, 26, 0)", "rgba(11, 14, 26, 0.9)"]
+    ["rgba(10, 35, 28, 0)", "rgba(10, 35, 28, 0.95)"]
   );
   const backdropBlur = useTransform(
     scrollY,
@@ -22,7 +22,7 @@ export default function Nav() {
   const borderBottom = useTransform(
     scrollY,
     [0, 60],
-    ["1px solid rgba(79, 110, 247, 0)", "1px solid rgba(79, 110, 247, 0.12)"]
+    ["1px solid rgba(232, 242, 158, 0)", "1px solid rgba(232, 242, 158, 0.1)"]
   );
 
   const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -55,7 +55,7 @@ export default function Nav() {
               <motion.button
                 whileHover={{ y: -1, scale: 1.02 }}
                 transition={{ ease }}
-                className="bg-gradient-to-r from-lp-accent to-[#6b85ff] hover:from-lp-accent-hover hover:to-[#4a6aff] text-white px-5 py-2.5 rounded-[14px] text-[14px] font-medium transition-all shadow-[0_4px_14px_0_rgba(79,110,247,0.39)] hover:shadow-[0_6px_20px_rgba(79,110,247,0.23)]"
+                className="bg-lp-accent hover:bg-lp-accent-hover text-[#0A231C] px-5 py-2.5 rounded-[12px] text-[14px] font-bold transition-all shadow-[0_4px_14px_0_rgba(232,242,158,0.2)]"
               >
                 Get Started
               </motion.button>
@@ -107,7 +107,7 @@ export default function Nav() {
             <Link href="/login?signup=true" onClick={() => setIsOpen(false)} className="w-full mt-2">
               <motion.button
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-lp-accent to-[#6b85ff] text-white py-3 rounded-[14px] text-[15px] font-medium shadow-[0_4px_14px_0_rgba(79,110,247,0.39)]"
+                className="w-full bg-lp-accent text-[#0A231C] py-3 rounded-[12px] text-[15px] font-bold shadow-[0_4px_14px_0_rgba(232,242,158,0.2)]"
               >
                 Get Started
               </motion.button>

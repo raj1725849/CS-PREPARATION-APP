@@ -218,9 +218,9 @@ export default function EvaluatePage() {
       const idToken = await auth.currentUser?.getIdToken();
       
       // Compress images before sending to OCR to avoid payload too large (413) or out-of-memory errors
-      // Use higher max width (1600) and quality (0.8) to maintain high OCR quality for handwriting
+      // Use optimized max width (1200) and quality (0.6) to keep quality high but significantly reduce payload size
       const compressedImagesForOCR = await Promise.all(
-        uploadedImages.map(img => compressBase64(img.base64, 1600, 0.8))
+        uploadedImages.map(img => compressBase64(img.base64, 1200, 0.6))
       );
 
       const res = await fetch("/api/extract", {
@@ -390,6 +390,17 @@ export default function EvaluatePage() {
                 onImagesReady={(images) => setUploadedImages(images)} 
                 maxImages={10} 
               />
+              
+              <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 text-[11px] text-slate-600 space-y-1.5 mt-2">
+                <div className="font-bold text-[#0f2640] flex items-center gap-1.5">
+                  <span>💡</span> Tips for best transcription accuracy:
+                </div>
+                <ul className="list-disc pl-4 space-y-1 text-slate-500 leading-normal">
+                  <li>Take photos in <strong>good, clear lighting</strong> (avoid dark shadows).</li>
+                  <li>Hold the camera <strong>flat and steady</strong> to prevent motion blur.</li>
+                  <li>Ensure the pages are <strong>upright</strong> (not rotated or sideways).</li>
+                </ul>
+              </div>
             </div>
 
             <div className="pt-4">

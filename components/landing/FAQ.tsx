@@ -46,7 +46,7 @@ export default function FAQ() {
             className="text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.2] font-bold font-sora text-lp-text tracking-tight"
             style={{ willChange: "transform" }}
           >
-            Honest answers.
+            Honest <span className="font-playfair-italic text-lp-accent font-normal">answers.</span>
           </motion.h2>
         </div>
 

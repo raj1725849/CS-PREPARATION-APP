@@ -6,7 +6,7 @@ export default function Chip({ children, className }: { children: ReactNode; cla
     <span
       className={cn(
         "inline-flex items-center px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.08em] font-medium",
-        "bg-[rgba(79,110,247,0.12)] text-[#7B96FF] border border-[rgba(79,110,247,0.2)]",
+        "bg-[rgba(232,242,158,0.08)] text-lp-accent border border-[rgba(232,242,158,0.15)]",
         className
       )}
     >

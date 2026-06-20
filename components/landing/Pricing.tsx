@@ -87,7 +87,7 @@ export default function Pricing() {
           className="text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.2] font-bold font-sora text-lp-text tracking-tight max-w-[700px] mb-6"
           style={{ willChange: "transform" }}
         >
-          Invest in your CS career. <GradientText>Pick your plan.</GradientText>
+          Invest in your CS career. <span className="font-playfair-italic text-lp-accent font-normal">Pick your plan.</span>
         </motion.h2>
 
         <motion.p
@@ -113,8 +113,8 @@ export default function Pricing() {
             className={cn(
               "relative flex flex-col p-8 rounded-[20px] transition-all duration-300",
               plan.highlight 
-                ? "bg-[rgba(79,110,247,0.05)] border-2 border-lp-accent md:scale-[1.04] md:-translate-y-2 z-10 shadow-[0_20px_50px_rgba(79,110,247,0.12)]" 
-                : "bg-lp-bg-card border border-lp-border-subtle hover:border-[rgba(79,110,247,0.3)] hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.05)]"
+                ? "bg-[rgba(232,242,158,0.03)] border-2 border-lp-accent md:scale-[1.04] md:-translate-y-2 z-10 shadow-[0_20px_50px_rgba(232,242,158,0.08)]" 
+                : "bg-lp-bg-card border border-lp-border-subtle hover:border-[rgba(232,242,158,0.3)] hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.05)]"
             )}
             style={{ willChange: "transform" }}
           >
@@ -149,10 +149,10 @@ export default function Pricing() {
                 whileTap={{ scale: 0.98 }}
                 transition={{ ease }}
                 className={cn(
-                  "relative w-full py-3.5 rounded-[14px] text-[15px] font-semibold transition-all duration-300 cursor-pointer",
+                  "relative w-full py-3.5 rounded-[12px] text-[15px] font-bold transition-all duration-300 cursor-pointer",
                   plan.highlight
-                    ? "bg-gradient-to-r from-lp-accent to-[#6b85ff] hover:from-lp-accent-hover hover:to-[#4a6aff] text-white shadow-[0_4px_14px_0_rgba(79,110,247,0.39)] hover:shadow-[0_6px_20px_rgba(79,110,247,0.3)] border border-[rgba(255,255,255,0.1)]"
-                    : "bg-transparent border border-lp-border-medium hover:border-lp-accent text-lp-text hover:bg-[rgba(79,110,247,0.08)]"
+                    ? "bg-lp-accent hover:bg-lp-accent-hover text-[#0A231C] shadow-[0_4px_14px_0_rgba(232,242,158,0.25)] hover:shadow-[0_6px_20px_rgba(232,242,158,0.3)]"
+                    : "bg-transparent border border-lp-border-medium hover:border-lp-accent text-lp-text hover:bg-[rgba(232,242,158,0.05)]"
                 )}
               >
                 {plan.ctaText}

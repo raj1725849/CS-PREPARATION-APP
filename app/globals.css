@@ -37,17 +37,17 @@
   --spacing-margin_mobile: 16px;
   --spacing-margin_desktop: 64px;
   /* Landing Page Tokens */
-  --color-lp-bg: #0B0E1A;
-  --color-lp-bg-card: #10142B;
-  --color-lp-bg-alt: #0D1020;
-  --color-lp-accent: #4F6EF7;
-  --color-lp-accent-hover: #3D57DC;
-  --color-lp-text: #F4F6FF;
-  --color-lp-muted: #8A9BC8;
-  --color-lp-dim: #6475A0;
-  --color-lp-verydim: #4D5E8A;
-  --color-lp-border-subtle: rgba(79, 110, 247, 0.1);
-  --color-lp-border-medium: rgba(79, 110, 247, 0.25);
+  --color-lp-bg: #0A231C;
+  --color-lp-bg-card: #0e352a;
+  --color-lp-bg-alt: #061814;
+  --color-lp-accent: #E8F29E;
+  --color-lp-accent-hover: #d9e28f;
+  --color-lp-text: #FFFFFF;
+  --color-lp-muted: #a8bcb5;
+  --color-lp-dim: #7a8e87;
+  --color-lp-verydim: #52635d;
+  --color-lp-border-subtle: rgba(232, 242, 158, 0.08);
+  --color-lp-border-medium: rgba(232, 242, 158, 0.2);
 }
 
 html {
@@ -69,6 +69,11 @@ body {
 .bg-lp-bg-card { background-color: var(--color-lp-bg-card) !important; }
 .bg-lp-bg-alt { background-color: var(--color-lp-bg-alt) !important; }
 .text-lp-accent { color: var(--color-lp-accent) !important; }
+
+.font-playfair-italic {
+  font-family: var(--font-display), serif;
+  font-style: italic;
+}
 
 .reveal {
   opacity: 0;

@@ -31,7 +31,7 @@ export default function CallToAction() {
         <Chip className="mb-6">Get Started</Chip>
         
         <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.1] font-bold font-sora text-lp-text tracking-tight mb-6">
-          Your exams are <GradientText>closer than you think.</GradientText>
+          Your exams are <span className="font-playfair-italic text-lp-accent font-normal">closer than you think.</span>
         </h2>
         
         <p className="text-[0.95rem] md:text-[1rem] text-lp-muted max-w-[500px] mb-10 leading-[1.7]">
@@ -45,8 +45,8 @@ export default function CallToAction() {
             transition={{ ease }}
             className="relative w-full sm:w-auto group"
           >
-            <div className="absolute inset-0 bg-lp-accent blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-500 rounded-[14px]"></div>
-            <div className="relative bg-gradient-to-r from-lp-accent to-[#6b85ff] text-white px-10 py-4 rounded-[14px] text-[16px] font-semibold tracking-wide transition-all duration-300 shadow-[0_8px_30px_rgb(79,110,247,0.3)] group-hover:shadow-[0_8px_30px_rgb(79,110,247,0.5)] border border-[rgba(255,255,255,0.1)]">
+            <div className="absolute inset-0 bg-lp-accent blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 rounded-[12px]"></div>
+            <div className="relative bg-lp-accent text-[#0A231C] px-10 py-4 rounded-[12px] text-[16px] font-bold tracking-wide transition-all duration-300 shadow-[0_8px_30px_rgba(232,242,158,0.25)] group-hover:shadow-[0_8px_30px_rgba(232,242,158,0.4)]">
               {"Get Started — It's Free"}
             </div>
           </motion.button>

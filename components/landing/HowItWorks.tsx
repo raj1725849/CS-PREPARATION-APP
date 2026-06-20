@@ -60,7 +60,7 @@ export default function HowItWorks() {
             className="text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.2] font-bold font-sora text-lp-text tracking-tight mb-6"
             style={{ willChange: "transform" }}
           >
-            From syllabus to exam-ready in <GradientText>four steps.</GradientText>
+            From syllabus to exam-ready in <span className="font-playfair-italic text-lp-accent font-normal">four steps.</span>
           </motion.h2>
         </div>
  

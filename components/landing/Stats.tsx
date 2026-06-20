@@ -48,7 +48,7 @@ export default function Stats() {
               className="flex flex-col items-center text-center"
               style={{ willChange: "transform" }}
             >
-              <div className="text-[2rem] md:text-[2.5rem] font-bold font-sora text-lp-text mb-2">
+              <div className="text-[2rem] md:text-[2.5rem] font-bold font-sora text-lp-accent mb-2">
                 {stat.prefix}
                 <Counter from={0} to={stat.value} />
                 {stat.suffix}
