@@ -129,8 +129,10 @@ export async function POST(req: NextRequest) {
 
   const { subject, question, questionId, marks } = body;
 
-  if (!subject || !question?.trim() || !questionId?.trim() || !marks) {
-    return NextResponse.json({ error: "Missing required fields: subject, question, questionId, marks" }, { status: 400 });
+  if (!subject || typeof question !== "string" || !question.trim() || typeof questionId !== "string" || !questionId.trim() || marks === undefined || marks === null) {
+    return NextResponse.json({ 
+      error: `Missing required fields: subject, question, questionId, marks. Received: subject=${subject}, question=${!!question}, questionId=${!!questionId}, marks=${marks}` 
+    }, { status: 400 });
   }
 
   const resolvedSubject = resolveSubjectName(subject);

@@ -230,9 +230,9 @@ export async function POST(req: NextRequest) {
 
   const { subject, question, marks, studentAnswer } = body
 
-  if (!subject || !question?.trim() || !marks || !studentAnswer?.trim()) {
+  if (!subject || typeof question !== "string" || !question.trim() || marks === undefined || marks === null || typeof studentAnswer !== "string" || !studentAnswer.trim()) {
     return NextResponse.json<EvaluateError>(
-      { error: "Missing required fields: subject, question, marks, studentAnswer", code: "INVALID_REQUEST" },
+      { error: `Missing required fields: subject, question, marks, studentAnswer. Received: subject=${subject}, question=${!!question}, marks=${marks}, studentAnswer=${!!studentAnswer}`, code: "INVALID_REQUEST" },
       { status: 400 }
     )
   }
