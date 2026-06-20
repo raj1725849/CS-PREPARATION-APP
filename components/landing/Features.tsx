@@ -15,10 +15,10 @@ export default function Features() {
   });
 
   // Calculate the y translation for the cards.
-  // We have 3 cards, each styled to have exactly 450px height.
-  // The viewport height is 450px.
-  // Total translation range: 0 to -900px.
-  const y = useTransform(scrollYProgress, [0, 1], ["0px", "-900px"]);
+  // We have 3 cards, each styled to have exactly 380px height.
+  // The viewport height is 380px.
+  // Total translation range: 0 to -760px.
+  const y = useTransform(scrollYProgress, [0, 1], ["0px", "-760px"]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (latest < 0.33) {
@@ -72,9 +72,9 @@ export default function Features() {
       ref={containerRef} 
       className="relative h-[300vh] w-full"
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center py-20 z-10">
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center py-6 z-10">
         {/* Editorial Header */}
-        <div className="flex flex-col items-center text-center mb-10 shrink-0 px-6">
+        <div className="flex flex-col items-center text-center mb-6 shrink-0 px-6">
           <Chip className="mb-4">AI Tutor Capabilities</Chip>
           <h2 
             className="text-[clamp(1.8rem,4vw,2.5rem)] leading-tight font-bold font-sora text-lp-text tracking-tight max-w-[800px] mb-4"
@@ -87,17 +87,17 @@ export default function Features() {
         </div>
 
         {/* Two-Column Grid container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-[1000px] mx-auto px-6 h-[500px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-[1000px] mx-auto px-6 h-[400px]">
           
           {/* Left Column: Sliding cards */}
-          <div className="h-[450px] overflow-hidden relative w-full pr-4">
+          <div className="h-[380px] overflow-hidden relative w-full pr-4">
             <motion.div style={{ y }} className="flex flex-col gap-0">
               {features.map((feature, i) => {
                 const isActive = activeIndex === i;
                 return (
                   <div
                     key={i}
-                    className="h-[450px] flex flex-col justify-center transition-all duration-500 py-6"
+                    className="h-[380px] flex flex-col justify-center transition-all duration-500 py-6"
                   >
                     <div 
                       className={`transition-all duration-500 origin-left ${
@@ -131,7 +131,7 @@ export default function Features() {
           </div>
 
           {/* Right Column: Sticky Mockup Visual Showcase */}
-          <div className="w-full aspect-[4/3] rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 min-h-[350px] md:min-h-[420px] z-10 backdrop-blur-md">
+          <div className="w-full h-[380px] rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 z-10 backdrop-blur-md">
           <AnimatePresence mode="wait">
             
             {/* Visual 0: Answer Evaluation Panel */}
