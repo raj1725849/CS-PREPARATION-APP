@@ -10,7 +10,7 @@ import Footer from "@/components/landing/Footer";
 
 export default function LandingPage() {
   return (
-    <main className="bg-lp-bg text-lp-text min-h-screen font-inter flex flex-col relative overflow-x-hidden">
+    <main className="bg-lp-bg text-lp-text min-h-screen font-inter flex flex-col relative overflow-x-clip">
       <Nav />
       <Hero />
       <Stats />
