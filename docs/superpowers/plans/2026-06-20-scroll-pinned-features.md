@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Implement fullscreen scroll-pinning and synchronous animations for the features showcase in `Features.tsx` using Framer Motion's `useScroll` and CSS `sticky` layout.
+**Goal:** Implement fullscreen scroll-pinning and height-optimized animations for the features showcase in `Features.tsx` using Framer Motion's `useScroll` and CSS `sticky` layout.
 
-**Architecture:** Wrap the features showcase in a `300vh` scroll track container. Pin the grid viewport at the top of the screen (`sticky top-0 h-screen`). Map the `scrollYProgress` using `useTransform` to translate the left-column text cards vertically, and update the active mockup screen index dynamically as the user scrolls.
+**Architecture:** Wrap the features showcase in a `300vh` scroll track container. Pin the grid viewport at the top of the screen (`sticky top-0 h-screen`). Map the `scrollYProgress` using `useTransform` to translate the left-column text cards vertically, and update the active mockup screen index dynamically as the user scrolls. Use spacing of ~600px total height to prevent clipping on viewports under 768px.
 
 **Tech Stack:** React 19, Next.js 16 (App Router), Framer Motion 12, Tailwind CSS 4
 
@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `components/landing/Features.tsx`
 
-- [ ] **Step 1: Set up the outer scroll-track and sticky viewport containers**
+- [ ] **Step 1: Set up the outer scroll-track and sticky viewport containers with optimized spacing**
   Modify the `Features` component JSX structure to wrap the grid in a `300vh` track and a `sticky` full-screen viewport. Update `components/landing/Features.tsx` with:
   ```tsx
   export default function Features() {
@@ -28,9 +28,9 @@
         ref={containerRef} 
         className="relative h-[300vh] w-full"
       >
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center py-20 z-10">
+        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center py-6 z-10">
           {/* Editorial Header */}
-          <div className="flex flex-col items-center text-center mb-10 shrink-0 px-6">
+          <div className="flex flex-col items-center text-center mb-6 shrink-0 px-6">
             <Chip className="mb-4">AI Tutor Capabilities</Chip>
             <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] leading-tight font-bold font-sora text-lp-text tracking-tight max-w-[800px] mb-4">
               Supercharge <span className="font-playfair-italic text-lp-accent font-normal">your prep</span> with Active Intelligence.
@@ -41,7 +41,7 @@
           </div>
 
           {/* Two-Column Grid container */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-[1000px] mx-auto px-6 h-[500px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-[1000px] mx-auto px-6 h-[400px]">
             {/* Left and Right Columns will go here */}
           </div>
         </div>
@@ -80,15 +80,15 @@
   });
 
   // Map scroll progress (0 to 1) to vertical transform of the card wrapper
-  // With 3 cards of height 450px, we translate the wrapper up by 0px to -900px
-  const y = useTransform(scrollYProgress, [0, 1], ["0px", "-900px"]);
+  // With 3 cards of height 380px, we translate the wrapper up by 0px to -760px
+  const y = useTransform(scrollYProgress, [0, 1], ["0px", "-760px"]);
   ```
 
 - [ ] **Step 2: Update left column layout to use fixed window and motion.div**
-  Modify the left column wrapper in `Features.tsx` to define a fixed-height window (`h-[450px] overflow-hidden relative`) and make the inner card wrapper a `motion.div` styled with the vertical `y` transform:
+  Modify the left column wrapper in `Features.tsx` to define a fixed-height window (`h-[380px] overflow-hidden relative`) and make the inner card wrapper a `motion.div` styled with the vertical `y` transform:
   ```tsx
   {/* Left Column: Sliding cards */}
-  <div className="h-[450px] overflow-hidden relative w-full pr-4">
+  <div className="h-[380px] overflow-hidden relative w-full pr-4">
     <motion.div style={{ y }} className="flex flex-col gap-0">
       {features.map((feature, i) => {
         // Since we are translating, focus is determined by activeIndex updated in Task 3
@@ -96,7 +96,7 @@
         return (
           <div
             key={i}
-            className="h-[450px] flex flex-col justify-center transition-all duration-500 py-6"
+            className="h-[380px] flex flex-col justify-center transition-all duration-500 py-6"
           >
             <div 
               className={`transition-all duration-500 origin-left ${
@@ -142,7 +142,7 @@
 
 ---
 
-### Task 3: Mockup Transition State Updates
+### Task 3: Mockup Transition State and Layout Updates
 
 **Files:**
 - Modify: `components/landing/Features.tsx`
@@ -161,8 +161,12 @@
   });
   ```
 
-- [ ] **Step 2: Clean up unused code and verify imports**
-  Remove any unused React `useEffect` hooks and the `CheckCircle2`, `FileText`, `BarChart3`, `AlertCircle`, `ArrowUpRight` imports if any are no longer needed (keep those used in the mockup layouts).
+- [ ] **Step 2: Update right mockup container size**
+  Change the right column container to height `h-[380px]` (replacing `aspect-[4/3]` and `min-h-[420px]`) so it aligns with the card height perfectly and prevents overflow:
+  ```tsx
+  {/* Right Column: Mockup Visual Showcase */}
+  <div className="w-full h-[380px] rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 z-10 backdrop-blur-md">
+  ```
 
 - [ ] **Step 3: Run verification tests**
   Run: `npx tsc --noEmit`
