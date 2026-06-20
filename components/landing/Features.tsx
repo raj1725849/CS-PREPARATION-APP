@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Chip from "../ui/Chip";
 import { CheckCircle2, FileText, BarChart3, AlertCircle, ArrowUpRight } from "lucide-react";
 
@@ -9,31 +9,26 @@ export default function Features() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer to track active feature scroll card
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute("data-index") || "0");
-            setActiveIndex(index);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "-25% 0px -45% 0px", // Trigger when the section reaches the center of the viewport
-        threshold: 0.2,
-      }
-    );
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
 
-    const cards = document.querySelectorAll(".feature-scroll-card");
-    cards.forEach((card) => observer.observe(card));
+  // Calculate the y translation for the cards.
+  // We have 3 cards, each styled to have exactly 450px height.
+  // The viewport height is 450px.
+  // Total translation range: 0 to -900px.
+  const y = useTransform(scrollYProgress, [0, 1], ["0px", "-900px"]);
 
-    return () => {
-      cards.forEach((card) => observer.unobserve(card));
-    };
-  }, []);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest < 0.33) {
+      setActiveIndex(0);
+    } else if (latest < 0.66) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(2);
+    }
+  });
 
   const features = [
     {
@@ -72,65 +67,71 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="px-6 py-20 md:py-28 max-w-[1000px] mx-auto w-full relative z-10">
-      {/* Editorial Header */}
-      <div className="flex flex-col items-center text-center mb-16 md:mb-24">
-        <Chip className="mb-6">AI Tutor Capabilities</Chip>
-        <h2 
-          className="text-[clamp(1.8rem,4.5vw,3rem)] leading-[1.15] font-bold font-sora text-lp-text tracking-tight max-w-[800px] mb-6"
-        >
-          Supercharge <span className="font-playfair-italic text-lp-accent font-normal">your prep</span> with Active Intelligence.
-        </h2>
-        <p className="text-[14px] md:text-[16px] text-lp-muted max-w-[580px] leading-relaxed">
-          Specifically tuned for the ICSI syllabus. No generic explanations, just rigorous preparation tailored for CS candidates.
-        </p>
-      </div>
-
-      {/* Two-Column Sticky Scroll Layout */}
-      <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start relative">
-        
-        {/* Left Column: Scrollable cards */}
-        <div className="space-y-4 lg:pr-4">
-          {features.map((feature, i) => {
-            const isActive = activeIndex === i;
-            return (
-              <div
-                key={i}
-                data-index={i}
-                className="feature-scroll-card min-h-[55vh] flex flex-col justify-center transition-all duration-500 py-12 first:pt-0 last:pb-16"
-              >
-                <div 
-                  className={`transition-all duration-500 origin-left ${
-                    isActive 
-                      ? "opacity-100 scale-100 translate-x-2" 
-                      : "opacity-30 scale-95 translate-x-0 pointer-events-none lg:pointer-events-auto"
-                  }`}
-                >
-                  <span className="text-xs uppercase tracking-[0.15em] font-bold text-lp-accent bg-lp-accent/10 px-3 py-1.5 rounded-lg border border-lp-accent/20 mb-4 inline-block">
-                    {feature.chip}
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-bold font-sora text-lp-text mt-2 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[14px] md:text-[15px] text-lp-muted leading-[1.7] mb-6">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {feature.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs md:text-sm text-lp-muted">
-                        <CheckCircle2 size={16} className="text-lp-accent mt-0.5 shrink-0" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
+    <section 
+      id="features" 
+      ref={containerRef} 
+      className="relative h-[300vh] w-full"
+    >
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center py-20 z-10">
+        {/* Editorial Header */}
+        <div className="flex flex-col items-center text-center mb-10 shrink-0 px-6">
+          <Chip className="mb-4">AI Tutor Capabilities</Chip>
+          <h2 
+            className="text-[clamp(1.8rem,4vw,2.5rem)] leading-tight font-bold font-sora text-lp-text tracking-tight max-w-[800px] mb-4"
+          >
+            Supercharge <span className="font-playfair-italic text-lp-accent font-normal">your prep</span> with Active Intelligence.
+          </h2>
+          <p className="text-[13px] md:text-[14px] text-lp-muted max-w-[580px] leading-relaxed">
+            Specifically tuned for the ICSI syllabus. No generic explanations, just rigorous preparation tailored for CS candidates.
+          </p>
         </div>
 
-        {/* Right Column: Sticky Mockup Visual Showcase */}
-        <div className="lg:sticky lg:top-[120px] w-full aspect-[4/3] rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 min-h-[350px] md:min-h-[420px] z-10 backdrop-blur-md">
+        {/* Two-Column Grid container */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-[1000px] mx-auto px-6 h-[500px]">
+          
+          {/* Left Column: Sliding cards */}
+          <div className="h-[450px] overflow-hidden relative w-full pr-4">
+            <motion.div style={{ y }} className="flex flex-col gap-0">
+              {features.map((feature, i) => {
+                const isActive = activeIndex === i;
+                return (
+                  <div
+                    key={i}
+                    className="h-[450px] flex flex-col justify-center transition-all duration-500 py-6"
+                  >
+                    <div 
+                      className={`transition-all duration-500 origin-left ${
+                        isActive 
+                          ? "opacity-100 scale-100 translate-x-2" 
+                          : "opacity-20 scale-95 translate-x-0"
+                      }`}
+                    >
+                      <span className="text-xs uppercase tracking-[0.15em] font-bold text-lp-accent bg-lp-accent/10 px-3 py-1.5 rounded-lg border border-lp-accent/20 mb-4 inline-block">
+                        {feature.chip}
+                      </span>
+                      <h3 className="text-xl md:text-2xl font-bold font-sora text-lp-text mt-2 mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-[13px] md:text-[14px] text-lp-muted leading-[1.6] mb-5">
+                        {feature.description}
+                      </p>
+                      <ul className="space-y-2.5">
+                        {feature.bullets.map((bullet, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-[11px] md:text-xs text-lp-muted">
+                            <CheckCircle2 size={14} className="text-lp-accent mt-0.5 shrink-0" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </div>
+
+          {/* Right Column: Sticky Mockup Visual Showcase */}
+          <div className="w-full aspect-[4/3] rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 min-h-[350px] md:min-h-[420px] z-10 backdrop-blur-md">
           <AnimatePresence mode="wait">
             
             {/* Visual 0: Answer Evaluation Panel */}
@@ -340,6 +341,7 @@ export default function Features() {
           </AnimatePresence>
         </div>
 
+      </div>
       </div>
     </section>
   );
