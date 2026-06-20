@@ -37,10 +37,46 @@ export interface GenerateRequest {
   difficulty: DifficultyLevel
 }
 
+export interface ParsedQuestion {
+  questionNumber: string            // e.g. "1(a)", "Q2"
+  questionText: string
+  marks: number
+  questionId: string                // unique Firebase-backed ID
+}
+
+export interface QuestionDocument {
+  questionId: string
+  userId: string
+  subject: string
+  questionText: string
+  marks: number
+  source: "generated" | "manual" | "rubric"
+  paperId?: string                  // links to GenerateSession.id
+  rubricQuestionId?: string         // e.g. "CLP_DEC2023_2022_Q1A"
+  textHash: string                  // for dedup lookups
+  createdAt: string                 // ISO timestamp
+}
+
+export interface EvaluationDocument {
+  evaluationId: string
+  userId: string
+  questionId: string
+  subject: string
+  questionText: string
+  studentAnswer: string
+  marksAwarded: number
+  totalMarks: number
+  scorePercentage: number
+  verdict: "Pass" | "Borderline Pass" | "Fail"
+  sessionId: string                 // links to EvaluateSession.id
+  createdAt: string                 // ISO timestamp
+}
+
 export interface GenerateResponse {
   paper: string
   subject: SubjectName
   generatedAt: string             // ISO timestamp
+  questions?: ParsedQuestion[]    // parsed individual questions
 }
 
 export interface GenerateError {
@@ -52,7 +88,7 @@ export interface EvaluateRequest {
   subject: SubjectName
   question: string
   questionNumber?: string         // e.g. "Q3" or "Q3(b)" — optional
-  marks: number                   // 5 | 7 | 10 | 15 | 20
+  marks?: number                  // Optional — auto-detected from rubric match. Only required as fallback when rubric not found.
   studentAnswer: string           // Verified student answer text
 }
 
@@ -88,7 +124,7 @@ export interface EvaluateResponse {
   score_percentage: number
   chapter: string
   improvement_suggestion: string
-  questionId?: string
+  questionId: string
   questionNumber?: string
   deductions?: EnhancedDeduction[]
   model_answer?: string
@@ -127,7 +163,7 @@ export interface EvaluateResponse {
 
 export interface EvaluateError {
   error: string
-  code: "INVALID_REQUEST" | "NO_IMAGES" | "PARSE_ERROR" | "GEMINI_ERROR" | "TRUNCATED_RESPONSE" | "UNKNOWN"
+  code: "INVALID_REQUEST" | "NO_IMAGES" | "PARSE_ERROR" | "GEMINI_ERROR" | "TRUNCATED_RESPONSE" | "RUBRIC_NOT_FOUND" | "UNKNOWN"
 }
 
 export interface GenerateSession {
@@ -141,6 +177,7 @@ export interface GenerateSession {
   difficulty: DifficultyLevel
   questionTypes: QuestionType[]
   paper: string                   // full generated paper text
+  questions?: ParsedQuestion[]    // parsed individual questions with Firebase IDs
 }
 
 export interface EvaluateSession {
@@ -155,7 +192,7 @@ export interface EvaluateSession {
   verdict: "Pass" | "Borderline Pass" | "Fail"
   chapter: string
   improvement_suggestion: string
-  questionId?: string
+  questionId: string
   questionNumber?: string
   deductions?: EnhancedDeduction[]
   model_answer?: string

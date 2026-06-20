@@ -101,7 +101,8 @@ export default function GeneratePage() {
         marks: parseInt(marks) as any,
         difficulty: difficulty as any,
         questionTypes: questionTypes.split(", ") as any,
-        paper: data.paper
+        paper: data.paper,
+        questions: data.questions,
       };
       
       await saveSession(session);

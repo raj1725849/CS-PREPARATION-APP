@@ -10,8 +10,16 @@ import { evaluateWithOpenRouter } from "@/lib/openrouter"
 import { resolveSubjectName } from "@/lib/subject-map"
 import { retrieveRubric } from "@/lib/rubric-retriever"
 import { verifyUserAuth } from "@/lib/firebase-server"
+import { getQuestionFromFirestore } from "@/lib/question-store"
 
 export const maxDuration = 60
+
+function extractQuestionNumber(text: string): string | undefined {
+  if (!text) return undefined;
+  const match = text.trim().match(/^(?:Q\.?\s*(\d+(?:\([a-z]\))?)|Question\s+(\d+(?:\([a-z]\))?)|(\d+(?:\([a-z]\))?))\b/i);
+  if (!match) return undefined;
+  return match[1] || match[2] || match[3];
+}
 
 async function generateJSONWithFallback(
   systemInstruction: string,
@@ -127,13 +135,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { subject, question, questionId, marks } = body;
+  const { subject, question, questionId, marks, questionNumber } = body;
 
-  if (!subject || typeof question !== "string" || !question.trim() || typeof questionId !== "string" || !questionId.trim() || marks === undefined || marks === null) {
+  if (!subject || typeof question !== "string" || !question.trim() || typeof questionId !== "string" || !questionId.trim()) {
     return NextResponse.json({ 
-      error: `Missing required fields: subject, question, questionId, marks. Received: subject=${subject}, question=${!!question}, questionId=${!!questionId}, marks=${marks}` 
+      error: `Missing required fields: subject, question, questionId. Received: subject=${subject}, question=${!!question}, questionId=${!!questionId}` 
     }, { status: 400 });
   }
+
+  const extractedNum = questionNumber || extractQuestionNumber(question);
+
+  console.log(`[IDEAL_ANSWER_TRACE] Step 1: Received request — questionId=${questionId}, subject=${subject}, uid=${uid}`);
 
   const resolvedSubject = resolveSubjectName(subject);
 
@@ -154,18 +166,35 @@ export async function POST(req: NextRequest) {
       }
     }
   } catch (cacheErr) {
-    console.warn("Failed to check cached ideal answer in Firestore:", cacheErr);
+    console.warn("[IDEAL_ANSWER_TRACE] Failed to check cached ideal answer in Firestore:", cacheErr);
   }
 
+  console.log(`[IDEAL_ANSWER_TRACE] Step 2: Cache ${cachedAnswer ? 'HIT' : 'MISS'} for questionId=${questionId}`);
+
   if (cachedAnswer) {
-    console.log(`Cache HIT for user ${uid}, question ${questionId}`);
     return NextResponse.json({ model_answer: cachedAnswer }, { status: 200 });
   }
 
-  console.log(`Cache MISS for user ${uid}, question ${questionId}. Fetching/generating...`);
+  // 2. Fetch question document from Firebase for better rubric matching
+  let questionText = question; // fallback to request body
+  let questionMarks = marks || 5;
+  let questionDocFound = false;
 
-  // 2. Retrieve Rubric
-  const rubric = retrieveRubric(resolvedSubject, question);
+  if (idToken && uid && questionId) {
+    const questionDoc = await getQuestionFromFirestore(idToken, uid, questionId);
+    console.log(`[IDEAL_ANSWER_TRACE] Step 3: Question document ${questionDoc ? 'FOUND' : 'NOT FOUND'} for questionId=${questionId}`);
+    if (questionDoc) {
+      questionDocFound = true;
+      questionText = questionDoc.questionText || question;
+      questionMarks = questionDoc.marks || marks || 5;
+    } else {
+      console.warn(`[IDEAL_ANSWER_TRACE] Question document not found for questionId=${questionId}, uid=${uid}. Falling back to request body question text.`);
+    }
+  }
+
+  // 3. Retrieve Rubric using the best available question text
+  const rubric = retrieveRubric(resolvedSubject, questionText);
+  console.log(`[IDEAL_ANSWER_TRACE] Step 4: Rubric match=${rubric.matched}, similarity=${rubric.similarity.toFixed(2)}`);
   let modelAnswer = "";
 
   try {
@@ -174,27 +203,31 @@ export async function POST(req: NextRequest) {
       const systemPrompt = buildFormatIdealAnswerSystemPrompt();
       const userPrompt = buildFormatIdealAnswerUserPrompt({
         subject: resolvedSubject,
-        question: rubric.question_text || question,
-        marks: rubric.marks || marks,
+        question: rubric.question_text || questionText,
+        marks: rubric.marks || questionMarks,
         guidelineAnswer: rubric.expected_answer.full_answer_summary
       });
 
       const resData = await generateJSONWithFallback(systemPrompt, userPrompt, "FormatIdealAnswer");
       const formatted = resData.model_answer || "";
       if (formatted) {
-        modelAnswer = `**Question ${rubric.sub_question} Expected Answer:**\n\n${formatted}`;
+        const qNum = rubric.sub_question || extractedNum;
+        modelAnswer = qNum ? `**Question ${qNum} Expected Answer:**\n\n${formatted}` : formatted;
       }
     } else {
-      console.log("Generating model answer from scratch with Gemini...");
+      console.log("[IDEAL_ANSWER_TRACE] Step 5: Generating model answer from scratch with AI...");
       const systemPrompt = buildGenerateIdealAnswerSystemPrompt();
       const userPrompt = buildGenerateIdealAnswerUserPrompt({
         subject: resolvedSubject,
-        question: question,
-        marks: marks
+        question: questionText,
+        marks: questionMarks
       });
 
       const resData = await generateJSONWithFallback(systemPrompt, userPrompt, "GenerateIdealAnswer");
-      modelAnswer = resData.model_answer || "";
+      const generated = resData.model_answer || "";
+      if (generated) {
+        modelAnswer = extractedNum ? `**Question ${extractedNum} Expected Answer:**\n\n${generated}` : generated;
+      }
     }
   } catch (err: any) {
     console.error("Failed to format/generate model answer:", err);

@@ -39,14 +39,23 @@ export async function getAllSessions(): Promise<Session[]> {
 export async function saveSession(session: Session): Promise<void> {
   const sessions = await getAllSessions()
   sessions.unshift(session)
-  const trimmed = sessions.slice(0, 200)
+  const trimmed = sessions.slice(0, 100)
+  
+  // Strip originalImages from all sessions to prevent Firestore 1MB document limit
+  const cleaned = trimmed.map(s => {
+    if (s.type === "evaluate" && (s as EvaluateSession).originalImages) {
+      const { originalImages, ...rest } = s as EvaluateSession;
+      return rest as Session;
+    }
+    return s;
+  });
   
   const user = auth.currentUser;
   if (!user) return;
   
   try {
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, sanitizeForFirestore({ sessions: trimmed }), { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ sessions: cleaned }), { merge: true });
   } catch (err) {
     console.error("Failed to save session to Firestore:", err);
   }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import TopBar from "@/components/TopBar";
-import { CheckCircle2, XCircle, ArrowLeft, Loader2, Edit3, ShieldAlert, Award, AlertTriangle } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowLeft, Loader2, Edit3, ShieldAlert, Award, AlertTriangle, Info } from "lucide-react";
 import { saveSession, updateSession, checkAndIncrementUsage, getSessionById } from "@/lib/storage";
 import { EvaluateSession, EnhancedDeduction } from "@/lib/types";
 import ImageUploader, { UploadedImage } from "@/components/ImageUploader";
@@ -68,9 +68,12 @@ function compressBase64(base64: string, maxWidth = 400, quality = 0.5): Promise<
 export default function EvaluatePage() {
   const [subject, setSubject] = useState(SUBJECTS[0]);
   const [question, setQuestion] = useState("");
-  const [marks, setMarks] = useState("5");
   const [uploadedImages, setUploadedImages] = useState<UploadedImage[]>([]);
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
+
+  // Rubric fallback: shown only when the backend can't find the question in the rubric bank
+  const [rubricNotFound, setRubricNotFound] = useState(false);
+  const [manualMarks, setManualMarks] = useState("5");
   
   // Step workflow state: "upload" | "extracting" | "review" | "evaluating" | "result"
   const [step, setStep] = useState<"upload" | "extracting" | "review" | "evaluating" | "result">("upload");
@@ -104,7 +107,6 @@ export default function EvaluatePage() {
               if (session && session.type === "evaluate") {
                 setSubject(session.subject);
                 setQuestion(session.question);
-                setMarks(session.total_marks.toString());
                 setEditedText(session.studentCorrectedText || "");
                 setExtractedText(session.originalExtractedText || "");
                 setResult(session);
@@ -143,24 +145,18 @@ export default function EvaluatePage() {
     return () => clearInterval(interval);
   }, [step]);
 
-  const getQuestionHashId = (questionText: string): string => {
-    let hash = 0;
-    const normalized = questionText.toLowerCase().replace(/[^\w]/g, "");
-    for (let i = 0; i < normalized.length; i++) {
-      const char = normalized.charCodeAt(i);
-      hash = (hash << 5) - hash + char;
-      hash = hash & hash;
-    }
-    return "Q_" + Math.abs(hash).toString(36);
-  };
+
 
   const handleFetchIdealAnswer = async (e: React.MouseEvent) => {
     e.preventDefault();
     if (!result) return;
+    if (!result.questionId) {
+      alert("This evaluation is from an older session without a question reference. Please re-evaluate to enable the Ideal Answer feature.");
+      return;
+    }
     setIsLoadingIdealAnswer(true);
     try {
       const idToken = await auth.currentUser?.getIdToken();
-      const resolvedQuestionId = result.questionId || getQuestionHashId(result.question || question);
       const res = await fetch("/api/evaluate/ideal-answer", {
         method: "POST",
         headers: {
@@ -168,10 +164,11 @@ export default function EvaluatePage() {
           "Authorization": idToken ? `Bearer ${idToken}` : ""
         },
         body: JSON.stringify({
-          subject: result.subject,
-          question: result.question,
-          questionId: resolvedQuestionId,
-          marks: result.total_marks
+          subject: result.subject || subject,
+          question: result.question || question,
+          questionId: result.questionId,
+          marks: result.total_marks,
+          questionNumber: result.questionNumber
         })
       });
 
@@ -270,10 +267,15 @@ export default function EvaluatePage() {
     try {
       const idToken = await auth.currentUser?.getIdToken();
 
-      // Compress images in parallel for storage auditing
-      const compressedImages = await Promise.all(
-        uploadedImages.map(img => compressBase64(img.base64))
-      );
+      // Build request body — only include marks if rubric was not found and user provided manual marks
+      const requestBody: Record<string, any> = {
+        subject,
+        question,
+        studentAnswer: editedText
+      };
+      if (rubricNotFound) {
+        requestBody.marks = parseInt(manualMarks);
+      }
 
       const res = await fetch("/api/evaluate", {
         method: "POST",
@@ -281,16 +283,19 @@ export default function EvaluatePage() {
           "Content-Type": "application/json",
           "Authorization": idToken ? `Bearer ${idToken}` : ""
         },
-        body: JSON.stringify({
-          subject,
-          question,
-          marks: parseInt(marks),
-          studentAnswer: editedText
-        })
+        body: JSON.stringify(requestBody)
       });
 
       if (!res.ok) {
         const errData = await res.json().catch(() => ({}));
+        
+        // Handle RUBRIC_NOT_FOUND: show manual marks fallback
+        if (res.status === 422 && errData.code === "RUBRIC_NOT_FOUND") {
+          setRubricNotFound(true);
+          setStep("review");
+          return;
+        }
+        
         throw new Error(errData.error || "Failed to evaluate");
       }
       
@@ -303,7 +308,7 @@ export default function EvaluatePage() {
         date: new Date().toISOString(),
         subject: subject as any,
         question,
-        total_marks: parseInt(marks),
+        total_marks: data.total_marks,
         marks_awarded: data.marks_awarded,
         score_percentage: data.score_percentage,
         verdict: data.verdict,
@@ -315,12 +320,12 @@ export default function EvaluatePage() {
         strengths: data.strengths,
         missing_points: data.missing_points,
         keywords_missing: data.keywords_missing,
-        originalImages: compressedImages,
         originalExtractedText: extractedText,
         studentCorrectedText: editedText
       };
       
       await saveSession(session);
+      setRubricNotFound(false);
       setStep("result");
 
     } catch (err: any) {
@@ -345,32 +350,16 @@ export default function EvaluatePage() {
         {/* ── STEP 1: UPLOAD FORM ──────────────────────────────── */}
         {step === "upload" && (
           <form className="bg-white rounded-xl border border-[#e2e8f0] p-8 shadow-sm space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0f2640]">Subject</label>
-                <select 
-                  className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
-                  value={subject}
-                  onChange={e => setSubject(e.target.value)}
-                >
-                  {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#0f2640]">Total Marks for Question</label>
-                <select 
-                  className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
-                  value={marks}
-                  onChange={e => setMarks(e.target.value)}
-                >
-                  <option value="5">5 marks</option>
-                  <option value="7">7 marks</option>
-                  <option value="10">10 marks</option>
-                  <option value="15">15 marks</option>
-                  <option value="20">20 marks</option>
-                </select>
-              </div>
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-[#0f2640]">Subject</label>
+              <select 
+                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                value={subject}
+                onChange={e => setSubject(e.target.value)}
+              >
+                {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
+              <p className="text-[11px] text-[#94a3b8]">Marks are auto-detected from our question bank</p>
             </div>
 
             <div className="space-y-2">
@@ -459,6 +448,34 @@ export default function EvaluatePage() {
                 </div>
               )}
 
+              {/* Rubric not found fallback — manual marks selector */}
+              {rubricNotFound && (
+                <div className="bg-blue-50 border border-blue-200 text-blue-900 p-5 rounded-xl text-sm space-y-3 shadow-sm reveal">
+                  <div className="flex items-start gap-3">
+                    <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                    <div className="space-y-1">
+                      <p className="font-bold">Question not found in our question bank</p>
+                      <p className="text-blue-800/80">We couldn&apos;t auto-detect the marks for this question. Please select the marks manually below.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 pl-8">
+                    <label className="text-xs font-bold text-blue-800 uppercase tracking-wider shrink-0">Total Marks:</label>
+                    <select
+                      className="border border-blue-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 bg-white transition-colors"
+                      value={manualMarks}
+                      onChange={e => setManualMarks(e.target.value)}
+                    >
+                      <option value="3">3 marks</option>
+                      <option value="5">5 marks</option>
+                      <option value="7">7 marks</option>
+                      <option value="10">10 marks</option>
+                      <option value="15">15 marks</option>
+                      <option value="20">20 marks</option>
+                    </select>
+                  </div>
+                </div>
+              )}
+
               <div className="space-y-2">
                 <label className="text-xs font-bold text-[#64748b] uppercase tracking-wider block">
                   Extracted Answer Text
@@ -518,6 +535,7 @@ export default function EvaluatePage() {
                   setExtractedText("");
                   setEditedText("");
                   setIdealAnswer("");
+                  setRubricNotFound(false);
                 }}
                 className="flex items-center gap-2 border border-[#1a3a5c] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"
               >
@@ -679,11 +697,19 @@ export default function EvaluatePage() {
                   {idealAnswer}
                 </div>
               ) : (
-                <div className="pt-2">
+                <div className="pt-2 space-y-3">
+                  {!result.questionId && (
+                    <div className="bg-blue-50 border border-blue-200 text-blue-800 rounded-xl p-4 flex items-start gap-3">
+                      <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                      <p className="text-sm">
+                        This is an older evaluation. Re-evaluate to enable the Ideal Answer feature.
+                      </p>
+                    </div>
+                  )}
                   <button
                     onClick={handleFetchIdealAnswer}
-                    disabled={isLoadingIdealAnswer}
-                    className="w-full bg-[#1a3a5c] hover:bg-[#0f2640] disabled:bg-[#94a3b8] text-white px-6 py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                    disabled={isLoadingIdealAnswer || !result.questionId}
+                    className="w-full bg-[#1a3a5c] hover:bg-[#0f2640] disabled:bg-[#94a3b8] disabled:cursor-not-allowed text-white px-6 py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
                   >
                     {isLoadingIdealAnswer ? (
                       <>

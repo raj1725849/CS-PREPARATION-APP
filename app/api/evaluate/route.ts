@@ -9,18 +9,23 @@ import { evaluateWithOpenRouter } from "@/lib/openrouter"
 import { resolveSubjectName } from "@/lib/subject-map"
 import { retrieveRubric } from "@/lib/rubric-retriever"
 import { verifyUserAndEnforceLimit } from "@/lib/firebase-server"
+import {
+  generateQuestionId,
+  generateEvaluationId,
+  computeTextHash,
+  saveQuestionToFirestore,
+  saveEvaluationToFirestore,
+  getQuestionFromFirestore,
+  findQuestionByRubricId,
+} from "@/lib/question-store"
 
 export const maxDuration = 60
 
-function getQuestionHashId(questionText: string): string {
-  let hash = 0;
-  const normalized = questionText.toLowerCase().replace(/[^\w]/g, "");
-  for (let i = 0; i < normalized.length; i++) {
-    const char = normalized.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash;
-  }
-  return "Q_" + Math.abs(hash).toString(36);
+function extractQuestionNumber(text: string): string | undefined {
+  if (!text) return undefined;
+  const match = text.trim().match(/^(?:Q\.?\s*(\d+(?:\([a-z]\))?)|Question\s+(\d+(?:\([a-z]\))?)|(\d+(?:\([a-z]\))?))\b/i);
+  if (!match) return undefined;
+  return match[1] || match[2] || match[3];
 }
 
 async function generateJSONWithFallback(
@@ -208,8 +213,16 @@ async function generateJSONWithFallback(
 }
 
 export async function POST(req: NextRequest) {
+  let uid = "";
+  let idToken = "";
+
   try {
-    await verifyUserAndEnforceLimit(req, "evaluate");
+    const authResult = await verifyUserAndEnforceLimit(req, "evaluate");
+    uid = authResult.uid;
+    const authHeader = req.headers.get("Authorization");
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      idToken = authHeader.substring(7);
+    }
   } catch (err: any) {
     const status = err.statusCode || 500;
     return NextResponse.json<EvaluateError>(
@@ -228,11 +241,11 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const { subject, question, marks, studentAnswer } = body
+  const { subject, question, marks, studentAnswer, questionId: incomingQuestionId } = body as EvaluateRequest & { questionId?: string }
 
-  if (!subject || typeof question !== "string" || !question.trim() || marks === undefined || marks === null || typeof studentAnswer !== "string" || !studentAnswer.trim()) {
+  if (!subject || typeof question !== "string" || !question.trim() || typeof studentAnswer !== "string" || !studentAnswer.trim()) {
     return NextResponse.json<EvaluateError>(
-      { error: `Missing required fields: subject, question, marks, studentAnswer. Received: subject=${subject}, question=${!!question}, marks=${marks}, studentAnswer=${!!studentAnswer}`, code: "INVALID_REQUEST" },
+      { error: `Missing required fields: subject, question, studentAnswer. Received: subject=${subject}, question=${!!question}, studentAnswer=${!!studentAnswer}`, code: "INVALID_REQUEST" },
       { status: 400 }
     )
   }
@@ -241,13 +254,24 @@ export async function POST(req: NextRequest) {
   const resolvedSubject = resolveSubjectName(subject);
   const rubric = retrieveRubric(resolvedSubject, question);
 
-  // If the rubric has its own marks definition, we can use it, or fallback to request marks
-  const finalMarks = rubric.matched && rubric.marks ? rubric.marks : marks;
+  // Determine marks: rubric match > user-provided > RUBRIC_NOT_FOUND error
+  let finalMarks: number;
+  if (rubric.matched && rubric.marks) {
+    finalMarks = rubric.marks;
+  } else if (marks !== undefined && marks !== null) {
+    finalMarks = marks;
+  } else {
+    // No rubric match AND no marks provided — ask frontend for manual marks
+    return NextResponse.json<EvaluateError>(
+      { error: "Question not found in our question bank. Please select the marks manually.", code: "RUBRIC_NOT_FOUND" },
+      { status: 422 }
+    )
+  }
 
   if (rubric.matched) {
     console.log(`Matched rubric: "${rubric.question_text}" (Sub-question: ${rubric.sub_question}, Similarity: ${rubric.similarity.toFixed(2)}, Marks: ${rubric.marks})`);
   } else {
-    console.log(`No rubric matched for: "${question}" (Subject: ${resolvedSubject})`);
+    console.log(`No rubric matched for: "${question}" (Subject: ${resolvedSubject}). Using user-provided marks: ${finalMarks}`);
   }
 
   try {
@@ -269,9 +293,68 @@ export async function POST(req: NextRequest) {
       ? "Borderline Pass"
       : "Fail"
 
-    const resolvedQuestionId = rubric.matched && rubric.question_id
-      ? rubric.question_id
-      : getQuestionHashId(question);
+    // ─── Resolve questionId via Firebase ─────────────────────────
+    let resolvedQuestionId: string;
+
+    if (incomingQuestionId && idToken && uid) {
+      // Frontend passed a known questionId (from a generated paper)
+      const existing = await getQuestionFromFirestore(idToken, uid, incomingQuestionId);
+      if (existing) {
+        resolvedQuestionId = incomingQuestionId;
+        console.log(`[EVALUATE] Using existing question doc: ${resolvedQuestionId}`);
+      } else {
+        // questionId was stale/invalid — create new
+        resolvedQuestionId = generateQuestionId();
+        console.log(`[EVALUATE] Incoming questionId ${incomingQuestionId} not found in Firebase, creating new: ${resolvedQuestionId}`);
+        await saveQuestionToFirestore(idToken, uid, {
+          questionId: resolvedQuestionId,
+          userId: uid,
+          subject: resolvedSubject,
+          questionText: question,
+          marks: finalMarks,
+          source: "manual",
+          textHash: computeTextHash(question),
+          createdAt: new Date().toISOString(),
+        });
+      }
+    } else if (rubric.matched && rubric.question_id && idToken && uid) {
+      // Rubric matched — check if we already have a doc for this rubric question
+      const existing = await findQuestionByRubricId(idToken, uid, rubric.question_id);
+      if (existing) {
+        resolvedQuestionId = existing.questionId;
+        console.log(`[EVALUATE] Found existing question for rubric ${rubric.question_id}: ${resolvedQuestionId}`);
+      } else {
+        resolvedQuestionId = generateQuestionId();
+        console.log(`[EVALUATE] Creating question doc for rubric ${rubric.question_id}: ${resolvedQuestionId}`);
+        await saveQuestionToFirestore(idToken, uid, {
+          questionId: resolvedQuestionId,
+          userId: uid,
+          subject: resolvedSubject,
+          questionText: rubric.question_text || question,
+          marks: finalMarks,
+          source: "rubric",
+          rubricQuestionId: rubric.question_id,
+          textHash: computeTextHash(rubric.question_text || question),
+          createdAt: new Date().toISOString(),
+        });
+      }
+    } else {
+      // No rubric match, no prior ID — create new question doc
+      resolvedQuestionId = generateQuestionId();
+      console.log(`[EVALUATE] No rubric match, no incoming ID. Creating new question: ${resolvedQuestionId}`);
+      if (idToken && uid) {
+        await saveQuestionToFirestore(idToken, uid, {
+          questionId: resolvedQuestionId,
+          userId: uid,
+          subject: resolvedSubject,
+          questionText: question,
+          marks: finalMarks,
+          source: "manual",
+          textHash: computeTextHash(question),
+          createdAt: new Date().toISOString(),
+        });
+      }
+    }
 
     const parsed: EvaluateResponse = {
       marks_awarded: evalData.marks_awarded ?? 0,
@@ -281,13 +364,34 @@ export async function POST(req: NextRequest) {
       chapter: evalData.chapter ?? "General",
       improvement_suggestion: evalData.improvement_suggestion ?? "",
       questionId: resolvedQuestionId,
-      questionNumber: rubric.matched ? rubric.sub_question : undefined,
+      questionNumber: rubric.matched ? rubric.sub_question : extractQuestionNumber(question),
       deductions: evalData.deductions ?? [],
       strengths: evalData.strengths ?? [],
       missing_points: evalData.missing_points ?? [],
       keywords_missing: evalData.keywords_missing ?? [],
       evaluated_at: new Date().toISOString()
     };
+
+    // ─── Save evaluation document to Firebase ────────────────────
+    if (idToken && uid) {
+      const evalId = generateEvaluationId();
+      saveEvaluationToFirestore(idToken, uid, {
+        evaluationId: evalId,
+        userId: uid,
+        questionId: resolvedQuestionId,
+        subject: resolvedSubject,
+        questionText: question,
+        studentAnswer,
+        marksAwarded: parsed.marks_awarded,
+        totalMarks: parsed.total_marks,
+        scorePercentage: parsed.score_percentage,
+        verdict: parsed.verdict,
+        sessionId: "", // will be set by frontend when saving session
+        createdAt: new Date().toISOString(),
+      }).catch((err) => {
+        console.error("[EVALUATE] Background evaluation save failed:", err);
+      });
+    }
 
     return NextResponse.json(parsed, { status: 200 })
 
