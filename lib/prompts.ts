@@ -3,7 +3,8 @@ import {
   QuestionType,
   DifficultyLevel,
   MarksTotal,
-  EvaluationScope
+  EvaluationScope,
+  PaperBlueprint
 } from "./types"
 
 const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
@@ -20,12 +21,42 @@ export function buildGeneratePrompt(params: {
   marks: MarksTotal
   difficulty: DifficultyLevel
   pdfContext: string
+  topTopics?: string[]
+  blueprint?: PaperBlueprint
 }): string {
-  const { subject, scope, topic, questionTypes, marks, difficulty, pdfContext } = params
+  const { subject, scope, topic, questionTypes, marks, difficulty, pdfContext, topTopics, blueprint } = params
   const typesList = questionTypes.map(t => `• ${QUESTION_TYPE_LABELS[t]}`).join("\n")
   const scopeText = scope === "full"
     ? "Full paper covering all major topics in the subject"
     : `Specific topic: ${topic}`
+
+  const topTopicsText = topTopics && topTopics.length > 0 && !blueprint
+    ? `\nTo ensure realistic ICSI pattern alignment, prioritize and distribute the questions proportionally across these highly frequent topics: ${topTopics.join(", ")}.`
+    : "";
+
+  let blueprintText = ""
+  if (blueprint) {
+    blueprintText = `\n═══════════════════════════════════════
+PAPER BLUEPRINT — YOU MUST FOLLOW THIS EXACTLY:
+═══════════════════════════════════════
+${blueprint.slots.map(s => {
+  let slotDesc = `Slot ${s.slotNumber}: Topic: "${s.topic}" | Subtopic: "${s.subTopic}" | Marks: ${s.marks} | Question Type: "${s.questionType}"`
+  if (s.isCaseStudy) slotDesc += " | isCaseStudy: true"
+  if (s.isPractical) slotDesc += " | isPractical: true"
+  if (s.sectionNumber) slotDesc += ` | Section: "${s.sectionNumber}"`
+  if (s.samplePYQText) {
+    slotDesc += `\n   - Reference PYQ Style/Complexity: "${s.samplePYQText}"`
+  }
+  return slotDesc
+}).join("\n\n")}
+
+BLUEPRINT COMPLIANCE RULES:
+1. Generate exactly one question corresponding to each blueprint slot listed above.
+2. Do NOT repeat any topic or subtopic. Follow the exact slot specifications.
+3. Each question must match the specified marks, questionType, isCaseStudy, and isPractical constraints.
+4. Use the Reference PYQ Style/Complexity as styling guidance (e.g. realistic details, scenario design) but do NOT copy the sample PYQ text verbatim.
+5. The sum of the marks of all questions must be exactly ${marks}.`
+  }
 
   return `You are a Senior Examiner at ICSI (Institute of Company Secretaries of India) 
 setting an Executive Programme examination paper. You have decades of experience creating 
@@ -46,6 +77,8 @@ ${typesList}
 Total Marks: ${marks}
 Difficulty: ${difficulty}
 Time Allowed: 3 Hours
+${topTopicsText}
+${blueprintText}
 
 ═══════════════════════════════════════
 MANDATORY PAPER FORMATTING RULES:
@@ -106,12 +139,142 @@ MANDATORY PAPER FORMATTING RULES:
    - Must be consistent throughout
 
 ═══════════════════════════════════════
-OUTPUT INSTRUCTION:
+OUTPUT INSTRUCTIONS:
 ═══════════════════════════════════════
-Output ONLY the complete question paper in plain text. 
-No explanations, no preamble, no "here is your paper" — 
-start directly with the ICSI header. 
-Format with clear spacing between sections and questions.`
+Return ONLY a valid JSON object matching the schema below.
+Do not include any Markdown wrappers like \`\`\`json. Start with { and end with }.
+
+JSON Schema:
+{
+  "paperText": "Complete formatted question paper as a human-readable plain text string (NOT JSON). Start with the ICSI header, include all instructions, and write out all questions and sub-parts clearly. Do not use JSON arrays or objects here.",
+  "questions": [
+    {
+      "questionNumber": "1(a)", 
+      "questionText": "Full text of the question as shown in the paperText",
+      "marks": 5, 
+      "topic": "The general syllabus topic, e.g. Share Capital, Board Constitution",
+      "subTopic": "The subtopic from syllabus, e.g. Buy-back of Shares, Appointment of Independent Directors",
+      "sectionNumber": "The specific legal section number if cited/applicable, e.g. 'Section 68', 'Section 149' (or empty string)",
+      "isCaseStudy": true, 
+      "isPractical": false, 
+      "idealAnswerCode": "Draft a concise pointwise ideal model answer summary (bullet points of the core legal provisions, criteria, and final conclusion) that should be present to score full marks for this question."
+    }
+  ]
+}
+
+STRICT JSON CONFIGURATION:
+- No unescaped newline characters inside string values. Use \\n to represent line breaks.
+- No raw double quotes inside string values. Use single quotes or escape them.
+- Do not add any preamble or markdown formatting like \`\`\`json. Return pure JSON string.
+`
+}
+
+export function buildChunkedGeneratePrompt(params: {
+  subject: SubjectName
+  scope: EvaluationScope
+  topic?: string
+  questionTypes: QuestionType[]
+  marks: MarksTotal
+  difficulty: DifficultyLevel
+  pdfContext: string
+  topTopics?: string[]
+  blueprintChunk: PaperBlueprint['slots']
+  chunkIndex: number
+  totalChunks: number
+}): string {
+  const { subject, scope, topic, questionTypes, marks, difficulty, pdfContext, topTopics, blueprintChunk, chunkIndex, totalChunks } = params
+  
+  const chunkText = `\n═══════════════════════════════════════
+THIS IS CHUNK ${chunkIndex + 1} OF ${totalChunks}.
+GENERATE ONLY THE FOLLOWING QUESTIONS EXACTLY:
+═══════════════════════════════════════
+${blueprintChunk.map(s => {
+  let slotDesc = `Slot ${s.slotNumber}: Topic: "${s.topic}" | Subtopic: "${s.subTopic}" | Marks: ${s.marks} | Question Type: "${s.questionType}"`
+  if (s.isCaseStudy) slotDesc += " | isCaseStudy: true"
+  if (s.isPractical) slotDesc += " | isPractical: true"
+  if (s.sectionNumber) slotDesc += ` | Section: "${s.sectionNumber}"`
+  if (s.samplePYQText) {
+    slotDesc += `\n   - Reference PYQ Style/Complexity: "${s.samplePYQText}"`
+  }
+  return slotDesc
+}).join("\n\n")}
+
+BLUEPRINT COMPLIANCE RULES:
+1. Generate exactly one question corresponding to each blueprint slot listed above.
+2. Do NOT repeat any topic or subtopic. Follow the exact slot specifications.
+3. Each question must match the specified marks, questionType, isCaseStudy, and isPractical constraints.
+4. The generated questions must total exactly ${blueprintChunk.reduce((acc, s) => acc + s.marks, 0)} marks for this chunk.`
+
+  const headerInstructions = chunkIndex === 0 
+    ? `1. HEADER (exactly as ICSI formats it):
+   - Institute name: THE INSTITUTE OF COMPANY SECRETARIES OF INDIA
+   - Programme: EXECUTIVE PROGRAMME
+   - Subject name in capitals
+   - Time: 3 Hours | Maximum Marks: ${marks}
+   - Instruction line: "All questions are compulsory"`
+    : `1. HEADER: Do NOT include the main paper header, just continue with the questions.`
+
+  return `You are a Senior Examiner at ICSI (Institute of Company Secretaries of India).
+You are generating a portion (chunk) of an Executive Programme examination paper.
+
+═══════════════════════════════════════
+STUDY MATERIAL CONTEXT:
+═══════════════════════════════════════
+${pdfContext || "Use your knowledge of ICSI Executive Programme syllabus."}
+
+═══════════════════════════════════════
+PAPER PARAMETERS (FOR CONTEXT):
+═══════════════════════════════════════
+Subject: ${subject}
+Overall Difficulty: ${difficulty}
+${chunkText}
+
+═══════════════════════════════════════
+MANDATORY PAPER FORMATTING RULES:
+═══════════════════════════════════════
+${headerInstructions}
+
+2. QUESTION LANGUAGE (use authentic ICSI phrases):
+   - "Referring to the provisions of the Companies Act, 2013, explain..."
+   - "Advise XYZ Limited in the matter of..."
+   - "Examine the validity of the following with reasons..."
+
+3. LEGAL SPECIFICITY:
+   - Always reference specific acts.
+   - Include specific section numbers in questions where natural.
+
+4. NUMBERING:
+   - MUST MATCH THE SLOT NUMBERS PROVIDED. For example, if the slot says 'Slot 1(a)', use '1(a)'.
+
+═══════════════════════════════════════
+OUTPUT INSTRUCTIONS:
+═══════════════════════════════════════
+Return ONLY a valid JSON object matching the schema below.
+Do not include any Markdown wrappers like \`\`\`json. Start with { and end with }.
+
+JSON Schema:
+{
+  "paperText": "The formatted text for just these specific questions as a human-readable plain text string (NOT JSON).",
+  "questions": [
+    {
+      "questionNumber": "1(a)", 
+      "questionText": "Full text of the question as shown in the paperText",
+      "marks": 5, 
+      "topic": "The general syllabus topic",
+      "subTopic": "The subtopic from syllabus",
+      "sectionNumber": "The specific legal section number if cited/applicable",
+      "isCaseStudy": true, 
+      "isPractical": false, 
+      "idealAnswerCode": "Draft a concise pointwise ideal model answer summary"
+    }
+  ]
+}
+
+STRICT JSON CONFIGURATION:
+- No unescaped newline characters inside string values. Use \\n to represent line breaks.
+- No raw double quotes inside string values. Use single quotes or escape them.
+- Return pure JSON string.
+`
 }
 
 export function buildEvaluateSystemPrompt(): string {
@@ -431,4 +594,58 @@ QUESTION:
 
 TASK:
 Generate the ideal pointwise model answer from scratch for this question.`;
+}
+
+export function buildCSExamReadyAnswerSystemPrompt(): string {
+  return `You are an experienced, strict ICSI (Institute of Company Secretaries of India) Senior Examiner.
+Your task is to convert the provided raw guideline/reference answer into a clean, exam-ready expected answer.
+
+STYLE RULES:
+- Write exactly what a high-scoring CS student would write in the examination.
+- Use clear, professional, yet student-friendly language. Easy to understand and memorize.
+- Use proper CS legal and financial terminology.
+- Cite the relevant legal acts (e.g. Companies Act, 2013) and sections correctly.
+- Do NOT write AI essays, academic papers, overly professional legal drafts, or generic chatbot answers.
+- Avoid large walls of text or long unstructured paragraphs.
+
+PREFERRED FORMAT:
+The answer must follow this structure, with bold headers for each section:
+
+1. **Introduction**: A brief 1-2 sentence conceptual introduction.
+2. **Relevant Section / Provision**: Cite the specific section(s) and act name (e.g., "Section 123 of the Companies Act, 2013").
+3. **Explanation**: Break down the core provisions, limits, and rules in simple, structured sentences.
+4. **Main Points**: Present the crucial points or checklist of requirements using a numbered or bulleted list.
+5. **Conclusion**: Provide a definitive 1-2 sentence final verdict/conclusion answering the question's prompt.
+
+OUTPUT FORMAT:
+Respond ONLY with a valid JSON object. No markdown. No backticks. Start with { and end with }.
+
+{
+  "expectedAnswer": "Exam-ready version of the answer. Use clear headings, numbered lists, and bullet points. Format with \\n for line breaks. Max 500 words."
+}
+
+STRICT JSON CONFIGURATION:
+- No unescaped newline characters inside string values. Use \\n to represent line breaks.
+- No raw double quotes inside string values. Use single quotes or escape them.
+- Do not add any preamble or markdown formatting like \`\`\`json. Return pure JSON string.`;
+}
+
+export function buildCSExamReadyAnswerUserPrompt(params: {
+  subject: string;
+  question: string;
+  marks: number;
+  sourceMaterial: string;
+}): string {
+  return `EXAMINATION DETAILS:
+Subject: ${params.subject}
+Marks: ${params.marks}
+
+QUESTION:
+"${params.question}"
+
+SOURCE MATERIAL / RAW GUIDELINE ANSWER:
+"${params.sourceMaterial}"
+
+TASK:
+Convert the source material into the requested exam-ready expected answer format. Ensure the source material is treated as the absolute source of truth.`;
 }
