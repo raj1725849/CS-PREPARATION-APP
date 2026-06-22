@@ -270,12 +270,79 @@ export interface UserUsage {
 }
 
 export interface UserProfile {
-  uid: string
-  email: string | null
-  displayName: string | null
-  plan: BillingPlan
-  createdAt: string // ISO timestamp
-  updatedAt: string // ISO timestamp
-  usage?: UserUsage
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+  plan: BillingPlan;
+  createdAt: string; // ISO timestamp
+  updatedAt: string; // ISO timestamp
+  usage?: UserUsage;
 }
+
+export interface GeneratedPaperQuestion {
+  questionId: string;
+  questionNumber: string;
+  questionText: string;
+  marks: number;
+  idealAnswerCode?: string;
+  topic: string;
+  subTopic: string;
+  sectionNumber: string;
+  isCaseStudy: boolean;
+  isPractical: boolean;
+  evaluated: boolean;
+  evaluationId?: string;
+}
+
+export interface GeneratedPaperDocument {
+  paperId: string;
+  userId: string;
+  subject: string;
+  createdAt: string;
+  totalMarks: number;
+  coveragePercentage?: number;
+  difficultyLevel: string;
+  topicCoverage: Record<string, number>;
+  questions: GeneratedPaperQuestion[];
+  status: "generated" | "attempted" | "evaluating" | "completed";
+  paperText?: string;
+  evaluationSummary?: {
+    marksAwarded: number;
+    scorePercentage: number;
+    verdict: "Pass" | "Borderline Pass" | "Fail";
+    feedback?: string;
+  };
+  blueprint?: PaperBlueprint;
+}
+
+export interface BlueprintSlot {
+  slotNumber: number;
+  topic: string;
+  subTopic: string;
+  marks: number;
+  questionType: QuestionType;
+  samplePYQText?: string;      // A real PYQ question text for this subtopic (for AI reference)
+  isCaseStudy: boolean;
+  isPractical: boolean;
+  sectionNumber?: string;      // From PYQ if available
+}
+
+export interface PaperBlueprint {
+  subject: string;
+  totalMarks: number;
+  difficulty: string;
+  slots: BlueprintSlot[];
+  topicCoverage: Record<string, number>;  // topic → marks allocated
+  coveragePercentage: number;             // % of known topics covered
+  generatedAt: string;
+}
+
+export interface IdealAnswerDocument {
+  paperId: string;
+  questionId: string;
+  userId: string;
+  expectedAnswer: string;
+  generatedAt: string;
+}
+
 
