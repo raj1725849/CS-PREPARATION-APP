@@ -28,6 +28,14 @@ service cloud.firestore {
       match /evaluations/{evaluationId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
+
+      match /parsed_papers/{paperId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      match /parser_debug_reports/{reportId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
     }
 
     // Rules for the root-level generated papers

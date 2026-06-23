@@ -401,3 +401,80 @@ export async function getIdealAnswerFromFirestore(
   }
 }
 
+// ─── Parsed Paper CRUD ───────────────────────────────────────────
+
+export async function saveParsedPaperToFirestore(
+  idToken: string,
+  uid: string,
+  paper: any
+): Promise<boolean> {
+  const url = `${FIRESTORE_BASE}/users/${uid}/parsed_papers/${paper.paperId}`;
+  try {
+    const res = await fetch(url, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${idToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fields: toFirestoreFields(paper) }),
+    });
+    if (res.ok) {
+      console.log(`[QUESTION_STORE] Saved parsed paper ${paper.paperId} for user ${uid}`);
+      return true;
+    } else {
+      const errText = await res.text();
+      console.error(`[QUESTION_STORE] Failed to save parsed paper ${paper.paperId}:`, errText);
+      return false;
+    }
+  } catch (err) {
+    console.error(`[QUESTION_STORE] Error saving parsed paper ${paper.paperId}:`, err);
+    return false;
+  }
+}
+
+export async function getParsedPaperFromFirestore(
+  idToken: string,
+  uid: string,
+  paperId: string
+): Promise<any | null> {
+  const url = `${FIRESTORE_BASE}/users/${uid}/parsed_papers/${paperId}`;
+  try {
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${idToken}` },
+    });
+    if (res.ok) {
+      const docData = await res.json();
+      if (docData.fields) {
+        return fromFirestoreFields(docData.fields);
+      }
+    }
+    return null;
+  } catch (err) {
+    console.error(`[QUESTION_STORE] Error fetching parsed paper ${paperId}:`, err);
+    return null;
+  }
+}
+
+export async function saveDebugReportToFirestore(
+  idToken: string,
+  uid: string,
+  report: any
+): Promise<boolean> {
+  const url = `${FIRESTORE_BASE}/users/${uid}/parser_debug_reports/${report.reportId || `rep_${Date.now()}`}`;
+  try {
+    const res = await fetch(url, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${idToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fields: toFirestoreFields(report) }),
+    });
+    return res.ok;
+  } catch (err) {
+    console.error(`[QUESTION_STORE] Error saving parser debug report:`, err);
+    return false;
+  }
+}
+
+

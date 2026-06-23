@@ -42,6 +42,9 @@ export interface ParsedQuestion {
   questionText: string
   marks: number
   questionId: string                // unique Firebase-backed ID
+  subpartId?: string;               // e.g. "a", "b" for subpart compatibility
+  text?: string;                    // subpart raw question text
+  subparts?: ParsedQuestion[];      // nested subparts list
 }
 
 export interface QuestionDocument {

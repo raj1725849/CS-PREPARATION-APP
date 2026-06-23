@@ -9,8 +9,8 @@ export function extractMarksFromText(text: string): number | null {
     if (!isNaN(val) && val > 0 && val <= 100) return val;
   }
 
-  // Pattern 2: "marks: 5" or "marks - 5" or "marks = 5"
-  const labelMatch = clean.match(/marks?\s*[:\-=\s]\s*(\d+)\b/i);
+  // Pattern 2: "marks: 5" or "marks - 5" or "marks = 5" or "M = 10"
+  const labelMatch = clean.match(/\b(?:marks?|m)\s*[:\-=\s]\s*(\d+)\b/i);
   if (labelMatch) {
     const val = parseInt(labelMatch[1], 10);
     if (!isNaN(val) && val > 0 && val <= 100) return val;
