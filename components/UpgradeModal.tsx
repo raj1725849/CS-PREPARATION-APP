@@ -92,8 +92,19 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
             });
 
             if (!verifyRes.ok) {
-              const errData = await verifyRes.json().catch(() => ({}));
-              throw new Error(errData.error || "Payment signature verification failed");
+              let errMsg = "Payment signature verification failed";
+              try {
+                const errData = await verifyRes.json();
+                errMsg = errData.error || errMsg;
+              } catch (jsonErr) {
+                try {
+                  const rawText = await verifyRes.text();
+                  errMsg = `Server Error (${verifyRes.status}): ${rawText.substring(0, 100)}`;
+                } catch (textErr) {
+                  errMsg = `Server Error (${verifyRes.status})`;
+                }
+              }
+              throw new Error(errMsg);
             }
 
             const verifyData = await verifyRes.json();
