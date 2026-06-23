@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       'public/study-material/**/*',
     ],
   },
-  serverExternalPackages: ["pdf-parse"],
+  serverExternalPackages: ["pdf-parse", "firebase-admin"],
 };
 
 export default nextConfig;
