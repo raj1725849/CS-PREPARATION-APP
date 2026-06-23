@@ -211,33 +211,8 @@ export async function verifyUserAuth(
     return { uid, plan: localPlan };
   }
 
-  const firestoreRes = await fetch(
-    `https://firestore.googleapis.com/v1/projects/cs-prep-dashboard-v1/databases/(default)/documents/users/${uid}`,
-    {
-      headers: {
-        Authorization: `Bearer ${idToken}`
-      }
-    }
-  );
-
-  if (!firestoreRes.ok) {
-    const errText = await firestoreRes.text();
-    console.error("Firestore authentication verification failed:", errText);
-    const verifyErr = new Error("Failed to verify user profile with authentication provider");
-    (verifyErr as any).statusCode = firestoreRes.status === 401 || firestoreRes.status === 403 ? 401 : 500;
-    throw verifyErr;
-  }
-
-  const docData = await firestoreRes.json();
-  const fields = docData.fields || {};
-  const plan = fields.plan ? parseFirestoreValue(fields.plan) : "free";
-  const expiresAt = fields.expiresAt ? parseFirestoreValue(fields.expiresAt) : null;
-
-  let activePlan = plan;
-  if (expiresAt && new Date(expiresAt).getTime() < Date.now()) {
-    activePlan = "free";
-  }
-
-  return { uid, plan: activePlan };
+  // Return the uid immediately without fetching the full user profile document
+  // (the calling endpoints do not require plan details from verifyUserAuth)
+  return { uid, plan: "free" };
 }
 
