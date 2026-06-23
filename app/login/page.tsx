@@ -125,7 +125,8 @@ export default function AuthPage() {
                     });
 
                     if (!verifyRes.ok) {
-                      throw new Error("Payment signature verification failed");
+                      const errData = await verifyRes.json().catch(() => ({}));
+                      throw new Error(errData.error || "Payment signature verification failed");
                     }
 
                     const verifyData = await verifyRes.json();

@@ -92,7 +92,8 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
             });
 
             if (!verifyRes.ok) {
-              throw new Error("Payment signature verification failed");
+              const errData = await verifyRes.json().catch(() => ({}));
+              throw new Error(errData.error || "Payment signature verification failed");
             }
 
             const verifyData = await verifyRes.json();
@@ -117,9 +118,9 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
             } else {
               alert("Payment verification failed. Please try again or contact support.");
             }
-          } catch (verifyErr) {
+          } catch (verifyErr: any) {
             console.error("Signature verification error:", verifyErr);
-            alert("Error verifying payment signature. Please contact support.");
+            alert(`Error verifying payment signature: ${verifyErr.message}`);
           } finally {
             setLoadingPlan(null);
           }

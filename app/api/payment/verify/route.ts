@@ -84,6 +84,11 @@ export async function POST(req: NextRequest) {
         plan = "quarterly";
       } else if (amount === PLAN_PRICES.yearly) {
         plan = "yearly";
+      } else {
+        console.warn(`[VERIFY] Amount ${amount} did not match expected plan prices. Falling back to body plan: ${bodyPlan}`);
+        if (bodyPlan && bodyPlan !== "free") {
+          plan = bodyPlan;
+        }
       }
     } catch (err: any) {
       console.warn("[VERIFY] Failed to fetch Razorpay order details during verification, using body fallback plan:", plan, err.message);
