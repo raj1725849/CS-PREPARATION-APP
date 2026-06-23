@@ -39,6 +39,66 @@ export function repairJsonStrings(jsonStr: string): string {
 }
 
 /**
+ * Automatically repairs truncated JSON strings by closing open quotes, brackets, and braces.
+ */
+export function repairTruncatedJson(jsonStr: string): string {
+  let result = jsonStr.trim();
+  let inString = false;
+  let isEscaped = false;
+  const stack: ('{' | '[')[] = [];
+
+  for (let i = 0; i < result.length; i++) {
+    const char = result[i];
+    if (inString) {
+      if (char === '\\' && !isEscaped) {
+        isEscaped = true;
+      } else if (char === '"' && !isEscaped) {
+        inString = false;
+      } else {
+        isEscaped = false;
+      }
+    } else {
+      if (char === '"') {
+        inString = true;
+        isEscaped = false;
+      } else if (char === '{') {
+        stack.push('{');
+      } else if (char === '[') {
+        stack.push('[');
+      } else if (char === '}') {
+        stack.pop();
+      } else if (char === ']') {
+        stack.pop();
+      }
+    }
+  }
+
+  if (inString) {
+    result += '"';
+  }
+
+  result = result.trim();
+  if (result.endsWith(',')) {
+    result = result.slice(0, -1).trim();
+  }
+
+  // Remove incomplete key-value structures at the cut-off point
+  result = result.replace(/,\s*"[^"]*"\s*:\s*$/, "");
+  result = result.replace(/,\s*"[^"]*"\s*$/, "");
+
+  while (stack.length > 0) {
+    const open = stack.pop();
+    if (open === '{') {
+      result += '}';
+    } else if (open === '[') {
+      result += ']';
+    }
+  }
+
+  return result;
+}
+
+/**
  * Safely parses an AI response into a JSON object.
  * Removes markdown fences, repairs unescaped characters, handles truncation errors,
  * and optionally validates the schema.
@@ -72,18 +132,28 @@ export function parseAiResponse<T = any>(
   try {
     parsedData = JSON.parse(cleanJson);
   } catch (err: any) {
-    // Check if it's a truncation error (Unterminated string or unexpected end of JSON)
-    const msg = err.message.toLowerCase();
-    let userFriendlyMessage = "Failed to parse AI response. The response may be malformed.";
-    if (msg.includes("unterminated string") || msg.includes("unexpected end of json")) {
-      userFriendlyMessage = "AI generation was truncated or incomplete. Please try generating fewer questions or a smaller paper.";
-    }
+    // Attempt to repair the JSON if it looks truncated or if parsing failed
+    console.warn("[JSON Parser] Initial parse failed, attempting auto-repair...");
+    try {
+      const repairedJson = repairTruncatedJson(cleanJson);
+      parsedData = JSON.parse(repairedJson);
+      console.log("[JSON Parser] Auto-repair successful! Parsed partial data.");
+    } catch (repairErr: any) {
+      const lastChar = cleanJson[cleanJson.length - 1];
+      const isTruncated = (lastChar !== '}' && lastChar !== ']') || 
+                          err.message.toLowerCase().includes("unterminated string") || 
+                          err.message.toLowerCase().includes("unexpected end of json");
+      
+      let userFriendlyMessage = "Failed to parse AI response. The response may be malformed.";
+      if (isTruncated) {
+        userFriendlyMessage = "AI generation was truncated or incomplete. Please try generating fewer questions or a smaller paper.";
+      }
 
-    console.error("[JSON Parser] Parse Failed:", err.message);
-    // Logging snippet of the raw string for server-side debugging
-    console.error(`[JSON Parser] Raw string length: ${rawText.length}. Ends with: ${rawText.substring(rawText.length - 100)}`);
-    
-    throw new AiParseError(userFriendlyMessage, rawText);
+      console.error("[JSON Parser] Parse Failed after repair attempt:", err.message);
+      console.error(`[JSON Parser] Raw string length: ${rawText.length}. Ends with: ${rawText.substring(rawText.length - 100)}`);
+      
+      throw new AiParseError(userFriendlyMessage, rawText);
+    }
   }
 
   // 4. Validate schema

@@ -194,6 +194,26 @@ export default function ExpectedAnswersViewerPage() {
     );
   }
 
+  const getNextGapIndex = () => {
+    if (!paper) return -1;
+    for (let i = currentIndex + 1; i < paper.questions.length; i++) {
+      const q = paper.questions[i];
+      const ev = evaluations[q.questionId];
+      if (!ev) return i; // skipped / not evaluated
+      
+      const score = ev.marksAwarded ?? 0;
+      const missedPoints = score < q.marks;
+      const hasDeductions = ev.deductions && ev.deductions.length > 0;
+      const hasMissedKeywords = ev.keywords_missing && ev.keywords_missing.length > 0;
+      
+      if (missedPoints || hasDeductions || hasMissedKeywords) {
+        return i;
+      }
+    }
+    return -1;
+  };
+
+  const nextGapIndex = getNextGapIndex();
   const currentQuestion = paper.questions[currentIndex];
   const currentEvaluation = evaluations[currentQuestion.questionId];
   const marksScored = currentEvaluation ? currentEvaluation.marksAwarded : 0;
@@ -374,6 +394,17 @@ export default function ExpectedAnswersViewerPage() {
           >
             <ChevronLeft className="w-4 h-4" /> Previous
           </button>
+          
+          {nextGapIndex !== -1 && (
+            <button
+              onClick={() => setCurrentIndex(nextGapIndex)}
+              disabled={loadingAnswer}
+              className="flex items-center gap-1.5 border border-amber-200 bg-amber-50 hover:bg-amber-100 text-amber-700 px-4 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm cursor-pointer"
+            >
+              Next Gap <AlertTriangle className="w-4 h-4 text-amber-500" />
+            </button>
+          )}
+
           <button
             onClick={() => setCurrentIndex((prev) => Math.min(paper.questions.length - 1, prev + 1))}
             disabled={currentIndex === paper.questions.length - 1 || loadingAnswer}

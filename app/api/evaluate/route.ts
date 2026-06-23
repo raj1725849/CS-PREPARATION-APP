@@ -9,6 +9,7 @@ import { EvaluateRequest, EvaluateResponse, EvaluateError } from "@/lib/types"
 import { evaluateWithOpenRouter } from "@/lib/openrouter"
 import { resolveSubjectName } from "@/lib/subject-map"
 import { retrieveRubric } from "@/lib/rubric-retriever"
+import { extractMarksFromText } from "@/lib/marks-extractor"
 import { verifyUserAndEnforceLimit } from "@/lib/firebase-server"
 import {
   generateQuestionId,
@@ -145,9 +146,8 @@ export async function POST(req: NextRequest) {
   } else if (marks !== undefined && marks !== null) {
     finalMarks = marks;
   } else {
-    // Try to extract marks from the question text using regex
-    const parsedMarksMatch = question.trim().match(/(?:\[|\()?\s*(\d+)\s*(?:marks?|m)\s*(?:\]|\))?\s*$/i);
-    const extractedMarks = parsedMarksMatch ? parseInt(parsedMarksMatch[1], 10) : null;
+    // Try to extract marks from the question text using robust utility
+    const extractedMarks = extractMarksFromText(question);
 
     if (extractedMarks && !isNaN(extractedMarks) && extractedMarks > 0 && extractedMarks <= 30) {
       finalMarks = extractedMarks;

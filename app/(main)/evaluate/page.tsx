@@ -8,6 +8,7 @@ import { EvaluateSession, EnhancedDeduction } from "@/lib/types";
 import ImageUploader, { UploadedImage } from "@/components/ImageUploader";
 import UpgradeModal from "@/components/UpgradeModal";
 import { auth } from "@/lib/firebase";
+import { extractMarksFromText } from "@/lib/marks-extractor";
 
 const SUBJECTS = [
   "Company Law", "Economic Laws", "Tax Laws", 
@@ -274,8 +275,7 @@ export default function EvaluatePage() {
         studentAnswer: editedText
       };
       
-      const parsedMarksMatch = question.trim().match(/(?:\[|\()?\s*(\d+)\s*(?:marks?|m)\s*(?:\]|\))?\s*$/i);
-      const extractedMarks = parsedMarksMatch ? parseInt(parsedMarksMatch[1], 10) : null;
+      const extractedMarks = extractMarksFromText(question);
 
       if (extractedMarks && !isNaN(extractedMarks) && extractedMarks > 0 && extractedMarks <= 30) {
         requestBody.marks = extractedMarks;

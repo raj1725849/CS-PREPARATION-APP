@@ -785,6 +785,14 @@ export default function PaperDetailPage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#e8590c]" />
                     <span className="text-sm text-[#cbd5e1]">Attempt Date: <strong className="text-white">{new Date(paper.createdAt).toLocaleDateString()}</strong></span>
                   </div>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => router.push(`/papers/${paper.paperId}/expected-answers`)}
+                      className="bg-[#e8590c] hover:bg-[#c94d0a] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 fill-white" /> View Expected Answers
+                    </button>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-6">
