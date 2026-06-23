@@ -1,0 +1,88 @@
+<h2>Expected Answer Viewer Layout</h2>
+<p class="subtitle">Choose the preferred layout style for displaying the ICSI exam-ready expected answers and student performance comparison.</p>
+
+<div class="options">
+  <div class="option" data-choice="side-by-side" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Layout A: Cinematic Split View (Desktop Optimized)</h3>
+      <p>Split screen dividing the student's evaluation details (left) from the official exam-ready model answer (right). Recommended for high readability and side-by-side comparison.</p>
+      
+      <div style="margin-top: 15px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; font-size: 11px;">
+        <div style="background: #f1f5f9; padding: 6px 12px; font-weight: bold; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between;">
+          <span>Q1 Evaluation</span>
+          <span>Marks: 3.5/5</span>
+        </div>
+        <div style="display: flex; height: 120px; background: #fff;">
+          <div style="flex: 1; border-right: 1px solid #cbd5e1; padding: 8px; overflow: hidden; background: #fafafa;">
+            <div style="font-weight: bold; color: #b91c1c; margin-bottom: 4px;">⚠️ What You Missed:</div>
+            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; margin: 4px 0 8px 0; width: 80%;"></div>
+            <div style="font-weight: bold; color: #475569;">🔑 Keywords Missed:</div>
+            <span style="display: inline-block; background: #fee2e2; color: #991b1b; padding: 2px 4px; border-radius: 4px; font-size: 9px; margin-top: 2px;">Ultra Vires</span>
+          </div>
+          <div style="flex: 1.2; padding: 8px; overflow: hidden;">
+            <div style="font-weight: bold; color: #15803d; margin-bottom: 4px;">✨ Exam-Ready Answer:</div>
+            <div style="height: 6px; background: #22c55e; border-radius: 3px; margin: 4px 0; width: 90%;"></div>
+            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; margin: 4px 0; width: 70%;"></div>
+            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; margin: 4px 0; width: 85%;"></div>
+          </div>
+        </div>
+        <div style="background: #f8fafc; padding: 6px; border-top: 1px solid #cbd5e1; text-align: center;">
+          <span style="padding: 2px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px; margin-right: 4px;">← Prev</span>
+          <span style="padding: 2px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px;">Next →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="stacked" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Layout B: Stacked Minimalist Cards (Mobile & Desktop)</h3>
+      <p>A unified single-column flow of card components (Question Card, Feedback Card, Model Answer Card). Simplifies mobile reading with a cohesive downward scroll.</p>
+      
+      <div style="margin-top: 15px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; font-size: 11px; max-width: 280px; margin-left: auto; margin-right: auto;">
+        <div style="background: #f1f5f9; padding: 6px 12px; font-weight: bold; border-bottom: 1px solid #cbd5e1; text-align: center;">
+          Question 1 of 5
+        </div>
+        <div style="padding: 8px; background: #fff; display: flex; flex-direction: column; gap: 8px; max-height: 120px; overflow-y: auto;">
+          <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px; background: #fafafa;">
+            <div style="font-weight: bold; color: #1e3a8a;">Question Text</div>
+            <div style="height: 5px; background: #cbd5e1; margin-top: 4px; width: 95%;"></div>
+          </div>
+          <div style="border: 1px dashed #f87171; border-radius: 6px; padding: 6px; background: #fef2f2;">
+            <div style="font-weight: bold; color: #b91c1c;">Marks: 3.5/5 • Gaps Detected</div>
+            <div style="height: 5px; background: #fca5a5; margin-top: 4px; width: 80%;"></div>
+          </div>
+          <div style="border: 1px solid #86efac; border-radius: 6px; padding: 6px; background: #f0fdf4;">
+            <div style="font-weight: bold; color: #166534;">Exam-Ready Answer</div>
+            <div style="height: 5px; background: #4ade80; margin-top: 4px; width: 90%;"></div>
+          </div>
+        </div>
+        <div style="background: #f8fafc; padding: 6px; border-top: 1px solid #cbd5e1; text-align: center;">
+          <span style="padding: 2px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px; margin-right: 4px;">← Prev</span>
+          <span style="padding: 2px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px;">Next →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pros-cons" style="margin-top: 25px;">
+  <div class="pros">
+    <h4>Layout A Pros & Cons</h4>
+    <ul>
+      <li><strong>Pro:</strong> Side-by-side layout makes comparing "what you missed" to the model answer incredibly natural.</li>
+      <li><strong>Pro:</strong> Fits more details above the fold on desktop screens.</li>
+      <li><strong>Con:</strong> Requires layout rearrangement on small mobile devices.</li>
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>Layout B Pros & Cons</h4>
+    <ul>
+      <li><strong>Pro:</strong> Seamless mobile experience; natural scroll direction.</li>
+      <li><strong>Pro:</strong> Focuses the student's attention on one block of information at a time.</li>
+      <li><strong>Con:</strong> Requires vertical scrolling to see the full comparison on desktop.</li>
+    </ul>
+  </div>
+</div>

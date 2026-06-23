@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2026-06-22T18:41:20Z",
+    "feature": "Robust JSON Parser",
+    "filesAffected": [
+      "lib/json-parser.ts"
+    ],
+    "description": "Created a centralized parseAiResponse utility to safely strip markdown, repair unescaped newlines/control characters, and catch truncated AI responses cleanly without crashing the server."
+  },
+  {
+    "date": "2026-06-22T18:42:42Z",
+    "feature": "API Route Refactoring for Safe Parsing",
+    "filesAffected": [
+      "app/api/generate/route.ts",
+      "app/api/evaluate/route.ts",
+      "app/api/evaluate/ideal-answer/route.ts",
+      "app/api/extract/route.ts",
+      "app/api/split-answers/route.ts"
+    ],
+    "description": "Replaced ad-hoc JSON parsing and backtracking logic with the new centralized parseAiResponse utility. Servers now return a clean 502 error with a user-friendly message when generation is truncated, and log the raw failed response for debugging."
+  },
+  {
+    "date": "2026-06-22T18:50:04Z",
+    "feature": "Chunked Prompt Construction",
+    "filesAffected": [
+      "lib/prompts.ts"
+    ],
+    "description": "Added buildChunkedGeneratePrompt to instruct the AI to generate only a specific subset of blueprint slots at a time, enforcing exact marks compliance and managing ICSI header placement across chunks."
+  },
+  {
+    "date": "2026-06-22T18:51:00Z",
+    "feature": "Chunked Exam Generation Engine",
+    "filesAffected": [
+      "app/api/generate/route.ts"
+    ],
+    "description": "Architected a sequential generation loop that breaks large paper blueprints into chunks (e.g., 5 questions per chunk), queries the LLMs sequentially, and merges the resulting text and question arrays. This completely bypasses the strict maxOutputTokens limits that were truncating large papers."
+  }
+]

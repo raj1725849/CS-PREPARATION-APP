@@ -1,0 +1,78 @@
+<h2>Select a Sticky Scroll & Animation Upgrade</h2>
+<p class="subtitle">Pick the animation pattern that will make the features section feel premium, fluid, and premium.</p>
+
+<div class="options">
+  
+  <!-- Option A -->
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Approach 1: Progressive Element Reveal (Recommended)</h3>
+      <p><strong>How it works:</strong> A single, high-fidelity dashboard mock container is always visible. As you scroll, elements *inside* the dashboard animate in sync with the active text block:</p>
+      <ul>
+        <li><strong>Step 1 (Evaluation):</strong> The mock answer sheet appears, and AI point redlines draw themselves sequentially.</li>
+        <li><strong>Step 2 (Mock Papers):</strong> The answer sheet morphs into a mock exam paper, scrolling through structured questions.</li>
+        <li><strong>Step 3 (Dashboard):</strong> The paper fades, and subject proficiency bar charts grow from 0% to their values.</li>
+      </ul>
+      <p>Uses <code>framer-motion</code>'s <code>layoutId</code> and smooth transitions to morph the visual content in place, preventing abrupt flips.</p>
+      <div class="pros-cons" style="margin-top: 10px;">
+        <div class="pros" style="font-size: 11px;">
+          <ul>
+            <li>Highly fluid, feels like a single cohesive interface morphing</li>
+            <li>Zero jarring transitions or abrupt layout jumps</li>
+          </ul>
+        </div>
+        <div class="cons" style="font-size: 11px;">
+          <ul>
+            <li>Requires careful coordination of UI states</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Approach 2: Cross-Fade Stack with Scale-In</h3>
+      <p><strong>How it works:</strong> The 3 mockups (Evaluation, Paper, Charts) are pre-loaded in an absolute-positioned stack. When you scroll to a feature, the active mockup fades in (<code>opacity: 1, scale: 1</code>) and the inactive ones fade out (<code>opacity: 0, scale: 0.95</code>) in place.</p>
+      <p>We also increase the scroll section height to <code>80vh</code> to give the user plenty of scroll space before a mockup changes, preventing rapid flurries of swaps.</p>
+      <div class="pros-cons" style="margin-top: 10px;">
+        <div class="pros" style="font-size: 11px;">
+          <ul>
+            <li>Clean and straightforward to interact with</li>
+            <li>More breathing room while scrolling</li>
+          </ul>
+        </div>
+        <div class="cons" style="font-size: 11px;">
+          <ul>
+            <li>Does not morph elements, still switches distinct panels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Approach 3: Horizontal Timeline Track</h3>
+      <p><strong>How it works:</strong> As you scroll vertically, the section locks in place (pinning) and horizontal scrolls through 3 full-width columns showing the features side-by-side with large-scale visuals.</p>
+      <div class="pros-cons" style="margin-top: 10px;">
+        <div class="pros" style="font-size: 11px;">
+          <ul>
+            <li>Extremely high visual impact, cinematic</li>
+          </ul>
+        </div>
+        <div class="cons" style="font-size: 11px;">
+          <ul>
+            <li>Can feel heavy and break the page's vertical reading flow</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
