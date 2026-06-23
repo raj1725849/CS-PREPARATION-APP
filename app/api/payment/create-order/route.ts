@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { verifyUserAuth } from "@/lib/firebase-server";
 
 const PLAN_PRICES: Record<string, number> = {
   monthly: 69900,     // ₹699 in paise
@@ -8,6 +9,15 @@ const PLAN_PRICES: Record<string, number> = {
 
 export async function POST(req: NextRequest) {
   try {
+    // Verify user authentication
+    let uid: string;
+    try {
+      const authResult = await verifyUserAuth(req);
+      uid = authResult.uid;
+    } catch (err: any) {
+      return NextResponse.json({ error: err.message || "Unauthorized" }, { status: 401 });
+    }
+
     const { plan } = await req.json();
 
     if (!plan || !PLAN_PRICES[plan]) {
@@ -34,7 +44,10 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         amount,
         currency: "INR",
-        receipt: `receipt_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`
+        receipt: `receipt_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+        notes: {
+          userId: uid
+        }
       })
     });
 

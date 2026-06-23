@@ -277,6 +277,11 @@ export interface UserProfile {
   createdAt: string; // ISO timestamp
   updatedAt: string; // ISO timestamp
   usage?: UserUsage;
+  expiresAt?: string | null;
+  subscriptionStatus?: string | null;
+  razorpayPaymentId?: string | null;
+  razorpayOrderId?: string | null;
+  upgradedAt?: string | null;
 }
 
 export interface GeneratedPaperQuestion {

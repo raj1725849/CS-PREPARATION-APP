@@ -84,9 +84,15 @@ export async function verifyUserAndEnforceLimit(
   const fields = docData.fields || {};
   
   const plan = fields.plan ? parseFirestoreValue(fields.plan) : "free";
+  const expiresAt = fields.expiresAt ? parseFirestoreValue(fields.expiresAt) : null;
   
-  if (plan !== "free") {
-    return { uid, plan };
+  let activePlan = plan;
+  if (expiresAt && new Date(expiresAt).getTime() < Date.now()) {
+    activePlan = "free";
+  }
+  
+  if (activePlan !== "free") {
+    return { uid, plan: activePlan };
   }
 
   // Handle free tier rate limiting
@@ -213,7 +219,13 @@ export async function verifyUserAuth(
   const docData = await firestoreRes.json();
   const fields = docData.fields || {};
   const plan = fields.plan ? parseFirestoreValue(fields.plan) : "free";
+  const expiresAt = fields.expiresAt ? parseFirestoreValue(fields.expiresAt) : null;
 
-  return { uid, plan };
+  let activePlan = plan;
+  if (expiresAt && new Date(expiresAt).getTime() < Date.now()) {
+    activePlan = "free";
+  }
+
+  return { uid, plan: activePlan };
 }
 

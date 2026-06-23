@@ -45,15 +45,17 @@ export default function AuthPage() {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(userCredential.user, { displayName: name });
 
+        // Always initialize user profile with free plan first (allowed by rules)
+        await updateUserProfile({
+          uid: userCredential.user.uid,
+          email: userCredential.user.email,
+          displayName: name,
+          plan: "free",
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        });
+
         if (selectedPlan === "free") {
-          await updateUserProfile({
-            uid: userCredential.user.uid,
-            email: userCredential.user.email,
-            displayName: name,
-            plan: "free",
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString()
-          });
           if (typeof window !== "undefined") {
             sessionStorage.removeItem("signing_up");
           }
@@ -72,9 +74,14 @@ export default function AuthPage() {
             }
             const { key } = await configRes.json();
 
+            const idToken = await userCredential.user.getIdToken();
+
             const orderRes = await fetch("/api/payment/create-order", {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              headers: { 
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${idToken}`
+              },
               body: JSON.stringify({ plan: selectedPlan })
             });
 
@@ -105,7 +112,10 @@ export default function AuthPage() {
                   try {
                     const verifyRes = await fetch("/api/payment/verify", {
                       method: "POST",
-                      headers: { "Content-Type": "application/json" },
+                      headers: { 
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${idToken}`
+                      },
                       body: JSON.stringify({
                         razorpay_payment_id: response.razorpay_payment_id,
                         razorpay_order_id: response.razorpay_order_id,
@@ -119,14 +129,6 @@ export default function AuthPage() {
 
                     const verifyData = await verifyRes.json();
                     if (verifyData.verified) {
-                      await updateUserProfile({
-                        uid: userCredential.user.uid,
-                        email: userCredential.user.email,
-                        displayName: name,
-                        plan: selectedPlan,
-                        createdAt: new Date().toISOString(),
-                        updatedAt: new Date().toISOString()
-                      });
                       if (typeof window !== "undefined") {
                         sessionStorage.removeItem("signing_up");
                       }
@@ -150,15 +152,6 @@ export default function AuthPage() {
               rzp.open();
             });
           } catch (checkoutErr: unknown) {
-            // Fallback: create Free profile so their user account is initialized
-            await updateUserProfile({
-              uid: userCredential.user.uid,
-              email: userCredential.user.email,
-              displayName: name,
-              plan: "free",
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString()
-            });
             if (typeof window !== "undefined") {
               sessionStorage.removeItem("signing_up");
             }

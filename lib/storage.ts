@@ -261,14 +261,27 @@ export async function getUserProfile(): Promise<UserProfile | null> {
     const snap = await getDoc(docRef);
     if (snap.exists()) {
       const data = snap.data();
+      const plan = data.plan || "free";
+      const expiresAt = data.expiresAt || null;
+
+      let activePlan = plan;
+      if (expiresAt && new Date(expiresAt).getTime() < Date.now()) {
+        activePlan = "free";
+      }
+
       return {
         uid: user.uid,
         email: user.email || data.email || null,
         displayName: user.displayName || data.displayName || null,
-        plan: (data.plan || "free") as BillingPlan,
+        plan: activePlan as BillingPlan,
         createdAt: data.createdAt || new Date().toISOString(),
         updatedAt: data.updatedAt || new Date().toISOString(),
-        usage: data.usage
+        usage: data.usage,
+        expiresAt: data.expiresAt || null,
+        subscriptionStatus: data.subscriptionStatus || null,
+        razorpayPaymentId: data.razorpayPaymentId || null,
+        razorpayOrderId: data.razorpayOrderId || null,
+        upgradedAt: data.upgradedAt || null
       };
     }
     

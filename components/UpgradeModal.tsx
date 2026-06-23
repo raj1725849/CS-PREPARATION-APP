@@ -36,10 +36,15 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
       }
       const { key } = await configRes.json();
 
+      const idToken = await user?.getIdToken();
+
       // 3. Create the payment order on server
       const orderRes = await fetch("/api/payment/create-order", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": idToken ? `Bearer ${idToken}` : ""
+        },
         body: JSON.stringify({ plan: selectedPlan })
       });
 
@@ -69,10 +74,15 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
         handler: async function (response: RazorpayResponse) {
           setLoadingPlan(selectedPlan);
           try {
+            const verifyIdToken = await user?.getIdToken();
+
             // 5. Verify the payment on the server
             const verifyRes = await fetch("/api/payment/verify", {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              headers: { 
+                "Content-Type": "application/json",
+                "Authorization": verifyIdToken ? `Bearer ${verifyIdToken}` : ""
+              },
               body: JSON.stringify({
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_order_id: response.razorpay_order_id,
@@ -86,8 +96,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
 
             const verifyData = await verifyRes.json();
             if (verifyData.verified) {
-              // 6. Update user's Firestore plan upon successful verification
-              await updateUserProfile({ plan: selectedPlan });
+              // 6. Refresh plan context state (updated server-side)
               await refreshPlan();
               setSuccess(true);
               setTimeout(() => {
