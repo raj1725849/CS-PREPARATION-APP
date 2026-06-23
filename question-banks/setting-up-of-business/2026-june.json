@@ -1,0 +1,710 @@
+{
+  "subject": "Industrial, Labour & General Laws",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "ILGL_2026_JUNE_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 3,
+      "questionText": "What are the key legal features of a Section 8 company under the Companies Act, 2013 that apply to CRDI ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Section 8 Company",
+      "sectionNumber": "Section 8 of the Companies Act, 2013",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 3,
+      "questionText": "What is the purpose of the SPICe+ (INC 32) form in the incorporation of a company like CRDI ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Company Incorporation",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 3,
+      "questionText": "How does bridge-round funding help startups to meet their financial needs ?",
+      "questionType": "Case Study",
+      "topic": "Startup Funding",
+      "subTopic": "Bridge-round funding",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 3,
+      "questionText": "What are the legal requirements for converting a Section 8 company into a private limited company ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Conversion of Company",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 3,
+      "questionText": "What types of loan-facilitation support can CRDI provide through MUDRA-supported banks while remaining compliant with Section 8 restrictions ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Section 8 Company Restrictions",
+      "sectionNumber": "Section 8",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 3,
+      "questionText": "Ravi, who runs a micro manufacturing unit, supplied goods to a buyer who accepted the delivery on 1st March. The buyer has not made payment even after 18 days. Ravi wants to understand whether this delay is covered under the Micro, Small and Medium Enterprises Development (MSMED) Act, 2006 and how the ‘‘appointed day’’ is determined. Explain the legal position.",
+      "questionType": "Case Study",
+      "topic": "Micro, Small and Medium Enterprises Development (MSMED) Act, 2006",
+      "subTopic": "Payment to MSMEs",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 3,
+      "questionText": "Nikhil is planning to establish a Non-Banking Financial Company (NBFC) and is currently in discussions with potential investors to raise his initial capital. During one such meeting, an investor informs him that the Reserve Bank of India has introduced a Scale-Based Regulatory Framework for NBFCs. Since Nikhil is unfamiliar with this framework, he seeks your guidance to understand its key regulatory features. Explain the main elements of the scale-based regulatory framework to help Nikhil make informed decisions while setting up his NBFC.",
+      "questionType": "Case Study",
+      "topic": "Non-Banking Financial Companies (NBFC)",
+      "subTopic": "Scale-Based Regulatory Framework",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 3,
+      "questionText": "Mahesh, who grew up in the slum areas of Mumbai, has always wanted to improve the living conditions in his neighbourhood. Now that he has secured a job, he plans to form a society to work towards community development. Explain the purposes for which a society can be registered under the Societies Registration Act, 1860.",
+      "questionType": "Case Study",
+      "topic": "Societies Registration Act, 1860",
+      "subTopic": "Registration of Society",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q2D",
+      "questionNumber": "2(d)",
+      "marks": 3,
+      "questionText": "Nexonova Engineering Corp, a foreign company, operates a Branch Office in Pune. During the financial year ending 31st March 2026, the Branch Office earned significant profits from its Indian and overseas clients. The Head Office, located in Zurich, now intends to remit 50% of the profit earned in India to its parent company abroad. Before initiating the remittance, the Branch Office wants to ensure full compliance with Indian foreign exchange regulations. Explain the compliances that the Indian Branch Office must complete before remitting the surplus profit to its foreign Head Office.",
+      "questionType": "Case Study",
+      "topic": "Foreign Exchange Management Act (FEMA)",
+      "subTopic": "Branch Office Remittance",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q2E",
+      "questionNumber": "2(e)",
+      "marks": 3,
+      "questionText": "Rohit, a partner in an LLP, intentionally conceals material information from a client and induces the client to enter into a contract with the LLP. Later, the client discovers the concealment and alleges that the LLP obtained the contract through fraud. Explain, under the Limited Liability Partnership Act, 2008, the liability of a partner in cases involving fraud and whether the LLP and its other innocent partners remain protected.",
+      "questionType": "Case Study",
+      "topic": "Limited Liability Partnership Act, 2008",
+      "subTopic": "Partner Liability for Fraud",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 3,
+      "questionText": "Noventrix Labs Pvt. Ltd. has recently been incorporated as a new startup entity. The company has not yet applied for recognition from the Department for Promotion of Industry and Internal Trade (DPIIT). In the second board meeting, one of the directors, D, pointed out that without DPIIT recognition, the company cannot access tax benefits or funding support available to Startups. As the Company Secretary, explain the process through which Noventrix Labs Pvt. Ltd. can obtain Startup recognition.",
+      "questionType": "Case Study",
+      "topic": "Startup India",
+      "subTopic": "DPIIT Recognition",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 3,
+      "questionText": "Bluewave Tech. Pvt. Ltd. attempted to file incorporation forms without properly preparing its Memorandum of Association and Articles of Association. The promoters now want to understand the statutory requirements relating to these documents. Explain the procedure for preparing, stamping, signing and filing the Memorandum of Association and Articles of Association during company incorporation.",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "MOA & AOA",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 3,
+      "questionText": "Crestview Labs Pvt. Ltd. is in the process of incorporation and intends to appoint new directors. Explain the statutory requirements for obtaining a Director Identification Number (DIN) and a Digital Signature Certificate (DSC) for the proposed directors.",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Directors - DIN & DSC",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q3D",
+      "questionNumber": "3(d)",
+      "marks": 3,
+      "questionText": "InfoEdge Pvt. Ltd. plans to invest in a foreign entity that does not have limited liability. The foreign entity is not in a strategic sector. Explain whether the investment can be treated as Overseas Direct Investment (ODI).",
+      "questionType": "Case Study",
+      "topic": "Foreign Exchange Management Act (FEMA)",
+      "subTopic": "Overseas Direct Investment (ODI)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q3E",
+      "questionNumber": "3(e)",
+      "marks": 3,
+      "questionText": "Finovate Finance Pvt. Ltd. has financial assets equal to 48% of its total assets and income from financial assets equal to 52% of its gross income. Explain whether the company qualifies as an NBFC.",
+      "questionType": "Case Study",
+      "topic": "Non-Banking Financial Company (NBFC)",
+      "subTopic": "Definition/Qualification Criteria",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 3,
+      "questionText": "Describe the essential characteristics that define a Micro Finance Institution (MFI).",
+      "questionType": "Descriptive",
+      "topic": "Micro Finance Institution (MFI)",
+      "subTopic": "Characteristics of MFI",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 3,
+      "questionText": "Under the Companies Act, 2013, outline the precautions that must be observed while drafting the Articles of Association of a company.",
+      "questionType": "Descriptive",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Articles of Association",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 3,
+      "questionText": "Under Section 12 of the Income Tax Act, 1961, specify the categories of income of a Trust or Society that are excluded from the computation of taxable income.",
+      "questionType": "Descriptive",
+      "topic": "Income Tax Act, 1961",
+      "subTopic": "Trust/Society Income Exclusions",
+      "sectionNumber": "Section 12 of the Income Tax Act, 1961",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4D",
+      "questionNumber": "4(d)",
+      "marks": 3,
+      "questionText": "Explain the manner in which foreign financial business collaborations support the economic development of developing countries.",
+      "questionType": "Descriptive",
+      "topic": "International Business",
+      "subTopic": "Foreign Financial Collaborations",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4E",
+      "questionNumber": "4(e)",
+      "marks": 3,
+      "questionText": "State the benefits of incorporating a Housing Finance Company.",
+      "questionType": "Descriptive",
+      "topic": "Housing Finance Company",
+      "subTopic": "Benefits of HFC",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 3,
+      "questionText": "Why is selecting the correct form of business entity important before starting operations ?",
+      "questionType": "Descriptive",
+      "topic": "Business Entities",
+      "subTopic": "Choice of Entity",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 3,
+      "questionText": "Explain the key corporate changes that take place when a private company converts into a public company.",
+      "questionType": "Descriptive",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Conversion of Private to Public Company",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4AIII",
+      "questionNumber": "4A(iii)",
+      "marks": 3,
+      "questionText": "Describe how the concept of limited liability operates within an LLP structure.",
+      "questionType": "Descriptive",
+      "topic": "Limited Liability Partnership Act, 2008",
+      "subTopic": "Limited Liability in LLP",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4AIV",
+      "questionNumber": "4A(iv)",
+      "marks": 3,
+      "questionText": "Outline the functional role of a Project Office established by a foreign company in India.",
+      "questionType": "Descriptive",
+      "topic": "Foreign Exchange Management Act (FEMA)",
+      "subTopic": "Project Office",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q4AV",
+      "questionNumber": "4A(v)",
+      "marks": 3,
+      "questionText": "State the significance of obtaining a Trade License for certain types of businesses.",
+      "questionType": "Descriptive",
+      "topic": "Business Laws",
+      "subTopic": "Trade License",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Analyze whether NovaGen’s actions of compelling a pregnant woman to work night shifts in a hazardous establishment and refusing reassignment violate constitutional protections relating to labour welfare.",
+      "questionType": "Case Study",
+      "topic": "Labour Law",
+      "subTopic": "Women Employment & Maternity Protection",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Explain the statutory responsibilities of the Appropriate Authority to ensure safety of women employed in hazardous operations under the Occupational Safety, Health and Working Conditions Code 2020.",
+      "questionType": "Case Study",
+      "topic": "Occupational Safety, Health and Working Conditions Code 2020",
+      "subTopic": "Safety of Women in Hazardous Operations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Assess whether the management’s request directing Tanya to resume duty by 5th June 2026 shortly after childbirth is legally valid under the Code on Social Security 2020.",
+      "questionType": "Case Study",
+      "topic": "Code on Social Security 2020",
+      "subTopic": "Maternity Benefits",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 5,
+      "questionText": "To what extent the demand of Tanya to the management, to provide childcare Creche facility is valid under the Code of Social Security, 2020 ?",
+      "questionType": "Case Study",
+      "topic": "Code on Social Security 2020",
+      "subTopic": "Creche Facility",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "Karan has recently completed his engineering degree and joined ABC Ltd. as a trainee engineer. During his orientation, he is informed that every employee has specific statutory duties under Section 13 of the Occupational Safety, Health and Working Conditions Code 2020. Since Karan is not familiar with these legal duties, advise him on the duties that an employee is required to follow at the workplace under this provision.",
+      "questionType": "Case Study",
+      "topic": "Occupational Safety, Health and Working Conditions Code 2020",
+      "subTopic": "Employee Duties",
+      "sectionNumber": "Section 13 of the Occupational Safety, Health and Working Conditions Code 2020",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "XYZ Ltd. is engaged in the manufacturing of heavy capital machinery and employs approximately 740 workers due to its labour-intensive operations. Until 31st March 2026, the establishment did not have any trade union. In May 2026, a group of 47 workers from the Finishing and Warehouse Section decided to form a trade union and submit an application for its registration. Examine the statutory criteria for registration of a new trade union under Section 6 of the Industrial Relations Code 2020 in the context of their proposal.",
+      "questionType": "Case Study",
+      "topic": "Industrial Relations Code 2020",
+      "subTopic": "Trade Union Registration",
+      "sectionNumber": "Section 6 of the Industrial Relations Code 2020",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "Raghav is a mechanical engineer who worked for two years with RST Limited, a public limited company engaged in the manufacture of heavy industrial chemicals. He recently accepted a higher-paying position with ABC Co-operative Society, a housing society and joined the new organization immediately. When he receives his first salary, Raghav notices that ABC Co-operative Society has not deducted any provident fund contribution from his wages, neither his share nor the employer’s share. He believes that ABC Co-operative Society is not complying with statutory requirements. Examine the validity of Raghav’s viewpoint in light of the applicability provisions of the Code on Social Security 2020.",
+      "questionType": "Case Study",
+      "topic": "Code on Social Security 2020",
+      "subTopic": "Provident Fund Applicability",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "Rohan is an adolescent employed at GS General Grocery Store. His regular working hours are from 10:00 a.m. to 4:00 p.m., which include intervals for rest and lunch. In May 2026, a new manager named Kunal joined the store. Observing a higher customer turnout during evening hours, Kunal changed Rohan’s shift from the morning slot (10:00 a.m. to 4:00 p.m.) to an evening slot (5:00 p.m. to 9:00 p.m.), stating that the new shift reduces his total working hours from six to four. Considering the provisions of the Child and Adolescent Labour (Prohibition and Regulation) Act 1986, examine the validity of the new shift timing proposed for Rohan.",
+      "questionType": "Case Study",
+      "topic": "Child and Adolescent Labour (Prohibition and Regulation) Act 1986",
+      "subTopic": "Working Hours for Adolescents",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "Discuss the need and objectives of bringing in the New Labour Codes.",
+      "questionType": "Descriptive",
+      "topic": "Labour Codes",
+      "subTopic": "Overview of Labour Codes",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Explain the qualifications required for engaging an apprentice and outline the contractual formalities prescribed under the Apprentices Act, 1961.",
+      "questionType": "Descriptive",
+      "topic": "Apprentices Act, 1961",
+      "subTopic": "Apprenticeship Contract",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "What interim measures can the Internal Committee recommend to the employer during the pendency of an inquiry under the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013, when such measures are requested in writing by the aggrieved woman ?",
+      "questionType": "Descriptive",
+      "topic": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+      "subTopic": "Internal Committee & Interim Measures",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2026_JUNE_Q6AIV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "What are the records, returns and notices that an employer is required to maintain and comply with under the Code on Wages, 2019 ?",
+      "questionType": "Descriptive",
+      "topic": "Code on Wages, 2019",
+      "subTopic": "Compliance & Records",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

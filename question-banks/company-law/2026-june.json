@@ -1,0 +1,805 @@
+{
+  "subject": "Company Law",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "CL_2026_JUNE_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 3,
+      "questionText": "Analyse the situation and advise the directors on the appropriate course of action to obtain approval for the change of name.",
+      "questionType": "Case Study",
+      "topic": "Company Name",
+      "subTopic": "Change of Name, ROC filing",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 3,
+      "questionText": "As a Practising Company Secretary, do you consider a dormant company mechanism would provide a solution to the issue raised by the promoters on how they can provide a corporate shield for the intellectual properties and the land linked to the future renewable energy projects without altering the existing object clause of Swash Infra Limited.",
+      "questionType": "Case Study",
+      "topic": "Company Operations",
+      "subTopic": "Dormant Company, Object Clause",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 3,
+      "questionText": "Explain the meaning of a “listed company” and examine whether the Company Secretary’s suggestion is justified i.e., whether the company would become a listed company by listing its proposed non-convertible redeemable preference shares on a recognized stock exchange such as the National Stock Exchange of India.",
+      "questionType": "Case Study",
+      "topic": "Listing and Securities",
+      "subTopic": "Listed Company Definition, Preference Shares Listing",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 3,
+      "questionText": "In view of the facts given under para-IV above, examine whether the Company Secretary is likely to succeed in obtaining an injunction from the appropriate court to restrain the trade union and workmen from releasing the video disk on social media or in any other manner.",
+      "questionType": "Case Study",
+      "topic": "Corporate Governance / Legal Remedies",
+      "subTopic": "Trade Unions, Defamation, Injunctions",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 3,
+      "questionText": "Explain the provisions relating to the applicability of CARO 2020 to companies and determine whether the statutory auditor’s report issued in this case is complaint with CARO 2020.",
+      "questionType": "Case Study",
+      "topic": "Audit",
+      "subTopic": "CARO 2020, Inventory Verification",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 3,
+      "questionText": "Blue Crest Industries Ltd. created a combined charge over two factories to secure\na loan of ` 100 crore, which was also registered with the ROC. After repaying\n` 95 crore along with interest, the lender agreed to release the charge with respect\nto Factory-1. The company then filed satisfaction of charge with the Registrar of\nCompanies (ROC) seeking deletion of the charge on Factory-1.\nAs the Company Secretary, examine whether the ROC would issue a certificate of\nsatisfaction of charge relating to Factory-1 under the Companies Act, 2013.",
+      "questionType": "Case Study",
+      "topic": "Charges",
+      "subTopic": "Satisfaction of Charge, Partial Release of Charge",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 3,
+      "questionText": "Zen Wave Technologies Pvt. Ltd. earned a profit of ` 70 crore for the financial\nyear ending 31st March 2026. The Board in its meeting on 30th May 2026, proposed\na final dividend of 30% on the paid-up share capital. While preparing the financial\nstatements, the company did not transfer 10% of its profits to the general reserve.\nAt the Annual General Meeting (AGM), some shareholders objected that the final\ndividend cannot be declared without making such a transfer. With reference to the\nCompanies Act, 2013, examine whether the shareholders’ objection is justifiable and\nwhether the proposed final dividend can be validly declared.",
+      "questionType": "Case Study",
+      "topic": "Dividends",
+      "subTopic": "Declaration of Dividend, Transfer to Reserves",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 3,
+      "questionText": "Ramakant is a debenture holder of Smart Tubes Ltd. with a turnover of ` 73 crores\nfor the previous financial year. He wrote an email to the company about his requirement\nfor a copy of the register of members within five days of his request. The company\ninsisted on payment of fees of rupees twenty-five per page and stated that it will\nbe given in fifteen days from date of resolution passed by Board in this aspect.\nReferring to the provisions of Companies Act, 2013 discuss the validity of action\nof the company.",
+      "questionType": "Case Study",
+      "topic": "Registers & Records",
+      "subTopic": "Inspection of Register of Members, Fees, Time Limits",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q2DI",
+      "questionNumber": "2(d)(i)",
+      "marks": 1,
+      "questionText": "Board of Directors of Beta Ltd. an unlisted company has decided to proceed\nfor making an offer of Equity Share on preferential basis. In this connection\nthe Vice President (Corporate Affairs) wants to know the time limit for completion\nof allotment of shares on preferential basis.",
+      "questionType": "Case Study",
+      "topic": "Share Capital",
+      "subTopic": "Preferential Allotment, Time Limit",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q2DII",
+      "questionNumber": "2(d)(ii)",
+      "marks": 2,
+      "questionText": "In a situation where convertible securities are offered on a preferential basis\nwith an option to apply for and get equity shares allotted, how will the price\nfor resultant shares pursuant to conversion be determined ? Advise.",
+      "questionType": "Case Study",
+      "topic": "Share Capital",
+      "subTopic": "Preferential Allotment, Pricing of Convertible Securities",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q2E",
+      "questionNumber": "2(e)",
+      "marks": 3,
+      "questionText": "Sona Boutique Pvt. Ltd. has not appointed a Company Secretary, as its paid-up\nshare capital is below the statutory threshold. The Board of directors has authorized\nthe Chief Financial Officer (CFO) to authenticate the entries in the Register of Members.\nThe company has recently forfeited certain shares for non-payment of calls. Explain\nthe statutory time limit for making entries in the Register of Members pursuant to\nsuch forfeiture and examine the validity of authentication of these entries by the CFO\nin light of the provisions of the Companies Act, 2013.",
+      "questionType": "Case Study",
+      "topic": "Registers & Records / Shares",
+      "subTopic": "Register of Members, Share Forfeiture, Authentication of Entries, Company Secretary",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "The Board of directors of Shagun Ltd. has, for a considerable period, observed that\nSampat, a member of the company, has been indulging in activities detrimental to\nthe interests and reputation of the company. The Articles of Association of the company\nauthorize the Board of Directors to expel a member whose conduct is detrimental\nto the company existance.\nIn exercise of such power and claiming to act in the bona fide interests of the company,\nthe Board of Directors, at its meeting held in March 2025, passed a resolution, with\nconsent of all directors attending the meeting, to expel Sampat from the membership\nof the company.\nExamine the validity of the Board’s resolution under the provisions of the Companies\nAct, 2013.",
+      "questionType": "Case Study",
+      "topic": "Members / Articles of Association",
+      "subTopic": "Expulsion of Members, Powers of Board, Ultra Vires",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Vanna Private Limited proposes to accept deposits amounting to ` 50 crore from\nits members. The company has no existing outstanding deposits. As per the audited\nfinancial statements for the year ended 31st March 2026, its paid-up share capital\nis ` 25 crore (equity ` 20 crore and preference ` 5 crore), free reserves are\n` 10 crore, and the securities premium account shows a balance of ` 5 crore. The\ncompany has an outstanding term loan of ` 40 crore. Vanna Private Limited is neither\na holding company nor a subsidiary or associate company of any other company\nand it has not defaulted in repayment of its borrowings.\nWith reference to the provisions of the Companies Act, 2013 and the Companies\n(Acceptance of Deposits) Rules, 2014 examine whether the company can accept the\nproposed deposits of ` 50 crore from its members.",
+      "questionType": "Practical",
+      "topic": "Deposits",
+      "subTopic": "Acceptance of Deposits from Members, Calculation of Limit",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q3CI",
+      "questionNumber": "3(c)(i)",
+      "marks": 3,
+      "questionText": "Parimal is indebted to Intense Finance Solutions Ltd. for ` 95,000. Intense\nFinance Solutions Ltd. is the holding company of Xplore Financial Services\nLtd.\nParama is sister of Prateek. Prateek is employed as General Manager (Marketing)\nin the company with a salary of ` 1 lakh per month.\nState if the following persons Parimal and Parama can be appointed as debenture\ntrustee for Xplore Financial Services Ltd.",
+      "questionType": "Case Study",
+      "topic": "Debentures",
+      "subTopic": "Debenture Trustee, Disqualifications",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q3CII",
+      "questionNumber": "3(c)(ii)",
+      "marks": 2,
+      "questionText": "Can a debenture trustee be removed from office before expiry of term ? How\nwill casual vacancy in the office of trustee be filled up ? Referring to the\nprovisions of the Companies Act, 2013 comment.",
+      "questionType": "Descriptive",
+      "topic": "Debentures",
+      "subTopic": "Debenture Trustee Removal, Casual Vacancy",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "AD Ltd. is unable to redeem its preference shares amounting to ` 50 lakh along\nwith the outstanding dividend of ` 5 lakh thereon on the due date for the reason\nof non-availability of adequate cash resources.\nIn the light of the provisions of the Companies Act, 2013, advise the company on\nthe permissible method for redemption of the preference shares without resulting in\neither an increase or a reduction of its share capital.",
+      "questionType": "Case Study",
+      "topic": "Share Capital",
+      "subTopic": "Redemption of Preference Shares",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "You are the senior partner of a firm of practising Company Secretaries. The turnover\nof your firm was ` 7 crores for year ended 31st March, 2026.\nSaugata is a director in AB Ltd., CD Private Ltd. and EF Ltd. He is confused\nif internal audit is required in these companies and has approached you on the applicability\nthereof.\nAdvise Saugata as per the information given below from the latest financial statements :\n(` in crore)\nCD Private\nLtd.\nParticulars AB Ltd. (subsidiary of EF Ltd.\n(listed) GH Ltd. (unlisted)\nlisted)\nTurnover 90 150 180\nPaid-up share capital 48 60 40\nReserves & Surplus 27 45 60\nOutstanding loans from Public\nfinancial institutions 10 75 70\nOutstanding deposits — — 50",
+      "questionType": "Practical",
+      "topic": "Audit",
+      "subTopic": "Internal Audit Applicability, Thresholds",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "The audited financial statements of Jo Ltd. for the year ended 31st March 2025\nshow the following :\n1. Paid-up equity share capital : ` 50 lakh (5 lakh shares of ` 10 each)\n2. Surplus in Profit & Loss Account : ` 10 lakh\n3. Free Reserves : ` 30 lakh\nFor the quarter ended 31st December 2025 and as on that day unaudited accounts\nshows a loss of ` 3 lakh.\nThe Board proposes to declare interim dividend @ ` 5 per share in January 2026.\nThe company declared dividends at 10%, 12% and 8% in FYs 2022-23, 2023-24 and\n2024-25 respectively.\nAdvise the Board suitably on declaration of interim dividend under the provisions of the\nCompanies Act, 2013.",
+      "questionType": "Practical",
+      "topic": "Dividends",
+      "subTopic": "Interim Dividend Declaration, Conditions for Declaration out of profits/reserves",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "Glow Bright Ltd. was facing acute financial difficulties due to continuous disruption\nof operations. The company was facing the impact of :\n• scarcity of raw materials;\n• loss of demand of company’s products;\n• frequent lock down due to workmen’s unrest.\nOn verge of liquidation the management proposed one last arrangement between creditors\nand the company whereby the creditors would have to forego forty percent of their\ndues. This has aroused strong objection from some of the creditors who may block\nthe arrangement.\nExamine the facts to be disclosed by the applicant company while proposing scheme\nof compromise or arrangement to the Tribunal by affidavit under provisions of Companies\nAct, 2013.",
+      "questionType": "Case Study",
+      "topic": "Compromise & Arrangement",
+      "subTopic": "Scheme of Arrangement, Disclosure Requirements",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "Forward Troopers Ltd. is engaged in the manufacturing of wearable protective gear\nand accessories including helmets and shields for supply to the armed forces in the\ncountry.\nFollowing are the extracts of the audited financial statement of the company as on\n31st March, 2026 :\nLiabilities Amount (in `)\nEquity shares of ` 10 each fully paid 20,00,000\nReserves & surplus 7,00,000\nForeign exchange fluctuation reserve 1,00,000\nProfit & loss account 3,00,000\n8% debenture (issued to twenty five persons) 25,00,000\nUnsecured loan (from a related party) 15,00,000\nThe company is considering buy-back of its shares without using any proceeds of\nshares or other securities. Ascertain the maximum quantum of buy-back of shares with\nshareholders’ approval as on 1st April, 2026.",
+      "questionType": "Practical",
+      "topic": "Share Capital",
+      "subTopic": "Buy-back of Shares, Calculation of Limit",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4AIIIA",
+      "questionNumber": "4A(iii)(a)",
+      "marks": 3,
+      "questionText": "Hipocam Ltd. has entered into a contract with Admenta Private Ltd. by which\nthe former will reserve twenty-two percent of their output to be sold to Ultra\nLtd. or to a buyer at the direction of Admenta Private Ltd. You are the\ncompany secretary of Hipocam Ltd. There is a query from accounts department\nif Admenta Private Ltd. can be called an associate company of Hipocam Ltd.\nDiscuss.",
+      "questionType": "Case Study",
+      "topic": "Related Party Transactions / Types of Companies",
+      "subTopic": "Associate Company Definition",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q4AIIIB",
+      "questionNumber": "4A(iii)(b)",
+      "marks": 2,
+      "questionText": "List out the situations when a company is liable for torts of its employees.",
+      "questionType": "Descriptive",
+      "topic": "Company Law Principles / Liabilities",
+      "subTopic": "Corporate Liability, Torts by Employees",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Examine if there is any non-compliance on the part of the company and statement\nof the President (Corporate Affairs) is tenable.",
+      "questionType": "Case Study",
+      "topic": "Directors",
+      "subTopic": "Casual Vacancy, Appointment of Director",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Analyse if the quorum was present in the board meeting held on 31st August, 2025.\nWill your answer be different if the articles stipulated a quorum of six directors ?",
+      "questionType": "Case Study",
+      "topic": "Board Meetings",
+      "subTopic": "Quorum for Board Meeting, Alternate Directors",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Compute company’s net profit as laid down under Companies Act, 2013 to calculate\nmanagerial remuneration.",
+      "questionType": "Practical",
+      "topic": "Managerial Remuneration",
+      "subTopic": "Calculation of Net Profit for Managerial Remuneration",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 3,
+      "questionText": "Comment on the action of Chairman with reference to Secretarial Standard and\nwhat would be the implications if there is no quorum in the adjourned general\nmeeting.",
+      "questionType": "Case Study",
+      "topic": "General Meetings",
+      "subTopic": "Adjournment of Meeting, Quorum, Secretarial Standards",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q5E",
+      "questionNumber": "5(e)",
+      "marks": 2,
+      "questionText": "As a separate case, advise Bithin next course of action for having two director\nidentification numbers.",
+      "questionType": "Case Study",
+      "topic": "Directors",
+      "subTopic": "Director Identification Number (DIN), Surrender of DIN",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AI",
+      "questionNumber": "6(a)(i)",
+      "marks": null,
+      "questionText": "Examine whether the decision of the Chairman was justified.",
+      "questionType": "Case Study",
+      "topic": "Directors",
+      "subTopic": "Alternate Director, Board Meeting",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AII",
+      "questionNumber": "6(a)(ii)",
+      "marks": null,
+      "questionText": "Draft a specimen Board Resolution for appointing a person to act in place\nof a director who is absent from India for a period exceeding three months.",
+      "questionType": "Practical",
+      "topic": "Directors",
+      "subTopic": "Alternate Director Appointment, Board Resolution",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "XYZ Foundation, a company registered under Section 8 of the Companies Act, 2013\nis engaged in charitable activities and proposes to receive foreign contribution for carrying\nout its objects. Under the Foreign Contribution (Regulation) Act, 2010, foreign contribution\ncan be received only in a designated bank account opened with the State Bank of\nIndia, New Delhi Main Branch (FCRA Branch), 11 Sansad Marg, New Delhi - 110001,\nand such account is to be used exclusively for receipt of foreign contribution.\nDraft a specimen board resolution for opening the said designated FCRA bank account,\nand authorising the director and/or the company secretary for doing the needful in\nthis regard under the provisions of the Companies Act, 2013.",
+      "questionType": "Practical",
+      "topic": "Company Administration",
+      "subTopic": "Section 8 Company, FCRA, Board Resolution Drafting",
+      "sectionNumber": "Section 8",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "The Board of directors of your company is intending to take approval from members\nof the company for consolidation of shares. The Managing director has advised you,\ncompany secretary of the company, to show him a specimen Notice of general meeting\ncontaining the resolution. Draft the Notice covering all incidental matters.",
+      "questionType": "Practical",
+      "topic": "Share Capital / General Meetings",
+      "subTopic": "Consolidation of Shares, Notice of General Meeting, Resolution Drafting",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6DI",
+      "questionNumber": "6(d)(i)",
+      "marks": null,
+      "questionText": "Examine whether it is mandatory for the Chairman to place the resolution before\na Board Meeting instead of passing it by circulation in the given scenario\nmentioned above.",
+      "questionType": "Case Study",
+      "topic": "Board Meetings",
+      "subTopic": "Circular Resolution, Interested Directors",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6DII",
+      "questionNumber": "6(d)(ii)",
+      "marks": null,
+      "questionText": "Draft a specimen circular resolution for approval of the purchase of raw material\nagreement with the Suppliers.",
+      "questionType": "Practical",
+      "topic": "Board Meetings",
+      "subTopic": "Circular Resolution Drafting",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIA",
+      "questionNumber": "6A(i)(a)",
+      "marks": null,
+      "questionText": "Explain the provisions of Section 202 of the Companies Act, 2013 relating\nto compensation for loss of office of a Managing Director, Whole-time Director,\nor Manager. Also, discuss the cases where no compensation is payable and\nthe statutory limit on payment of such compensation.",
+      "questionType": "Descriptive",
+      "topic": "Managerial Personnel",
+      "subTopic": "Compensation for Loss of Office",
+      "sectionNumber": "Section 202",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIB",
+      "questionNumber": "6A(i)(b)",
+      "marks": null,
+      "questionText": "Examine whether Saleem’s claim for compensation for loss of office is legally\nsustainable.",
+      "questionType": "Case Study",
+      "topic": "Managerial Personnel",
+      "subTopic": "Compensation for Loss of Office, Resignation",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIIA",
+      "questionNumber": "6A(ii)(a)",
+      "marks": null,
+      "questionText": "The composition of the “Corporate Social Responsibility Committee” (CSR\nCommittee) in case of a private company.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Governance",
+      "subTopic": "CSR Committee Composition (Private Company)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIIB",
+      "questionNumber": "6A(ii)(b)",
+      "marks": null,
+      "questionText": "The Quorum for the CSR Committee.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Governance",
+      "subTopic": "CSR Committee Quorum",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIIC",
+      "questionNumber": "6A(ii)(c)",
+      "marks": null,
+      "questionText": "The functions of the CSR Committee under the statute.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Governance",
+      "subTopic": "CSR Committee Functions",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIID",
+      "questionNumber": "6A(ii)(d)",
+      "marks": null,
+      "questionText": "Number of CSR Committee Meetings.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Governance",
+      "subTopic": "CSR Committee Meetings",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIIE",
+      "questionNumber": "6A(ii)(e)",
+      "marks": null,
+      "questionText": "Chairman of the CSR Committee.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Governance",
+      "subTopic": "CSR Committee Chairman",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "Shantilal, a customer of Cotton Textile Pvt. Ltd. intends to apply in writing to the\ncompany for inspection of its latest Annual Return and extracts thereof. If the company\nrejects his application as he is not a member or debenture holder of the company,\ncan he seek any remedy from the Central Government. He also wants to know the\nevidentiary value of the copies of the annual return. Advise, with reference to the\nprovisions of the Companies Act, 2013.",
+      "questionType": "Case Study",
+      "topic": "Registers & Records",
+      "subTopic": "Annual Return Inspection, Evidentiary Value",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2026_JUNE_Q6AIV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "Rohit has applied to the Indian Institute of Corporate Affairs (IICA) for inclusion\nof his name in the data bank of independent directors. He is working as a director\nof unlisted public companies JKL Ltd. and MNO Ltd., having paid-up share capital\nof ` 10 crore since last 7 years. Rohit clarifies that he is not required to pass the\nonline proficiency self-assessment test as he is director of two unlisted companies with\npaid-up share capital of ` 10 crore since last 7 years. Explain if the contention of\nRohit is correct as per Companies Act, 2013.",
+      "questionType": "Case Study",
+      "topic": "Directors",
+      "subTopic": "Independent Directors Databank, Proficiency Test Exemption",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

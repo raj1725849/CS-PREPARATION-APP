@@ -1,0 +1,615 @@
+{
+  "subject": "Company Law",
+  "year": 2025,
+  "session": "December",
+  "questions": [
+    {
+      "questionId": "CL_2025_DECEMBER_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 3,
+      "questionText": "Explain, whether the company is liable for punishment for its failure to distribute the dividend on preference shares within the statutory time limit.",
+      "questionType": "Case Study",
+      "topic": "Dividend",
+      "subTopic": "Distribution of Dividend",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 3,
+      "questionText": "As regards to Case II, state whether the proposal for closure of register of members in December, 2025 is tenable ?",
+      "questionType": "Case Study",
+      "topic": "Register of Members",
+      "subTopic": "Closure of Register",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 3,
+      "questionText": "As regards to Case III, examine both the claims of transmission of shares and decide whose claim is valid under law.",
+      "questionType": "Case Study",
+      "topic": "Shares",
+      "subTopic": "Transmission of Shares",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 3,
+      "questionText": "As regards to Case IV, examine, if the objection of secretarial advisor regarding assignment of investment advisory services to BCD & Co. is justified.",
+      "questionType": "Case Study",
+      "topic": "Auditors",
+      "subTopic": "Prohibited Services",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 3,
+      "questionText": "As regards to Case V, decide, whether Pradip will succeed in challenging the amendment in articles of association of the company.",
+      "questionType": "Case Study",
+      "topic": "Articles of Association",
+      "subTopic": "Alteration of Articles",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 3,
+      "questionText": "Green Roots Organics Private Limited decides to raise funds by accepting deposits from its members. The Board proposes to offer a fixed interest rate of 9% per annum and plans to secure the deposits through a charge on certain movable assets. State, what are the terms and conditions of Deposits from its members under the provisions of the Companies Act, 2013.",
+      "questionType": "Practical",
+      "topic": "Deposits",
+      "subTopic": "Acceptance of Deposits from Members",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 3,
+      "questionText": "Examining judicial decisions, if any, state whether corporate veil can be lifted where the acts of the company are in avoidance of welfare legislation.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Veil",
+      "subTopic": "Lifting of Corporate Veil",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 3,
+      "questionText": "Neptune Private Ltd. applied to Registrar of Companies for getting status of a dormant company and the application were approved. In this connection the company wants to know the following in light of the provisions of the Companies Act, 2013 :\n(i) \tIs it permissible for a dormant company to allot any security to any person\nand file a ‘Return’ therefor ?\n(ii) \tIs the company required to file any return annually within the prescribed time\nlimit ?\n(iii) \tWhat is the relevance of Form MSC-5, if a dormant company wants to obtain\na status of an active company ?",
+      "questionType": "Descriptive",
+      "topic": "Dormant Company",
+      "subTopic": null,
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q2D",
+      "questionNumber": "2(d)",
+      "marks": 3,
+      "questionText": "Himmat Ltd. communicated with Sourav seeking information which the company has reasonable cause to believe that he has knowledge of the identity of a significant beneficial owner (SBO) of the company. Sourav is not a member of the company. The company is not satisfied with the information given by Sourav. Advise in accordance with the provisions of Companies Act, 2013 whether the company can seek orders from the Tribunal and can its order be subject to certain restrictions.",
+      "questionType": "Descriptive",
+      "topic": "Significant Beneficial Owner (SBO)",
+      "subTopic": "Declaration and Disclosure",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q2E",
+      "questionNumber": "2(e)",
+      "marks": 3,
+      "questionText": "Dixit & Co. are the auditors of KVS Ltd. appointed at the annual general meeting (AGM) held on 19th September, 2024 for a period of five years. However, due to difference of opinion on certain important matters with the Director (Finance) of the company, Dixit & Co. decided not to seek re-appointment as auditors at the AGM held on 22nd September, 2025 but failed to inform their unwillingness in writing prior to AGM. The Company proceeded further and re-appointed them as auditors in the AGM. Post AGM, Dixit & Co. informed in writing their unwillingness to act as auditors. Analyse the situation and explain the further course of action KVS Ltd. should take under the provisions of the Companies Act, 2013.",
+      "questionType": "Case Study",
+      "topic": "Auditors",
+      "subTopic": "Appointment and Re-appointment of Auditors",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Blink Tools Ltd. failed to pay 11% dividend declared in its annual general meeting to certain shareholders due to dispute over entitlement. Aggrieved shareholders filed a complaint against the company to the tribunal. Considering the provisions of the Companies Act, 2013 analyse whether the company is liable for the punishment on its failure to distribute the dividend within the prescribed time limit to certain shareholders.",
+      "questionType": "Case Study",
+      "topic": "Dividend",
+      "subTopic": "Declaration and Distribution of Dividend",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Partho is the Manager (Marketing) of unlisted company Seesaw Machineries Ltd. The company was listed earlier but got delisted two years back. The company took 1 lakh from him under an employment contract @3% interest per annum. Partho is paid a salary of \t60,000 per month. It was ascertained that rate of interest offered by banks for temporary loan was 12%. Veer & Associates, internal auditors, in its draft Report for year ended 31st March, 2025 pointed out that the above transaction constitutes contravention of provisions of Companies Act, 2013 with grave consequences. Comment on the remark of the auditor in reference to the provisions of Companies Act, 2013.",
+      "questionType": "Practical",
+      "topic": "Deposits",
+      "subTopic": "Deposits from Directors/Employees",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "Sohan intends to form a new company and wishes to know the concept of the C-PACE under the provisions of the Companies Act, 2013. Explain him what is the legal authority under which the C-PACE has been established ? Where is it located ? When did it come into effect ? What are the expected benefits through C-PACE ?",
+      "questionType": "Descriptive",
+      "topic": "Incorporation of Company",
+      "subTopic": "C-PACE",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "ABC Pvt. Ltd., incorporated under the Companies Act, 2013, recently conducted a right issue of equity shares to its existing shareholders. The Board of Directors through its resolution allotted equity shares on 15th July, 2025. The share certificates issued to shareholders, except for Raj, were signed by a director. The company does not have a Company Secretary. Raj, a shareholder, made a complaint to the company on 15th September, 2025 that he is still to receive a share certificate. In reply, the company took the excuse of administrative reasons for the same. Neha, another shareholder raised an issue that the share certificate does not bear the distinctive numbers of the shares held in dematerialised (DEMAT) form through a depository. Considering the provisions of the Companies Act, 2013 assess the validity of the share certificates, complaint of Raj and issue raised by Neha.",
+      "questionType": "Case Study",
+      "topic": "Shares",
+      "subTopic": "Share Certificates",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "You are the founder partner of a firm of Practising Company Secretaries with huge client base. Ambarish is a director in seven companies. He has approached you on the applicability of XBRL mode of filing for three companies as per the information given below from their latest financial statements :\n( in crore)\nParticulars \tLong Ltd. \tWide Private \tSharp Ltd.\n(listed) \tLtd. \t(listed)\nTurnover \t45 \t75 \t150\nNature of \tSteel \tToys \tGeneral\nbusiness \tManufacturing \tManufacturing \tInsurance\nPaid up \t3 \t4 \t10\ncapital\nLoan \t— \t15 \t—\nAdvise Ambarish considering the provisions of the Companies Act, 2013.",
+      "questionType": "Practical",
+      "topic": "Financial Statements",
+      "subTopic": "XBRL Filing",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "MNO Infrastructure Ltd., engaged in real estate development, avails a secured term loan of \t50 crores from XYZ Bank Ltd. The loan is secured by a charge on\nthe company’s land assets. The loan agreement is signed on 1st January 2025, but\ndue to internal delays, the company failed to file the particulars of charge with the\nRegistrar of Companies (ROC) within the prescribed period under the Companies\nAct, 2013.\nBy the time the company approaches the ROC for registration after expiry of the\noverall prescribed period, the ROC refused to allow the registration of charge citing\nnon-compliance with the statutory time limits. Consequently :\n• \tThe charge remains unregistered on the MCA portal.\n• \tA third-party lender, relying on the MCA records, provided additional secured\ncredit to MNO Infrastructure Ltd., assuming there is no prior charge on the\nproperty. The charge so created in favour of the third-party lender was registered\nwith the ROC.\n• \tA dispute arises between XYZ Bank Ltd. and the third-party lender over\npriority of claim when the company defaults on repayment.\nConsidering the above scenario and in light of the provisions of the Companies Act,\n2013 decide whether the refusal of registration of charge by the ROC was valid.\nAlso assess the priority of charge of XYZ Bank Ltd. over the charge of third-party\nlender referring to the consequences of non-registration of a charge.",
+      "questionType": "Case Study",
+      "topic": "Charges",
+      "subTopic": "Registration of Charges, Priority of Charges",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "Considering the provisions of the Companies Act, 2013 explain :\n(a) \tWhat is the minimum period for which the books and papers of amalgamated\ncompanies shall be preserved and what is the compliance requirement for their\ndisposal ?\n(b) \tWhether the liability of officers in default for the offences committed prior to\namalgamation shall cease to be continued after amalgamation.",
+      "questionType": "Descriptive",
+      "topic": "Amalgamation",
+      "subTopic": "Books of Accounts, Liabilities",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "Analyse ‘Negligence’ and ‘Forgery’ as an exception to the ‘Doctrine of Indoor Management’ with reference to the Companies Act, 2013.",
+      "questionType": "Descriptive",
+      "topic": "General Principles",
+      "subTopic": "Doctrine of Indoor Management",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q4AIII",
+      "questionNumber": "4A(iii)",
+      "marks": 5,
+      "questionText": "Smooth Products Ltd. is a public company with 260 members as follows :\n• \tDirectors & their relatives \t15\n• \tEmployees at registered office \t10\n• \tEmployees at factory \t32\n• \tEx-Employees [shares were allotted when they were employees] \t28\n• \tOthers \t175\nTotal \t260\nThe Board of Directors have resolved to convert the company into a private company. The Executive Director seeks your advice to implement the board resolution. Advise him in light of the provisions of the Companies Act, 2013.",
+      "questionType": "Practical",
+      "topic": "Conversion of Company",
+      "subTopic": "Public to Private Company",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Whether the appointment of Anil requires the approval of the shareholders of Greenstone Cements Ltd. at a general meeting ? Does the appointment of Parimal as a director in the company affect the continuation of Kamal as the production Manager in Greenstone Cements Ltd. ?",
+      "questionType": "Case Study",
+      "topic": "Directors",
+      "subTopic": "Appointment of Directors, Related Party Transactions",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Analyse the validity of the proposal of paying managerial remuneration to the managing director and other directors.",
+      "questionType": "Case Study",
+      "topic": "Managerial Remuneration",
+      "subTopic": "Remuneration to MD, WTD and Other Directors",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "With reference to the proposal of the Board to appoint an independent woman director and other independent directors advise whether the company is mandatorily required to make such appointments.",
+      "questionType": "Case Study",
+      "topic": "Directors",
+      "subTopic": "Independent Directors, Woman Director",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 5,
+      "questionText": "Whether the length of the notice convening the AGM was valid ?",
+      "questionType": "Case Study",
+      "topic": "Meetings",
+      "subTopic": "Notice of General Meeting",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "The Audit Committee of T2 Transport Limited has decided to convene its meeting to discuss the finalisation of the quarterly financial statements. You are requested to draft a specimen Notice of the Audit Committee Meeting considering the provisions of the Companies Act, 2013.",
+      "questionType": "Descriptive",
+      "topic": "Committees of Board",
+      "subTopic": "Audit Committee, Meeting Notice",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Draft a resolution for re-appointment of independent director—Sachin in a listed company namely Ambition Ltd. for second term of five years stating the kind of meeting and type of resolution.",
+      "questionType": "Descriptive",
+      "topic": "Directors",
+      "subTopic": "Independent Directors, Re-appointment Resolution",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "The Board of Directors of your company is contemplating taking approval from members of the company for reduction of share capital. The Whole-time director has advised you, being the company secretary of the company, to show him a specimen Notice of Extra-ordinary general meeting containing the resolution for reduction of share capital along with an explanatory statement.",
+      "questionType": "Descriptive",
+      "topic": "Share Capital",
+      "subTopic": "Reduction of Share Capital, EGM Notice",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "Draft a specimen of minutes of a board meeting of Que Private Ltd. in which the agenda item for alteration of object clause of Memorandum of Association was transacted.",
+      "questionType": "Descriptive",
+      "topic": "Memorandum of Association",
+      "subTopic": "Alteration of Object Clause, Board Meeting Minutes",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "Northern Appliances Ltd. has five undertakings. The Deputy General Manager (Operations) has proposed to the Managing Director that one of the undertakings—MU303 be leased out for tactical reasons. It has been ascertained that MU303 generated around 23% of the total income in preceding financial year. The Board called a general meeting for passing an ordinary resolution to execute the proposal. Param, a shareholder challenged the action of the Board of Directors contending that a resolution was to be passed by members through postal ballot. With reference to the provisions of the Companies Act, 2013 examine, if the contention raised by the shareholder is valid.",
+      "questionType": "Case Study",
+      "topic": "Board Powers",
+      "subTopic": "Sale/Lease of Undertaking, Postal Ballot",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Manish and his wife Manisha are the shareholders of Vogue Ltd. holding jointly eight percent of equity shares. Manish is working in the company as executive Vice-President and draws a salary of 8 lakh per month. His son Mohan is an instrumentation engineer and is employed in the company drawing a salary of 9 lakh per month. The Manager of Vogue Ltd., Karan is paid an annual salary of \t84 lakh.\nUnder the circumstances does the Board of Directors have any duty of disclosure requirement towards these employees under the Companies Act, 2013 ? Analyse.",
+      "questionType": "Practical",
+      "topic": "Directors",
+      "subTopic": "Disclosure of Interests",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "With reference to the provisions of the Companies Act, 2013 explain the filing requirement of annual return with the Registrar of Companies. Also specify whether the annual return is available for inspection under the Companies (Management & Administration) Rules, 2014.",
+      "questionType": "Descriptive",
+      "topic": "Annual Filings",
+      "subTopic": "Annual Return, Inspection",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6AIVa",
+      "questionNumber": "6A(iv)(a)",
+      "marks": 3,
+      "questionText": "Visesh is a shareholder of Image Ltd. As per past trends, he insists for inspection of minutes and different registers of the company every year and asks questions in every annual general meeting on future plans, acquisitions, bonus shares. Chief Financial Officer (CFO) of the company wants to know from you being the secretary of the company, how can the registers be kept open for inspection at the ensuing Annual General Meeting held by OAVM if the company has not maintained those in electronic form and has not scanned the same. Explain with reference to the provisions of the Companies Act, 2013.",
+      "questionType": "Case Study",
+      "topic": "Registers & Records",
+      "subTopic": "Inspection of Registers, OAVM Meetings",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CL_2025_DECEMBER_Q6AIVb",
+      "questionNumber": "6A(iv)(b)",
+      "marks": 2,
+      "questionText": "Explain, what are the conditions, if satisfied, any remuneration for services rendered by any director in other capacity shall not be so included in the maximum remuneration payable to him under the Companies Act, 2013.",
+      "questionType": "Descriptive",
+      "topic": "Managerial Remuneration",
+      "subTopic": "Remuneration for Other Capacity",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    }
+  ]
+}

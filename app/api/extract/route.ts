@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { getFlashModel, getGeminiKeyCount } from "@/lib/gemini"
 import { verifyUserAuth } from "@/lib/firebase-server"
+import { parseAiResponse, AiParseError } from "@/lib/json-parser"
 
 export const maxDuration = 60
 
@@ -103,42 +104,24 @@ JSON format:
     let unclear = false;
 
     try {
-      let cleanJson = responseText.trim();
-      // Strip markdown code block wrappers if present
-      if (cleanJson.startsWith("```")) {
-        cleanJson = cleanJson.replace(/^```(json)?/, "").trim();
-        cleanJson = cleanJson.replace(/```$/, "").trim();
-      }
-
-      const jsonStart = cleanJson.indexOf('{');
-      const jsonEnd = cleanJson.lastIndexOf('}');
-      if (jsonStart !== -1 && jsonEnd !== -1) {
-        try {
-          const parsed = JSON.parse(cleanJson.substring(jsonStart, jsonEnd + 1));
-          text = parsed.text || "";
-          unclear = !!parsed.unclear;
-        } catch (parseErr) {
-          console.warn("Standard JSON parse failed in /api/extract, using regex fallback:", parseErr);
-          // Regex fallback to extract text field value from malformed JSON
-          const textMatch = cleanJson.substring(jsonStart, jsonEnd + 1).match(/"text"\s*:\s*"([\s\S]*?)"\s*,\s*"unclear"\s*:/);
-          const unclearMatch = cleanJson.substring(jsonStart, jsonEnd + 1).match(/"unclear"\s*:\s*(true|false)/);
-          
-          if (textMatch && textMatch[1]) {
-            text = textMatch[1]
-              .replace(/\\n/g, "\n")
-              .replace(/\\"/g, '"')
-              .replace(/\\\\/g, '\\');
-            unclear = unclearMatch ? unclearMatch[1] === "true" : false;
-          } else {
-            throw parseErr; // Re-throw if regex fails as well
-          }
+      const parsed = parseAiResponse<{ text: string, unclear: boolean }>(responseText);
+      text = parsed.text || "";
+      unclear = !!parsed.unclear;
+    } catch (parseErr: any) {
+      console.warn("All JSON parsing attempts failed in /api/extract:", parseErr.message);
+      
+      if (parseErr instanceof AiParseError) {
+        // Fallback: if we completely fail to parse JSON for OCR extraction, 
+        // we can just return the raw text cleaned up instead of crashing.
+        let raw = parseErr.rawResponse || responseText;
+        if (raw.startsWith("```")) {
+          raw = raw.replace(/^```(json)?/, "").trim();
+          raw = raw.replace(/```$/, "").trim();
         }
+        text = raw;
       } else {
         text = responseText.trim();
       }
-    } catch (err) {
-      console.warn("All JSON parsing attempts failed in /api/extract:", err);
-      text = responseText.trim();
     }
 
     return NextResponse.json({ text, unclear }, { status: 200 })

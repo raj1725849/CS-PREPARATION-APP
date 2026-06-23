@@ -1,0 +1,691 @@
+{
+  "subject": "Jurisprudence, Interpretation & General Laws",
+  "year": 2025,
+  "session": "December",
+  "questions": [
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1AI",
+      "questionNumber": "1(a)(i)",
+      "marks": 2,
+      "questionText": "Whether opening of Sanjay’s old case under the amended law violates his fundamental rights under the Indian Constitution ? Explain.",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Article 20 - Protection in respect of conviction for offences (Ex post facto law)",
+      "sectionNumber": "Article 20",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1AII",
+      "questionNumber": "1(a)(ii)",
+      "marks": 2,
+      "questionText": "Does compelling Sanjay to provide thumb impression and voice sample amount to violation of Article 20(3) of the Constitution ? Explain.",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Article 20(3) - Self-incrimination",
+      "sectionNumber": "Article 20(3)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1AIII",
+      "questionNumber": "1(a)(iii)",
+      "marks": 2,
+      "questionText": "Sanjay was detained for three days without producing him before a magistrate. Decide whether this act of police would amount to violation of Article 22 of the Constitution ?",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Article 22 - Protection against arrest and detention",
+      "sectionNumber": "Article 22",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1AIV",
+      "questionNumber": "1(a)(iv)",
+      "marks": 2,
+      "questionText": "Sanjay was denied emergency medical services while in custody. Discuss whether this is violation of fundamental rights guaranteed under the Indian Constitution.",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Article 21 - Right to life and personal liberty (Right to medical care)",
+      "sectionNumber": "Article 21",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1AV",
+      "questionNumber": "1(a)(v)",
+      "marks": 2,
+      "questionText": "If Sanjay’s family directly approaches the High Court against his detention, what is the remedy available to them ?",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Writ Jurisdiction (Habeas Corpus)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1BI",
+      "questionNumber": "1(b)(i)",
+      "marks": 2,
+      "questionText": "Anil offered Brijesh to sell his house for a price of ` 1,00,000 but Brijesh offered to buy it for ` 95,000 only. Later, Anil sold the house to Pritam for ` 1,00,000. Brijesh filed a suit on Anil claiming for damages under the breach of contract. Discuss the legality of Brijesh’s claim for damages for the breach of contract.",
+      "questionType": "Case Study",
+      "topic": "Indian Contract Act, 1872",
+      "subTopic": "Offer and Acceptance (Counter-offer)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1BII",
+      "questionNumber": "1(b)(ii)",
+      "marks": 3,
+      "questionText": "Discuss the provisions related to the acceptance of offer under the Indian Contract Act, 1872.",
+      "questionType": "Descriptive",
+      "topic": "Indian Contract Act, 1872",
+      "subTopic": "Acceptance of Offer",
+      "sectionNumber": "Section 2(b)",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1BIII",
+      "questionNumber": "1(b)(iii)",
+      "marks": 2,
+      "questionText": "Discuss the provisions related to the mode of revocation of proposal under the Indian Contract Act, 1872.",
+      "questionType": "Descriptive",
+      "topic": "Indian Contract Act, 1872",
+      "subTopic": "Revocation of Offer",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q1BIV",
+      "questionNumber": "1(b)(iv)",
+      "marks": 3,
+      "questionText": "Azaad ran away from his father’s home. His father issued a pamphlet offering a reward of ` 50,000 to anyone who would bring the boy. Hari saw the boy at a hotel and informed his father. Azaad’s father refused Hari the reward. Discuss with the help of relevant case law whether Hari is entitled to the reward ? What kind of offer is this ?",
+      "questionType": "Case Study",
+      "topic": "Indian Contract Act, 1872",
+      "subTopic": "General Offer, Communication of Offer",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "The Municipal Governance Act, 2010 lays down general rules for property taxation on all buildings in the city including residential and commercial buildings. However, the Heritage Sites Preservation Act, 2012 specifically stated that heritage buildings maintained by recognized trusts shall be exempted from municipal property tax. In 2023, the municipal authorities imposed property tax on a historic building maintained by a registered heritage trust arguing that the general rules for property taxation will apply on all properties. The trust challenged the tax demand by the authority. Discuss with reference to the principles of interpretation of statutes.",
+      "questionType": "Case Study",
+      "topic": "Interpretation of Statutes",
+      "subTopic": "Rule of harmonious construction / Specific over general",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "Ravi, an MBBS student at a reputed government medical college, was removed from the institution on the grounds of ‘regular unsatisfactory academic performance’ in the last three semesters. The college authorities passed a formal removal order based on his repeated failure to secure the minimum required grades. Ravi contended that he was neither given any prior notice nor an opportunity of being heard before the order was passed. He approached the High Court alleging violation of his right to principles of natural justice. Discuss.",
+      "questionType": "Case Study",
+      "topic": "Administrative Law",
+      "subTopic": "Principles of Natural Justice (Audi alteram partem)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "Sunshine Solar Systems Private Limited operated a solar panel manufacturing plant on the outskirts of a city. As part of its operation, it stored large quantities of a dangerous chemical compound used in panel coating. It followed all the safety protocols and government regulations. One day a tank with this material ruptured causing the chemical to leak into a nearby field owned by Surya and destroyed its crops and contaminated the soil. Surya sued Sunshine solar systems private limited for damages. Discuss the applicability of the rule in Rylands v. Fletcher in this case and examine whether Surya can claim damages under the rule of strict liability ?",
+      "questionType": "Case Study",
+      "topic": "Law of Torts",
+      "subTopic": "Strict Liability, Rylands v. Fletcher",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Sunny filed a suit against Yogesh for the recovery of a valuable antique unlawfully taken by Yogesh. Sunny claimed that the sculpture was a rare and valuable artefact. During the hearing, Sunny alleged that Yogesh may dispose of the property to his benefit. Discuss the remedy available to Sunny under the provisions of the Civil Procedure Code 1908.",
+      "questionType": "Case Study",
+      "topic": "Civil Procedure Code, 1908",
+      "subTopic": "Interim Orders (Attachment before judgment, Injunction)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "A gang of six persons raided a jewel shop owned by Soni at night. They had loaded guns and other weapons with them. After the loot while they were running away with their loot when Ramesh saw them and tried to stop them. He was shot down by one of them. With the help of the relevant provisions of the Bhartiya Nyaya Sanhita 2023, discuss the kind of offence committed by them. Also explain whether every offender is liable for the murder of Ramesh ?",
+      "questionType": "Case Study",
+      "topic": "Bhartiya Nyaya Sanhita, 2023",
+      "subTopic": "Dacoity with Murder, Common Intention/Object",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "The State of Gujarat enacted the Social Harmony Act, 2021, which included a provision under Section 5 prohibiting citizens from organizing public meetings without prior police approval. Another provision of the Act under Section 8 promoted awareness programmes for communal harmony in schools. A citizen group challenged the validity of the Act itself in the High Court alleging that it violated the fundamental rights. The Government pleaded that the Act served a valid constitutional purpose and the complete act should not be declared void, only Section 5 should be severed. Referring to the provisions of Article 13 of the lndian Constitution explain whether a provision to an act be severed ?",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Doctrine of Severability",
+      "sectionNumber": "Article 13",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "Amir and Bhanu were business partners. They had a serious dispute over profit-sharing. A week later to this dispute, Bhanu was found dead due to poisoning. Investigation revealed that Amir had purchased a rare poison shortly before Bhanu’s death and was heard saying that he will regret this betrayal. After Bhanu’s death, Amir was seen destroying several financial records related to their business. Discuss the relevancy of the above facts in the light of Section 6 of the Bharatiya Sakshya Adhiniyam, 2023.",
+      "questionType": "Case Study",
+      "topic": "Bharatiya Sakshya Adhiniyam, 2023",
+      "subTopic": "Relevancy of Facts, Res Gestae",
+      "sectionNumber": "Section 6",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Arjun and Reyansh entered into a business agreement containing an arbitration clause. Later, a dispute arose between them and Ramesh filed a civil suit in a District Court. Upon receiving notice of the suit, Reyansh applied to the judicial authority for referring the matter for arbitration before submitting his first statement. Reyansh could annex only a photocopy of the arbitration agreement with his application as the original arbitration agreement or certified copy was in Arjun’s possession. Discuss the remedy available to Reyansh under Section 8 of the Arbitration and Conciliation Act, 1996.",
+      "questionType": "Case Study",
+      "topic": "Arbitration and Conciliation Act, 1996",
+      "subTopic": "Reference to Arbitration",
+      "sectionNumber": "Section 8",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "Priya forced Neha to sign a cheque for ` 50,000 in her favour, else she will publish false and damaging information about Neha’s family in the local newspaper. Neha afraid of the damage to her and her family’s reputation did accordingly and signed a cheque. Discuss the offence committed by Priya under the Bharatiya Nyaya Sanhita, 2023. Distinguish between extortion and theft.",
+      "questionType": "Case Study",
+      "topic": "Bharatiya Nyaya Sanhita, 2023",
+      "subTopic": "Extortion, Theft",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "Ravi Enterprises issued a written instrument to Mehta Traders stating : ‘‘I owe you (I.O.U.). ` 500 and will pay you as soon as possible’’. Mehta Traders treated this document as a promissory note and sought to enforce it under the Negotiable Instruments Act, 1881. However, Ravi Enterprises contended that this is mere acknowledgment of debt and conditional, therefore, not enforceable as a promissory note. Based on the above facts explain the essential requirements of a promissory note under the Negotiable Instruments Act, 1881 ? Examine whether the instrument issued by Ravi Enterprises qualifies as a valid promissory note under the Act ?",
+      "questionType": "Case Study",
+      "topic": "Negotiable Instruments Act, 1881",
+      "subTopic": "Promissory Note (Essentials, Conditional promise)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "‘The main body of rules and principles of Indian law is an adaptation of English law’. Discuss the various sources of English Law.",
+      "questionType": "Descriptive",
+      "topic": "Jurisprudence & General Laws",
+      "subTopic": "Sources of Law, English Law",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q4AIII",
+      "questionNumber": "4A(iii)",
+      "marks": 5,
+      "questionText": "‘‘Certain categories of information have been exempted from disclosure under Section 8 of the Right to Information Act, 2005.’’ Discuss.",
+      "questionType": "Descriptive",
+      "topic": "Right to Information Act, 2005",
+      "subTopic": "Exemptions from Disclosure",
+      "sectionNumber": "Section 8",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Rajesh, a software developer, wanted to start offering secure digital contract services to his clients. For this purpose, he applied to a licensed Certifying Authority for the issuance of electronic signature certificate. He submitted the prescribed application form and paid the required fee. However, he did not attach a certification practice statement or any statement containing the particulars as per the regulations. The Certifying Authority, after preliminary examination, decided to reject his application without giving him an opportunity to present his case. Rajesh challenged this decision with the competent authority/Court arguing that the rejection was unlawful under the Information Technology Act, 2000. Explaining the procedure for obtaining electronic signature certificate as per the provisions of the Information Technology Act, 2000 decide whether Rajesh’s application can be rejected without being heard ?",
+      "questionType": "Case Study",
+      "topic": "Information Technology Act, 2000",
+      "subTopic": "Electronic Signature Certificate, Procedure for obtaining, Principles of Natural Justice",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Ambuj, who was executor to the will of a deceased person Raj, dishonestly disobeyed the law which directed him to divide the effects according to the will and appropriated them to his own use. Discuss in detail the kind of offence committed by Ambuj under the Bhartiya Nyaya Sanhita, 2023. What are the punishments prescribed under the Act for various kinds of such offence ?",
+      "questionType": "Case Study",
+      "topic": "Bhartiya Nyaya Sanhita, 2023",
+      "subTopic": "Criminal Breach of Trust (Executor)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5CI",
+      "questionNumber": "5(c)(i)",
+      "marks": 1,
+      "questionText": "What is the period of limitation for the following suits and the time from which such period of limitation begins to run :\n(i) \tfor compensation for slander",
+      "questionType": "Descriptive",
+      "topic": "Limitation Act, 1963",
+      "subTopic": "Periods of Limitation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5CII",
+      "questionNumber": "5(c)(ii)",
+      "marks": 1,
+      "questionText": "for compensation for libel",
+      "questionType": "Descriptive",
+      "topic": "Limitation Act, 1963",
+      "subTopic": "Periods of Limitation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5CIII",
+      "questionNumber": "5(c)(iii)",
+      "marks": 1,
+      "questionText": "for compensation for a malicious prosecution",
+      "questionType": "Descriptive",
+      "topic": "Limitation Act, 1963",
+      "subTopic": "Periods of Limitation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5CIV",
+      "questionNumber": "5(c)(iv)",
+      "marks": 1,
+      "questionText": "any suit for which no period of limitation is provided elsewhere in this schedule",
+      "questionType": "Descriptive",
+      "topic": "Limitation Act, 1963",
+      "subTopic": "Periods of Limitation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q5CV",
+      "questionNumber": "5(c)(v)",
+      "marks": 1,
+      "questionText": "by a landlord to recover possession from a tenant.",
+      "questionType": "Descriptive",
+      "topic": "Limitation Act, 1963",
+      "subTopic": "Periods of Limitation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "Sameer gave a piece of cloth to Munshi, a tailor, to make a suit from it urgently within two days. Munshi promised to have the suit ready on time and managed to get it ready for delivery. Sameer refused to pay him the extra amount as agreed. In light of the relevant provisions of the Indian Contract Acl 1872, discuss the remedy available to Munshi. Also discuss the difference between a general and a particular lien.",
+      "questionType": "Case Study",
+      "topic": "Indian Contract Act, 1872",
+      "subTopic": "Bailment, Lien (Particular Lien)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Ravi maintains a current account with XYZ Bank in Delhi. On 15th March 2025, a cheque was issued in his favour by Meena for ` 2,50,000 towards payment of goods purchased. Instead of sending the physical cheque to Meena’s bank for clearing, XYZ Bank scanned the cheque, created its electronic image, and transmitted it through the clearing house recognised by the Reserve Bank of India. The physical cheque remained with Ravi’s bank branch. Meena claimed that no payment could be demanded by Ravi as only electronic image was sent by his bank. With the help of the provisions of the Negotiable Instruments Act, 1881 (as amended in 2002 and 2015), discuss whether Meena’s objection based on the absence of physical movement has any merit ?",
+      "questionType": "Case Study",
+      "topic": "Negotiable Instruments Act, 1881",
+      "subTopic": "Cheque, Electronic Image of a Cheque, Cheque Truncation System",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "The Parliament is not in session. Both the houses have been prorogued. Therefore, due to urgency, the President promulgates an ordinance on a subject of national importance. Discuss in detail referring to the ordinance-making power of the President under the Constitution of India.",
+      "questionType": "Descriptive",
+      "topic": "Constitutional Law",
+      "subTopic": "Ordinance Making Power of President",
+      "sectionNumber": "Article 123",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "During the municipal council elections in Nagpur, Ramesh, a registered and eligible voter, reached the polling booth to cast his vote. However, the presiding officer refused to allow Ramesh to vote, despite him having valid identity documents. Later it was found that Ramesh’s preferred candidate won the election and Ramesh suffered no financial loss. Ramesh filed a suit against the presiding officer claiming damages for violation of his legal right. Discuss the remedy available to Ramesh.",
+      "questionType": "Case Study",
+      "topic": "Law of Torts",
+      "subTopic": "Injuria sine damno",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "What do you mean by ‘body corporate’, ‘reasonable security practices and procedures’, and ‘sensitive personal data or information’ under Section 43A of the Information Technology Act, 2000 ? Discuss as to when a body corporate is liable to pay compensation for failure to protect data.",
+      "questionType": "Descriptive",
+      "topic": "Information Technology Act, 2000",
+      "subTopic": "Data Protection, Definitions, Compensation",
+      "sectionNumber": "Section 43A",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "What are the provisions related to the determination of specified value of the subject matter of the commercial dispute in a suit, appeal or application under the Commercial Courts Act, 2015 ?",
+      "questionType": "Descriptive",
+      "topic": "Commercial Courts Act, 2015",
+      "subTopic": "Specified Value, Commercial Dispute",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "‘‘Where once time has begun to run, no subsequent disability or inability to institute a suit or make an application can stop it.’’ Explain this statement under the Limitation Act, 1963.",
+      "questionType": "Descriptive",
+      "topic": "Limitation Act, 1963",
+      "subTopic": "Continuous running of time",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2025_DECEMBER_Q6AIV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "Discuss the provisions related to the removal of a member from the Arbitration Council of India established under the Arbitration and Conciliation Act, 1996.",
+      "questionType": "Descriptive",
+      "topic": "Arbitration and Conciliation Act, 1996",
+      "subTopic": "Arbitration Council of India, Removal of Members",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    }
+  ]
+}

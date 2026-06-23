@@ -267,13 +267,19 @@ export default function EvaluatePage() {
     try {
       const idToken = await auth.currentUser?.getIdToken();
 
-      // Build request body — only include marks if rubric was not found and user provided manual marks
+      // Build request body — auto-detect marks from question text if present, or include manual marks
       const requestBody: Record<string, any> = {
         subject,
         question,
         studentAnswer: editedText
       };
-      if (rubricNotFound) {
+      
+      const parsedMarksMatch = question.trim().match(/(?:\[|\()?\s*(\d+)\s*(?:marks?|m)\s*(?:\]|\))?\s*$/i);
+      const extractedMarks = parsedMarksMatch ? parseInt(parsedMarksMatch[1], 10) : null;
+
+      if (extractedMarks && !isNaN(extractedMarks) && extractedMarks > 0 && extractedMarks <= 30) {
+        requestBody.marks = extractedMarks;
+      } else if (rubricNotFound) {
         requestBody.marks = parseInt(manualMarks);
       }
 

@@ -1,0 +1,596 @@
+{
+  "subject": "Company Accounts & Auditing Practices",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "CAAP_2026_JUNE_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 2,
+      "questionText": "Calculate the Total Sales of the company",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Ratio Analysis",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 2,
+      "questionText": "Determine the value of Sundry Debtors.",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Ratio Analysis",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 2,
+      "questionText": "Compute the value of Sundry Creditors.",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Ratio Analysis",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 2,
+      "questionText": "Ascertain the Closing Stock.",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Ratio Analysis",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 2,
+      "questionText": "Analyse the working capital cycle of the company based on the given turnover ratios.",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Working Capital Cycle",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q1F",
+      "questionNumber": "1(f)",
+      "marks": 2,
+      "questionText": "Comment on the liquidity position and efficiency in managing receivables, payables, and inventory.",
+      "questionType": "Descriptive",
+      "topic": "Working Capital Management",
+      "subTopic": "Liquidity & Efficiency",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q1G",
+      "questionNumber": "1(g)",
+      "marks": 3,
+      "questionText": "Draft a brief note to the Finance Director highlighting :\n(i) \tKey observations from the financial analysis\n(ii) \tStrengths and weaknesses in working capital management\n(iii) Suggestions for improvement.",
+      "questionType": "Descriptive",
+      "topic": "Working Capital Management",
+      "subTopic": "Financial Analysis & Recommendations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "X applied for 2,000 shares of ` 10 each at a premium of ` 2.50 per share. He was allotted 1000 shares. After having paid ` 3 per share on application, he did not pay the allotment money of ` 4.50 per share (including premium) and on his subsequent failure to pay the first call of ` 2 per share, his shares were forfeited. These shares were reissued @ ` 8 per share credited as fully paid-up.\nPass Journal entries to record forfeiture and reissue of shares.",
+      "questionType": "Practical",
+      "topic": "Share Capital",
+      "subTopic": "Forfeiture and Reissue of Shares",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "On 1st April, 2024, XY Ltd. took over assets of ` 4,50,000 and liabilities of ` 60,000 of Himalyan Ltd. for the purchase consideration of ` 4,40,000. It paid the purchase consideration by issuing 8% Debenture of ` 100 each at l0% premium. On same date it issued another 3,000, 8% Debenture of ` 100 at discount of 10%, redeemable at premium of 5% after 5 years. According to the terms of the issue ` 30 is payable on application and the balance on the allotment of debentures.\nYou are required to pass journal entries for the financial year 2024-25 in the books of XY Ltd. to record the above transactions.",
+      "questionType": "Practical",
+      "topic": "Debentures",
+      "subTopic": "Issue of Debentures & Acquisition of Business",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "The following balances are extracted from XYZ Ltd. at the end of the year 2024-25 :\n`a \t`a \t`a \t`a\n8,000\tLoss\nDepreciation\n75,000\n26,000\n55,000\n41,000\n33,500\n45,000\n75,000\n35,000\n37,000\n53,000\n21,500\n45,000\n1,000\n1,15,000\n8,000\n30,000\n20,000\n45,000\n51,500\n11,500\n30,000\n22,000\n35,000\n48,000\n6,000\t6,500\n1,15,000\nExpenses\nAdditional Information :\n(i) \t10% dividend was paid in cash,\n(ii) \tNew machinery for ` 15,000 was purchased and old machinery costing\n` 6,000 was sold for ` 2,000; accumulated depreciation was ` 3,000.\n(iii) ` 10,000, 8% debentures were redeemed by purchase from open market\n@ ` 96 for a debenture of ` 100.\n(iv) An investment of ` 18,000 was sold at a book value.\nYou are required to prepare a cash flow statement for the year ended 31.03.2025 as per AS 3 (revised) using the indirect method.",
+      "questionType": "Practical",
+      "topic": "Financial Statements",
+      "subTopic": "Cash Flow Statement (AS 3)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "The Summary Balance Sheet of ABC Ltd. as on 3lst March, 2025 read as under :\nLiabilities \tAmount \tAssets \tAmount\nShare Capital : \tFreehold property \t1,15,000\nAuthorized share \tStock \t1,35,000\nCapital : \tTrade Receivables \t75,000\n40,000 Equity Shares of \t4,00,000 \tCash \t30,000\n10 each. \tBalance at Bank \t2,00,000\nIssued and Subscribed :\n20,000 Equity Shares of\n`\n10 each fully paid. \t2,00,000\nProfit and Loss Account \t1,20,000\n12% Debentures \t1,20,000\nTrade Payables \t1,15,000\n`\n5,55,000 \t5,55,000\nThe Annual General Meeting of ABC Ltd, it was resolved that :\n(a) \tTo issue one bonus share for every four shares held.\n(b) \tTo give option to existing shareholders to be purchased one share of\n` 10 at a premium of ` 5 for every four share held (held prior to the bonus\ndistribution), this option being taken up by all shareholders.\n(c) \tTo repay the debentures at a premium of 3%.\nYou are requested to pass necessary journal entries and after completion of these transactions, prepare the Balance Sheet of ABC Ltd. as per Company Act 2013.",
+      "questionType": "Practical",
+      "topic": "Share Capital & Debentures",
+      "subTopic": "Bonus Issue, Rights Issue, Debenture Redemption, Balance Sheet",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Raj Ltd recently reported the following income Statement : ` This year company is forecasting 25% increase in sales and it expects that its year end operating cost will be around 70% of sales. It is expected that tax rate, interest and dividend pay-out ratio will be constant.\nYou are required to compute projected Net Income and expected growth rate in dividend.",
+      "questionType": "Practical",
+      "topic": "Financial Management",
+      "subTopic": "Financial Forecasting",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "A company made a public issue of ` 1,25,000 equity shares of ` 100 each as on 15th March, 2026, ` 50 payable on application. The entire issue was underwritten by A, B, C, and D in the proportion of 30%, 25%, 25% and 20% respectively. Under the terms agreed upon a maximum limit of underwriting commission was payable to underwriters. A, B, C and D also agreed on firm underwriting of 4000, 6000, Nil, 15,000 shares respectively. The total subscription excluding firm underwriting but including marked application received were 90,000. Marked applications were received from A-24,000, B-20,000, C-12,000 and D-24,000. Consider firm underwriting shares are treated as unmarked application.\nPrepare a statement showing net underwriter liability.",
+      "questionType": "Practical",
+      "topic": "Underwriting of Shares",
+      "subTopic": "Underwriter Liability",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 6,
+      "questionText": "The Balance Sheets of H Ltd. and S Ltd. as on 31st March 2026 were as under :\nParticulars \tH \tLtd. \tS \tLtd.\n( )\nTotal \t8,20,000 \t4,40,000\nTotal \t8,20,000 \t4,40,000\n`\nI. EQUITY AND LIABILITIES\n(1) Shareholder’s Funds\na) \tAuthorised Share Capital : \t– \t–\nIssued and Subscribed Equity Shares capital of Rs.\n100 each\nb) \tReserves and Surplus : General Reserve 1-4-2025\nP. & L. A/c \t1,40,000 \t90,000\n(2) Non-Current Liabilities \t– \t–\n(3) Current Liabilities\nBills Payables \t– \t40,000\nTrade Payables (Creditors) \t80,000 \t50,000\nII. ASSETS\n(1) Non-Current Assets\na) \tFixed Assets :\n(i) \tTangible Assets \t3,60,000 \t2,20,000\n(ii) Intangible Assets : Goodwill \t40,000 \t30,000\nb) \tNon-Current Investments\n1,500 Shares in S Ltd. \t2,40,000 \t–\nc) \tOther Non-Current Assets \t– \t–\n(2) Current Assets\nStock \t1,00,000 \t90,000\nBills Receivables (Debtors) \t20,000 \t75,000\nCash and Cash Equivalent \t60,000 \t25,000\n1,00,000 \t60,000\n( )\t`\n5,00,000 \t2,00,000\nThe Profit & Loss Account of S Ltd. showed a credit balance of ` 50,000 on 01.04.2025. A dividend of l5% was paid in January 2026 for the year 2024-2025. This dividend was credited by H. Ltd. to its Profit & Loss Account. The shares were acquired on 1st October 2025. The bills payable was all issued in favour of H Ltd. included in the creditors of S Ltd. ` 20,000 are related to goods sold by S Ltd. included in the stock of S Ltd. are goods of the value of ` 8,000 supplied by H Ltd. at a profit of 1\n33 % \n3 on cost.\nYou are required to calculate consolidated profit of the companies, Net Worth of S Ltd. as on 1st October 2025 and minority interest.",
+      "questionType": "Practical",
+      "topic": "Consolidated Financial Statements",
+      "subTopic": "Holding Company Accounts, Minority Interest",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Solar Equipment Ltd. wants to arrange overdraft facilities with its bankers during the period March to May. Prepare a cash budget for the above period on the basis of the under-mentioned data indicating the extent of bank overdraft facilities, the company will require at the end of each month :\n(`\n`\n`\n6,240\n7,200\n12,150\n12,300\n13,400\t11,300\nAdditional Information :\n(i) \t50% of the credit sales will be realized in the month following the month\nof sales and remaining 50% in the second month following the month of sales.\n(ii) \tThe creditors for purchases will be paid in the month following the month\nof purchases.\n(iii) Workers are paid in the same month for their wages.\n(iv) Cash at bank on 1st March, is estimated to be ` 1,250 lakh.",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Cash Budgeting",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 4,
+      "questionText": "PQR Ltd. has issued 10000, 12% convertible debentures ` 100 each redeemable after a period of five years at a premium of 5%. The debenture holders also had the option at the time of redemption to convert 30% of their holdings into equity shares of ` 10 each at a price of ` 20 per share and balance in cash. Debenture holders amounting ` 2,00,000 opted to get their debentures converted into equity shares as per terms of the issue. You are required to calculate the number of shares issued and cash paid for redemption of remaining debentures.",
+      "questionType": "Practical",
+      "topic": "Debentures",
+      "subTopic": "Convertible Debentures Redemption",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q4AI",
+      "questionNumber": "4A.(i)",
+      "marks": 5,
+      "questionText": "What are differences between Ind AS 16 and IGAAP 10 ?",
+      "questionType": "Descriptive",
+      "topic": "Accounting Standards",
+      "subTopic": "Ind AS vs IGAAP",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q4AII",
+      "questionNumber": "4A.(ii)",
+      "marks": 5,
+      "questionText": "Explain the components and factors of financial forecasting.",
+      "questionType": "Descriptive",
+      "topic": "Financial Management",
+      "subTopic": "Financial Forecasting",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q4AIII",
+      "questionNumber": "4A.(iii)",
+      "marks": 5,
+      "questionText": "‘‘The accounting standards seek to describe the accounting principles, valuation techniques, and the methods of applying these accounting principles in the preparation and presentation of the financial statements so that they represent a true and fair view of the financial position and financial performance of the enterprise.’’\nDiscuss the need for Accounting Standards.",
+      "questionType": "Descriptive",
+      "topic": "Accounting Standards",
+      "subTopic": "Need for Accounting Standards",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Average Accounting Rate of Return Method;",
+      "questionType": "Practical",
+      "topic": "Capital Budgeting",
+      "subTopic": "Investment Appraisal Methods",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Pay-back period Method;",
+      "questionType": "Practical",
+      "topic": "Capital Budgeting",
+      "subTopic": "Investment Appraisal Methods",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Equivalent Net Present Value Method;",
+      "questionType": "Practical",
+      "topic": "Capital Budgeting",
+      "subTopic": "Investment Appraisal Methods",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 5,
+      "questionText": "Determine Annual profit after tax and Annual Cash Flow after tax.",
+      "questionType": "Practical",
+      "topic": "Capital Budgeting",
+      "subTopic": "Cash Flow Calculation",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "The CFO of KKK Limited started restructuring of company's capital structure. He is concerned with what the company has to pay for the capital it has mobilized through various sources of finance. The cost of capital has to be specially considered because cost of capital has direct effect on profit earning capacity of the company. Therefore, it is necessary for the CFO to take into consideration the cost of capital which should not be burdensome for the company and should try to develop an optimum capital structure so that the cost of capital can be minimized. The CFO is considering the restructuring plan and possibility of raising ` 50,00,000 by issuing equity shares, preference shares and debentures. The details are as follows :\n(i) \t2,00,000 Equity Shares of ` 10 each \t20,00,000\n(ii) \t1,00,000 10% Debenture of ` 10 each \t10,00,000\n(iii) 1,00,000 11% Preference Shares of ` 10 each \t10,00,000\n(iv) Retained Earnings \t10,00,000\nTotal \t50,00,000\nMarket Price of :\nEquity shares is ` 18,\nPreference shares is ` 12, and\nDebenture is ` 12.\nEarnings per share of the company are ` 2. The corporate tax rate is 50%.\nYou are the Company Secretary of the Company, help the CFO in determining weighted average cost of capital (using weights based on market values.)",
+      "questionType": "Practical",
+      "topic": "Cost of Capital",
+      "subTopic": "Weighted Average Cost of Capital (WACC)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Calculate operating and financial leverage under situations A, B and C and financial plans 1, 2 and 3 respectively from the following information and find which plan will give the highest value and the least value.\nInstalled capacity 1,200 (units)\nActual production and sales 800 (units)\nSelling price per unit ` 15\nVariable cost per unit ` 10\nFixed costs (`)\nSituation A \t1,000\nSituation B \t2,000\nSituation C \t3,000\n`\n`\n1 \t2 \t3\nEquity \t5,000\n5,000 \t2,500\n7,500 \t2,500\n7,500",
+      "questionType": "Practical",
+      "topic": "Financial Leverage",
+      "subTopic": "Operating and Financial Leverage",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "The Production of ABC Ltd., during the previous year was 1000000 units. The same level of activity is intended to be maintained during the current year also.\nThe expected ratios of cost to selling price are :\nRaw material 40%\nDirect Wages 20%\nOverheads 20%\nThe raw materials ordinarily remain in stores for 3 months before production. Every unit of production remains in the process for 2 months and is assumed to be consisting of 100% raw material, wages and overheads.\nFinished goods remain in the warehouse for 3 months. Credit allowed by creditors is 4 months from the date of the delivery of raw material and credit given to debtors is 3 months from the date of dispatch.\nThe estimated balance of cash is to be held ` 2,00,000.\nLag in payment of wages 1/2 month.\nLag in payment of expenses l/2 month.\nSelling price is ` 8 per unit. Both production and sales are in a regular cycle.\nCompany makes a provision of 10% for contingency (except cash).\nPrepare a working capital forecast from the above information.",
+      "questionType": "Practical",
+      "topic": "Working Capital Management",
+      "subTopic": "Working Capital Forecast",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "The value of the company can be maximized if the shareholders’ wealth is maximized. The par value of equity share of COMOS Limited is ` 100 per share. The company’s earning per share is ` 10. The return on retained earnings of the company is 15% and the rate of capitalization of the market is 10%.\nThe following are the alternates available before the management regarding the distribution of dividend :\n(i) \tTo have a pay-out ratio of 20%\n(ii) \tTo have a pay-out ratio of 40%\n(iii) To have a pay-out ratio of 60%\n(iv) To have a pay-out ratio of 0% or To have a retention of earning 100%.\nYou are required to calculate market price of the equity shares of the company in all above circumstances and suggest which alternative consider the best by using Walters’ Model.",
+      "questionType": "Practical",
+      "topic": "Dividend Decisions",
+      "subTopic": "Walters’ Model",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6AI",
+      "questionNumber": "6A.(i)",
+      "marks": 5,
+      "questionText": "‘‘Cash Flow Analysis is an important financial tool for management in decision making.’’ Explain this statement and discuss the advantages of cash flow analysis.",
+      "questionType": "Descriptive",
+      "topic": "Financial Analysis",
+      "subTopic": "Cash Flow Analysis",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6AII",
+      "questionNumber": "6A.(ii)",
+      "marks": 5,
+      "questionText": "‘‘Capital Budgeting is important not only because of the high investment cost of capital projects, but also due to their irreversible nature, long-term commitment and impact on profitability.’’ Explain this statement and discuss the importance of capital budgeting.",
+      "questionType": "Descriptive",
+      "topic": "Capital Budgeting",
+      "subTopic": "Importance of Capital Budgeting",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6AIII",
+      "questionNumber": "6A.(iii)",
+      "marks": 5,
+      "questionText": "Decisions on investments are determined by various factors like risk involved, return, purpose, period etc. Do you think there are differences between investment and speculation? If so, what are the differences ? Give examples.",
+      "questionType": "Descriptive",
+      "topic": "Investment Decisions",
+      "subTopic": "Investment vs Speculation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CAAP_2026_JUNE_Q6AIV",
+      "questionNumber": "6A.(iv)",
+      "marks": 5,
+      "questionText": "One of the main objectives of a business organization is profit maximization though there are other objectives like service to society, nation's development, providing employment opportunities etc. Are there any arguments against the goal of profit maximization by business organization ?",
+      "questionType": "Descriptive",
+      "topic": "Financial Management",
+      "subTopic": "Objectives of Business (Profit Maximization)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

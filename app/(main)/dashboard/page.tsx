@@ -3,11 +3,13 @@
 import { useEffect, useState } from "react";
 import TopBar from "@/components/TopBar";
 import { getEvaluateSessions, getGenerateSessions, computeDashboardStats } from "@/lib/storage";
-import { Session, EvaluateSession, Deduction } from "@/lib/types";
-import { ArrowUpRight, ArrowDownRight, TrendingUp, AlertCircle, FileText, CheckSquare, Target } from "lucide-react";
+import { Session, EvaluateSession, GeneratedPaperDocument } from "@/lib/types";
+import { TrendingUp, AlertCircle, FileText, CheckSquare, Target, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/components/AuthProvider";
 import UpgradeModal from "@/components/UpgradeModal";
+import { auth, db } from "@/lib/firebase";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 export default function Dashboard() {
   const { plan } = useAuth();
@@ -15,7 +17,9 @@ export default function Dashboard() {
   const [isClient, setIsClient] = useState(false);
   const [evalSessions, setEvalSessions] = useState<EvaluateSession[]>([]);
   const [genSessions, setGenSessions] = useState<any[]>([]);
+  const [mockPapers, setMockPapers] = useState<GeneratedPaperDocument[]>([]);
   const [stats, setStats] = useState<any>(null);
+  const [loadingPapers, setLoadingPapers] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -26,6 +30,27 @@ export default function Dashboard() {
       setEvalSessions(evals);
       setGenSessions(gens);
       setStats(st);
+      
+      // Fetch mock papers from Firestore
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        setLoadingPapers(true);
+        try {
+          const q = query(
+            collection(db, "generated_papers"),
+            where("userId", "==", currentUser.uid)
+          );
+          const snap = await getDocs(q);
+          const papersList = snap.docs.map((doc) => doc.data() as GeneratedPaperDocument);
+          // Sort by createdAt descending
+          papersList.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+          setMockPapers(papersList);
+        } catch (err) {
+          console.error("Failed to fetch mock papers on dashboard:", err);
+        } finally {
+          setLoadingPapers(false);
+        }
+      }
     }
     loadData();
   }, []);
@@ -186,9 +211,74 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* HISTORY TABLE */}
+        {/* MOCK EXAMS SIMULATION HUB */}
         <div className="bg-[#0e352a] rounded-xl border border-[rgba(232,242,158,0.08)] p-6 shadow-sm reveal stagger-3">
-          <h3 className="text-xs font-semibold text-[#a8bcb5] uppercase tracking-wider mb-4 font-sora">Recent History</h3>
+          <h3 className="text-xs font-semibold text-[#a8bcb5] uppercase tracking-wider mb-4 font-sora">Mock Exam Simulations</h3>
+          {loadingPapers ? (
+            <div className="py-8 text-center flex items-center justify-center gap-2 text-[#a8bcb5] text-sm">
+              <Loader2 className="w-4 h-4 animate-spin text-[#E8F29E]" /> Loading mock exams...
+            </div>
+          ) : mockPapers.length === 0 ? (
+            <div className="py-8 text-center text-sm text-[#a8bcb5] font-inter">
+              No mock exams simulated yet. Go to <Link href="/generate" className="text-[#E8F29E] underline">Generate Paper</Link> to create one.
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left">
+                <thead className="text-xs text-[#a8bcb5] border-b border-[rgba(232,242,158,0.08)] font-inter">
+                  <tr>
+                    <th className="py-3 font-medium">Date</th>
+                    <th className="py-3 font-medium">Subject</th>
+                    <th className="py-3 font-medium">Marks</th>
+                    <th className="py-3 font-medium">Status</th>
+                    <th className="py-3 font-medium">Score / Verdict</th>
+                    <th className="py-3 font-medium">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[rgba(232,242,158,0.05)] font-inter">
+                  {mockPapers.map((paper, idx) => (
+                    <tr key={idx} className="text-white hover:bg-white/[0.01]">
+                      <td className="py-3">{new Date(paper.createdAt).toLocaleDateString()}</td>
+                      <td className="py-3 font-medium">{paper.subject}</td>
+                      <td className="py-3">{paper.totalMarks}m</td>
+                      <td className="py-3">
+                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                          paper.status === 'completed' 
+                            ? 'bg-green-500/10 text-green-400 border border-green-500/20'
+                            : paper.status === 'attempted'
+                            ? 'bg-sky-500/10 text-sky-400 border border-sky-500/20'
+                            : paper.status === 'evaluating'
+                            ? 'bg-purple-500/10 text-purple-400 border border-purple-500/20'
+                            : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
+                        }`}>
+                          {paper.status}
+                        </span>
+                      </td>
+                      <td className="py-3 font-medium">
+                        {paper.status === 'completed' && paper.evaluationSummary ? (
+                          <span className={paper.evaluationSummary.verdict === 'Pass' ? "text-green-400" : paper.evaluationSummary.verdict === 'Borderline Pass' ? "text-amber-400" : "text-red-400"}>
+                            {paper.evaluationSummary.marksAwarded} / {paper.totalMarks} ({paper.evaluationSummary.verdict})
+                          </span>
+                        ) : (
+                          <span className="text-[#a8bcb5]">-</span>
+                        )}
+                      </td>
+                      <td className="py-3">
+                        <Link href={`/papers/${paper.paperId}`} className="text-[#E8F29E] hover:underline font-semibold text-xs">
+                          {paper.status === 'completed' ? 'Review Report' : paper.status === 'generated' ? 'Attempt Exam' : 'Verify OCR'} &rarr;
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+
+        {/* HISTORY TABLE */}
+        <div className="bg-[#0e352a] rounded-xl border border-[rgba(232,242,158,0.08)] p-6 shadow-sm reveal stagger-4">
+          <h3 className="text-xs font-semibold text-[#a8bcb5] uppercase tracking-wider mb-4 font-sora">Single Question Practice History</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
               <thead className="text-xs text-[#a8bcb5] border-b border-[rgba(232,242,158,0.08)] font-inter">
@@ -244,7 +334,7 @@ export default function Dashboard() {
         </div>
 
         {/* TWO COLUMN ROW: Chart & Recommendations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 reveal stagger-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 reveal stagger-5">
           
           <div className="bg-[#0e352a] rounded-xl border border-[rgba(232,242,158,0.08)] p-6 shadow-sm">
             <h3 className="text-xs font-semibold text-[#a8bcb5] uppercase tracking-wider mb-4 font-sora">Score Trend</h3>

@@ -6,6 +6,7 @@ import {
   buildGenerateIdealAnswerSystemPrompt,
   buildGenerateIdealAnswerUserPrompt
 } from "@/lib/prompts"
+import { parseAiResponse, AiParseError } from "@/lib/json-parser"
 import { evaluateWithOpenRouter } from "@/lib/openrouter"
 import { resolveSubjectName } from "@/lib/subject-map"
 import { retrieveRubric } from "@/lib/rubric-retriever"
@@ -62,54 +63,22 @@ async function generateJSONWithFallback(
     }
   }
 
-  let parsedObj: any = null;
-  const jsonStart = rawText.indexOf('{');
-  const jsonEnd = rawText.lastIndexOf('}');
-  if (jsonStart !== -1 && jsonEnd !== -1) {
-    const cleanJson = rawText.substring(jsonStart, jsonEnd + 1);
-    try {
-      parsedObj = JSON.parse(cleanJson);
-    } catch (err) {
-      console.warn(`Direct JSON parsing failed for ${callName}, attempting repair...`);
-    }
-  }
-
-  // Basic brace repair
-  if (!parsedObj && jsonStart !== -1) {
-    const s = rawText.substring(jsonStart);
-    let inString = false;
-    let isEscaped = false;
-    const stack: ('{' | '[')[] = [];
-    for (let i = 0; i < s.length; i++) {
-      const char = s[i];
-      if (isEscaped) { isEscaped = false; continue; }
-      if (char === '\\') { isEscaped = true; continue; }
-      if (char === '"') { inString = !inString; continue; }
-      if (!inString) {
-        if (char === '{' || char === '[') stack.push(char);
-        else if (char === '}') { if (stack[stack.length - 1] === '{') stack.pop(); }
-        else if (char === ']') { if (stack[stack.length - 1] === '[') stack.pop(); }
+  try {
+    return parseAiResponse(rawText);
+  } catch (err: any) {
+    if (err instanceof AiParseError) {
+      try {
+        const fs = require('fs');
+        const path = require('path');
+        const logPath = path.join(process.cwd(), `evaluate_error_${callName.toLowerCase()}.log`);
+        fs.writeFileSync(logPath, `--- ERROR DATE: ${new Date().toISOString()} ---\n${err.rawResponse}\n`, 'utf8');
+        console.log(`Wrote raw ${callName} response to evaluate_error_${callName.toLowerCase()}.log`);
+      } catch (logErr) {
+        console.error("Failed to write raw response log file:", logErr);
       }
     }
-    let repaired = s;
-    if (inString) repaired += '"';
-    let suffix = "";
-    for (let j = stack.length - 1; j >= 0; j--) {
-      suffix += stack[j] === '{' ? '}' : ']';
-    }
-    repaired += suffix;
-    try {
-      parsedObj = JSON.parse(repaired);
-    } catch (err) {
-      console.error(`Repair failed for ${callName}`);
-    }
+    throw err;
   }
-
-  if (!parsedObj) {
-    throw new Error(`AI response for ${callName} was cut off or invalid JSON.`);
-  }
-
-  return parsedObj;
 }
 
 export async function POST(req: NextRequest) {
@@ -231,7 +200,9 @@ export async function POST(req: NextRequest) {
     }
   } catch (err: any) {
     console.error("Failed to format/generate model answer:", err);
-    return NextResponse.json({ error: `Failed to format/generate model answer: ${err.message}` }, { status: 502 });
+    return NextResponse.json({ 
+      error: err instanceof AiParseError ? err.message : `Failed to format/generate model answer: ${err.message}` 
+    }, { status: 502 });
   }
 
   if (!modelAnswer) {

@@ -1,0 +1,1072 @@
+{
+  "Company Law": [
+    {
+      "topic": "Directors",
+      "count": 9
+    },
+    {
+      "topic": "Share Capital",
+      "count": 5
+    },
+    {
+      "topic": "Corporate Governance",
+      "count": 5
+    },
+    {
+      "topic": "Deposits",
+      "count": 3
+    },
+    {
+      "topic": "Managerial Remuneration",
+      "count": 3
+    },
+    {
+      "topic": "Registers & Records",
+      "count": 3
+    },
+    {
+      "topic": "Board Meetings",
+      "count": 3
+    },
+    {
+      "topic": "Dividend",
+      "count": 2
+    },
+    {
+      "topic": "Shares",
+      "count": 2
+    },
+    {
+      "topic": "Auditors",
+      "count": 2
+    },
+    {
+      "topic": "Charges",
+      "count": 2
+    },
+    {
+      "topic": "Audit",
+      "count": 2
+    },
+    {
+      "topic": "Dividends",
+      "count": 2
+    },
+    {
+      "topic": "Debentures",
+      "count": 2
+    },
+    {
+      "topic": "Managerial Personnel",
+      "count": 2
+    },
+    {
+      "topic": "Register of Members",
+      "count": 1
+    },
+    {
+      "topic": "Articles of Association",
+      "count": 1
+    },
+    {
+      "topic": "Corporate Veil",
+      "count": 1
+    },
+    {
+      "topic": "Dormant Company",
+      "count": 1
+    },
+    {
+      "topic": "Significant Beneficial Owner (SBO)",
+      "count": 1
+    },
+    {
+      "topic": "Incorporation of Company",
+      "count": 1
+    },
+    {
+      "topic": "Financial Statements",
+      "count": 1
+    },
+    {
+      "topic": "Amalgamation",
+      "count": 1
+    },
+    {
+      "topic": "General Principles",
+      "count": 1
+    },
+    {
+      "topic": "Conversion of Company",
+      "count": 1
+    },
+    {
+      "topic": "Meetings",
+      "count": 1
+    },
+    {
+      "topic": "Committees of Board",
+      "count": 1
+    },
+    {
+      "topic": "Memorandum of Association",
+      "count": 1
+    },
+    {
+      "topic": "Board Powers",
+      "count": 1
+    },
+    {
+      "topic": "Annual Filings",
+      "count": 1
+    },
+    {
+      "topic": "Company Name",
+      "count": 1
+    },
+    {
+      "topic": "Company Operations",
+      "count": 1
+    },
+    {
+      "topic": "Listing and Securities",
+      "count": 1
+    },
+    {
+      "topic": "Corporate Governance / Legal Remedies",
+      "count": 1
+    },
+    {
+      "topic": "Registers & Records / Shares",
+      "count": 1
+    },
+    {
+      "topic": "Members / Articles of Association",
+      "count": 1
+    },
+    {
+      "topic": "Compromise & Arrangement",
+      "count": 1
+    },
+    {
+      "topic": "Related Party Transactions / Types of Companies",
+      "count": 1
+    },
+    {
+      "topic": "Company Law Principles / Liabilities",
+      "count": 1
+    },
+    {
+      "topic": "General Meetings",
+      "count": 1
+    },
+    {
+      "topic": "Company Administration",
+      "count": 1
+    },
+    {
+      "topic": "Share Capital / General Meetings",
+      "count": 1
+    }
+  ],
+  "Company Accounts & Auditing Practices": [
+    {
+      "topic": "Working Capital Management",
+      "count": 9
+    },
+    {
+      "topic": "Capital Budgeting",
+      "count": 7
+    },
+    {
+      "topic": "Underwriting of Shares",
+      "count": 3
+    },
+    {
+      "topic": "Accounting Standards",
+      "count": 3
+    },
+    {
+      "topic": "Capital Structure Theories",
+      "count": 3
+    },
+    {
+      "topic": "Financial Management",
+      "count": 3
+    },
+    {
+      "topic": "Issue of Shares",
+      "count": 2
+    },
+    {
+      "topic": "Financial Statement Analysis",
+      "count": 2
+    },
+    {
+      "topic": "Ratio Analysis",
+      "count": 2
+    },
+    {
+      "topic": "Risk Analysis in Capital Budgeting",
+      "count": 2
+    },
+    {
+      "topic": "Debentures",
+      "count": 2
+    },
+    {
+      "topic": "Employee Stock Option Plan (ESOP)",
+      "count": 1
+    },
+    {
+      "topic": "Issue of Debentures",
+      "count": 1
+    },
+    {
+      "topic": "Bonus Issue",
+      "count": 1
+    },
+    {
+      "topic": "Redemption of Preference Shares",
+      "count": 1
+    },
+    {
+      "topic": "Buyback of Shares",
+      "count": 1
+    },
+    {
+      "topic": "Cash Flow Statement",
+      "count": 1
+    },
+    {
+      "topic": "Cash Flow Analysis",
+      "count": 1
+    },
+    {
+      "topic": "Companies Act, 2013",
+      "count": 1
+    },
+    {
+      "topic": "Investment Appraisal",
+      "count": 1
+    },
+    {
+      "topic": "Cost Volume Profit (CVP) Analysis",
+      "count": 1
+    },
+    {
+      "topic": "Value Based Management",
+      "count": 1
+    },
+    {
+      "topic": "Time Value of Money",
+      "count": 1
+    },
+    {
+      "topic": "Risk Management",
+      "count": 1
+    },
+    {
+      "topic": "Technical Analysis",
+      "count": 1
+    },
+    {
+      "topic": "Share Capital",
+      "count": 1
+    },
+    {
+      "topic": "Financial Statements",
+      "count": 1
+    },
+    {
+      "topic": "Share Capital & Debentures",
+      "count": 1
+    },
+    {
+      "topic": "Consolidated Financial Statements",
+      "count": 1
+    },
+    {
+      "topic": "Cost of Capital",
+      "count": 1
+    },
+    {
+      "topic": "Financial Leverage",
+      "count": 1
+    },
+    {
+      "topic": "Dividend Decisions",
+      "count": 1
+    },
+    {
+      "topic": "Financial Analysis",
+      "count": 1
+    },
+    {
+      "topic": "Investment Decisions",
+      "count": 1
+    }
+  ],
+  "Economic, Business & Commercial Laws": [
+    {
+      "topic": "Trade Marks Act, 1999",
+      "count": 12
+    },
+    {
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "count": 9
+    },
+    {
+      "topic": "Consumer Protection Act, 2019",
+      "count": 7
+    },
+    {
+      "topic": "Copyright Act, 1957",
+      "count": 7
+    },
+    {
+      "topic": "Foreign Exchange Management Act, 1999 (FEMA)",
+      "count": 5
+    },
+    {
+      "topic": "Indian Patents Act",
+      "count": 5
+    },
+    {
+      "topic": "Patents Act, 1970",
+      "count": 3
+    },
+    {
+      "topic": "Foreign Contribution (Regulation) Act, 2010",
+      "count": 2
+    },
+    {
+      "topic": "Foreign Trade Policy",
+      "count": 2
+    },
+    {
+      "topic": "Overseas Direct Investment (ODI)",
+      "count": 2
+    },
+    {
+      "topic": "Competition Act, 2002",
+      "count": 2
+    },
+    {
+      "topic": "Legal Metrology Act, 2009",
+      "count": 2
+    },
+    {
+      "topic": "Foreign Direct Investments (FDI)",
+      "count": 2
+    },
+    {
+      "topic": "Geographical Indications of Goods (Registration and Protection) Act, 1999",
+      "count": 2
+    },
+    {
+      "topic": "Intellectual Property Rights (IPR)",
+      "count": 2
+    },
+    {
+      "topic": "Designs Act, 2000",
+      "count": 2
+    },
+    {
+      "topic": "Special Economic Zone (SEZ) Act",
+      "count": 1
+    },
+    {
+      "topic": "Prevention of Money Laundering Act (PMLA)",
+      "count": 1
+    },
+    {
+      "topic": "Design Act, 2000",
+      "count": 1
+    },
+    {
+      "topic": "Prevention of Money Laundering Act, 2002",
+      "count": 1
+    },
+    {
+      "topic": "Foreign Trade Policy (FTP)",
+      "count": 1
+    },
+    {
+      "topic": "Special Economic Zones Act, 2005",
+      "count": 1
+    },
+    {
+      "topic": "Trademarks (General)",
+      "count": 1
+    },
+    {
+      "topic": "Intellectual Property Rights (General)",
+      "count": 1
+    }
+  ],
+  "Jurisprudence, Interpretation & General Laws": [
+    {
+      "topic": "Constitutional Law",
+      "count": 13
+    },
+    {
+      "topic": "Limitation Act, 1963",
+      "count": 6
+    },
+    {
+      "topic": "Civil Procedure Code",
+      "count": 6
+    },
+    {
+      "topic": "Indian Contract Act, 1872",
+      "count": 5
+    },
+    {
+      "topic": "Law of Torts",
+      "count": 3
+    },
+    {
+      "topic": "Indian Contract Act",
+      "count": 3
+    },
+    {
+      "topic": "Administrative Law",
+      "count": 2
+    },
+    {
+      "topic": "Bhartiya Nyaya Sanhita, 2023",
+      "count": 2
+    },
+    {
+      "topic": "Arbitration and Conciliation Act, 1996",
+      "count": 2
+    },
+    {
+      "topic": "Negotiable Instruments Act, 1881",
+      "count": 2
+    },
+    {
+      "topic": "Information Technology Act, 2000",
+      "count": 2
+    },
+    {
+      "topic": "Information Technology Act",
+      "count": 2
+    },
+    {
+      "topic": "Criminal Law (Bharatiya Nyaya Sanhita, 2023)",
+      "count": 2
+    },
+    {
+      "topic": "Negotiable Instruments Act",
+      "count": 2
+    },
+    {
+      "topic": "Arbitration and Conciliation Act",
+      "count": 2
+    },
+    {
+      "topic": "Jurisprudence",
+      "count": 2
+    },
+    {
+      "topic": "Interpretation of Statutes",
+      "count": 1
+    },
+    {
+      "topic": "Civil Procedure Code, 1908",
+      "count": 1
+    },
+    {
+      "topic": "Bharatiya Sakshya Adhiniyam, 2023",
+      "count": 1
+    },
+    {
+      "topic": "Bharatiya Nyaya Sanhita, 2023",
+      "count": 1
+    },
+    {
+      "topic": "Jurisprudence & General Laws",
+      "count": 1
+    },
+    {
+      "topic": "Right to Information Act, 2005",
+      "count": 1
+    },
+    {
+      "topic": "Commercial Courts Act, 2015",
+      "count": 1
+    },
+    {
+      "topic": "Criminal Procedure (Bharatiya Nagarik Suraksha Sanhita, 2023)",
+      "count": 1
+    },
+    {
+      "topic": "Law of Evidence (Bharatiya Sakshya Adhiniyam, 2023)",
+      "count": 1
+    },
+    {
+      "topic": "Limitation Act",
+      "count": 1
+    },
+    {
+      "topic": "Right to Information Act",
+      "count": 1
+    }
+  ],
+  "Capital Markets & Securities Laws": [
+    {
+      "topic": "Stock Broker",
+      "count": 4
+    },
+    {
+      "topic": "Custodian",
+      "count": 4
+    },
+    {
+      "topic": "Collective Investment Schemes (CIS)",
+      "count": 4
+    },
+    {
+      "topic": "Mutual Funds",
+      "count": 3
+    },
+    {
+      "topic": "SEBI Act, Appeals",
+      "count": 2
+    },
+    {
+      "topic": "Insider Trading",
+      "count": 2
+    },
+    {
+      "topic": "Buy-back of Securities",
+      "count": 2
+    },
+    {
+      "topic": "Delisting, Equity Shares",
+      "count": 2
+    },
+    {
+      "topic": "SEBI Act, Civil Courts Jurisdiction",
+      "count": 1
+    },
+    {
+      "topic": "SEBI Act, Further Appeals",
+      "count": 1
+    },
+    {
+      "topic": "SEBI Act, Special Courts",
+      "count": 1
+    },
+    {
+      "topic": "Portfolio Manager, Stock Broker",
+      "count": 1
+    },
+    {
+      "topic": "Secondary Market",
+      "count": 1
+    },
+    {
+      "topic": "Shares with Differential Voting Rights (DVR)",
+      "count": 1
+    },
+    {
+      "topic": "Listing of Securities, Appeals",
+      "count": 1
+    },
+    {
+      "topic": "SEBI Powers",
+      "count": 1
+    },
+    {
+      "topic": "SEBI Complaint Redressal",
+      "count": 1
+    },
+    {
+      "topic": "Depository Participants",
+      "count": 1
+    },
+    {
+      "topic": "International Financial Services Centres Authority Act, 2019",
+      "count": 1
+    },
+    {
+      "topic": "Offer for Sale (OFS)",
+      "count": 1
+    },
+    {
+      "topic": "Stock Appreciation Right (SAR)",
+      "count": 1
+    },
+    {
+      "topic": "Commercial Papers",
+      "count": 1
+    },
+    {
+      "topic": "Compliance Officer",
+      "count": 1
+    },
+    {
+      "topic": "Related Party Transactions",
+      "count": 1
+    },
+    {
+      "topic": "Fraudulent and Unfair Trade Practices",
+      "count": 1
+    },
+    {
+      "topic": "Delisting of Equity Shares",
+      "count": 1
+    },
+    {
+      "topic": "Market Abuse",
+      "count": 1
+    },
+    {
+      "topic": "Delisting",
+      "count": 1
+    },
+    {
+      "topic": "Securities Market Operations",
+      "count": 1
+    },
+    {
+      "topic": "Sweat Equity",
+      "count": 1
+    },
+    {
+      "topic": "Valuation",
+      "count": 1
+    },
+    {
+      "topic": "Depositories and Participants",
+      "count": 1
+    },
+    {
+      "topic": "Investment Advisers",
+      "count": 1
+    },
+    {
+      "topic": "Debt Instruments",
+      "count": 1
+    },
+    {
+      "topic": "Stock Exchanges, Risk Management",
+      "count": 1
+    },
+    {
+      "topic": "Penalties, Securities Contracts (Regulation) Act",
+      "count": 1
+    },
+    {
+      "topic": "Special Purpose Acquisition Company (SPAC), Listing",
+      "count": 1
+    },
+    {
+      "topic": "Rights Issue",
+      "count": 1
+    },
+    {
+      "topic": "Insider Trading, Penalties",
+      "count": 1
+    },
+    {
+      "topic": "Depository Act, Offences, Penalties",
+      "count": 1
+    },
+    {
+      "topic": "Intermediaries",
+      "count": 1
+    },
+    {
+      "topic": "Bonus Issue",
+      "count": 1
+    },
+    {
+      "topic": "Debt Instruments, Social Bonds",
+      "count": 1
+    },
+    {
+      "topic": "Corporate Governance, Listing Obligations",
+      "count": 1
+    },
+    {
+      "topic": "Company Secretary, Listing Obligations",
+      "count": 1
+    },
+    {
+      "topic": "SEBI, Enforcement",
+      "count": 1
+    },
+    {
+      "topic": "Delisting, Relisting",
+      "count": 1
+    },
+    {
+      "topic": "Debenture Trustees, Non-Convertible Securities",
+      "count": 1
+    },
+    {
+      "topic": "Listing Obligations, Corporate Governance",
+      "count": 1
+    },
+    {
+      "topic": "Mutual Funds, Risk Management",
+      "count": 1
+    }
+  ],
+  "Industrial, Labour & General Laws": [
+    {
+      "topic": "Companies Act, 2013",
+      "count": 15
+    },
+    {
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "count": 6
+    },
+    {
+      "topic": "Foreign Exchange Management Act (FEMA)",
+      "count": 4
+    },
+    {
+      "topic": "Apprentices Act, 1961",
+      "count": 4
+    },
+    {
+      "topic": "Limited Liability Partnership (LLP) Act",
+      "count": 3
+    },
+    {
+      "topic": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+      "count": 3
+    },
+    {
+      "topic": "Industrial Disputes Act",
+      "count": 3
+    },
+    {
+      "topic": "Employees’ Provident Funds and Miscellaneous Provisions Act, 1952",
+      "count": 3
+    },
+    {
+      "topic": "Code on Social Security 2020",
+      "count": 3
+    },
+    {
+      "topic": "Startup India Initiative",
+      "count": 2
+    },
+    {
+      "topic": "MSME Development Act, 2006",
+      "count": 2
+    },
+    {
+      "topic": "Limited Liability Partnership Act, 2008",
+      "count": 2
+    },
+    {
+      "topic": "Occupational Safety, Health and Working Conditions Code 2020",
+      "count": 2
+    },
+    {
+      "topic": "Foreign Exchange Management Act (FEMA), Overseas Direct Investment (ODI)",
+      "count": 1
+    },
+    {
+      "topic": "Environmental Laws",
+      "count": 1
+    },
+    {
+      "topic": "Business Collaborations",
+      "count": 1
+    },
+    {
+      "topic": "Societies Registration Act",
+      "count": 1
+    },
+    {
+      "topic": "Labour Laws",
+      "count": 1
+    },
+    {
+      "topic": "Industrial (Development and Regulation) Act",
+      "count": 1
+    },
+    {
+      "topic": "Chit Funds Act",
+      "count": 1
+    },
+    {
+      "topic": "Forms of Business Organization",
+      "count": 1
+    },
+    {
+      "topic": "Shops and Establishments Act",
+      "count": 1
+    },
+    {
+      "topic": "Banking Law",
+      "count": 1
+    },
+    {
+      "topic": "Multidisciplinary Firms (MDF)",
+      "count": 1
+    },
+    {
+      "topic": "Banking Law, NBFC Regulations",
+      "count": 1
+    },
+    {
+      "topic": "Trusts Act",
+      "count": 1
+    },
+    {
+      "topic": "Partnership Act, LLP Act",
+      "count": 1
+    },
+    {
+      "topic": "Corporate Law",
+      "count": 1
+    },
+    {
+      "topic": "Maternity Benefit Act",
+      "count": 1
+    },
+    {
+      "topic": "Factories Act, Shops and Establishments Act",
+      "count": 1
+    },
+    {
+      "topic": "Contract Labour (Regulation and Abolition) Act, Factories Act",
+      "count": 1
+    },
+    {
+      "topic": "Payment of Gratuity Act",
+      "count": 1
+    },
+    {
+      "topic": "Factories Act, 1948",
+      "count": 1
+    },
+    {
+      "topic": "Employees' State Insurance (ESI) Act",
+      "count": 1
+    },
+    {
+      "topic": "Startup Funding",
+      "count": 1
+    },
+    {
+      "topic": "Micro, Small and Medium Enterprises Development (MSMED) Act, 2006",
+      "count": 1
+    },
+    {
+      "topic": "Non-Banking Financial Companies (NBFC)",
+      "count": 1
+    },
+    {
+      "topic": "Societies Registration Act, 1860",
+      "count": 1
+    },
+    {
+      "topic": "Startup India",
+      "count": 1
+    },
+    {
+      "topic": "Non-Banking Financial Company (NBFC)",
+      "count": 1
+    },
+    {
+      "topic": "Micro Finance Institution (MFI)",
+      "count": 1
+    },
+    {
+      "topic": "Income Tax Act, 1961",
+      "count": 1
+    },
+    {
+      "topic": "International Business",
+      "count": 1
+    },
+    {
+      "topic": "Housing Finance Company",
+      "count": 1
+    },
+    {
+      "topic": "Business Entities",
+      "count": 1
+    },
+    {
+      "topic": "Business Laws",
+      "count": 1
+    },
+    {
+      "topic": "Labour Law",
+      "count": 1
+    },
+    {
+      "topic": "Industrial Relations Code 2020",
+      "count": 1
+    },
+    {
+      "topic": "Child and Adolescent Labour (Prohibition and Regulation) Act 1986",
+      "count": 1
+    },
+    {
+      "topic": "Labour Codes",
+      "count": 1
+    },
+    {
+      "topic": "Code on Wages, 2019",
+      "count": 1
+    }
+  ],
+  "Tax Laws": [
+    {
+      "topic": "Income from Other Sources",
+      "count": 4
+    },
+    {
+      "topic": "GST - Input Tax Credit",
+      "count": 4
+    },
+    {
+      "topic": "Residential Status and Scope of Total Income",
+      "count": 3
+    },
+    {
+      "topic": "Computation of Total Income",
+      "count": 3
+    },
+    {
+      "topic": "Income from Salaries",
+      "count": 2
+    },
+    {
+      "topic": "Profits and Gains from Business or Profession (PGBP)",
+      "count": 2
+    },
+    {
+      "topic": "Deductions from Gross Total Income",
+      "count": 2
+    },
+    {
+      "topic": "Computation of Total Income and Tax Liability",
+      "count": 2
+    },
+    {
+      "topic": "Income from House Property",
+      "count": 2
+    },
+    {
+      "topic": "Procedure for Assessment",
+      "count": 2
+    },
+    {
+      "topic": "GST - Output Tax",
+      "count": 2
+    },
+    {
+      "topic": "GST - Payment of Tax",
+      "count": 2
+    },
+    {
+      "topic": "Computation of Tax Liability",
+      "count": 2
+    },
+    {
+      "topic": "Returns of Income",
+      "count": 2
+    },
+    {
+      "topic": "GST - Time of Supply",
+      "count": 2
+    },
+    {
+      "topic": "Customs Duty",
+      "count": 2
+    },
+    {
+      "topic": "Set-off and Carry Forward of Losses, Computation of Gross Total Income, Virtual Digital Assets",
+      "count": 1
+    },
+    {
+      "topic": "Capital Gains",
+      "count": 1
+    },
+    {
+      "topic": "Tax Deducted at Source (TDS)",
+      "count": 1
+    },
+    {
+      "topic": "Exempt Incomes, Agricultural Income, Income from Other Sources",
+      "count": 1
+    },
+    {
+      "topic": "Clubbing of Income, Income from Other Sources",
+      "count": 1
+    },
+    {
+      "topic": "GST - Supply, Valuation",
+      "count": 1
+    },
+    {
+      "topic": "GST - Valuation",
+      "count": 1
+    },
+    {
+      "topic": "GST - Supply, Place of Supply",
+      "count": 1
+    },
+    {
+      "topic": "Customs Act - Valuation",
+      "count": 1
+    },
+    {
+      "topic": "GST - Administration and Enforcement",
+      "count": 1
+    },
+    {
+      "topic": "GST - Accounts and Records",
+      "count": 1
+    },
+    {
+      "topic": "GST - Registration, Tax Invoice",
+      "count": 1
+    },
+    {
+      "topic": "GST - Scope of Supply",
+      "count": 1
+    },
+    {
+      "topic": "Tax Planning",
+      "count": 1
+    },
+    {
+      "topic": "Computation of Gross Total Income",
+      "count": 1
+    },
+    {
+      "topic": "Advance Tax",
+      "count": 1
+    },
+    {
+      "topic": "GST - Returns",
+      "count": 1
+    },
+    {
+      "topic": "GST - Value of Supply",
+      "count": 1
+    },
+    {
+      "topic": "GST - Returns and Registration",
+      "count": 1
+    },
+    {
+      "topic": "GST - Composition Levy",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "subject": "Industrial, Labour & General Laws",
+  "year": 2025,
+  "session": "December",
+  "questions": [
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 3,
+      "questionText": "What is the statutory time limit for filing of LLP Agreement after incorporation and the importance of such document ?",
+      "questionType": "Descriptive",
+      "topic": "Limited Liability Partnership (LLP) Act",
+      "subTopic": "LLP Agreement Filing",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 3,
+      "questionText": "What important points should be considered by Ananya and Ritu before they setup their Start-up ?",
+      "questionType": "Descriptive",
+      "topic": "Startup India Initiative",
+      "subTopic": "Startup Recognition Criteria",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 3,
+      "questionText": "In case where there is a dispute with respect to payment due, what remedy is available to an MSME ?",
+      "questionType": "Descriptive",
+      "topic": "MSME Development Act, 2006",
+      "subTopic": "Delayed Payments to MSMEs",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 3,
+      "questionText": "What steps should be kept in view while setting-up business through subsidiary company in Singapore ?",
+      "questionType": "Descriptive",
+      "topic": "Foreign Exchange Management Act (FEMA), Overseas Direct Investment (ODI)",
+      "subTopic": "Setting up Wholly Owned Subsidiary (WOS)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 3,
+      "questionText": "What types of compliances to be complied with by Ananya and Ritu under Environment Laws ?",
+      "questionType": "Descriptive",
+      "topic": "Environmental Laws",
+      "subTopic": "Environmental Compliances",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 3,
+      "questionText": "CK XH Inc., a Company incorporated in Hong Kong, engaged primarily in the manufacturing and international trading of telecom infrastructure components, proposes to establish a Branch Office (BO) in Guwahati, Assam, with the intent of marketing its products and offering post-sale technical services. The entity has demonstrated profitability in four out of the last five financial years, with the fifth showing a nominal net loss. The company has appointed a local consultancy firm in India to act as its authorized agent for filing the requisite application through an AD Category-I bank. In view of above situation, whether CK XH Inc. is eligible for setting up the Branch Office ?",
+      "questionType": "Case Study",
+      "topic": "Foreign Exchange Management Act (FEMA)",
+      "subTopic": "Branch Office in India",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 3,
+      "questionText": "X Ltd. is a company incorporated under the Companies Act, 2013. Its Memorandum of Association (MoA) restricts the company from carrying out manufacturing of electrical appliances only. However, the Articles of Association (AoA) were recently amended by special resolution to include a provision allowing the company to enter into the business of real estate development, and based on this amendment, the Board of Directors passed a resolution to purchase land for a commercial mall project. A minority shareholder challenges this decision stating that it is ultra vires to the company. The Board contends that since the Articles now allow it and the shareholders approved the amendment, the decision is valid. With reference to relevant case law and principles, examine the legal validity of the Board’s action and advise :",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Memorandum of Association (MoA), Articles of Association (AoA), Ultra Vires",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2B_I",
+      "questionNumber": "2(b)(i)",
+      "marks": null,
+      "questionText": "Whether the amendment to the Articles enabling entry into real estate business is valid in light of the Memorandum ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "MoA vs AoA, Ultra Vires",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2B_II",
+      "questionNumber": "2(b)(ii)",
+      "marks": null,
+      "questionText": "Whether the shareholder’s challenge is tenable in law ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Ultra Vires",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2B_III",
+      "questionNumber": "2(b)(iii)",
+      "marks": null,
+      "questionText": "Whether the Board’s action can be ratified by the shareholders by passing another special resolution ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Ratification of Ultra Vires Acts",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 3,
+      "questionText": "During the launch of a new line of eco-friendly homes, ABC Infra Ltd., a construction company, collaborates with XYZ Marketing, a marketing agency, where ABC Infra Ltd. provides product expertise and XYZ Marketing handles promotions and customer engagement. Identify the type of collaboration represented in this scenario and explain the benefits each partner derives from this collaboration.",
+      "questionType": "Descriptive",
+      "topic": "Business Collaborations",
+      "subTopic": "Types and Benefits of Collaboration",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2D",
+      "questionNumber": "2(d)",
+      "marks": 3,
+      "questionText": "Sewa Foundation is a registered NGO for promoting Indian Culture. It organizes various cultural programmes in India as well as outside India. The founder members are retired from armed force service, Indian Army. Most of the members desired that the Foundation may be converted into a section 8 Company under the Companies Act, 2013 with 5 members as promoter. Further, they don't want to affix the word 'Limited' or 'Private Limited' after the proposed name ‘Live with Culture’. They also desired to expand the object of the company. In view of the above, answer the following :",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Section 8 Company",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2D_1",
+      "questionNumber": "2(d)(1)",
+      "marks": null,
+      "questionText": "Whether, proposed Company can be incorporated with affixing the word 'Limited' or 'Private Limited' as case may be ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Section 8 Company Name",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2D_2",
+      "questionNumber": "2(d)(2)",
+      "marks": null,
+      "questionText": "What are the other objectives that can be included in the object clause of the proposed Company ?",
+      "questionType": "Case Study",
+      "topic": "Companies Act, 2013",
+      "subTopic": "Section 8 Company Objects",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q2E",
+      "questionNumber": "2(e)",
+      "marks": 3,
+      "questionText": "BJS & Co., a registered LLP under LLP Act provides the legal and financial consultancy services through its 21 branches all over in India. All its partners are Practicing Company Secretaries. The turnover for the financial year 2024-25 was ` 9.55 Crore. The LLP recently engaged its trainees for preparation of statutory forms, return and other documents. Rahul, one of the trainees, during the preparation of Annual Return of LLP, opines that as Annual Return can be signed by any designated partner and all partners are Practicing Company Secretary, hence there is no need to get certification from Company Secretary in Practice, who is not the member of LLP. In above situation, whether view of Rahul is correct in light of provisions of LLP Act ?",
+      "questionType": "Case Study",
+      "topic": "Limited Liability Partnership (LLP) Act",
+      "subTopic": "Annual Return Certification",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 3,
+      "questionText": "For welfare of farmers, a group of farmers in Gujarat decided to incorporate a Society. The main objective of the society is to provide scientific developed equipment for farming, education for modern farming and also to organize research & development programmes from time to time. What are the documents to be submitted with Registrar for formation of such society ?",
+      "questionType": "Descriptive",
+      "topic": "Societies Registration Act",
+      "subTopic": "Formation and Registration of Society",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 3,
+      "questionText": "Srinivasan Rao recently completed his degree in Law. After qualifying the examination, he got the membership of Bar Association and started practising as an Advocate. His area of interest is Labour Laws. In view of this, highlight the importance of Labour Laws.",
+      "questionType": "Descriptive",
+      "topic": "Labour Laws",
+      "subTopic": "Importance of Labour Laws",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 3,
+      "questionText": "Maharaja Bhanu Pratap Pvt. Ltd. was incorporated as Private Limited Company in year 1943 under prevailing Companies Act. The main objective of the Company was to maintain the properties of the Maharaja and the revenue therefrom. However, after a long period, it was felt that the company became un-operational. Further, the younger generation decided to start advisory business. Hence, it was decided that Maharaja Bhanu Pratap Pvt. Ltd. will be converted into an LLP. In view of the above situation, what conditions are to be fulfilled for such conversion. Also describe the effect of conversion.",
+      "questionType": "Case Study",
+      "topic": "Limited Liability Partnership (LLP) Act",
+      "subTopic": "Conversion of Private Company to LLP",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q3D",
+      "questionNumber": "3(d)",
+      "marks": 3,
+      "questionText": "Renowned Business House of India recently entered into a collaboration with a Germany-based company for manufacturing of defense equipment. There shall be production of explosives also with modern technology. The manufacturing plant is proposed to be set up in an industrial area situated near to Greater Noida. However, the management is not sure as to the requirement of Industrial license. In view of the present situation, opine whether Industrial License will be required. Also detail the procedure for obtaining Industrial License.",
+      "questionType": "Case Study",
+      "topic": "Industrial (Development and Regulation) Act",
+      "subTopic": "Industrial Licensing",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q3E",
+      "questionNumber": "3(e)",
+      "marks": 3,
+      "questionText": "A group of people in a slum area of Kolkata decided to start a chit fund to assist the daily wage labour. As per the scheme, a member of the chit fund has to deposit ` 50 per day. On the last day of the month, the fund can be used by the subscriber on bid basis. Highest discount would win the bid. Tenure of the scheme is 13 months. However, in mid of the month, a subscriber can avail the loan facility with fixed interest rate of 7% per annum. One of the subscribers opines that such scheme should be registered with registrar of Chit Fund. Check the validity of opinion of subscriber.",
+      "questionType": "Case Study",
+      "topic": "Chit Funds Act",
+      "subTopic": "Registration of Chit Funds",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 3,
+      "questionText": "‘‘Choosing a form of business entity is crucial to a successful organization.’’ Based on the above statement, highlight the major factors and their relevance in choosing the form of a business.",
+      "questionType": "Descriptive",
+      "topic": "Forms of Business Organization",
+      "subTopic": "Factors for Choosing Business Form",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 3,
+      "questionText": "‘‘The Shops and Establishments (S&E) Act is applicable on all the commercial establishments; viz, business centers, offices, warehouses, stores, hotels, eateries, amusement parks, theatres, etc., nationwide. It is one of the most important regulations required to be complied with for any business.’’ In view of above statement, enumerate the procedure for registration under the Shops & Establishments Act.",
+      "questionType": "Descriptive",
+      "topic": "Shops and Establishments Act",
+      "subTopic": "Registration Procedure",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 3,
+      "questionText": "‘‘Payment banks is a new model of banks conceptualised by the Reserve Bank of India (RBI). These banks can accept a restricted deposit.’’ When can RBI grant full license to an entity as payment bank ?",
+      "questionType": "Descriptive",
+      "topic": "Banking Law",
+      "subTopic": "Payment Banks Licensing",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4D",
+      "questionNumber": "4(d)",
+      "marks": 3,
+      "questionText": "‘‘The nature of a multidisciplinary firm fosters collaboration. The common office space, with professionals working in close proximity to one another, provides each professional with a strong set of resources in the firm. In addition, this spirit of working together creates greater opportunity for collaboration so the total needs of the client are best met.’’ What are the risks involved in forming of a multidisciplinary firm (MDF) ?",
+      "questionType": "Descriptive",
+      "topic": "Multidisciplinary Firms (MDF)",
+      "subTopic": "Risks of MDF",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4E",
+      "questionNumber": "4(e)",
+      "marks": 3,
+      "questionText": "‘‘Micro, Small and Medium Enterprises Development (MSMED) Act, 2006 was notified to address policy issues affecting MSMEs as well as the coverage and investment ceiling of the sector.\" In view of above statement, highlight the benefits provided to an enterprise having Udyam registration.",
+      "questionType": "Descriptive",
+      "topic": "MSME Development Act, 2006",
+      "subTopic": "Udyam Registration Benefits",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4A_I",
+      "questionNumber": "4A(i)",
+      "marks": 3,
+      "questionText": "Differentiate between Banks & NBFC’s.",
+      "questionType": "Descriptive",
+      "topic": "Banking Law, NBFC Regulations",
+      "subTopic": "Banks vs. NBFCs",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4A_II",
+      "questionNumber": "4A(ii)",
+      "marks": 3,
+      "questionText": "Differentiate between Public Trust and Private Trust.",
+      "questionType": "Descriptive",
+      "topic": "Trusts Act",
+      "subTopic": "Public Trust vs. Private Trust",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4A_III",
+      "questionNumber": "4A(iii)",
+      "marks": 3,
+      "questionText": "Differentiate between Partnership & LLP.",
+      "questionType": "Descriptive",
+      "topic": "Partnership Act, LLP Act",
+      "subTopic": "Partnership vs. LLP",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4A_IV",
+      "questionNumber": "4A(iv)",
+      "marks": 3,
+      "questionText": "Differentiate between Entrepreneurship and Startup.",
+      "questionType": "Descriptive",
+      "topic": "Startup India Initiative",
+      "subTopic": "Entrepreneurship vs. Startup",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q4A_V",
+      "questionNumber": "4A(v)",
+      "marks": 3,
+      "questionText": "Differentiate between Special Purpose Vehicle (SPV) and Company.",
+      "questionType": "Descriptive",
+      "topic": "Corporate Law",
+      "subTopic": "SPV vs. Company",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Can Vibhut Small Finance Ltd. terminate employee on basis of finding of Internal Committee for POSH, without conducting any departmental inquiry ?",
+      "questionType": "Case Study",
+      "topic": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+      "subTopic": "Internal Committee Recommendations, Disciplinary Action",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Can remaining Maternity leave be cancelled in case of death of the child prior to expected delivery date ?",
+      "questionType": "Case Study",
+      "topic": "Maternity Benefit Act",
+      "subTopic": "Maternity Leave Entitlement",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Is the view of Vibhut Small Finance Ltd. correct that no first aid facility can be provided where the numbers of employee is less than 150 ?",
+      "questionType": "Case Study",
+      "topic": "Factories Act, Shops and Establishments Act",
+      "subTopic": "First Aid Facilities",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 5,
+      "questionText": "Is Vibhut Small Finance Ltd. liable to provide the facility of drinking water to its contract labour ?",
+      "questionType": "Case Study",
+      "topic": "Contract Labour (Regulation and Abolition) Act, Factories Act",
+      "subTopic": "Welfare Facilities for Contract Labour",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "Due to dissatisfaction among workers, wage-related concerns and working conditions, a group of employees formed a trade union and submitted a charter of demands seeking revision of wages and improvements in leave benefits to Managing Director of Maharaja Jet Airways. The management did not recognize the union, claiming that a welfare committee was already addressing grievances. In protest, the trade union approached the Labour Officer, who forward the matter to Conciliation Officers. Since long, there being no resolution, the state government, in the interest of the industry, referred the matter to the Industrial Tribunal for settlement of the disputes. The tenure of the tribunal is 2 months. Maharaja Jet Airways opposed the decision of the Government, contesting that as the proceeding for conciliation is pending, the matter cannot be referred to the Industrial Tribunal. In view of above, answer the following :",
+      "questionType": "Case Study",
+      "topic": "Industrial Disputes Act",
+      "subTopic": "Trade Unions, Conciliation, Industrial Tribunal Reference",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_I",
+      "questionNumber": "6(a)(i)",
+      "marks": null,
+      "questionText": "Whether Government can refer the matter to Industrial Tribunal without waiting for conclusion of conciliation proceeding ?",
+      "questionType": "Case Study",
+      "topic": "Industrial Disputes Act",
+      "subTopic": "Reference to Tribunal",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_II",
+      "questionNumber": "6(a)(ii)",
+      "marks": null,
+      "questionText": "Can Industrial Tribunal continue office after expiry of 2 months, where the matter is unresolved ?",
+      "questionType": "Case Study",
+      "topic": "Industrial Disputes Act",
+      "subTopic": "Tenure of Tribunal",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Rekha was an employee of State Power Generation Ltd. As informed to her, the company has a Trust for Contributory Provident Fund, as provisions of Employees’ Provident Funds and Miscellaneous Provisions Act, 1952 are not applicable to it. After working for more than 7 years, Rekha left State Power Generation Ltd. and joined XYZ Ltd., having more than 1000 employees on the roll. The HR department of XYZ Ltd. informed Rekha that the amount of the provident fund in State Power Generation Ltd. cannot be transferred to EPFO, as the provisions of Employees' Provident Funds and Miscellaneous Provisions Act, 1952 are applicable to the company. In above given situation, answer the following :",
+      "questionType": "Case Study",
+      "topic": "Employees’ Provident Funds and Miscellaneous Provisions Act, 1952",
+      "subTopic": "Applicability, Provident Fund Transfer",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6B_I",
+      "questionNumber": "6(b)(i)",
+      "marks": null,
+      "questionText": "In which cases provision of Employees’ Provident Funds and Miscellaneous Provisions Act, 1952 are not applicable ?",
+      "questionType": "Case Study",
+      "topic": "Employees’ Provident Funds and Miscellaneous Provisions Act, 1952",
+      "subTopic": "Exemptions from Applicability",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6B_II",
+      "questionNumber": "6(b)(ii)",
+      "marks": null,
+      "questionText": "How can Rekha receive the amount of Provident Fund from previous company ?",
+      "questionType": "Case Study",
+      "topic": "Employees’ Provident Funds and Miscellaneous Provisions Act, 1952",
+      "subTopic": "PF Withdrawal/Transfer",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "Mohindra had joined PZ India Ltd. in 1994. After attaining of age of superannuation, he retired from the organization. PZ India Ltd. had allotted him residential facility in quarters of the organization. As per the policy of the organization, an employee has to vacate the quarter within 30 days of his retirement, but Mohindra didn't do so. Because of this, the amount of gratuity owed to him was withheld by the organization. Can PZ India Ltd. withhold the amount of gratuity on the above ground ? Also suggest how the amount of gratuity can recovered.",
+      "questionType": "Case Study",
+      "topic": "Payment of Gratuity Act",
+      "subTopic": "Withholding/Forfeiture of Gratuity",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "Ranjan is a graduate holding degree of BE (Mechanical). For career prospective, he joined the training in Gas and Oil Production Ltd. The period of his apprenticeship was 18 months. After completion of such training, he applied for a job of Technician in the organization. The qualifying criteria was at least 1 year post qualification experience of candidate. The period of his training was not considered and his application was rejected. In view of such situation, answer the following :",
+      "questionType": "Case Study",
+      "topic": "Apprentices Act, 1961",
+      "subTopic": "Apprenticeship, Employment Post-Training",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6D_I",
+      "questionNumber": "6(d)(i)",
+      "marks": null,
+      "questionText": "Can an apprentice demand the employment ?",
+      "questionType": "Case Study",
+      "topic": "Apprentices Act, 1961",
+      "subTopic": "Employment Obligations for Apprentices",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6D_II",
+      "questionNumber": "6(d)(ii)",
+      "marks": null,
+      "questionText": "What are the obligations of the employer under Apprentices Act, 1961 ?",
+      "questionType": "Case Study",
+      "topic": "Apprentices Act, 1961",
+      "subTopic": "Employer Obligations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_I",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "Prepare a note on Local Complaint Committees constituted under Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+      "questionType": "Short Notes",
+      "topic": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+      "subTopic": "Local Complaint Committees (LCC)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_II",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "What is the specific responsibility of occupier in relation to hazardous processes under Factories Act, 1948 ?",
+      "questionType": "Descriptive",
+      "topic": "Factories Act, 1948",
+      "subTopic": "Occupier's Responsibility for Hazardous Processes",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_III",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "What types of matters are decided by Employee Insurance (E.I.) Court ?",
+      "questionType": "Descriptive",
+      "topic": "Employees' State Insurance (ESI) Act",
+      "subTopic": "E.I. Court Jurisdiction",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_IV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "Define the following terms under Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014 :",
+      "questionType": "Short Notes",
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "subTopic": "Definitions",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_IV_A",
+      "questionNumber": "6A(iv)(a)",
+      "marks": null,
+      "questionText": "‘Employer’",
+      "questionType": "Short Notes",
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "subTopic": "Definition of Employer",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_IV_B",
+      "questionNumber": "6A(iv)(b)",
+      "marks": null,
+      "questionText": "‘Establishment’",
+      "questionType": "Short Notes",
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "subTopic": "Definition of Establishment",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_IV_C",
+      "questionNumber": "6A(iv)(c)",
+      "marks": null,
+      "questionText": "‘Form’",
+      "questionType": "Short Notes",
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "subTopic": "Definition of Form",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_IV_D",
+      "questionNumber": "6A(iv)(d)",
+      "marks": null,
+      "questionText": "‘Small Establishment’",
+      "questionType": "Short Notes",
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "subTopic": "Definition of Small Establishment",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "ILGL_2025_DECEMBER_Q6A_IV_E",
+      "questionNumber": "6A(iv)(e)",
+      "marks": null,
+      "questionText": "‘Very Small Establishment’.",
+      "questionType": "Short Notes",
+      "topic": "Labour Laws (Exemption from Furnishing Returns and Maintaining Registers by certain Establishments) Amendment Act, 2014",
+      "subTopic": "Definition of Very Small Establishment",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    }
+  ]
+}

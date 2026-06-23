@@ -1,0 +1,50 @@
+{
+  "totalPdfFilesProcessed": 14,
+  "totalQuestionsExtracted": 489,
+  "subjects": [
+    {
+      "subjectCode": "CL",
+      "subjectName": "Company Law",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 74
+    },
+    {
+      "subjectCode": "CAAP",
+      "subjectName": "Company Accounts & Auditing Practices",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 61
+    },
+    {
+      "subjectCode": "EBCL",
+      "subjectName": "Economic, Business & Commercial Laws",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 74
+    },
+    {
+      "subjectCode": "JIGL",
+      "subjectName": "Jurisprudence, Interpretation & General Laws",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 67
+    },
+    {
+      "subjectCode": "CMSL",
+      "subjectName": "Capital Markets & Securities Laws",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 65
+    },
+    {
+      "subjectCode": "ILGL",
+      "subjectName": "Industrial, Labour & General Laws",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 90
+    },
+    {
+      "subjectCode": "TL",
+      "subjectName": "Tax Laws",
+      "filesProcessedCount": 2,
+      "questionsExtracted": 58
+    }
+  ],
+  "duplicateQuestionsCount": 0,
+  "timestamp": "2026-06-22T16:40:22.900Z"
+}

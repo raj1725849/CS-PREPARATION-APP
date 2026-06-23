@@ -4,6 +4,7 @@ import {
   buildEvaluateSystemPrompt,
   buildEvaluateUserPrompt
 } from "@/lib/prompts"
+import { parseAiResponse, AiParseError } from "@/lib/json-parser"
 import { EvaluateRequest, EvaluateResponse, EvaluateError } from "@/lib/types"
 import { evaluateWithOpenRouter } from "@/lib/openrouter"
 import { resolveSubjectName } from "@/lib/subject-map"
@@ -76,140 +77,23 @@ async function generateJSONWithFallback(
   console.log("Response length:", rawText.length, "chars");
   console.log("====================================");
 
-  let parsedObj: any = null;
-
-  // First attempt: try to parse directly
-  const jsonStart = rawText.indexOf('{');
-  const jsonEnd = rawText.lastIndexOf('}');
-  if (jsonStart !== -1 && jsonEnd !== -1) {
-    const cleanJson = rawText.substring(jsonStart, jsonEnd + 1);
-    try {
-      parsedObj = JSON.parse(cleanJson);
-    } catch (err) {
-      console.warn(`Direct JSON parsing failed for ${callName}, attempting robust repair...`);
-    }
-  }
-
-  // Robust repair attempt
-  if (!parsedObj && jsonStart !== -1) {
-    const s = rawText.substring(jsonStart);
-    let inString = false;
-    let isEscaped = false;
-    const stack: ('{' | '[')[] = [];
-    let lastValidIndex = 0;
-
-    for (let i = 0; i < s.length; i++) {
-      const char = s[i];
-      if (isEscaped) {
-        isEscaped = false;
-        continue;
-      }
-      if (char === '\\') {
-        isEscaped = true;
-        continue;
-      }
-      if (char === '"') {
-        inString = !inString;
-        if (!inString) {
-          lastValidIndex = i + 1;
-        }
-        continue;
-      }
-      if (!inString) {
-        if (char === '{' || char === '[') {
-          stack.push(char);
-          lastValidIndex = i + 1;
-        } else if (char === '}') {
-          if (stack[stack.length - 1] === '{') {
-            stack.pop();
-            lastValidIndex = i + 1;
-          }
-        } else if (char === ']') {
-          if (stack[stack.length - 1] === '[') {
-            stack.pop();
-            lastValidIndex = i + 1;
-          }
-        } else if (char === ',') {
-          lastValidIndex = i; // comma boundary is safe
-        }
-      }
-    }
-
-    // Attempt 1: Direct close of current string and braces
-    let repaired1 = s;
-    if (inString) {
-      repaired1 += '"';
-    }
-    let suffix1 = "";
-    for (let j = stack.length - 1; j >= 0; j--) {
-      suffix1 += stack[j] === '{' ? '}' : ']';
-    }
-    repaired1 += suffix1;
-
-    try {
-      parsedObj = JSON.parse(repaired1);
-      console.log(`Robust JSON repair (Attempt 1: Direct Close) succeeded for ${callName}`);
-    } catch (err) {
-      console.warn(`Robust JSON repair (Attempt 1) failed, attempting backtrack...`);
-    }
-
-    // Attempt 2: Backtrack to last safe boundary
-    if (!parsedObj && lastValidIndex > 0) {
-      const cleanSub = s.substring(0, lastValidIndex);
-      const subStack: ('{' | '[')[] = [];
-      let subInString = false;
-      let subEscaped = false;
-
-      for (let i = 0; i < cleanSub.length; i++) {
-        const char = cleanSub[i];
-        if (subEscaped) { subEscaped = false; continue; }
-        if (char === '\\') { subEscaped = true; continue; }
-        if (char === '"') { subInString = !subInString; continue; }
-        if (!subInString) {
-          if (char === '{' || char === '[') subStack.push(char);
-          else if (char === '}') { if (subStack[subStack.length - 1] === '{') subStack.pop(); }
-          else if (char === ']') { if (subStack[subStack.length - 1] === '[') subStack.pop(); }
-        }
-      }
-
-      let repaired2 = cleanSub.trim();
-      if (repaired2.endsWith(',')) {
-        repaired2 = repaired2.slice(0, -1).trim();
-      }
-
-      let suffix2 = "";
-      for (let j = subStack.length - 1; j >= 0; j--) {
-        suffix2 += subStack[j] === '{' ? '}' : ']';
-      }
-      repaired2 += suffix2;
-
+  try {
+    return parseAiResponse(rawText);
+  } catch (err: any) {
+    if (err instanceof AiParseError) {
+      // Log to file for debug
       try {
-        parsedObj = JSON.parse(repaired2);
-        console.log(`Robust JSON repair (Attempt 2: Backtrack) succeeded for ${callName}`);
-      } catch (err2) {
-        console.error(`Robust JSON repair (Attempt 2) failed as well for ${callName}:`, err2);
+        const fs = require('fs');
+        const path = require('path');
+        const logPath = path.join(process.cwd(), `evaluate_error_${callName.toLowerCase()}.log`);
+        fs.writeFileSync(logPath, `--- ERROR DATE: ${new Date().toISOString()} ---\n${err.rawResponse}\n`, 'utf8');
+        console.log(`Wrote raw ${callName} response to evaluate_error_${callName.toLowerCase()}.log`);
+      } catch (logErr) {
+        console.error("Failed to write raw response log file:", logErr);
       }
     }
+    throw err;
   }
-
-  if (!parsedObj) {
-    console.error(`Failed to parse response for ${callName}. Raw response:\n`, rawText);
-    
-    // Log to file for debug
-    try {
-      const fs = require('fs');
-      const path = require('path');
-      const logPath = path.join(process.cwd(), `evaluate_error_${callName.toLowerCase()}.log`);
-      fs.writeFileSync(logPath, `--- ERROR DATE: ${new Date().toISOString()} ---\n${rawText}\n`, 'utf8');
-      console.log(`Wrote raw ${callName} response to evaluate_error_${callName.toLowerCase()}.log`);
-    } catch (logErr) {
-      console.error("Failed to write raw response log file:", logErr);
-    }
-    
-    throw new Error(`AI response for ${callName} was cut off or invalid JSON.`);
-  }
-
-  return parsedObj;
 }
 
 export async function POST(req: NextRequest) {
@@ -254,18 +138,27 @@ export async function POST(req: NextRequest) {
   const resolvedSubject = resolveSubjectName(subject);
   const rubric = retrieveRubric(resolvedSubject, question);
 
-  // Determine marks: rubric match > user-provided > RUBRIC_NOT_FOUND error
+  // Determine marks: rubric match > user-provided > extract from text > RUBRIC_NOT_FOUND error
   let finalMarks: number;
   if (rubric.matched && rubric.marks) {
     finalMarks = rubric.marks;
   } else if (marks !== undefined && marks !== null) {
     finalMarks = marks;
   } else {
-    // No rubric match AND no marks provided — ask frontend for manual marks
-    return NextResponse.json<EvaluateError>(
-      { error: "Question not found in our question bank. Please select the marks manually.", code: "RUBRIC_NOT_FOUND" },
-      { status: 422 }
-    )
+    // Try to extract marks from the question text using regex
+    const parsedMarksMatch = question.trim().match(/(?:\[|\()?\s*(\d+)\s*(?:marks?|m)\s*(?:\]|\))?\s*$/i);
+    const extractedMarks = parsedMarksMatch ? parseInt(parsedMarksMatch[1], 10) : null;
+
+    if (extractedMarks && !isNaN(extractedMarks) && extractedMarks > 0 && extractedMarks <= 30) {
+      finalMarks = extractedMarks;
+      console.log(`[EVALUATE] Auto-detected marks from question text: ${finalMarks}`);
+    } else {
+      // No rubric match AND no marks provided — ask frontend for manual marks
+      return NextResponse.json<EvaluateError>(
+        { error: "Question not found in our question bank. Please select the marks manually.", code: "RUBRIC_NOT_FOUND" },
+        { status: 422 }
+      )
+    }
   }
 
   if (rubric.matched) {
@@ -356,7 +249,12 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const parsed: EvaluateResponse = {
+    let evalId = "";
+    if (idToken && uid) {
+      evalId = generateEvaluationId();
+    }
+
+    const parsed: EvaluateResponse & { evaluationId?: string } = {
       marks_awarded: evalData.marks_awarded ?? 0,
       total_marks: evalData.total_marks ?? finalMarks,
       score_percentage: Math.round(scorePercent * 10) / 10,
@@ -369,12 +267,12 @@ export async function POST(req: NextRequest) {
       strengths: evalData.strengths ?? [],
       missing_points: evalData.missing_points ?? [],
       keywords_missing: evalData.keywords_missing ?? [],
-      evaluated_at: new Date().toISOString()
+      evaluated_at: new Date().toISOString(),
+      evaluationId: evalId || undefined
     };
 
     // ─── Save evaluation document to Firebase ────────────────────
-    if (idToken && uid) {
-      const evalId = generateEvaluationId();
+    if (idToken && uid && evalId) {
       saveEvaluationToFirestore(idToken, uid, {
         evaluationId: evalId,
         userId: uid,
@@ -388,7 +286,15 @@ export async function POST(req: NextRequest) {
         verdict: parsed.verdict,
         sessionId: "", // will be set by frontend when saving session
         createdAt: new Date().toISOString(),
-      }).catch((err) => {
+        // Save full details for mock exam report linking
+        chapter: parsed.chapter,
+        improvement_suggestion: parsed.improvement_suggestion,
+        deductions: parsed.deductions,
+        strengths: parsed.strengths,
+        missing_points: parsed.missing_points,
+        keywords_missing: parsed.keywords_missing,
+        model_answer: evalData.model_answer || ""
+      } as any).catch((err) => {
         console.error("[EVALUATE] Background evaluation save failed:", err);
       });
     }
@@ -398,14 +304,13 @@ export async function POST(req: NextRequest) {
   } catch (err: any) {
     console.error("Evaluation pipeline failed:", err);
     
-    // Check if it's a truncation error
     const isTruncated = err.message?.includes("cut off") || err.message?.includes("truncated");
     return NextResponse.json<EvaluateError>(
       {
-        error: isTruncated 
+        error: err instanceof AiParseError ? err.message : (isTruncated 
           ? "AI response was cut off. This happens when the answer is very detailed. Please try again."
-          : `Evaluation pipeline failed: ${err.message}`,
-        code: isTruncated ? "TRUNCATED_RESPONSE" : "GEMINI_ERROR"
+          : `Evaluation pipeline failed: ${err.message}`),
+        code: isTruncated || err instanceof AiParseError ? "TRUNCATED_RESPONSE" : "GEMINI_ERROR"
       },
       { status: 502 }
     )

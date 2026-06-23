@@ -1,0 +1,710 @@
+{
+  "subject": "Economic, Business & Commercial Laws",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "EBCL_2026_JUNE_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 2,
+      "questionText": "What is the legal effect if RERA neither grants nor rejects registration within 30 days ?",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Project Registration",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 2,
+      "questionText": "Is booking amount up to 20% of the apartment cost valid ? Give reason.",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Booking Amount",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 2,
+      "questionText": "If the promoter provided false information regarding land title at the time of registration, what penalty may be imposed under Section 60 read with Section 4 ?",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Penalties",
+      "sectionNumber": "Section 60 read with Section 4",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 2,
+      "questionText": "What remedies are available to a buyer under Section 12 of the Act, if the advertisement, prospectus or model flat contains false or incorrect representations ?",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Allottee's Rights and Remedies",
+      "sectionNumber": "Section 12",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 2,
+      "questionText": "If Devendra decides to withdraw due to delay in possession, what relief is available to him under Section 18(1) of the Act ?",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Allottee's Rights and Remedies",
+      "sectionNumber": "Section 18(1)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q1F",
+      "questionNumber": "1(f)",
+      "marks": 2,
+      "questionText": "If Surendra does not withdraw from the project and continues as an allottee, state the promoter’s liability for delayed possession under Section 18(1) of the Act ?",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Promoter's Liability",
+      "sectionNumber": "Section 18(1)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q1G",
+      "questionNumber": "1(g)",
+      "marks": 3,
+      "questionText": "What are the promoter’s obligations regarding execution of conveyance deed and transfer of common areas under Section 17 of the Act ?",
+      "questionType": "Case Study",
+      "topic": "Real Estate (Regulation and Development) Act, 2016",
+      "subTopic": "Promoter's Obligations",
+      "sectionNumber": "Section 17",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "Refresh & Co. released an advertisement claiming its drink “instantly cures fatigue and boosts immunity by 200%.” Joe, one of India’s top social media influencers, also endorsed it as a healthy drink. Against this, complaints were filed with the Central Authority under the Consumer Protection Act, 2019. What directions and penalties can the Central Authority issue/impose against Refresh & Co. and Joe ?",
+      "questionType": "Case Study",
+      "topic": "Consumer Protection Act, 2019",
+      "subTopic": "Unfair Trade Practices, Misleading Advertisements",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "Arjun Mehta purchased a house using proceeds of crime. The Enforcement Directorate attached the property under the Prevention of Money Laundering Act, 2002. During the pendency of proceedings, Arjun Mehta created a lease in favour of his friend and also mortgaged the house to a private lender. Later, the Special Court passed an order of confiscation under Section 8(5) of the Act. What will be the effect of confiscation on the lease and mortgage created by Arjun Mehta under Section 9 of the Prevention of Money Laundering Act, 2002 ? Will those rights survive after confiscation ?",
+      "questionType": "Case Study",
+      "topic": "Prevention of Money Laundering Act, 2002",
+      "subTopic": "Confiscation of Property",
+      "sectionNumber": "Section 8(5), Section 9",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "ABC Global Media Ltd., a United Kingdom-based well-known daily newspaper, proposes to publish in India, (i) a scientific and technical journal and (ii) a facsimile edition of its foreign newspaper. Examine the permissibility of each proposal under the Foreign Direct Investments Regulations and Policy for Print Media, specifying the applicable FDI cap, entry route, and mandatory conditions.",
+      "questionType": "Case Study",
+      "topic": "Foreign Direct Investments (FDI)",
+      "subTopic": "FDI in Print Media",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Arvind Mehra, an Indian exporter of readymade garments, returns to India from Italy after attending an international trade fair. While returning, he carries in his passenger baggage certain items including : • Imported price tags, designer labels and embellishments required for his export orders. • Two prototype fashion accessories purchased abroad for product development as he is actual user. • A restricted electronic gadget as a gift for his cousin in India. At the Customs counter, he claims that since all goods are part of his passenger baggage and some are for business purposes, no authorisation is required under the Foreign Trade Policy (FTP). In the above circumstances, examine whether Arvind Mehra can import all the above items without authrorisation under the Foreign Trade Policy provisions.",
+      "questionType": "Case Study",
+      "topic": "Foreign Trade Policy (FTP)",
+      "subTopic": "Import/Export Authorisations, Passenger Baggage",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "M/s. Green Textiles Pvt. Ltd. is a unit established in a notified Special Economic Zone (SEZ) for manufacturing eco-friendly fabrics exclusively for export. The company imported raw materials without payment of customs duty for its authorised operations in the SEZ. After two years, due to financial difficulties, the company transferred a portion of the imported duty-free raw materials to its sister concern located in the Domestic Tariff Area (DTA), without obtaining permission from the competent authority. The company argues that since both entities belong to the same corporate group and the goods were originally imported lawfully, no violation of the SEZ Act has occurred. Examine the legality of the company’s action with reference to Sections 30 and 53 of the Special Economic Zones Act, 2005. Also explain the meaning of Special Economic Zone (SEZ).",
+      "questionType": "Case Study",
+      "topic": "Special Economic Zones Act, 2005",
+      "subTopic": "SEZ Operations, DTA Transfers",
+      "sectionNumber": "Sections 30 and 53",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "Ananya Rao is a senior officer working in a Government-owned company. She was invited by a Canadian organisation to attend and speak at a conference in Canada. The organisation offered to pay for her flight, hotel stay and other expenses. She accepted the offer without taking permission from the Central Government. She says the visit was in her personal capacity and not related to her official work. After returning to India, she did not inform the Government about the hospitality she received. In this situation answer the following with reason : (i) Whether she was required to take prior permission under the Foreign Contribution (Regulation) Act, 2010. (ii) Whether saying that the visit was in her personal capacity excuses her from the legal requirement.",
+      "questionType": "Case Study",
+      "topic": "Foreign Contribution (Regulation) Act, 2010",
+      "subTopic": "Acceptance of Foreign Hospitality",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "Rohit, a resident individual in India, remitted USD 1,80,000 in June 2025 towards his daughter’s tuition fees in Canada under the Liberalised Remittance Scheme (LRS). In September 2025, he remitted USD 40,000 towards maintenance expenses for his son studying in Australia. In January 2026, Rohit proposes to remit USD 60,000 as a gift to his brother residing in the United States. The Authorised Dealer (AD) bank refuses to process the last remittance without perior approval of the Reserve Bank of India (RBI). Rohit argues that each remittance falls under a separate permissible category (studies abroad, maintenance of relatives abroad and gift) and therefore each should independently qualify up to USD 2,50,000. Advise whether the AD bank is correct in refusing the remittance. Give reasons with reference to the Liberalised Remittance Scheme provisions under the Foreign Exchange Management Act, 1999.",
+      "questionType": "Case Study",
+      "topic": "Foreign Exchange Management Act, 1999 (FEMA)",
+      "subTopic": "Liberalised Remittance Scheme (LRS)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Explain the reporting requirements for Overseas Direct Investment (ODI) and Overseas Portfolio Investment (OPI) by a person resident in India.",
+      "questionType": "Descriptive",
+      "topic": "Foreign Exchange Management Act, 1999 (FEMA)",
+      "subTopic": "Overseas Direct Investment (ODI), Overseas Portfolio Investment (OPI)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "State the composition of the Competition Commission of India and the term of office of its Chairperson and other Members under Sections 8 and 9 of the Competition Act, 2002.",
+      "questionType": "Descriptive",
+      "topic": "Competition Act, 2002",
+      "subTopic": "Competition Commission of India",
+      "sectionNumber": "Sections 8 and 9",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q4A_I",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "What is meaning of “remittance of assets” ? Explain the provisions relating to remittance of assets by individuals other than NRIs/PIOs under the Foreign Exchange Management Act, 1999.",
+      "questionType": "Descriptive",
+      "topic": "Foreign Exchange Management Act, 1999 (FEMA)",
+      "subTopic": "Remittance of Assets",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q4A_II",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "Discuss the powers of Director or Controller in respect of inspection and seizure under section 15 of the Legal Metrology Act, 2009.",
+      "questionType": "Descriptive",
+      "topic": "Legal Metrology Act, 2009",
+      "subTopic": "Inspection and Seizure",
+      "sectionNumber": "Section 15",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q4A_III",
+      "questionNumber": "4A(iii)",
+      "marks": 5,
+      "questionText": "Discuss the jurisdiction of the National Consumer Disputes Redressal Commission under Section 58 of the Consumer Protection Act, 2019.",
+      "questionType": "Descriptive",
+      "topic": "Consumer Protection Act, 2019",
+      "subTopic": "National Consumer Disputes Redressal Commission, Jurisdiction",
+      "sectionNumber": "Section 58",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5AI",
+      "questionNumber": "5(a)(i)",
+      "marks": 2,
+      "questionText": "What is Copyright ?",
+      "questionType": "Case Study",
+      "topic": "Copyright Act, 1957",
+      "subTopic": "Definition of Copyright",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5AII",
+      "questionNumber": "5(a)(ii)",
+      "marks": 2,
+      "questionText": "Whether copying the storyline and sequence of events in the film “Quiet Waters” amounts to copyright infringement ?",
+      "questionType": "Case Study",
+      "topic": "Copyright Act, 1957",
+      "subTopic": "Copyright Infringement",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5AIII",
+      "questionNumber": "5(a)(iii)",
+      "marks": 2,
+      "questionText": "Whether registration of copyright is mandatory before filing an infringement suit ?",
+      "questionType": "Case Study",
+      "topic": "Copyright Act, 1957",
+      "subTopic": "Copyright Registration, Infringement Suit",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5AIV",
+      "questionNumber": "5(a)(iv)",
+      "marks": 2,
+      "questionText": "Whether Arjun, as the author of the novel, has moral rights even after assigning adaptation rights ?",
+      "questionType": "Case Study",
+      "topic": "Copyright Act, 1957",
+      "subTopic": "Moral Rights of Author",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5AV",
+      "questionNumber": "5(a)(v)",
+      "marks": 2,
+      "questionText": "Before which Court can Arjun seek remedy under the Copyright Act, 1957 ?",
+      "questionType": "Case Study",
+      "topic": "Copyright Act, 1957",
+      "subTopic": "Jurisdiction, Remedies",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5BI",
+      "questionNumber": "5(b)(i)",
+      "marks": 2,
+      "questionText": "Whether “NATURAGLO” can be considered deceptively similar to “NATURAGLOW” ?",
+      "questionType": "Case Study",
+      "topic": "Trade Marks Act, 1999",
+      "subTopic": "Deceptive Similarity",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5BII",
+      "questionNumber": "5(b)(ii)",
+      "marks": 2,
+      "questionText": "What is the purpose of advertisement of BrightGlow’s mark ?",
+      "questionType": "Case Study",
+      "topic": "Trade Marks Act, 1999",
+      "subTopic": "Trademark Advertisement (Publication)",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5BIII",
+      "questionNumber": "5(b)(iii)",
+      "marks": 2,
+      "questionText": "If the marks and goods are identical, what presumption will the Court make regarding confusion ?",
+      "questionType": "Case Study",
+      "topic": "Trade Marks Act, 1999",
+      "subTopic": "Trademark Infringement, Presumption of Confusion",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5BIV",
+      "questionNumber": "5(b)(iv)",
+      "marks": 2,
+      "questionText": "What benefits does BrightGlow acquire by registration of its trademark under the Trade Marks Act, 1999 ?",
+      "questionType": "Case Study",
+      "topic": "Trade Marks Act, 1999",
+      "subTopic": "Benefits of Trademark Registration",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q5BV",
+      "questionNumber": "5(b)(v)",
+      "marks": 2,
+      "questionText": "Can the use of “NATURAGLO” as part of a corporate name amount to infringement ?",
+      "questionType": "Case Study",
+      "topic": "Trade Marks Act, 1999",
+      "subTopic": "Corporate Name Infringement",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "An Indian scientist Dr. Mehta, working in a private research laboratory in India, developed a new chemical process for manufacturing a pharmaceutical compound. Dr. Mehta directly filed a patent application for the invention in the United States. Later, it came to the notice of the Indian Patent Office that the invention had been developed in India and that the application was first filed abroad. Discuss whether Dr. Mehta can validly file a patent application outside India under Section 39 of the Patents Act, 1970.",
+      "questionType": "Case Study",
+      "topic": "Patents Act, 1970",
+      "subTopic": "Filing Patent Applications Abroad",
+      "sectionNumber": "Section 39",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "The “Mewar Marble Association”, consisting of marble quarry owners from the Udaipur region of Rajasthan, applies for registration of the name “Mewar Marble” as a Geographical Indication. They claim that the marble extracted from this region is famous for its unique white texture, durability and traditional mining techniques, which are essentially attributable to the geographical conditions of the area. Whether the name “Mewar Marble” can be registered as a Geographical Indication as per Geographical Indications of Goods (Registration and Protection) Act, 1999 ?",
+      "questionType": "Case Study",
+      "topic": "Geographical Indications of Goods (Registration and Protection) Act, 1999",
+      "subTopic": "Registration of Geographical Indications",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "Elegant Furniture Pvt. Ltd. created a new ornamental design for a dining chair and obtained registration of the design under the Designs Act, 2000 on 1 January 2015. As the registered proprietor, the company enjoyed exclusive rights over the design. • What is the duration of copyright in a registered design under the Act ? • What legal requirement must Elegant Furniture Pvt. Ltd. fulfil to extend this period and for what further period can the copyright be extended ? • On what grounds can the registered design be cancelled under Section 19 of the Act ?",
+      "questionType": "Descriptive",
+      "topic": "Designs Act, 2000",
+      "subTopic": "Design Registration, Duration, Cancellation",
+      "sectionNumber": "Section 19",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "Nature Fresh Pvt. Ltd. obtained registration of the trade mark “GREENBITE” in 2016 for packaged fruit juices. However, after registration, the company did not start production or sale of fruit juices under the said trade mark for several years. In 2023, another company Healthy Drinks Ltd. applied to the Registrar for removal of the trade mark “GREENBITE” from the register, claiming that the mark had not been used for more than five years from the date of its registration. Nature Fresh Pvt. Ltd. argued that the non-use of the mark was due to government restrictions on the import of certain ingredients required for manufacturing the product, which prevented them from using the mark. State the provision relating to Removal of Trade Mark for Non-use. Discuss whether the non-use of the trade mark by Nature Fresh Pvt. Ltd. can be justified on the ground of special circumstances in trade under Section 47(3) of the Trade Marks Act, 1999.",
+      "questionType": "Case Study",
+      "topic": "Trade Marks Act, 1999",
+      "subTopic": "Removal of Trademark for Non-use",
+      "sectionNumber": "Section 47(3)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6A_I",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "What is the tort of passing off in relation to unregistered trademarks ? What are the essential elements that a plaintiff must establish in an action for passing off ?",
+      "questionType": "Descriptive",
+      "topic": "Trademarks (General)",
+      "subTopic": "Passing Off",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6A_II",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "What is meant by copyright under Section 14 of the Copyright Act, 1957 in relation to a computer programme and an artistic work ?",
+      "questionType": "Descriptive",
+      "topic": "Copyright Act, 1957",
+      "subTopic": "Scope of Copyright",
+      "sectionNumber": "Section 14",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6A_III",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "Explain the essential requirements for the registration of a ‘Design’ under the Designs Act, 2000.",
+      "questionType": "Descriptive",
+      "topic": "Designs Act, 2000",
+      "subTopic": "Requirements for Design Registration",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "EBCL_2026_JUNE_Q6A_IV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "Explain the term “Industrial Property” under Intellectual Property Rights ?",
+      "questionType": "Descriptive",
+      "topic": "Intellectual Property Rights (General)",
+      "subTopic": "Industrial Property",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

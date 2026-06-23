@@ -1,0 +1,520 @@
+{
+  "subject": "Capital Markets & Securities Laws",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "CMSL_2026_JUNE_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 10,
+      "questionText": "FinTech Limited, a newly incorporated company from the rapidly growing digital finance sector, aims to enter into the securities market infrastructure by establishing itself as a new and leading depository participant. Because, with the increase in paperless trading and growing investors’ participation, its management believes this as a lucrative opportunity. Therefore, the management applies for registration under SEBI (Depositories and Participants) Regulations, 2018. The company proudly claims to have cutting-edge ambitions. But, in real terms, it presents a mixed picture of preparedness.\nThe company has a net worth of ` 75 crore. Management feels this level is sufficient to meet the general infrastructure for such an institution. Its promoters, consist entirely of private investors and venture capitalists in India, with no Financial Institution participations. X, an Indian resident is holding about four percent of the paid-up equity capital and desirous to increase it by additional six percent of the capital.\nNEW SYLLABUS\nThe company is yet to develop technological infrastructure and secure systems to maintain electronic records of securities. The management team is very enthusiastic and energetic, though they don’t have prior experience in handling large-scale securities market operations.\nDespite its ambitious vision to revolutionize the depository business, management of FinTech Limited know that there will be more challenges in the smooth running of the operations. Because, management feels there will be some operational issues on reconciling the records of dematerialised securities on monthly basis, as well as, the audit report required for the purposes of reconciliation of the total issued capital, listed capital and capital held in the dematerialized form etc. can be issued by their Chief Financial Officer [CFO], he is yet be appointed.\nBased on these scenarios, determine the legal position with respect to the provisions of the said Regulation on the below aspects :\n(i) Meeting the net worth requirements by FinTech Limited.\n(ii) FinTech Limited wants to reconcile the records of demat securities on monthly basis.\n(iii) Is the CFO of FinTech Limited eligible to issue the audit report ?\n(iv) Experience and capability of the Management, and\n(v) Regulations that will be applicable to FinTech Limited, as Depository ?",
+      "questionType": "Case Study",
+      "topic": "Depositories and Participants",
+      "subTopic": "Registration, Net Worth, Reconciliation, Audit Report, Management Experience, Applicable Regulations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 10,
+      "questionText": "Sun Advisory Services, a growing financial advisory firm, has recently expanded its client base by offering both full-time and part-time advisory services. The firm has started referring to some of its employees as “part-time investment advisers” in its official communications and promotional materials. However, these advisers are handling a large number of clients and providing advisory services alongside other professional engagements.\nIn addition to this, Sun Advisory Services has not clearly disclosed the limitations and scope of services offered by such part-time advisers to its clients. It also continues to onboard new clients without properly monitoring the number of clients being handled by each adviser. As a result, even some of the experienced part-time advisers are handling close to 100 clients.\nWith the objectives of strengthening investor protection and improving transparency in the advisory ecosystem, the Securities and Exchange Board of India introduced the SEBI (Investment Advisers) (Second Amendment) Regulations, 2024. Therefore, these amendments brought significant changes, especially in the classification and functioning of investment advisers. However, the firm is planning to operates with ` 50 crore of net worth limit.\nAs a result, in a recent regulatory review, questions are raised regarding whether Sun Advisory Services has complied with the amended provisions relating to the definition, scope, disclosure and operational limits of part-time investment advisers. Concerns are also expressed about investor protection and the clarity of communication maintained by the firm.\nBased on these scenarios, determine the legal position with respect to the provisions of the said Regulation on the below aspects :\n(i) Explain the concept of part-time investment adviser as introduced in the amended provisions of SEBI regulation.\n(ii) State the restrictions on the number of clients for a part-time investment adviser,\n(iii) Which SEBI Regulation(s) will be applicable to the Sun Advisory Services ?\n(iv) What is the limit of net worth requirement for Sun Advisory Services, as an investment adviser ?\n(v) State the provisions of compliance audit for Sun Advisory Services.",
+      "questionType": "Case Study",
+      "topic": "Investment Advisers",
+      "subTopic": "Part-time Investment Advisers, Client Restrictions, Net Worth, Compliance Audit, Applicable Regulations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "N, has recently been elevated from the post of Vice-President (Operations) to Director in a listed company named Green Tech India Limited. In his first board meeting, he wanted to know from their Company Secretary about a bond and also how many types of bonds are issued in the Indian Capital Market ?",
+      "questionType": "Descriptive",
+      "topic": "Debt Instruments",
+      "subTopic": "Bonds, Types of Bonds",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "With online digitalization of the day-to-day operations in the Indian Stock Exchanges, their operational risks have been increased multifold. To mitigate these risks, in the recent past, Securities and Exchange Board of India [SEBI] has initiated various risk management measures. Elaborate the initiatives taken by SEBI, in this aspect.",
+      "questionType": "Descriptive",
+      "topic": "Stock Exchanges, Risk Management",
+      "subTopic": "SEBI Initiatives for Operational Risk",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "Elaborate the penalties as imposed under Section 23C, 23D and 23E of the Securities Contracts (Regulation) Act, 1956.",
+      "questionType": "Descriptive",
+      "topic": "Penalties, Securities Contracts (Regulation) Act",
+      "subTopic": "Penalties under SCR Act",
+      "sectionNumber": "23C, 23D and 23E of the Securities Contracts (Regulation) Act, 1956",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2D",
+      "questionNumber": "2(d)",
+      "marks": 5,
+      "questionText": "Innovate Corporation Limited, a Special Purpose Acquisition Company (SPAC), proposes to list its shares on the recognised stock exchange under the prescribed regulatory framework. The company desirous to raises USD 25 Million through on IPO. Further, the company allows investors to apply with a minimum application size of USD 50,000. Examine, the listing compliances of SPACs, as required under the regulatory provisions.",
+      "questionType": "Case Study",
+      "topic": "Special Purpose Acquisition Company (SPAC), Listing",
+      "subTopic": "IPO, Listing Compliances for SPACs",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2AI",
+      "questionNumber": "2A(i)",
+      "marks": 5,
+      "questionText": "A rights issue allows existing shareholder to subscribe for additional share(s). Shareholders also have an option to transfer the rights to another person through renunciation. Explain the concept of right entitlement and the procedure to renounce such rights, as per the regulations of the Securities and Exchange Board of India.",
+      "questionType": "Descriptive",
+      "topic": "Rights Issue",
+      "subTopic": "Right Entitlement, Renunciation Procedure",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2AII",
+      "questionNumber": "2A(ii)",
+      "marks": 5,
+      "questionText": "D, is a senior director of ARN Limited, a listed entity with National Stock Exchange. About 4 months ago, D received a summon (in his personal capacity) from the SEBI regarding his involvement in the insider trading activities of SZN Limited. Both these companies are not related to each other, in any way i.e., neither common board, nor directors or management etc.\nOn 14th May 2026, SEBI imposed a penalty of ` 50 lakhs on D. Due to this incident, D got a heart-attack and died on 18th May. L, is the legal representative of D. Is L responsible to pay the penalty imposed by SEBI under the SEBI Act, 1992 or not ? Give answer with justification.",
+      "questionType": "Case Study",
+      "topic": "Insider Trading, Penalties",
+      "subTopic": "Legal Representative Liability",
+      "sectionNumber": "SEBI Act, 1992",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2AIII",
+      "questionNumber": "2A(iii)",
+      "marks": 5,
+      "questionText": "Which act(s) constitutes an offence for an individual, under Section 20 of the Depository Act, 1996 ? And what are the penalties provided under the Act for such offence ?",
+      "questionType": "Descriptive",
+      "topic": "Depository Act, Offences, Penalties",
+      "subTopic": "Section 20 Offences and Penalties",
+      "sectionNumber": "Section 20 of the Depository Act, 1996",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q2AIV",
+      "questionNumber": "2A(iv)",
+      "marks": 5,
+      "questionText": "In the last board meeting of BPR Limited, its board suggested to explore the possibility of entering into the business of intermediaries. Being their Company Secretary, enlist the general obligations of an intermediaries as prescribed by the Securities and Exchange Board of India and state the period for which the certificate of registration remains valid.",
+      "questionType": "Descriptive",
+      "topic": "Intermediaries",
+      "subTopic": "Obligations, Registration Validity",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "In your recent interaction with the new CFO of Sun Limited, he wanted to know the restrictions on a bonus issue. Elaborate.\nCan a bonus issue, be withdrawn ?",
+      "questionType": "Descriptive",
+      "topic": "Bonus Issue",
+      "subTopic": "Restrictions, Withdrawal of Bonus Issue",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Moon Limited is passing through its financial crises. M, the new Managing Director, immediately on his joining wanted to know from you about the objectives for which a ‘Social Bonds’ can be issued ?",
+      "questionType": "Descriptive",
+      "topic": "Debt Instruments, Social Bonds",
+      "subTopic": "Objectives of Social Bonds",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "Tech Solutions Limited, a listed company with its high market capitalization ranks among the top 500 entities. Its board consist of 10 directors. The Chairperson is a non-executive director and also a promoter of the company. The board comprises 4 executive directors (including MD and CEO), 3 non-executive non-independent directors and 3 independent directors (all male). There is one woman director who is a non-executive non-independent nominee from a financial institution. A shareholder raises concerns about the non-compliance of SEBI Regulations. However, the company claims full compliance under SEBI Regulation. As a Company Secretary, assess whether Tech Solution Limited is complying with the SEBI (LODR) Regulations, 2015 (as amended) and highlight the violations if any with reasons thereof.",
+      "questionType": "Case Study",
+      "topic": "Corporate Governance, Listing Obligations",
+      "subTopic": "Board Composition, Woman Director, SEBI (LODR) Compliance",
+      "sectionNumber": "SEBI (LODR) Regulations, 2015",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "Elaborate in detail the role of a Company Secretary, under the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015.",
+      "questionType": "Descriptive",
+      "topic": "Company Secretary, Listing Obligations",
+      "subTopic": "Role under SEBI (LODR) Regulations",
+      "sectionNumber": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Blue Sky Limited has recently received a notice from the SEBI, regarding violation of various provisions under the Act. While discussing this matter in the board, one of the senior directors raised a question regarding the manner of service of summons and notices issued by the SEBI. Being their Company Secretary, elaborate the procedure.",
+      "questionType": "Descriptive",
+      "topic": "SEBI, Enforcement",
+      "subTopic": "Service of Summons and Notices by SEBI",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "ASR Limited has voluntarily delisted its equity shares, from the Bombay Stock Exchange and the National Stock Exchange on 1st December, 2024. However, with recent changes in its top management, the new Managing Director wants to get the shares relisted in both the stock exchanges with immediate effect. Advise with reason, the validity of the proposal suggested by the new MD for re-listing of shares in both the stock exchanges.",
+      "questionType": "Case Study",
+      "topic": "Delisting, Relisting",
+      "subTopic": "Validity of Relisting Proposal",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Glory Limited, a listed company with the National Stock Exchange of India, proposes to buy back its shares under the SEBI (Buy-back of Securities) Regulations, 2018. At the time of buy-back proposal, the company has a paid-up equity share capital of ` 30 crore and free reserves of ` 60 crore. The Board of Directors approves a buyback of ` 25 crore. The company also had secured debts of ` 52 crore and unsecured debts of ` 68 crore. The buyback price is fixed at ` 250 per share, whereas its current market price of equity share is ` 230 per share. Evaluate, whether the proposed buyback is in compliance with the SEBI Buyback Regulations, or not ?",
+      "questionType": "Practical",
+      "topic": "Buy-back of Securities",
+      "subTopic": "Compliance with SEBI Buyback Regulations",
+      "sectionNumber": "SEBI (Buy-back of Securities) Regulations, 2018",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "MF mutual fund scheme has the following details at on 31st March, 2026.\nAssets :\nMarket value of equity shares = ` 52,00,000\nMarket value of government securities = ` 18,00,000\nCorporate bonds = ` 10,00,000\nAccrued dividend and interest = ` 3,20,000\nCash and bank balance = ` 2,50,000\nOther receivables = ` 1,80,000\nLiabilities :\nManagement fees payable = ` 1,50,000\nOther expenses payable = ` 1,20,000\nTrustee fees payable = ` 70,000\nOutstanding liabilities = ` 1,60,000\nDuring the year, the scheme issued 15,000 new units at ` 22 per unit. The scheme had 8,00,000 units outstanding as on 1st April, 2025.\nYou are required to calculate :\n(i) Calculate the total net assets of the scheme, and\n(ii) Calculate the Net Asset Value (NAV) per unit.",
+      "questionType": "Practical",
+      "topic": "Mutual Funds",
+      "subTopic": "Net Asset Value (NAV) Calculation",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Green Earth Plantation Limited, a Collective Investment Management Company registered under the SEBI (Collective Investment Schemes) Regulations, 1999. It has launched a new plantation scheme and issued an offer document to the public. The document stated that the subscription list would remain open for 15 days. The company opened the subscription on 21st May 2026 and closed on 30th May 2026. At the time of closure, the scheme had collected ` 14 crore from 16 investors. The company proceeded with the scheme and began utilizing the funds for plantation activities. Examine, whether Green Earth Plantation Limited has complied with the regulatory compliances regarding closure of the subscription list, or not ? Give reasons to support your answer.",
+      "questionType": "Case Study",
+      "topic": "Collective Investment Schemes (CIS)",
+      "subTopic": "Subscription, Offer Document, Compliance",
+      "sectionNumber": "SEBI (Collective Investment Schemes) Regulations, 1999",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 3,
+      "questionText": "Obligations of debenture trustees under Issue and listing of Non-convertible securities",
+      "questionType": "Short Notes",
+      "topic": "Debenture Trustees, Non-Convertible Securities",
+      "subTopic": "Obligations under Issue and Listing",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 3,
+      "questionText": "Discovered price under delisting of equity shares",
+      "questionType": "Short Notes",
+      "topic": "Delisting, Equity Shares",
+      "subTopic": "Discovered Price",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 3,
+      "questionText": "Prohibition of buy-back",
+      "questionType": "Short Notes",
+      "topic": "Buy-back of Securities",
+      "subTopic": "Prohibition",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 3,
+      "questionText": "Disqualification from being appointed as Mutual Fund Trustees",
+      "questionType": "Short Notes",
+      "topic": "Mutual Funds",
+      "subTopic": "Trustee Disqualifications",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6E",
+      "questionNumber": "6(e)",
+      "marks": 3,
+      "questionText": "Periodic and continual disclosure as general obligation of Collective Investment Management Company",
+      "questionType": "Short Notes",
+      "topic": "Collective Investment Schemes (CIS)",
+      "subTopic": "Disclosure Obligations",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "N, a newly appointed director of Newage Electronics Limited, a listed company with the National Stock Exchange. In his first Board meeting, there was an agenda item for Omnibus approval. He wanted to understand from you, being their Company Secretary, the provisions for approval of the same under the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015. Explain.",
+      "questionType": "Descriptive",
+      "topic": "Listing Obligations, Corporate Governance",
+      "subTopic": "Omnibus Approval",
+      "sectionNumber": "SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Star Limited, is a listed company with Innovators Growth Platform. In the recent past, it has made its initial public offer. However, in the forthcoming board meeting there is an agenda item for delisting of its equity shares. List down the compliances, required under Regulation 36 of the SEBI (Delisting of Equity Shares) Regulations, 2021 for delisting of equity shares.",
+      "questionType": "Descriptive",
+      "topic": "Delisting, Equity Shares",
+      "subTopic": "Delisting Compliances under Regulation 36",
+      "sectionNumber": "Regulation 36 of the SEBI (Delisting of Equity Shares) Regulations, 2021",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2026_JUNE_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "Growmore Mutual Fund is doing well in the capital market. However, one of its senior directors suggested that despite their fund schemes are doing good, still their operations carries various risks. Being the company secretary of Growmore Mutual Fund, list down the various risks the business may have.",
+      "questionType": "Descriptive",
+      "topic": "Mutual Funds, Risk Management",
+      "subTopic": "Risks in Mutual Fund Operations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

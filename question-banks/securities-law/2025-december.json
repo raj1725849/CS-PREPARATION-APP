@@ -1,0 +1,729 @@
+{
+  "subject": "Capital Markets & Securities Laws",
+  "year": 2025,
+  "session": "December",
+  "questions": [
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Ai",
+      "questionNumber": "1(a)(i)",
+      "marks": 2,
+      "questionText": "What is the procedure R and his family, can follow to make an appeal with Securities Appellate Tribunal (SAT) ?",
+      "questionType": "Descriptive",
+      "topic": "SEBI Act, Appeals",
+      "subTopic": "Securities Appellate Tribunal Procedure",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Aii",
+      "questionNumber": "1(a)(ii)",
+      "marks": 2,
+      "questionText": "What are the powers Securities Appellate Tribunal, may have in this case ?",
+      "questionType": "Descriptive",
+      "topic": "SEBI Act, Appeals",
+      "subTopic": "Securities Appellate Tribunal Powers",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Aiii",
+      "questionNumber": "1(a)(iii)",
+      "marks": 2,
+      "questionText": "After discussion with L, is R eligible to make an appeal in the jurisdiction of any civil court to obtain an injunction order ?",
+      "questionType": "Descriptive",
+      "topic": "SEBI Act, Civil Courts Jurisdiction",
+      "subTopic": null,
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Aiv",
+      "questionNumber": "1(a)(iv)",
+      "marks": 2,
+      "questionText": "If R is aggrieved by the decision of Securities Appellate Tribunal, what option does he have ?",
+      "questionType": "Descriptive",
+      "topic": "SEBI Act, Further Appeals",
+      "subTopic": null,
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Av",
+      "questionNumber": "1(a)(v)",
+      "marks": 2,
+      "questionText": "For speedy trial of offences under the SEBI Act, 1992, what are the provisions for establishing Special Courts ?",
+      "questionType": "Descriptive",
+      "topic": "SEBI Act, Special Courts",
+      "subTopic": null,
+      "sectionNumber": "SEBI Act, 1992",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Bi",
+      "questionNumber": "1(b)(i)",
+      "marks": 2,
+      "questionText": "Y wants to understand the major activities that a Stock Broker does in the securities market ?",
+      "questionType": "Descriptive",
+      "topic": "Stock Broker",
+      "subTopic": "Activities",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Bii",
+      "questionNumber": "1(b)(ii)",
+      "marks": 2,
+      "questionText": "If Y starts his profession as a Stock Broker, then what specific roles and responsibilities he will have as per the SEBI (Stock Brokers) Regulations, 1992 ?",
+      "questionType": "Descriptive",
+      "topic": "Stock Broker",
+      "subTopic": "Roles and Responsibilities",
+      "sectionNumber": "SEBI (Stock Brokers) Regulations, 1992",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Biii",
+      "questionNumber": "1(b)(iii)",
+      "marks": 2,
+      "questionText": "What is the minimum net worth requirement that Y needs to have for starting the business of a stock broker as per the SEBI (Stock Brokers) Regulations, 1992 ?",
+      "questionType": "Descriptive",
+      "topic": "Stock Broker",
+      "subTopic": "Net Worth Requirement",
+      "sectionNumber": "SEBI (Stock Brokers) Regulations, 1992",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Biv",
+      "questionNumber": "1(b)(iv)",
+      "marks": 2,
+      "questionText": "To become a Qualified Stock Broker, what parameters Y should have, so that, he may be designated so by SEBI ?",
+      "questionType": "Descriptive",
+      "topic": "Stock Broker",
+      "subTopic": "Qualification Parameters",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q1Bv",
+      "questionNumber": "1(b)(v)",
+      "marks": 2,
+      "questionText": "Y also wants to understand the difference between the role of a Portfolio Manager, and how it is different from that of a Stock Broker ?",
+      "questionType": "Descriptive",
+      "topic": "Portfolio Manager, Stock Broker",
+      "subTopic": "Comparison of Roles",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "Explain the Regulatory Framework of Secondary Market in India.",
+      "questionType": "Descriptive",
+      "topic": "Secondary Market",
+      "subTopic": "Regulatory Framework",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "Shares with Differential Voting Rights (DVR), are an important element in the Indian capital market. However, all the entities are not permitted to do so. List down the companies which are not entitled to issue DVRs.",
+      "questionType": "Descriptive",
+      "topic": "Shares with Differential Voting Rights (DVR)",
+      "subTopic": "Eligibility for Issuance",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "Serene Lifestyle Limited has been into the business of manufacturing wooden furniture. In order to expand its business operations, the company has decided to list its securities. Accordingly, it submitted a preliminary application with the Recognised Stock Exchange for listing of its forthcoming public issue. But the application has been refused by the respective Stock Exchange without stating any reason(s). One of the junior Board Director suggested, to make an appeal to the Central Government. You being the Company Secretary of Serene Lifestyle Limited, analyse the situation and elaborate, whether the suggested remedies are available for the Company, or not ?",
+      "questionType": "Case Study",
+      "topic": "Listing of Securities, Appeals",
+      "subTopic": "Refusal of Listing, Remedies",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2D",
+      "questionNumber": "2(d)",
+      "marks": 5,
+      "questionText": "In the last Board meeting of Express Limited, a listed company, one of the Board members suggested that she has heard “SEBI has been vested with the same power as are available to a Civil Court under the Code of Civil Procedures, 1908”. You being the Company Secretary, are advised by the Board to examine the facts.",
+      "questionType": "Case Study",
+      "topic": "SEBI Powers",
+      "subTopic": "Powers of a Civil Court",
+      "sectionNumber": "Code of Civil Procedures, 1908",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2Ai",
+      "questionNumber": "2A(i)",
+      "marks": 5,
+      "questionText": "Elaborate the process of Second Review under the redressal system for a Complaint, as followed by the SEBI.",
+      "questionType": "Descriptive",
+      "topic": "SEBI Complaint Redressal",
+      "subTopic": "Second Review Process",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2Aii",
+      "questionNumber": "2A(ii)",
+      "marks": 5,
+      "questionText": "“Cyber-attacks and threats attempt to compromise the Confidentiality, Integrity and Availability (CIA) of the computer systems, networks and databases. Cyber security framework includes measures, tools and processes that are intended to prevent cyber-attacks and improve cyber resilience”. In the context of given statement(s), enumerate the measures each and every Depository Participant is required to undertake as part of SEBI’s Cyber Security and Cyber Resilience Framework.",
+      "questionType": "Descriptive",
+      "topic": "Depository Participants",
+      "subTopic": "Cyber Security and Cyber Resilience Framework",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2AiiiA",
+      "questionNumber": "2A(iii)(a)",
+      "marks": 2,
+      "questionText": "Define the term ‘Custodian’",
+      "questionType": "Descriptive",
+      "topic": "Custodian",
+      "subTopic": "Definition",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2AiiiB",
+      "questionNumber": "2A(iii)(b)",
+      "marks": 1,
+      "questionText": "What are the specific responsibilities of a custodian ?",
+      "questionType": "Descriptive",
+      "topic": "Custodian",
+      "subTopic": "Responsibilities",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2AiiiC",
+      "questionNumber": "2A(iii)(c)",
+      "marks": 1,
+      "questionText": "What is the minimum net worth requirement for any custodian ?",
+      "questionType": "Descriptive",
+      "topic": "Custodian",
+      "subTopic": "Net Worth Requirement",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2AiiiD",
+      "questionNumber": "2A(iii)(d)",
+      "marks": 1,
+      "questionText": "Custodian is governed under which regulation ?",
+      "questionType": "Descriptive",
+      "topic": "Custodian",
+      "subTopic": "Governing Regulation",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q2Aiv",
+      "questionNumber": "2A(iv)",
+      "marks": 5,
+      "questionText": "Elaborate various Financial Product, being notified by the Central Government from time to time, under the International Financial Services Centres Authority Act, 2019 ?",
+      "questionType": "Descriptive",
+      "topic": "International Financial Services Centres Authority Act, 2019",
+      "subTopic": "Financial Products",
+      "sectionNumber": "International Financial Services Centres Authority Act, 2019",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Agni Safety Solutions Limited is a public limited company incorporated on 27th February, 2018. It is into the business of manufacturing of different types of fire-fighting equipment. Its promoters, mainly constitute the Board of Directors of the company. The promoters now intend to enter into a new business of home appliances. But they do not have sufficient funds, to start any new business. They don’t want to take bank loans, because one of existing banker has nominated their representative in Agni Safety Solutions Limited, has given a bitter experience to the promoters. In the last Board meeting, one of the senior Director suggested to explore the possibility of ‘Offer for Sale’. You being their Company Secretary, advice to the Board regarding the additional conditions to be complied with under Regulation 8 of the SEBI (Issue of Capital and Disclosure Requirements) Regulations, 2018, with regards to the ‘Offer for Sale’.",
+      "questionType": "Case Study",
+      "topic": "Offer for Sale (OFS)",
+      "subTopic": "Conditions under SEBI (ICDR) Regulations",
+      "sectionNumber": "Regulation 8 of the SEBI (Issue of Capital and Disclosure Requirements) Regulations, 2018",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Alpha Limited is a public limited company; it is one of the leaders in the business of manufacturing specialized automobile parts in the domestic market. In the last Board meeting, HR-Director suggested to issue Sweat Equity shares to the company’s loyal and dedicated employees so that, other employees should also get motivated, and that will in turn help the company by having improved employees’ productivity. Before the proposal got approved, one of newly inducted Director raised a question to the Company Secretary, to explain-what a Stock Appreciation Right (SAR) is, and how SAR price is defined ?",
+      "questionType": "Case Study",
+      "topic": "Stock Appreciation Right (SAR)",
+      "subTopic": "Definition, Price Definition",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "Moon Light Limited is a Listed company, with National Stock Exchange. For last couple of quarters, due to blockage of its funds in strategic assets and investments, it is going through liquidity crunch. Recently, its newly joined Finance Director suggested to raise fund by issuing of Commercial Papers valued ` 37 crores. In the last Board meeting, Directors have approved this proposal and also suggested to get these Commercial Papers listed. You being the Company Secretary, list the conditions prescribed in Chapter VI of SEBI (Issue and Listing of Non-Convertible Securities) Regulations, 2021 to be fulfilled by the company for getting these Commercial Papers listed.",
+      "questionType": "Case Study",
+      "topic": "Commercial Papers",
+      "subTopic": "Listing Conditions",
+      "sectionNumber": "Chapter VI of SEBI (Issue and Listing of Non-Convertible Securities) Regulations, 2021",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "Galaxy Limited is a listed company, with Bombay Stock Exchange. During last mid- November, 2025 its Company Secretary has resigned, and you have been appointed as their new Company Secretary. But, due to certain personal commitments, you are not in a position to join them before 1st January, 2026. In the meanwhile, to comply various regulatory requirements, Board has decided to appoint one of its senior Board members, A, as the Compliance Officer, till you formally join them. A is not only a Director of the Company, but he is also a qualified Company Secretary. During the Board meeting, legal officer suggested that since A is also a Director of the Company, hence he may have vested interest. Therefore, he cannot be appointed as Compliance Office of the Company. Explain with reason whether A’s appointment as the Compliance Officer of the Company, between November to December end, is valid or invalid ?",
+      "questionType": "Case Study",
+      "topic": "Compliance Officer",
+      "subTopic": "Appointment, Eligibility",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Go Green Limited is a listed company, recently received a notice from a Regulatory Authority regarding violation of related party transaction. One of its newly inducted Board members wanted to know from you as its Company Secretary-which transactions, do not form part of related party transaction.",
+      "questionType": "Case Study",
+      "topic": "Related Party Transactions",
+      "subTopic": "Exclusions",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "What information a listed company should maintain in its structured digital database as per Regulation 3(5) of the SEBI (Prohibition of Insider Trading) Regulation, 2015, in case the designated person is a fiduciary or intermediary ? Explain with suitable example.",
+      "questionType": "Descriptive",
+      "topic": "Insider Trading",
+      "subTopic": "Structured Digital Database, Fiduciary/Intermediary",
+      "sectionNumber": "Regulation 3(5) of the SEBI (Prohibition of Insider Trading) Regulation, 2015",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "In the last Board meeting of Blue Gems Limited, a listed company with National Stock Exchange, one of its Director suggested that under the SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003 certain acts/transactions are not considered as ‘Fraud’. He suggested you, to elaborate.",
+      "questionType": "Case Study",
+      "topic": "Fraudulent and Unfair Trade Practices",
+      "subTopic": "Exclusions from 'Fraud'",
+      "sectionNumber": "SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Progressive Limited, is a listed company with Innovators Growth Platform. It is planning to go for its public issue in March, 2026. However, in the meanwhile, on 29th October, 2025, company has received a notice from the Regulatory Authority regarding certain non-compliances on delisting of its equity shares. During the Board meeting, one of the Director raised issue of negligence on the Company Secretary, and asked him to give a detailed explanation–whether this Regulation, is applicable to their company or not ?",
+      "questionType": "Case Study",
+      "topic": "Delisting of Equity Shares",
+      "subTopic": "Applicability of Regulations",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Grow Well is a Collective Investment Management Company, registered with the Regulatory Authorities. It is planning to launch one of its Scheme to the public. Elaborate the disclosures it is required to made in the offer document.",
+      "questionType": "Case Study",
+      "topic": "Collective Investment Schemes (CIS)",
+      "subTopic": "Offer Document Disclosures",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 3,
+      "questionText": "Unpublished price sensitive information",
+      "questionType": "Short Notes",
+      "topic": "Insider Trading",
+      "subTopic": "Unpublished Price Sensitive Information (UPSI)",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 3,
+      "questionText": "Mule account and its restrictions",
+      "questionType": "Short Notes",
+      "topic": "Market Abuse",
+      "subTopic": "Mule Accounts",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 3,
+      "questionText": "Public notice after Delisting Order under Regulation 32(5), by the recognized stock exchange.",
+      "questionType": "Short Notes",
+      "topic": "Delisting",
+      "subTopic": "Public Notice",
+      "sectionNumber": "Regulation 32(5)",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 3,
+      "questionText": "Different forms of Escrow account",
+      "questionType": "Short Notes",
+      "topic": "Securities Market Operations",
+      "subTopic": "Escrow Accounts",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6E",
+      "questionNumber": "6(e)",
+      "marks": 3,
+      "questionText": "Structure of a Mutual Fund",
+      "questionType": "Short Notes",
+      "topic": "Mutual Funds",
+      "subTopic": "Structure",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6Ai",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "M/s Silver Sky Limited, a company listed with Innovators Growth Platform, incorporated on 14th April, 2022. As on 31st March, 2025, following are the elements of its capital structure :\n(a) \tAuthorised equity shares capital : ` 1,000 crore\n(b) \tIssued and Paid-up equity share capital : ` 500 crore\n(c) \tPaid-up preference share capital : ` 100 crore\n(d) \tFree reserve and surplus : ` 100 crore, and\n(e) \tBank funding [thru term loans] : ` 300 crores.\nIn the past, the Company has already issued Sweat Equity shares to the tune of ` 35 crore. And, during the last Board Meeting held on 5th October, 2025 the Board proposed to further issue Sweat Equity shares to the tune of ` 50 crore.\nDetermine to what extent, further issue of Sweat Equity shares is permissible under SEBI (Share Based Employee Benefits and Sweat Equity) Regulations, 2021 ?",
+      "questionType": "Practical",
+      "topic": "Sweat Equity",
+      "subTopic": "Permissible Limit for Issue",
+      "sectionNumber": "SEBI (Share Based Employee Benefits and Sweat Equity) Regulations, 2021",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6Aii",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Financial statement of M/s Sun & Moon Limited as on 30th September 2025 is as follows :\nLiabilities \t` Crores \tAssets \t` Crores\nEquity share capital \t200 \tFixed Assets \t750\n8% Debentures \t125 \tCurrent Assets :\n14% Debentures \t175 \tStock-in-trade \t120\nBank term loan \t275 \tDebtors \t80\nBank secured loan \t250 \tCash and Bank balance \t75\nTotal \t1,025 \tTotal \t1,025\nAdditional information, are as follows :\n(a) \tStock-in-trade includes raw material in transit worth ` 20 crores,\n(b) \tDebtors includes ` 15 crores receivable from Group Companies, due for more than last 3 months,\n(c) \tCash and Bank balance includes ` 18 crores invested in Fixed Deposits, and\n(d) \tBeing a listed entity with National Stock Exchange, its market capitalization as on this day was ` 325 crores.\nDetermine the Enterprises Value as on 30th September, 2025",
+      "questionType": "Practical",
+      "topic": "Valuation",
+      "subTopic": "Enterprise Value Calculation",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "CMSL_2025_DECEMBER_Q6Aiii",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "You have been recently appointed as the Company Secretary of M/s Diamond Teak Tree Plantation Limited. It is a Collective Investment Company, registered with SEBI. It has launched a collective investment management scheme valued at ` 25 crores, whereby the funds collected from investors will be invested in plantation of teak trees. One of your assistant Company Secretary wanted to know from you–is it possible that the fund collected in this scheme, can be deployed in any other scheme ? Explain with the relevant provisions of the SEBI (Collective Investment Schemes) Regulations, 1999, regarding investment and segregation of funds.",
+      "questionType": "Case Study",
+      "topic": "Collective Investment Schemes (CIS)",
+      "subTopic": "Investment and Segregation of Funds",
+      "sectionNumber": "SEBI (Collective Investment Schemes) Regulations, 1999",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    }
+  ]
+}

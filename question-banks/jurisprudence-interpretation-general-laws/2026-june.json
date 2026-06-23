@@ -1,0 +1,596 @@
+{
+  "subject": "Jurisprudence, Interpretation & General Laws",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "JIGL_2026_JUNE_Q1AI",
+      "questionNumber": "1(a)(i)",
+      "marks": 2,
+      "questionText": "Explain the structure of civil courts in India.",
+      "questionType": "Case Study",
+      "topic": "Civil Procedure Code",
+      "subTopic": "Structure of Civil Courts",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1AII",
+      "questionNumber": "1(a)(ii)",
+      "marks": 2,
+      "questionText": "Discuss whether the Jaipur court has territorial jurisdiction in this matter.",
+      "questionType": "Case Study",
+      "topic": "Civil Procedure Code",
+      "subTopic": "Territorial Jurisdiction",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1AIII",
+      "questionNumber": "1(a)(iii)",
+      "marks": 2,
+      "questionText": "What is meant by stay of suit under the Code of Civil Procedure, 1908 ?",
+      "questionType": "Case Study",
+      "topic": "Civil Procedure Code",
+      "subTopic": "Stay of Suit",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1AIV",
+      "questionNumber": "1(a)(iv)",
+      "marks": 2,
+      "questionText": "Explain the principle of res judicata. Can Ramesh raise the same issue again after the Jodhpur Court has decided it ?",
+      "questionType": "Case Study",
+      "topic": "Civil Procedure Code",
+      "subTopic": "Res Judicata",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1AV",
+      "questionNumber": "1(a)(v)",
+      "marks": 2,
+      "questionText": "What are summary proceedings ? Was Rahul justified in filing a summary suit for recovery of money ?",
+      "questionType": "Case Study",
+      "topic": "Civil Procedure Code",
+      "subTopic": "Summary Suits",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1BI",
+      "questionNumber": "1(b)(i)",
+      "marks": 2,
+      "questionText": "What are the six freedoms guaranteed to the citizens of India under Article 19(1) ?",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Fundamental Rights",
+      "sectionNumber": "Article 19(1)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1BII",
+      "questionNumber": "1(b)(ii)",
+      "marks": 3,
+      "questionText": "Explain whether the government order violates fundamental rights under Article 19(1)(a) and 19(1)(b) of the Constitution of India.",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Fundamental Rights (Freedom of Speech and Assembly)",
+      "sectionNumber": "Article 19(1)(a) and 19(1)(b)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1BIII",
+      "questionNumber": "1(b)(iii)",
+      "marks": 2,
+      "questionText": "What are the resonable restrictions on the freedom of speech and expression under Article 19(2) that may be imposed by the legislature ?",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Fundamental Rights (Restrictions on Freedom of Speech)",
+      "sectionNumber": "Article 19(2)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q1BIV",
+      "questionNumber": "1(b)(iv)",
+      "marks": 3,
+      "questionText": "Examine the validity of detention of students in light of liberties guaranteed under Article 21.",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Fundamental Rights (Right to Personal Liberty)",
+      "sectionNumber": "Article 21",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "In the city of Bengaluru, Prabhu, a supplier, sent an email quotation of Meera, offering to sell goods at a discounted price. Meera’s system automatically sent an email showing acceptance of the offer due to a technical glitch, even though she did not intend to accept it. Prabhu, relying on the email, dispatched the goods. Later, Meera refused to accept delivery, claiming that she never personally sent the acceptance and the email was sent due to an automated system error. Prabhu contended that the acceptance is valid as it originated from Meera’s authorised system. Referring to the provisions of the Information Technology Act, 2000, discuss whether the electronic acceptance is valid and attributable to Meera and when the dispatch is complete.",
+      "questionType": "Case Study",
+      "topic": "Information Technology Act",
+      "subTopic": "Attribution of Electronic Records, Dispatch of Electronic Records",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "ABC Manufacturing Ltd., a company registered under the Companies Act, 2013, is facing a criminal complaint for violation of environmental regulations. The trial court issues a summon to the company. The summon was served by delivering it to the company’s receptionist, who refuses to accept it. Later, the summon is sent by registered post addressed to the company’s Director. The letter is duly posted but the Director claims he never personally received it. Discuss whether the service of summon on ABC Manufacturing Ltd. is valid under Section 65 of the Bharatiya Nagarik Suraksha Sanhita, 2023.",
+      "questionType": "Case Study",
+      "topic": "Criminal Procedure (Bharatiya Nagarik Suraksha Sanhita, 2023)",
+      "subTopic": "Service of Summons",
+      "sectionNumber": "Section 65",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "Anil entered into a betting agreement with Bhushan in the city of Delhi and lost ` 40,000. To discharge this liability, Anil borrowed the amount from Kapil, who directly paid to Bhushan. Later, Anil refused to repay Kapil, arguing that the original agreement between Anil and Bhushan was a wagering agreement and therefore not enforceable. Discuss whether Kapil can recover the amount from Anil. What would be your answer if the betting agreement took place in Mumbai ?",
+      "questionType": "Case Study",
+      "topic": "Indian Contract Act",
+      "subTopic": "Wagering Agreements, Quasi-contracts",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Kamaldeep applied for the post of an Elementary Teacher Training (ETT) in the State of Punjab and submitted a certificate showing that she had worked in Gyandeep Public School for a specified period. During verification, it was found that the school was not recognized during that period. The prosecution alleged that the certificate was false and forged and initiated criminal proceedings against her for forgery. Examine whether Kamaldeep is guilty of forgery for submitting such a certificate. What are the punishments for committing forgery under the Bharatiya Nyaya Sanhita, 2023 ?",
+      "questionType": "Case Study",
+      "topic": "Criminal Law (Bharatiya Nyaya Sanhita, 2023)",
+      "subTopic": "Forgery",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "The Government of a State announces a welfare policy aimed at improving the living conditions of economically weaker sections of society. The policy is based on certain Directive Principles of State Policy (DPSPs) mentioned in Part IV of the Constitution. However, the government does not immediately pass any legislation to implement the policy. Rahul, a social activist, files a petition before the High Court claiming that the government has failed to implement the Directive Principles and requests the court to order the government to immediately enact a law and enforce the policy. At the same time, another citizen argues that an existing law of the state contradicts a Directive Principle and therefore should be declared void by the court. The State Government contends that Directive Principles are only guidelines for governance and cannot be directly enforced by courts. Explain the nature and constitutional status of Directive Principles of State Policy. Can Rahul enforce the Directive Principles in a court of law ? Give reasons.",
+      "questionType": "Case Study",
+      "topic": "Constitutional Law",
+      "subTopic": "Directive Principles of State Policy (DPSPs)",
+      "sectionNumber": "Part IV",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "MediCare Plus Pvt. Ltd., a private healthcare company, maintains an online portal where patients upload their medical records, Aadhaar details, bank account information and diagnostic reports. The company stores this information on its own servers. Due to outdated firewall systems and lack of encryption, hackers gain unauthorized access to the database and leak sensitive medical and financial information of thousands of patients. Several patients suffer financial fraud and reputational harm as a result of the data breach. An internal inquiry reveals that MediCare Plus had not updated its cybersecurity systems for over two years and had failed to follow industry-standard security practices. The affected patients filed claims seeking compensation for the wrongful loss suffered by them. The matter is brought before the adjudicating authority under the provisions of the Information Technology Act, 2000. Examine whether MediCare Plus Pvt. Ltd. can be held liable under Section 43A of the Act.",
+      "questionType": "Case Study",
+      "topic": "Information Technology Act",
+      "subTopic": "Data Protection, Cyber Security, Liability for Data Breach",
+      "sectionNumber": "Section 43A",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Arjun had a commercial property in Udaipur. He leased out this commercial building for ten years to Bhavesh. Relying on this, Bhavesh entered into a lease agreement, invested substantial money in renovating the premises and started his business. After two and half years, when Bhavesh’s business started doing well, Arjun’s father filed a suit for eviction, claiming that Arjun had no authority to lease the property. Can Bhavesh be asked to evict the premises by Arjun’s father ? Discuss referring to relevant provisions of the Bharatiya Sakshya Adhiniyam, 2023.",
+      "questionType": "Case Study",
+      "topic": "Law of Evidence (Bharatiya Sakshya Adhiniyam, 2023)",
+      "subTopic": "Estoppel",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "In the city of Patna, Amit wrote and signed a document stating, “I promise to pay ` 50,000 to Bharat after six months, provided I receive payment from my client.” Bharat sues Amit after six months for payment. Does this document constitute a valid promissory note ? Explain the essential of a valid promissory note under the Negotiable Instruments Act, 1881.",
+      "questionType": "Case Study",
+      "topic": "Negotiable Instruments Act",
+      "subTopic": "Promissory Note",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "What do you mean by arbitral tribunal ? Discuss the competence of arbitral tribunal to rule on its jurisdiction.",
+      "questionType": "Descriptive",
+      "topic": "Arbitration and Conciliation Act",
+      "subTopic": "Arbitral Tribunal, Jurisdiction",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "‘Judicial precedents are an important source of law. They have enjoyed high authority at all times and in all countries.’ Discuss. Explain various kinds of precedents.",
+      "questionType": "Descriptive",
+      "topic": "Jurisprudence",
+      "subTopic": "Sources of Law, Judicial Precedents",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q4AIII",
+      "questionNumber": "4A(iii)",
+      "marks": 5,
+      "questionText": "Explain the provisions when a banker must refuse payment and when a banker may refuse payment under the Negotiable Instruments Act, 1881.",
+      "questionType": "Descriptive",
+      "topic": "Negotiable Instruments Act",
+      "subTopic": "Banker and Customer, Payment Obligations",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Mohit filed a civil suit against Rohit for recovery of money within the prescribed limitation period. However, due to a defect of jurisdiction, the court returned the plaint after several months. Mohit then filed the same suit in a proper court, but by that time, the limitation period had expired. Whether Mohit is entitled to exclusion of time spent in earlier proceedings under the Limitation Act, 1963 ? Explain.",
+      "questionType": "Case Study",
+      "topic": "Limitation Act",
+      "subTopic": "Exclusion of Time, Condonation of Delay",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "In a rural area of Rajasthan, there exists a long-standing custom of arranging marriages of minor children at a very young age. The village elders justify this practice as an age-old tradition followed for generations. However, a statute prohibits child marriage and prescribes punishment for those involved. A social activist challenges the validity of such marriages and the custom supporting them. The villagers argue that the custom is ancient and continuously followed and it should be recognized as a valid source of law. Discuss as to what are the essential conditions of a valid custom and whether such a custom is valid in law when it conflicts with a statute ?",
+      "questionType": "Case Study",
+      "topic": "Jurisprudence",
+      "subTopic": "Sources of Law, Custom, Conflict with Statute",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Sita, by a deed of gift made over certain property to her daughter, Gita, asked her to continue paying an annuity to her sister Mita, as she was doing that before she gifted the property to Gita. Gita accepted the condition to pay annuity to Mita. Afterwards, when Sita died, Gita declined to pay Mita saying that no consideration had moved from her. Define consideration and explain, whether Mita can recover annuity from Gita.",
+      "questionType": "Case Study",
+      "topic": "Indian Contract Act",
+      "subTopic": "Consideration, Privity of Contract",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "Arvind, a government employee, is facing disciplinary proceedings for alleged miscounduct. An inquiry officer, a close relative of the complainant, is appointed by the department to conduct the inquiry. Aggrieved by the manner in which the inquiry is conducted, Arvind challenges the proceedings before the High Court, contending that the inquiry violated the principle of natural justice and the inquiry officer was biased. The department, however, argues that the inquiry was conducted in accordance with its internal rules and fair procedures. Explain, whether the principle of natural justice have been violated in the present case.",
+      "questionType": "Case Study",
+      "topic": "Administrative Law",
+      "subTopic": "Principles of Natural Justice, Bias",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Ravi owns a well-established bakery in a small village. Over the years, his business has built a strong reputation among the villagers for maintaining high standards of quality and hygiene. As a result, his bakery attracts a large number of customers. Meera, who also runs a bakery in the same village, is Ravi’s direct competitor. With the intention of increasing her own sales and diverting customers away from Ravi’s bakery, Meera begins spreading false rumours among the villagers. She tells them that Ravi uses expired ingredients in his cakes and mixes harmful artificial “tasting powders” to make his bakery items appear more delicious, despite knowing that they are completely untrue. Due to these false allegations, Ravi experiences a significant decline in sales, resulting in substantial financial loss and damage to his business reputation. Explain, which civil wrong under the Law of Torts is committed by Meera ? What legal remedies are available to Ravi ?",
+      "questionType": "Case Study",
+      "topic": "Law of Torts",
+      "subTopic": "Defamation, Slander of Goods/Business",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "ABC Ltd., an Indian company, enters into a contract with XYZ Corp., a company incorporated in the United States. A dispute arise regarding the delivery of goods and the matter is referred to international arbitration. The arbitral tribunal issues a foreign award in favour of XYZ Corp. When XYZ Corp. approaches the Indian courts for enforcement of the foreign award under the Arbitration and Conciliation Act, 1996, ABC Ltd. opposes it, claiming that certain conditions for enforcement under Section 48 of the Act have not been complied with. Explain the conditions for enforcement of foreign awards under Section 48 of the Arbitration and Conciliation Act, 1996.",
+      "questionType": "Case Study",
+      "topic": "Arbitration and Conciliation Act",
+      "subTopic": "Foreign Awards, Enforcement",
+      "sectionNumber": "Section 48",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "Ravi, a warehouse supervisor, is entrusted by his employer with custody of goods worth ` 10 lakh. The company’s policy requires that the goods be released only upon written authorization from the head office. Instead, Ravi secretly sells part of the goods to a third party for personal profit. When confronted, Ravi argues that since he was in charge of the warehouse, he had the right to deal with the goods as he wished. Identify and explain the offence committed by Ravi. State the essential ingredients of that offence.",
+      "questionType": "Case Study",
+      "topic": "Criminal Law (Bharatiya Nyaya Sanhita, 2023)",
+      "subTopic": "Criminal Breach of Trust",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "Explain the constitutional provisions governing government contracts under the Constitution of India. Discuss the essential conditions for a valid government contract.",
+      "questionType": "Descriptive",
+      "topic": "Constitutional Law",
+      "subTopic": "Government Contracts",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Discuss the distinction between a Decree-holder and a Judgement-debtor under the Code of Civil Procedure, 1908. Give example.",
+      "questionType": "Descriptive",
+      "topic": "Civil Procedure Code",
+      "subTopic": "Decree-holder, Judgement-debtor",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "Under the Right to Information Act, 2005, certain organizations are excluded from its purview. Explain which agencies are excluded under the Act and discuss the circumstances under which these excluded agencies are still required to provide information.",
+      "questionType": "Descriptive",
+      "topic": "Right to Information Act",
+      "subTopic": "Exemptions, Excluded Agencies",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "JIGL_2026_JUNE_Q6AIV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "Discuss the provisions related to discharge of surety under the Indian Contract Act, 1872.",
+      "questionType": "Descriptive",
+      "topic": "Indian Contract Act",
+      "subTopic": "Contract of Guarantee, Discharge of Surety",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

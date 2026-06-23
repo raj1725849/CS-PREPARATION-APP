@@ -1,0 +1,558 @@
+{
+  "subject": "Tax Laws",
+  "year": 2026,
+  "session": "June",
+  "questions": [
+    {
+      "questionId": "TL_2026_JUNE_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 5,
+      "questionText": "Compute the Total Income of Lalit for the assessment year 2026-27, assuming that\nhe has followed default tax regime under section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Computation of Total Income",
+      "subTopic": "Default Tax Regime",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 5,
+      "questionText": "Compute the Total Tax payable of Lalit for the assessment year 2026-27 as per\ndefault tax regime under section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Computation of Tax Liability",
+      "subTopic": "Default Tax Regime",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 2,
+      "questionText": "Compute the Total Income of Lalit for the assessment year 2026-27, assuming that\nhe has followed old tax regime under Income Tax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Computation of Total Income",
+      "subTopic": "Old Tax Regime",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 2,
+      "questionText": "Compute the Total Tax payable of Lalit for the assessment year 2026-27, assuming\nthat he has followed old tax regime under Income Tax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Computation of Tax Liability",
+      "subTopic": "Old Tax Regime",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 1,
+      "questionText": "Suggest to Lalit that which tax regime will be beneficial for him for the assessment\nyear 2026-27.",
+      "questionType": "Descriptive",
+      "topic": "Tax Planning",
+      "subTopic": "Comparison of Tax Regimes",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "Rajiv Gupta, aged 45, is employed as a Finance Manager in XYZ Pvt. Ltd., in\nMumbai. During the financial year 2025-26, he received the following emoluments :\nParticulars Amount (`)\n(i) Basic Salary ` 80,000 p.m.\n(ii) Dearness Allowance (DA) 40% of Basic\n(Forming part of retirement benefits) Salary\n(iii) House Rent Allowance receive (HRA) ` 30,000 p.m.\n(iv) Rent paid for house in Mumbai ` 35,000 p.m.\n(v) Entertainment Allowance paid by employer ` 5,000 p.m.\n(vi) Bonus (Annual) ` 1,00,000\n(vii) Free use of company-owned car (engine < 1.6L) for both\nofficial and personal purposes. Running and maintenance borne\nby company. —\n(viii) Employer’s contribution to RPF @ 15% of Basic Salary + DA —\n(ix) Interest credited to RPF account @ 11% ` 88,000\nYou are required to compute the taxable salary income of Rajiv Gupta for the\nassessment year 2026-27, assuming that he is not opting the default tax regime under\nsection 115BAC of the Income Tax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Income from Salaries",
+      "subTopic": "Computation of Taxable Salary",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "Ms. Neha, a resident individual, received the following incomes during the financial\nyear 2025-26 :\n(i) Cash Gift of ` 80,000 from a close family friend on her birthday.\n(ii) A wedding gift of gold worth ` 1,20,000 from her maternal uncle on her\nmarriage on 20th June, 2025.\n(iii) Received a Car gifted from her father on 15th August, 2025 (FMV ` 12,00,000).\n(iv) Won a gift voucher worth ` 1,00,000 from a TV game show on\n25th July, 2025.\n(v) Received a vacant plot of land (FMV ` 3,00,000) without consideration from\na friend on 30th January, 2026.\n(vi) Rent of ` 20,000 per month from 1st June 2025 to 31st March 2026, from\nletting out her plant and machinery. Letting out of plant, machinery is not the\nprimary business of Ms. Neha. During the financial year 2025-26, Ms. Neha\nincurred ` 77,000 as repair charges on the Plant and machinery.\nYou are required to compute the income chargeable under the head ‘‘Income from\nOther Sources’’ for Ms. Neha for the assessment year 2026-27, considering that she\nhas shifted out of the default tax regime under section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Income from Other Sources",
+      "subTopic": "Gifts, Winnings, Rental Income",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "Ramesh, a resident individual, submits the following information for the financial year\n2025-26 :\nParticulars Amount (`)\nIncome from house property (Net) 60,000\nBusiness A\nLoss of the current year 2025-26 48,000\nBrought forward loss of the year 2024-25 40,000\nBusiness B\nProfit of the current year 2025-26 1,50,000\nBusiness C (Business discontinued on 10th April, 2025)\nProfit of the period from 1st April, 2025 to 10th April, 2025 10,000\nBrought forward loss of 2024-25 49,000\nBusiness D (Business discontinued on 31st March, 2025)\nBrought forward loss of 2024-25 45,000\nLoss from the business of owning and maintaining horse race 9,000\nInterest on debentures held as investments 90,000\nLong-term capital loss on sale of shares 15,000\nDetermine the Gross Total Income of Ramesh for the assessment year 2026-27 and\nalso calculate the amount of loss which can be carried forward for being set off\nin the next assessment year, assuming that he has shifted out of the default tax regime\nunder section 115BAC of the Income Tax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Computation of Gross Total Income",
+      "subTopic": "Set-off and Carry-forward of Losses",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Raghav, aged 34, a resident individual, furnishes the following details of investments\nand expenses for the financial year 2025-26. His Gross Total Income (GTI) before\nChapter VI-A deductions is ` 9,00,000.\nDetails of investments and expenses are :\n(i) Tuition fees of ` 60,000 paid for his two children (` 30,000 each) pursuing\nfull time graduation course at Winners University in Bengaluru.\n(ii) Principal repayment of housing loan taken from a relative – ` 70,000. The\nproperty is self-occupied situated at Pune.\n(iii) Mediclaim premium : ` 28,000 for self : ` 32,000 for parents (senior citizens)\npaid through Credit Card.\n(iv) Donation to Prime Minister’s National Relief Fund for ` 50,000 paid through\nDebit Card of Union Bank.\n(v) Interest paid on education loan taken for his spouse’s higher education :\n` 48,000 through account payee cheque.\n(vi) Cash deposit in PPF account : ` 1,15,000 on 31st March, 2026.\nCompute the deductions available under Chapter VI-A to Raghav for the assessment\nyear 2026-27. Assuming that he has not opted for Section 115BAC for the assessment\nyear 2026-27.",
+      "questionType": "Practical",
+      "topic": "Deductions from Gross Total Income",
+      "subTopic": "Chapter VI-A Deductions",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Mr. Bhanu, a citizen of India, stay 45 days in India during the financial year 2025-\n26, earlier to this year he always stayed in India. He provides the following income\ndetails during the year ended 31st March, 2026 :\n(i) Salary received in India for 45 days – ` 1,80,000\n(ii) Interest on saving bank deposit in HDFC Bank (India) – ` 20,000\n(iii) Amount brought into India out of past untaxed profits earned in Japan –\n` 70,000\n(iv) Income from agriculture in Sri Lanka, retained there – ` 62,000\n(v) Income from business in Nepal, controlled from India – ` 55,000\n(vi) Dividend received in USA from a US company – ` 90,000, out of which\n` 30,000 was remitted to India during the year.\nCompute the Gross Total Income of Mr. Bhanu for the assessment year 2026-27.\nAssuming that he has followed default tax regime under section 115BAC of the Income\nTax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Residential Status and Scope of Total Income",
+      "subTopic": "Computation of Gross Total Income",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "Anupam owns a residential house property in Noida (UP). It has two equal residential\nunits–Unit I and Unit II. Unit I is self-occupied by Anupam for his residential purpose,\nwhile Unit II is let out at ` 10,000 per month to Mr. Pranshul.\nMunicipal value of the property is 10 times of the Annual Municipal tax. Standard\nRent is ` 3,00,000 per annum and fair rent is ` 70,000 per quarter. Municipal tax\nof such property for the financial year 2025-26 is ` 36,000, 50% of such municipal\ntax is paid by Mr. Pranshul and remaining 50% is still outstanding till 3l-03-2026.\nOther expenses for the financial year 2025-26 being repairs : ` 2,500, Property\nInsurance : ` 6,000, Interest on capital (borrowed from bank during 2020-21) for\nthe constructing the property : ` 1,65,000.\nCompute the Income from House Property of Anupam for the assessment year\n2026-27 on the assumption that he has opted out of default tax regime under section\n115BAC of the Income Tax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Income from House Property",
+      "subTopic": "Self-occupied and Let-out Property",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "Specify the persons who are not required to pay advance tax as per the provisions\nof the Income-tax Act, 1961. Is advance tax payable on capital gains and lottery\nincome ? Give your answer with reference to the relevant provisions of the Income\nTax Act, 1961.",
+      "questionType": "Descriptive",
+      "topic": "Advance Tax",
+      "subTopic": "Exemptions and Inclusions in Advance Tax",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "Who all are required to mandatorily file the Return of Loss as per Section 80 of\nIncome Tax Act, 1961 ?",
+      "questionType": "Descriptive",
+      "topic": "Returns of Income",
+      "subTopic": "Return of Loss",
+      "sectionNumber": "80",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "Updated return under section 139(8A) cannot be filed if original return is a loss return\nunder section 139(3). Explain the validity of above statement in the context of Income\nTax Act, 1961.",
+      "questionType": "Descriptive",
+      "topic": "Returns of Income",
+      "subTopic": "Updated Return (Section 139(8A)) and Loss Return (Section 139(3))",
+      "sectionNumber": "139(8A), 139(3)",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "On 10th January 2026, Amit (a bank employee) received ` 6,00,000 towards interest\non enhanced compensation from State Government in respect of compulsory acquisition\nof his land effected during the financial year 2021-22.\nOut of this interest, ` 2,50,000 relates to the financial year 2022-23; ` 1,85,000\nto the financial year 2023-24; and ` 1,65,000 to the financial year 2024-25. He\nincurred ` 50,000 on 25th October, 2025 by way of legal expenses to receive the\ninterest on such enhanced compensation.\nExplain how much of interest on enhanced compensation would be chargeable to income\ntax for the assessment year 2026-27, with legal provision as per Income Tax Act,\n1961 ?",
+      "questionType": "Practical",
+      "topic": "Income from Other Sources",
+      "subTopic": "Taxability of Interest on Enhanced Compensation",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "Mr. Pankaj, age 85 years, a resident individual, gives the following particulars of his\nIncome for the financial year 2025-26 :\nParticulars Amount (`)\nPension received from Central Govt. 4,00,000\nSalary received from Partnership firm\n{allowed as per section 40(b)} 1,50,000\nInterest on bank term deposits 3,50,000\nInterest on bank saving a/c 50,000\nInterest from Partnership Firm {calculated @ 10% p.a.} 80,000\nSTCG on sale of dining furniture 90,000\nCompute the Total Income and Tax liability of Mr. Pankaj for assessment year\n2026-27 considering that he has opted the default tax regime under section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Computation of Total Income and Tax Liability",
+      "subTopic": "Senior Citizen, Default Tax Regime",
+      "sectionNumber": "40(b), 115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q4AIII",
+      "questionNumber": "4A(iii)",
+      "marks": 5,
+      "questionText": "Karan Bothra, a resident individual, provides the following details relating to the financial\nyear 2025-26 :\n(i) Short-term capital loss from sale of shares (STT paid) : ` 1,20,000\n(ii) Long-term capital gain on sale of land : ` 2,50,000\n(iii) His wife, Mrs. Sunita Bothra who is Company Secretary, received ` 90,000\n(after deducting TDS @ 10%) as professional fees from a Private Limited\nCompany where Mr. Karan Bothra is a director.\n(iv) His minor daughter Kajal earned ` 1,50,000 (Gross) from a TV advertisement\ncontract.\n(v) His minor son Kunal earned ` 80,000 as bank interest from a fixed deposit.\nCompute the Total Income of Mr. Karan Bothra for the assessment year 2026-27,\nif he has exercised the option of shifting out of default tax regime provided under\nsection 115BAC. Assuming that his wife’s income is lower than the income of Karan\nBothra for the financial year 2025-26.",
+      "questionType": "Practical",
+      "topic": "Computation of Total Income",
+      "subTopic": "Capital Gains, Clubbing of Income",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 5,
+      "questionText": "Compute the value of Output Tax Liability under GST for M/s Khatri Electronics\nPvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Output Tax",
+      "subTopic": "Value of Supply",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 5,
+      "questionText": "Compute the value of eligible Input Tax Credit under GST for M/s Khatri Electronics\nPvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Input Tax Credit",
+      "subTopic": "Eligibility for ITC",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 4,
+      "questionText": "Compute the Net minimum GST payable in cash (CGST/SGST/IGST) for M/s Khatri\nElectronics Pvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Payment of Tax",
+      "subTopic": "Utilisation of ITC and Net Tax Liability",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 6,
+      "questionText": "Explain the due date of filing of Annual Return u/s 44 of the CGST Act, 2017.\nIs there any late fees is charged to M/s Khatri Electronics Pvt. Ltd. for delay filing\nof Annual Return for financial year 2024-25 which was filed on 31st March, 2026 ?\nAlso explain the provisions relating to late fees for filing of Annual Return under section\n47(2) of the CGST Act, 2017.",
+      "questionType": "Descriptive",
+      "topic": "GST - Returns",
+      "subTopic": "Annual Return, Late Fees for Returns",
+      "sectionNumber": "44, 47(2)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "Banshi Lal & Co., a firm of Tax Consultants, issued invoice for services rendered\nto Mr. Amit on 7th September, 2025. Determine the time of supply in the following\nindependent cases in the context on CGST Act, 2017 :\n(i) The provision of service was completed on 1st August, 2025 and payment\nwas received on 28th September, 2025.\n(ii) The provision of service was completed on 14th August, 2025 and payment\nwas received on 29th September, 2025.\n(iii) The provision of service was remaining to be completed. However. Mr. Amit\nmade the advance payment on 13th August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Time of Supply",
+      "subTopic": "Time of Supply of Services",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Shri Keshri Pvt, Ltd., a registered supplier from Rajasthan, furnishes the following\ninformation relating to goods sold by it to Shri Balaji Pvt. Ltd. in Rajasthan, during\nthe month of December, 2025 :\nS. Particulars Amount\nNo. (`)\n(i) Price of the goods other than below item 1,00,000\n(ii) Installation and testing charges for goods, not included in price 25,000\n(iii) Freight charges from the Showroom of Keshri Pvt. Ltd. to\nwarehouse of Shri Balaji Pvt. Ltd., included in price mentioned\nin Point No. (i) above. 12,000\n(iv) Shri Keshri Pvt. Ltd. provides additional discount @ 1% at year\nend, based on additional purchase of other machinery for which\nadjustment is made at the end of the financial year without\nany change in individual transactions. —\n(v) Late fees for delayed payment inclusive of GST 7,500\n[Shri Balaji Pvt. Ltd. paid the late fees. However, these charges\nwere ultimately waived by Shri Keshri Pvt. Ltd. and the amount\nwas refunded to Shri Balaji Pvt. Ltd. during the same month]\n(vi) Weighment charges [Such charges were paid by Shri Balaji\nPvt. Ltd. to Radhe Pvt. Ltd. on behalf of Shri Keshri Pvt. Ltd.] 6,000\nCompute the value of taxable supply made by Shri Keshri Pvt. Ltd. to Shri Balaji\nPvt. Ltd. for the month of December, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Value of Supply",
+      "subTopic": "Inclusions and Exclusions in Value of Supply",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "Arihant Ltd., a registered supplier from Rajkot, is engaged in the manufacture of heavy\nmachinery. The company provides the following details of purchases made/services availed\nby it during the month of July, 2025 :\nS. Particulars GST\nNo. Amount (`)\n(i) Purchase of iron which is used as a raw material 3,00,000\n[Goods were received in two lots - first in July, 2025\nand the second in August, 2025]\n(ii) Purchase of accessories which were delivered directly to the 1,00,000\ndealers of the company on the direction of Arihant Ltd.\n[Only invoice was received by Arihant Ltd.]\n(iii) Electrical Transformers to be used in the manufacturing process 4,25,000\n(iv) Truck used for the transport of raw material 1,40,000\n(v) General Insurance taken on Truck (used by company on\ntransportation of goods) 20,000\nYou are required to determine the ITC that can be availed by Arihant Ltd. for the month\nof July, 2025 by giving brief explanations for treatment of various items. Subject to the information\ngiven above, all the other conditions necessary for availing ITC have been fulfilled.",
+      "questionType": "Practical",
+      "topic": "GST - Input Tax Credit",
+      "subTopic": "Eligibility and Conditions for ITC",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "M/s Rajkumar Enterprises have imported a machine from U.K. and furnished the following\nparticulars in relation to such import :\nS. Particulars Amount\nNo.\n(i) F.O.B. cost of the machine 20,000 U.K.\nPounds\n(ii) Freight (air) 3,000 U.K.\nPounds\n(iii) License fee relating to imported goods payable by the buyer as 20% of\na condition of sale F.O.B. Cost\n(iv) Commission paid to a local agent in India on behalf of exporter ` 15,000\n(v) Insurance paid to the insurer in India ` 28,000\nOther particulars :\n(a) Inter-bank exchange rate as arrived at by the authorized dealer : ` 92.50\nper U.K. Pound.\n(b) CBIC had notified for purpose of Section 14 of the Customs Act, 1944,\nexchange rate of ` 90 per U.K. Pound.\nCompute the assessable value of goods for the purpose of customs duty for\nM/s Rajkumar Enterprises.",
+      "questionType": "Practical",
+      "topic": "Customs Duty",
+      "subTopic": "Valuation of Imported Goods",
+      "sectionNumber": "14",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "Ramada Ltd., registered under GST as normal taxpayer, is winding up its business\nin Uttar Pradesh. The Tax Consultant of Ramada Ltd. has suggested that Ramada\nLtd. will have to file either the annual return or the final return at the time of voluntary\ncancellation of registration in the state of Uttar Pradesh.\nDo you agree with the stand taken by Tax Consultant of Ramada Ltd ? Explain\nin the context of CGST Act, 2017.",
+      "questionType": "Descriptive",
+      "topic": "GST - Returns and Registration",
+      "subTopic": "Annual Return, Final Return, Cancellation of Registration",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Determine whether the suppliers in the following cases are eligible for composition\nlevy, under section 10(1) and 10(2) of CGST Act, 2017 provided their turnover in\npreceding financial year was ` 1.06 crore :\n(a) Yash Enterprises is engaged in trading of pan masala in Maharashtra and its\nsupply is only in the same State.\n(b) Anirudh Manufacturers has registered offices in Delhi and Haryana and supplies\ngoods in neighbouring States.",
+      "questionType": "Descriptive",
+      "topic": "GST - Composition Levy",
+      "subTopic": "Eligibility Conditions for Composition Scheme",
+      "sectionNumber": "10(1), 10(2)",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "GST is payable on advance received for supply of goods and services taxable under\nforward charge. Explain this statement along with correct legal provisions as per GST\nLaw.",
+      "questionType": "Descriptive",
+      "topic": "GST - Time of Supply",
+      "subTopic": "Advance Receipts",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2026_JUNE_Q6AIV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "Mention the names of any five ‘‘Types of Custom Duty’’ on Import Goods covered\nunder Schedule I of Custom Tariff Act, 1975.",
+      "questionType": "Descriptive",
+      "topic": "Customs Duty",
+      "subTopic": "Types of Customs Duties",
+      "sectionNumber": null,
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2026
+        ]
+      }
+    }
+  ]
+}

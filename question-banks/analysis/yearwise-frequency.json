@@ -1,0 +1,72 @@
+{
+  "Company Law": {
+    "2025-December": {
+      "totalQuestions": 32,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 42,
+      "totalMarks": 115
+    }
+  },
+  "Company Accounts & Auditing Practices": {
+    "2025-December": {
+      "totalQuestions": 30,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 31,
+      "totalMarks": 135
+    }
+  },
+  "Economic, Business & Commercial Laws": {
+    "2025-December": {
+      "totalQuestions": 37,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 37,
+      "totalMarks": 135
+    }
+  },
+  "Jurisprudence, Interpretation & General Laws": {
+    "2025-December": {
+      "totalQuestions": 36,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 31,
+      "totalMarks": 130
+    }
+  },
+  "Capital Markets & Securities Laws": {
+    "2025-December": {
+      "totalQuestions": 38,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 27,
+      "totalMarks": 135
+    }
+  },
+  "Industrial, Labour & General Laws": {
+    "2025-December": {
+      "totalQuestions": 53,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 37,
+      "totalMarks": 135
+    }
+  },
+  "Tax Laws": {
+    "2025-December": {
+      "totalQuestions": 29,
+      "totalMarks": 135
+    },
+    "2026-June": {
+      "totalQuestions": 29,
+      "totalMarks": 135
+    }
+  }
+}

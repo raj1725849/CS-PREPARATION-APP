@@ -1,0 +1,558 @@
+{
+  "subject": "Tax Laws",
+  "year": 2025,
+  "session": "December",
+  "questions": [
+    {
+      "questionId": "TL_2025_DECEMBER_Q1A",
+      "questionNumber": "1(a)",
+      "marks": 5,
+      "questionText": "Compute the income chargeable under the head of Salary for Karan for the Assessment Year 2025-26.",
+      "questionType": "Practical",
+      "topic": "Income from Salaries",
+      "subTopic": "Computation of Salary Income",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q1B",
+      "questionNumber": "1(b)",
+      "marks": 2,
+      "questionText": "Compute the income chargeable under the head of “Profits and Gains from Business and Profession” for Karan for the Assessment Year 2025-26.",
+      "questionType": "Practical",
+      "topic": "Profits and Gains from Business or Profession (PGBP)",
+      "subTopic": "Presumptive Taxation",
+      "sectionNumber": "44AE",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q1C",
+      "questionNumber": "1(c)",
+      "marks": 2,
+      "questionText": "Compute the income chargeable under the head of “Income from other sources” for Karan for the Assessment Year 2025-26.",
+      "questionType": "Practical",
+      "topic": "Income from Other Sources",
+      "subTopic": "Computation of Income from Other Sources",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q1D",
+      "questionNumber": "1(d)",
+      "marks": 4,
+      "questionText": "Compute the total allowable deduction under chapter VI-A of the Income Tax Act, 1961 for Karan for the Assessment Year 2025-26.",
+      "questionType": "Practical",
+      "topic": "Deductions from Gross Total Income",
+      "subTopic": "Chapter VI-A Deductions",
+      "sectionNumber": "Chapter VI-A",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q1E",
+      "questionNumber": "1(e)",
+      "marks": 2,
+      "questionText": "Compute the Tax Payable/Refundable on total income for Karan for the Assessment Year 2025-26.",
+      "questionType": "Practical",
+      "topic": "Computation of Total Income and Tax Liability",
+      "subTopic": "Tax Calculation",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q2A",
+      "questionNumber": "2(a)",
+      "marks": 5,
+      "questionText": "Rakesh, a resident individual, provides the following Profit & Loss Account for the year ending 31st March 2025, from his business. You are required to compute income under the head “Profits and Gains from Business or Profession” for A.Y. 2025-26, considering the applicable provisions of the Income-Tax Act, 1961, and ICDS (if relevant). He maintains books of account on a mercantile basis.",
+      "questionType": "Practical",
+      "topic": "Profits and Gains from Business or Profession (PGBP)",
+      "subTopic": "Computation of Business Income, Disallowances",
+      "sectionNumber": "44AD",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q2B",
+      "questionNumber": "2(b)",
+      "marks": 5,
+      "questionText": "Anju Lata owns the two-house properties in India. The first House is in Delhi and used by her for self-residence during the financial year 2024-25. Municipal Value of this house was ` 2,00,000; Fair Rent was ` 2,40,000 and Standard Rent was ` 2,20,000. Municipal Taxes of this house was ` 20,000 (out of which only ` 12,000 paid by Anju Lata during the financial year 2024-25). The second house is in Mumbai which was Let out for 9 months during the financial year 2024-25 at ` 30,000 per month, and Vacant for 3 months despite efforts to let it out. Municipal Value of second house was ` 3,60,000; Fair Rent was ` 3,90,000 and Standard Rent was ` 3,75,000. Municipal Taxes of this house was ` 30,000 (fully paid by tenant); Interest paid on borrowed capital by Anju Lata for House 1 at Delhi is ` 2,40,000 and for House 2 at Mumbai is ` 1,50,000. Compute the Income from house property for Anju Lata for the Assessment Year 2025-26. Assume she has exercised the option of shifting out of the default tax regime provided under section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Income from House Property",
+      "subTopic": "Computation of House Property Income for Self-occupied and Let-out Property",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q2C",
+      "questionNumber": "2(c)",
+      "marks": 5,
+      "questionText": "Pratap, aged 40 years, is a salaried employee with Lalit Limited. He has furnished the following details for the financial year 2024-25 : S. No. Particulars Amount (`) (i) Gross salary 10,00,000 (ii) Loss from house property 1,80,000 (iii) Income from speculation business 50,000 (iv) Loss from a new part time business of trading in marbles 3,50,000 (v) Loss from specified business covered by section 35AD 20,000 (vi) Short term capital loss on sale of property (computed) 3,60,000 (vii) Income from betting (gross) 45,000 (viii) Pratap purchased 1000 Bitcoins, a virtual digital currency on 1st April, 2024 for ` 2000 per coin, which he sold on 15th March, 2025 for ` 2300 per coin. Commission expenses for transfer of bitcoins is 2% of the sale value. You are required to compute the gross total income of Pratap for the Assessment Year 2025-26, assuming that he has shifted out of the default tax regime under section 115BAC of Income Tax Act, 1961.",
+      "questionType": "Practical",
+      "topic": "Set-off and Carry Forward of Losses, Computation of Gross Total Income, Virtual Digital Assets",
+      "subTopic": "Inter-head and Intra-head adjustments, VDA taxation",
+      "sectionNumber": "35AD, 115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q3A",
+      "questionNumber": "3(a)",
+      "marks": 5,
+      "questionText": "Vikram, a resident individual aged 45 years, received the following incomes during the previous year 2024-25 : S. No. Particulars Amount (`) (i) Dividend from Indian Company 8,40,000 (ii) Income from winning a TV game show (gross) 35,000 (iii) Winnings from online card games 1,40,000 (net of TDS at 30%) (iv) Family Pension after death of his father 1,80,000 p.a. (v) Interest on compensation from a government authority for compulsory acquisition of land 1,20,000 (vi) Rental income from letting out plant and machinery (not business asset) 2,40,000 Compute the Income chargeable under the head “Income from Other Sources” for Vikram for the Assessment Year 2025-26 considering that he has opted the benefit of default tax regime under section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Income from Other Sources",
+      "subTopic": "Computation of Income from Other Sources",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q3B",
+      "questionNumber": "3(b)",
+      "marks": 5,
+      "questionText": "Chirag a resident individual, aged 62 years sold an urban agricultural land for ` 74 lakhs to Anupam on July 15, 2024 when the stamp duty value of agricultural land was ` 95 lakhs. However, in the “agreement to sell” the agricultural land was entered on May 15, 2024 and Anupam gave ` 4 lakhs as advance through IMPS on the same day. The stamp duty value at the time of agreement was ` 84 lakhs. Chirag paid 1% of sale consideration as commission to a broker. The land was purchased by him on May 25, 2003 for ` 10.85 lakhs and it was being used for agricultural purposes by him since its purchase. Chirag purchased another agricultural land in rural area on January 1, 2025 for ` 39 lakhs and this land was sold by him on March 12, 2025 for ` 45 lakhs and he invested the entire sale proceeds in fixed deposits with a nationalized bank on the same day. Compute the Capital Gain chargeable to tax for Chirag for Assessment Year 2025-26 if he exercises the option of shifting out of the default tax regime provided under section 115BAC. Cost Inflation Index for : F.Y. 2003-04 = 109; F.Y. 2024-25 = 363.",
+      "questionType": "Practical",
+      "topic": "Capital Gains",
+      "subTopic": "Computation of Capital Gains, Exemption u/s 54F, Stamp Duty Value implications",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q3C",
+      "questionNumber": "3(c)",
+      "marks": 5,
+      "questionText": "Arvind, who is a resident but not ordinarily resident (NOR), received the following incomes during the previous year 2024-25 : S. No. Particulars Amount (`) (i) Salary received in India for services rendered in Germany 4,50,000 (ii) Interest on fixed deposits in UAE bank 2,00,000 (iii) Rent received from property located in Canada, received directly in Canada 5,00,000 (iv) Pension from former employer received in India for services rendered abroad 3,00,000 (v) Past untaxed profits brought into India during the year 4,00,000 Compute the total income chargeable to tax in India for Arvind for the Assessment Year 2025-26 on the assumption that he has opted the default tax scheme u/s 115BAC.",
+      "questionType": "Practical",
+      "topic": "Residential Status and Scope of Total Income",
+      "subTopic": "Income of Resident but Not Ordinarily Resident (NOR)",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q4A",
+      "questionNumber": "4(a)",
+      "marks": 5,
+      "questionText": "Specify all the documents in which quoting of Aadhaar Number is mandatory u/s 139AA of the Income Tax Act, 1961. Also explain to whom provisions of section 139AA does not apply.",
+      "questionType": "Descriptive",
+      "topic": "Procedure for Assessment",
+      "subTopic": "Aadhaar-PAN Interlinking",
+      "sectionNumber": "139AA",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q4B",
+      "questionNumber": "4(b)",
+      "marks": 5,
+      "questionText": "What is the time limit for filing of Updated Return u/s 139(8A) of the Income Tax Act, 1961 ? Also explain the situations where Updated Return u/s 139(8A) cannot be filed.",
+      "questionType": "Descriptive",
+      "topic": "Procedure for Assessment",
+      "subTopic": "Updated Return",
+      "sectionNumber": "139(8A)",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q4C",
+      "questionNumber": "4(c)",
+      "marks": 5,
+      "questionText": "Explain the provisions relating to deduction of tax at source on payment of Transfer of Virtual Digital Assets u/s 194S and exception thereon under the Income Tax Act, 1961.",
+      "questionType": "Descriptive",
+      "topic": "Tax Deducted at Source (TDS)",
+      "subTopic": "TDS on Virtual Digital Assets",
+      "sectionNumber": "194S",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q4AI",
+      "questionNumber": "4A(i)",
+      "marks": 5,
+      "questionText": "Neelam, a resident individual, received the following incomes during the financial year 2024-25 : S. No. Particulars Amount (`) (i) Agricultural income from land in Pune (Maharashtra) 2,40,000 (ii) Agricultural income from land situated in Kenya 1,60,000 (iii) Share of profit from a partnership firm (assessed as firm) 3,00,000 (iv) Interest on capital received from the partnership firm @ 15% 60,000 (v) Dividend received from : • A domestic listed company 1,50,000 • A foreign company 90,000 (vi) Income from ULIP (Unit Linked Insurance Plan) with annual premium of ` 3,00,000, policy issued on 1st January, 2023 20,000 You are required to compute incomes exempt under Section 10 or other relevant provisions of the Income Tax Act, 1961. Identify which incomes are not exempt and why ?",
+      "questionType": "Practical",
+      "topic": "Exempt Incomes, Agricultural Income, Income from Other Sources",
+      "subTopic": "Incomes not included in Total Income (Section 10)",
+      "sectionNumber": "Section 10",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q4AII",
+      "questionNumber": "4A(ii)",
+      "marks": 5,
+      "questionText": "Nishit and Nikhil are minor sons of Sunil and Sheetal. For the previous year 2024-25 business income of Sunil is ` 5,40,000 p.a. and Salary Income of Sheetal is ` 30,000 per month. Income of Nishit and Nikhil from stage acting is ` 60,000 and ` 40,000 respectively. Besides interest on company deposits of Nishit and Nikhil (deposit was made out income from acting) are ` 30,000 and ` 1,000 respectively. Nishit and Nikhil have received the following birthday gifts : On 20th August, 2024, gift received by Nikhil from his grandfather of ` 80,000. On 14th November, 2024, gift received by Nishit of ` 75,000 from Sunil’s friend and ` 35,000 from Sheetal’s mother. Compute the total income of Sunil, Sheetal, Nishit and Nikhil for the Assessment Year 2025-26, assuming that all the above person does not opt for the provisions of section 115BAC.",
+      "questionType": "Practical",
+      "topic": "Clubbing of Income, Income from Other Sources",
+      "subTopic": "Income of Minor Child, Gifts",
+      "sectionNumber": "115BAC",
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q4AIII",
+      "questionNumber": "4A(iii)",
+      "marks": 5,
+      "questionText": "Harish, a citizen of India and the Karta of an HUF is employed in M/s PWD Pvt. Ltd. He is drawing monthly salary of ` 40,000 in India. On August 31st, 2024 he was transferred to the branch office of M/s PWD Pvt. Ltd. in U.S.A. and he left India on September 1st, 2024. The overseas branch paid him a salary of $ 2,000 per month in USA. He managed business of HUF from USA when he was not in India. He had also gone out of India for 99 days and 201 days in previous years 2023-24 and 2022-23, respectively. He had never gone out of India prior to that. He visited India from January 1, 2025 to January 15, 2025 for training on a project and received 15 days salary in India as per his Indian monthly salary before being transferred. Determine the residential status of Harish and his HUF for the Assessment Year 2025-26.",
+      "questionType": "Descriptive",
+      "topic": "Residential Status and Scope of Total Income",
+      "subTopic": "Residential Status of Individual and HUF",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q5A",
+      "questionNumber": "5(a)",
+      "marks": 6,
+      "questionText": "Compute the value of Taxable Outward Supplies under the GST for M/s Optitech Solutions Pvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Supply, Valuation",
+      "subTopic": "Value of Taxable Supply, Composite/Mixed Supply, Exports, Gifts",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q5B",
+      "questionNumber": "5(b)",
+      "marks": 4,
+      "questionText": "Compute the value of Output Tax Liability under the GST for M/s Optitech Solutions Pvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Output Tax",
+      "subTopic": "Calculation of CGST, SGST, IGST",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q5C",
+      "questionNumber": "5(c)",
+      "marks": 5,
+      "questionText": "Compute the value of Input Tax Credit under the GST for M/s Optitech Solutions Pvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Input Tax Credit",
+      "subTopic": "Eligibility and Blocked Credits",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q5D",
+      "questionNumber": "5(d)",
+      "marks": 5,
+      "questionText": "Compute the Net minimum GST payable by M/s Optitech Solutions Pvt. Ltd. for the month of August, 2025.",
+      "questionType": "Practical",
+      "topic": "GST - Payment of Tax",
+      "subTopic": "Net GST Liability",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6A",
+      "questionNumber": "6(a)",
+      "marks": 5,
+      "questionText": "Keshav Ltd., a registered supplier, has supplied machinery to Ganesh Ltd. (a supplier registered in the same State). Determine the value of taxable supply made by Keshav Ltd. to Ganesh Ltd. on the basis of the following information : S. No. Particulars Amount (`) (i) Price of machinery (exclusive of taxes and discounts) 6,00,000 (ii) Part fitted in the machinery at the premises of Ganesh Ltd. 30,000 [Amount has been paid by Ganesh Ltd. directly to the supplier. However, it was Keshav Ltd.’s liability to pay the said amount. The said amount has not been recorded in the invoice issued by Keshav Ltd.] (iii) Installation and testing charges for machinery, not included in price 20,000 (iv) Discount @ 2% on price of the machinery mentioned at S. No. (i) above (recorded in the invoice) (v) Keshav Ltd. provides additional discount @ 1% at year end, based on additional purchase of other machinery for which adjustment is made at the end of the financial year without any change in individual transactions.",
+      "questionType": "Practical",
+      "topic": "GST - Valuation",
+      "subTopic": "Transaction Value, Additions to Value, Discounts",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6B",
+      "questionNumber": "6(b)",
+      "marks": 5,
+      "questionText": "Ramesh, a registered supplier in Delhi, enters into a contract to supply and install an air conditioning system in a Royal Garden Hotel located in Punjab. The air conditioning system is assembled at the site using various components, and installation requires civil work, wiring, and testing. The total value of the contract is ` 12,00,000. Accountant of Ramesh argues that since he is supplying goods (air conditioning units), the supply should be treated as an Inter-State supply of goods from Delhi to Punjab, and IGST should be charged. As a tax consultant you are required to determine whether this transaction is a supply of goods or supply of services ? Also determine the place of supply and nature of the supply for the above transaction under GST Law.",
+      "questionType": "Case Study",
+      "topic": "GST - Supply, Place of Supply",
+      "subTopic": "Works Contract, Composite Supply, Inter-State vs Intra-State Supply",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6C",
+      "questionNumber": "6(c)",
+      "marks": 5,
+      "questionText": "M/s Delta Manufacturers Ltd., a registered company in Gujarat, is engaged in manufacturing of taxable goods. The following transactions took place during the month of July, 2025 : (i) Purchased raw materials worth ` 10,00,000 + GST @ 18% from M/s Alpha Traders (a registered supplier). Payment was made on 15th November 2025. (ii) Purchased a passenger vehicle (sedan) for use by the Director for official and personal purposes : ` 12,00,000 + GST @ 28% + Cess @ 12%. (iii) Paid outdoor catering charges to a caterer for employee meals in the factory canteen : ` 50,000 + GST @ 5% (under composition scheme). (iv) Incurred construction expenses of ` 5,00,000 + GST @ 18% for building an additional floor on the factory building (capitalized in books). (v) Purchased office stationery worth ` 25,000 + GST @ 12% from a registered supplier. The invoice was uploaded in GSTR-1 after the due date by supplier and it was not reflected in GSTR-2B in the month of July, 2025. You are required to compute the eligible Input Tax Credit for M/s Delta Manufacturers Ltd., for the month of July, 2025 by giving brief explanations for each item separately. Subject to the information given above, all the other conditions necessary for availing the ITC have been fulfilled unless specified above.",
+      "questionType": "Practical",
+      "topic": "GST - Input Tax Credit",
+      "subTopic": "Eligibility and Blocked Credits, Conditions for ITC",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6D",
+      "questionNumber": "6(d)",
+      "marks": 5,
+      "questionText": "M/s Global Imports Ltd., a company based in Mumbai, imported a consignment of industrial machinery from Germany on CIF (Cost, Insurance, Freight) basis. Compute the assessable value of goods for the purpose of custom duty on the basis of the following information : (i) FOB value of machinery €50,000 (ii) Freight charges (as per invoice) €12,000 (iii) Insurance cost (actual) : Not available — (iv) Landing charges : Not separately paid — (v) Exchange rate notified by CBIC on date of filing Bill of Entry `91/€ (10th June 2025): (vi) Exchange rate notified by CBIC on date of Entry Inward of Vessel (14th June 2025): `90/€",
+      "questionType": "Practical",
+      "topic": "Customs Act - Valuation",
+      "subTopic": "Assessable Value for Import Duty",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": true,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6AI",
+      "questionNumber": "6A(i)",
+      "marks": 5,
+      "questionText": "Ranjan Enterprises is entitled for exemption from tax under GST law. However, it collected tax from its buyers worth ` 70,000 in the month of May, 2025. It has not deposited the said amount collected as GST with the Government. You are required to brief to Ranjan Enterprises the consequences of collecting tax, but not depositing the same with Government as provided under section 76 of CGST Act, 2017.",
+      "questionType": "Case Study",
+      "topic": "GST - Administration and Enforcement",
+      "subTopic": "Collection of Tax where no Tax is Payable (Section 76)",
+      "sectionNumber": "76 of CGST Act, 2017",
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6AII",
+      "questionNumber": "6A(ii)",
+      "marks": 5,
+      "questionText": "Ms. Aruna Pathak is engaged in the business of works contract services and seeks your guidance as to specific records required to maintained by her under GST laws.",
+      "questionType": "Descriptive",
+      "topic": "GST - Accounts and Records",
+      "subTopic": "Records for Works Contract",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6AIII",
+      "questionNumber": "6A(iii)",
+      "marks": 5,
+      "questionText": "M/s Zenith Systems, a registered supplier in Delhi, is engaged in the manufacture and supply of industrial tools. The following events occurred during the month of June, 2025 : (1) On 1st June 2025, the company’s aggregate turnover for the financial year crossed ` 40,00,000 for the first time. However, it applied for registration on 20th June 2025 and received the registration certificate dated 30th June 2025. (2) Between 1st June and 30th June, it made taxable outward supplies worth ` 12,00,000, and received taxable inward supplies worth ` 5,00,000 + GST @ 18%, all from registered suppliers. (3) The company did not issue proper tax invoices during this period but issued bill of supply without mentioning GST. From the above-mentioned information, you are required to examine the legal validity of registration, liability for GST, and Invoicing for the month of June 2025 under GST Law.",
+      "questionType": "Case Study",
+      "topic": "GST - Registration, Tax Invoice",
+      "subTopic": "Compulsory Registration, Issue of Tax Invoice",
+      "sectionNumber": null,
+      "isCaseStudy": true,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    },
+    {
+      "questionId": "TL_2025_DECEMBER_Q6AIV",
+      "questionNumber": "6A(iv)",
+      "marks": 5,
+      "questionText": "State whether the following supplies would be treated as supply of goods or supply of services as per Schedule II of CGST Act, 2017 : (a) Renting of immovable property. (b) Goods forming part of business assets are transferred or disposed of by/under Directions of person carrying on the business. (c) Transfer of right in goods without transfer of title in goods. (d) Transfer of title in goods under an agreement which stipulates that property shall pass at a future date. (e) Temporary transfer or permitting use or enjoyment of any intellectual property right.",
+      "questionType": "Descriptive",
+      "topic": "GST - Scope of Supply",
+      "subTopic": "Activities treated as Supply of Goods or Supply of Services (Schedule II)",
+      "sectionNumber": "Schedule II of CGST Act, 2017",
+      "isCaseStudy": false,
+      "isPractical": false,
+      "frequencyMetadata": {
+        "appearsInPYQ": true,
+        "frequencyCount": 1,
+        "yearsAppeared": [
+          2025
+        ]
+      }
+    }
+  ]
+}
