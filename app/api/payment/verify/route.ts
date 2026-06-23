@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { verifyUserAuth } from "@/lib/firebase-server";
 import { adminDb } from "@/lib/firebase-admin";
+import { PLAN_PRICES } from "@/lib/payment-config";
 
 async function fetchRazorpayOrder(orderId: string): Promise<{ amount: number }> {
   const keyId = (process.env.RAZORPAY_LIVE_KEY || "").trim();
@@ -69,13 +70,13 @@ export async function POST(req: NextRequest) {
     let plan: "monthly" | "quarterly" | "yearly" | "free" = "free";
     let durationDays = 0;
 
-    if (amount === 69900) {
+    if (amount === PLAN_PRICES.monthly) {
       plan = "monthly";
       durationDays = 30;
-    } else if (amount === 319900) {
+    } else if (amount === PLAN_PRICES.quarterly) {
       plan = "quarterly";
       durationDays = 180; // 6 months
-    } else if (amount === 649900) {
+    } else if (amount === PLAN_PRICES.yearly) {
       plan = "yearly";
       durationDays = 365;
     }

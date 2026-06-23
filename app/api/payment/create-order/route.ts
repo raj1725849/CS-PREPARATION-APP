@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyUserAuth } from "@/lib/firebase-server";
 
-const PLAN_PRICES: Record<string, number> = {
-  monthly: 69900,     // ₹699 in paise
-  quarterly: 319900,   // ₹3,199 in paise (6-Month Plan)
-  yearly: 649900      // ₹6,499 in paise (Annual Plan)
-};
+import { PLAN_PRICES } from "@/lib/payment-config";
 
 export async function POST(req: NextRequest) {
   try {
