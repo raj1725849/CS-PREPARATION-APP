@@ -114,6 +114,7 @@ STRICT RULE: Return ONLY a valid JSON object. No explanations, no markdown fence
     const qNum = String(q.questionNumber || `Q${idx + 1}`).trim();
     const qText = String(q.questionText || "").trim();
     let qMarks = parseInt(q.marks, 10);
+    const hasExplicitParentMarks = !isNaN(qMarks) && qMarks > 0;
 
     if (isNaN(qMarks) || qMarks <= 0) {
       // Try regex extract from text
@@ -130,11 +131,14 @@ STRICT RULE: Return ONLY a valid JSON object. No explanations, no markdown fence
         const subNum = String(sub.questionNumber || `${qNum}(${String.fromCharCode(97 + sIdx)})`).trim();
         const subText = String(sub.questionText || "").trim();
         let subMarks = parseInt(sub.marks, 10);
+        let hasExplicitSubMarks = !isNaN(subMarks) && subMarks > 0;
 
-        if (isNaN(subMarks) || subMarks <= 0) {
+        if (!hasExplicitSubMarks) {
           const extractedSub = extractMarksFromText(subText);
-          subMarks = extractedSub || 5;
-          warnings.push(`Marks not clearly detected for subpart ${subNum}. Defaulted to ${subMarks} marks.`);
+          if (extractedSub) {
+            subMarks = extractedSub;
+            hasExplicitSubMarks = true;
+          }
         }
 
         const subId = sub.subpartId || String.fromCharCode(97 + sIdx);
@@ -145,12 +149,39 @@ STRICT RULE: Return ONLY a valid JSON object. No explanations, no markdown fence
           questionText: subText,
           subpartId: subId,
           text: subText,
-          marks: subMarks
+          marks: hasExplicitSubMarks ? subMarks : -1
         });
-        calculatedTotalMarks += subMarks;
       });
-      // The parent marks is the sum of subparts
-      qMarks = processedSubparts.reduce((sum, s) => sum + s.marks, 0);
+
+      if (hasExplicitParentMarks) {
+        // Parent marks is specified!
+        qMarks = parseInt(q.marks, 10);
+        calculatedTotalMarks += qMarks;
+
+        // Resolve any subparts that don't have explicit marks
+        const unresolved = processedSubparts.filter(s => s.marks === -1);
+        const resolvedSum = processedSubparts.filter(s => s.marks !== -1).reduce((sum, s) => sum + s.marks, 0);
+
+        if (unresolved.length > 0) {
+          const remaining = Math.max(0, qMarks - resolvedSum);
+          const distributedVal = remaining / unresolved.length;
+          processedSubparts.forEach(s => {
+            if (s.marks === -1) {
+              s.marks = distributedVal;
+            }
+          });
+        }
+      } else {
+        // Parent marks is NOT specified. We sum up subparts (defaulting missing ones to 5)
+        processedSubparts.forEach(s => {
+          if (s.marks === -1) {
+            s.marks = 5;
+            warnings.push(`Marks not clearly detected for subpart ${s.questionNumber}. Defaulted to 5 marks.`);
+          }
+        });
+        qMarks = processedSubparts.reduce((sum, s) => sum + s.marks, 0);
+        calculatedTotalMarks += qMarks;
+      }
     } else {
       calculatedTotalMarks += qMarks;
     }
@@ -228,6 +259,15 @@ function isSubpartPrefix(prefix: string): boolean {
   return false;
 }
 
+function parentNumbersMatch(numStrA: string, numStrB: string): boolean {
+  const cleanA = numStrA.trim().replace(/^Q(?:uestion)?\.?\s*/i, "").match(/^\d+/);
+  const cleanB = numStrB.trim().replace(/^Q(?:uestion)?\.?\s*/i, "").match(/^\d+/);
+  if (cleanA && cleanB) {
+    return parseInt(cleanA[0], 10) === parseInt(cleanB[0], 10);
+  }
+  return numStrA.trim().toLowerCase() === numStrB.trim().toLowerCase();
+}
+
 function groupHierarchy(rawQuestions: any[], warnings: string[]): any[] {
   const grouped: any[] = [];
   let currentParent: any = null;
@@ -242,12 +282,11 @@ function groupHierarchy(rawQuestions: any[], warnings: string[]): any[] {
     if (compoundMatch) {
       const parentNum = compoundMatch[1];
       const subLetter = compoundMatch[2].toLowerCase();
-      const parentNumStr = `Q${parentNum}`;
 
-      let parentQ = grouped.find(g => g.questionNumber === parentNum || g.questionNumber === parentNumStr);
+      let parentQ = grouped.find(g => parentNumbersMatch(g.questionNumber, parentNum));
       if (!parentQ) {
         parentQ = {
-          questionNumber: parentNumStr,
+          questionNumber: `Q${parentNum}`,
           questionText: `Question ${parentNum}`,
           marks: 5,
           subparts: []
@@ -340,13 +379,13 @@ function regexFallbackParse(text: string): { questions: any[] } {
         const subLetter = subpartMatch[2];
         const subNumStr = `${parentNum}(${subLetter.toLowerCase()})`;
         
-        let parentQ = questions.find(q => q.questionNumber === parentNum || q.questionNumber === `Q${parentNum}`);
+        let parentQ = questions.find(q => parentNumbersMatch(q.questionNumber, parentNum));
         if (!parentQ) {
           parentQ = {
             questionId: `q_${Date.now()}_${Math.random().toString(36).slice(2, 5)}`,
             questionNumber: parentNum,
             questionText: `Question ${parentNum}`,
-            marks: 5,
+            marks: null as any,
             subparts: []
           };
           questions.push(parentQ);
@@ -356,14 +395,14 @@ function regexFallbackParse(text: string): { questions: any[] } {
           parentQ.subparts = [];
         }
 
-        const marks = extractMarksFromText(trimmed) || 5;
+        const marks = extractMarksFromText(trimmed);
         parentQ.subparts.push({
           questionId: `${parentQ.questionId}_sub_${parentQ.subparts.length + 1}`,
           questionNumber: subNumStr,
           questionText: cleanText,
           subpartId: subLetter.toLowerCase(),
           text: cleanText,
-          marks: marks
+          marks: marks as any
         });
         currentQ = parentQ;
       } else if (isSubpartPrefix(fullNum)) {
@@ -373,34 +412,34 @@ function regexFallbackParse(text: string): { questions: any[] } {
           }
           const subLetter = fullNum.replace(/[().]/g, "").toLowerCase();
           const subNumStr = `${currentQ.questionNumber}(${subLetter})`;
-          const marks = extractMarksFromText(trimmed) || 5;
+          const marks = extractMarksFromText(trimmed);
           currentQ.subparts.push({
             questionId: `${currentQ.questionId}_sub_${currentQ.subparts.length + 1}`,
             questionNumber: subNumStr,
             questionText: cleanText,
             subpartId: subLetter,
             text: cleanText,
-            marks: marks
+            marks: marks as any
           });
         } else {
           // Orphan subpart inside regex fallback
-          const marks = extractMarksFromText(trimmed) || 5;
+          const marks = extractMarksFromText(trimmed);
           currentQ = {
             questionId: `q_${Date.now()}_${Math.random().toString(36).slice(2, 5)}`,
             questionNumber: fullNum,
             questionText: cleanText,
-            marks: marks,
+            marks: marks as any,
             subparts: []
           };
           questions.push(currentQ);
         }
       } else {
-        const marks = extractMarksFromText(trimmed) || 5;
+        const marks = extractMarksFromText(trimmed);
         currentQ = {
           questionId: `q_${Date.now()}_${Math.random().toString(36).slice(2, 5)}`,
           questionNumber: fullNum,
           questionText: cleanText,
-          marks: marks,
+          marks: marks as any,
           subparts: []
         };
         questions.push(currentQ);
