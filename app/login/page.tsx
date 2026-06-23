@@ -119,7 +119,8 @@ export default function AuthPage() {
                       body: JSON.stringify({
                         razorpay_payment_id: response.razorpay_payment_id,
                         razorpay_order_id: response.razorpay_order_id,
-                        razorpay_signature: response.razorpay_signature
+                        razorpay_signature: response.razorpay_signature,
+                        plan: selectedPlan
                       })
                     });
 
@@ -129,6 +130,16 @@ export default function AuthPage() {
 
                     const verifyData = await verifyRes.json();
                     if (verifyData.verified) {
+                      // Perform client-side upgrade fallback for local testing
+                      await updateUserProfile({
+                        plan: selectedPlan,
+                        subscriptionStatus: "active",
+                        expiresAt: new Date(Date.now() + (selectedPlan === "monthly" ? 30 : selectedPlan === "quarterly" ? 180 : 365) * 24 * 60 * 60 * 1000).toISOString(),
+                        razorpayPaymentId: response.razorpay_payment_id,
+                        razorpayOrderId: response.razorpay_order_id,
+                        upgradedAt: new Date().toISOString()
+                      });
+
                       if (typeof window !== "undefined") {
                         sessionStorage.removeItem("signing_up");
                       }
@@ -341,7 +352,7 @@ export default function AuthPage() {
                       }`}
                     >
                       <span className="font-semibold text-sm">Monthly Plan</span>
-                      <span className="text-xs text-on-surface-variant mt-1">₹699/mo (Unlimited)</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹1/mo (Unlimited)</span>
                     </button>
                     <button
                       type="button"

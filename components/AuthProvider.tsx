@@ -38,6 +38,38 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
+    // Intercept window.fetch to attach the x-local-plan header when on localhost
+    if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+      const originalFetch = window.fetch;
+      window.fetch = function (input, init) {
+        const localSubStr = localStorage.getItem("cs_prep_local_subscription");
+        if (localSubStr) {
+          try {
+            const localSub = JSON.parse(localSubStr);
+            if (localSub.plan) {
+              init = init || {};
+              init.headers = init.headers || {};
+              if (init.headers instanceof Headers) {
+                init.headers.set("x-local-plan", localSub.plan);
+              } else if (Array.isArray(init.headers)) {
+                const idx = init.headers.findIndex(([k]) => k.toLowerCase() === "x-local-plan");
+                if (idx !== -1) {
+                  init.headers[idx][1] = localSub.plan;
+                } else {
+                  init.headers.push(["x-local-plan", localSub.plan]);
+                }
+              } else {
+                (init.headers as any)["x-local-plan"] = localSub.plan;
+              }
+            }
+          } catch (e) {
+            console.error("Error setting local plan header:", e);
+          }
+        }
+        return originalFetch.call(this, input, init);
+      };
+    }
+
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setUser(user);
       if (user) {

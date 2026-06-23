@@ -61,6 +61,12 @@ export async function verifyUserAndEnforceLimit(
 
   const uid = payload.sub;
 
+  // Development bypass based on x-local-plan header
+  const localPlan = req.headers.get("x-local-plan");
+  if (process.env.NODE_ENV === "development" && localPlan && localPlan !== "free") {
+    return { uid, plan: localPlan };
+  }
+
   // Verify token and fetch document from Firestore REST API
   // Using user's authorization token to validate the request
   const firestoreRes = await fetch(
@@ -198,6 +204,12 @@ export async function verifyUserAuth(
   }
 
   const uid = payload.sub;
+
+  // Development bypass based on x-local-plan header
+  const localPlan = req.headers.get("x-local-plan");
+  if (process.env.NODE_ENV === "development" && localPlan && localPlan !== "free") {
+    return { uid, plan: localPlan };
+  }
 
   const firestoreRes = await fetch(
     `https://firestore.googleapis.com/v1/projects/cs-prep-dashboard-v1/databases/(default)/documents/users/${uid}`,

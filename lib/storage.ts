@@ -259,6 +259,7 @@ export async function getUserProfile(): Promise<UserProfile | null> {
   try {
     const docRef = doc(db, "users", user.uid);
     const snap = await getDoc(docRef);
+    let dbProfile: UserProfile | null = null;
     if (snap.exists()) {
       const data = snap.data();
       const plan = data.plan || "free";
@@ -269,7 +270,7 @@ export async function getUserProfile(): Promise<UserProfile | null> {
         activePlan = "free";
       }
 
-      return {
+      dbProfile = {
         uid: user.uid,
         email: user.email || data.email || null,
         displayName: user.displayName || data.displayName || null,
@@ -283,18 +284,42 @@ export async function getUserProfile(): Promise<UserProfile | null> {
         razorpayOrderId: data.razorpayOrderId || null,
         upgradedAt: data.upgradedAt || null
       };
+    } else {
+      // Default profile if user doc doesn't exist yet but user is logged in
+      dbProfile = {
+        uid: user.uid,
+        email: user.email,
+        displayName: user.displayName,
+        plan: "free",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
     }
-    
-    // Default profile if user doc doesn't exist yet but user is logged in
-    const defaultProfile: UserProfile = {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      plan: "free",
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
-    return defaultProfile;
+
+    // Merge with local storage subscription if running on localhost (for dev checkout testing)
+    if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+      const localSubStr = localStorage.getItem("cs_prep_local_subscription");
+      if (localSubStr) {
+        try {
+          const localSub = JSON.parse(localSubStr);
+          if (localSub.uid === user.uid) {
+            dbProfile = {
+              ...dbProfile,
+              plan: localSub.plan || dbProfile.plan,
+              subscriptionStatus: localSub.subscriptionStatus || dbProfile.subscriptionStatus,
+              expiresAt: localSub.expiresAt || dbProfile.expiresAt,
+              razorpayPaymentId: localSub.razorpayPaymentId || dbProfile.razorpayPaymentId,
+              razorpayOrderId: localSub.razorpayOrderId || dbProfile.razorpayOrderId,
+              upgradedAt: localSub.upgradedAt || dbProfile.upgradedAt
+            };
+          }
+        } catch (e) {
+          console.error("Error merging local subscription:", e);
+        }
+      }
+    }
+
+    return dbProfile;
   } catch (err) {
     console.error("Failed to fetch user profile from Firestore:", err);
     return null;
@@ -305,9 +330,41 @@ export async function updateUserProfile(data: Partial<UserProfile>): Promise<voi
   const user = auth.currentUser;
   if (!user) return;
 
+  const subscriptionKeys = ["plan", "subscriptionStatus", "expiresAt", "razorpayPaymentId", "razorpayOrderId", "upgradedAt"];
+
+  // If in localhost and updating subscription keys, save to localStorage
+  if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+    const hasSubKeys = Object.keys(data).some(key => subscriptionKeys.includes(key));
+    if (hasSubKeys) {
+      try {
+        const localSubStr = localStorage.getItem("cs_prep_local_subscription");
+        let currentSub = localSubStr ? JSON.parse(localSubStr) : {};
+        currentSub = {
+          ...currentSub,
+          uid: user.uid,
+          ...Object.fromEntries(Object.entries(data).filter(([k]) => subscriptionKeys.includes(k)))
+        };
+        localStorage.setItem("cs_prep_local_subscription", JSON.stringify(currentSub));
+        console.log("[STORAGE] Saved subscription info locally:", currentSub);
+      } catch (e) {
+        console.error("Error updating local subscription:", e);
+      }
+    }
+  }
+
+  // Filter out subscription keys from the payload to avoid firestore rules error on localhost
+  const firestoreData = { ...data };
+  if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+    subscriptionKeys.forEach(k => delete (firestoreData as any)[k]);
+  }
+
+  if (Object.keys(firestoreData).length === 0) {
+    return;
+  }
+
   try {
     const docRef = doc(db, "users", user.uid);
-    await setDoc(docRef, sanitizeForFirestore({ ...data, updatedAt: new Date().toISOString() }), { merge: true });
+    await setDoc(docRef, sanitizeForFirestore({ ...firestoreData, updatedAt: new Date().toISOString() }), { merge: true });
   } catch (err) {
     console.error("Failed to update user profile in Firestore:", err);
   }
