@@ -296,29 +296,6 @@ export async function getUserProfile(): Promise<UserProfile | null> {
       };
     }
 
-    // Merge with local storage subscription if running on localhost (for dev checkout testing)
-    if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
-      const localSubStr = localStorage.getItem("cs_prep_local_subscription");
-      if (localSubStr) {
-        try {
-          const localSub = JSON.parse(localSubStr);
-          if (localSub.uid === user.uid) {
-            dbProfile = {
-              ...dbProfile,
-              plan: localSub.plan || dbProfile.plan,
-              subscriptionStatus: localSub.subscriptionStatus || dbProfile.subscriptionStatus,
-              expiresAt: localSub.expiresAt || dbProfile.expiresAt,
-              razorpayPaymentId: localSub.razorpayPaymentId || dbProfile.razorpayPaymentId,
-              razorpayOrderId: localSub.razorpayOrderId || dbProfile.razorpayOrderId,
-              upgradedAt: localSub.upgradedAt || dbProfile.upgradedAt
-            };
-          }
-        } catch (e) {
-          console.error("Error merging local subscription:", e);
-        }
-      }
-    }
-
     return dbProfile;
   } catch (err) {
     console.error("Failed to fetch user profile from Firestore:", err);

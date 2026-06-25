@@ -108,17 +108,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
             }
 
             const verifyData = await verifyRes.json();
-            if (verifyData.verified) {
-              // Perform client-side upgrade fallback for local testing
-              await updateUserProfile({
-                plan: selectedPlan,
-                subscriptionStatus: "active",
-                expiresAt: new Date(Date.now() + (selectedPlan === "monthly" ? 30 : selectedPlan === "quarterly" ? 180 : 365) * 24 * 60 * 60 * 1000).toISOString(),
-                razorpayPaymentId: response.razorpay_payment_id,
-                razorpayOrderId: response.razorpay_order_id,
-                upgradedAt: new Date().toISOString()
-              });
-
+            if (verifyData.verified && verifyData.upgraded) {
               // 6. Refresh plan context state (updated server-side)
               await refreshPlan();
               setSuccess(true);
@@ -126,6 +116,8 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
                 setSuccess(false);
                 onClose();
               }, 1500);
+            } else if (verifyData.verified && !verifyData.upgraded) {
+              alert(`Payment verified, but upgrading failed: ${verifyData.error || "Unknown error"}`);
             } else {
               alert("Payment verification failed. Please try again or contact support.");
             }

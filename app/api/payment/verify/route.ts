@@ -2,24 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { verifyUserAuth } from "@/lib/firebase-server";
 import { adminDb } from "@/lib/firebase-admin";
-import { PLAN_PRICES } from "@/lib/payment-config";
-
-async function fetchRazorpayOrder(orderId: string): Promise<{ amount: number }> {
-  const keyId = (process.env.RAZORPAY_LIVE_KEY || "").trim();
-  const keySecret = (process.env.RAZORPAY_SECRET_LIVE_KEY || "").trim();
-  const authHeader = `Basic ${Buffer.from(`${keyId}:${keySecret}`).toString("base64")}`;
-
-  const res = await fetch(`https://api.razorpay.com/v1/orders/${orderId}`, {
-    headers: { Authorization: authHeader }
-  });
-
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Failed to fetch order from Razorpay: ${errText}`);
-  }
-
-  return res.json();
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -32,12 +14,27 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: err.message || "Unauthorized" }, { status: 401 });
     }
 
-    const { razorpay_payment_id, razorpay_order_id, plan: bodyPlan } = await req.json();
-
-    // Verification bypassed as requested. Immediately upgrade the plan in Firestore.
+    const { razorpay_payment_id, razorpay_order_id, razorpay_signature, plan: bodyPlan } = await req.json();
     const plan = bodyPlan || "monthly";
-    const durationDays = plan === "monthly" ? 30 : plan === "quarterly" ? 180 : 365;
-    const expiresAt = new Date(Date.now() + durationDays * 24 * 60 * 60 * 1000).toISOString();
+
+    // 2. Verify Razorpay Signature
+    const secret = process.env.RAZORPAY_SECRET_LIVE_KEY || "";
+    const generatedSignature = crypto
+      .createHmac("sha256", secret)
+      .update(razorpay_order_id + "|" + razorpay_payment_id)
+      .digest("hex");
+
+    if (generatedSignature !== razorpay_signature) {
+      return NextResponse.json({ error: "Invalid payment signature" }, { status: 400 });
+    }
+
+    // 3. Update Firestore using Admin SDK
+    const durationMonths = plan === "monthly" ? 1 : plan === "quarterly" ? 6 : 12;
+    const expiresAtDate = new Date();
+    expiresAtDate.setMonth(expiresAtDate.getMonth() + durationMonths);
+    const expiresAt = expiresAtDate.toISOString();
+
+    const now = new Date().toISOString();
 
     try {
       const userDocRef = adminDb.collection("users").doc(uid);
@@ -45,18 +42,20 @@ export async function POST(req: NextRequest) {
         plan,
         subscriptionStatus: "active",
         expiresAt,
-        razorpayPaymentId: razorpay_payment_id || "bypass",
-        razorpayOrderId: razorpay_order_id || "bypass",
-        upgradedAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        razorpayPaymentId: razorpay_payment_id,
+        razorpayOrderId: razorpay_order_id,
+        upgradedAt: now,
+        updatedAt: now
       }, { merge: true });
 
-      console.log(`[VERIFY BYPASS] Successfully upgraded user ${uid} to plan ${plan} server-side.`);
-    } catch (dbErr: any) {
-      console.warn("[VERIFY BYPASS] Server-side Firestore update failed (expected locally without GCP credentials):", dbErr.message);
-    }
+      console.log(`[PAYMENT VERIFIED] Order: ${razorpay_order_id}, Payment: ${razorpay_payment_id}, UID: ${uid}, Plan: ${plan}, Success: true, Timestamp: ${now}`);
 
-    return NextResponse.json({ verified: true, plan });
+      return NextResponse.json({ success: true, verified: true, upgraded: true });
+    } catch (dbErr: any) {
+      console.error(`[PAYMENT ERROR] Order: ${razorpay_order_id}, Payment: ${razorpay_payment_id}, UID: ${uid}, Plan: ${plan}, Success: false, Timestamp: ${now}`);
+      console.error("Firestore update failed:", dbErr.message);
+      return NextResponse.json({ success: false, verified: true, upgraded: false, error: "Firestore update failed" });
+    }
   } catch (err: unknown) {
     console.error("Failed to verify Razorpay signature:", err);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
