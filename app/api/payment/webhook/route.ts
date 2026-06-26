@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
-import { adminDb } from "@/lib/firebase-admin";
+import { getAdminDb } from "@/lib/firebase-admin";
 import { PLAN_PRICES } from "@/lib/payment-config";
+
+export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
@@ -61,6 +63,7 @@ export async function POST(req: NextRequest) {
       const expiresAt = new Date(Date.now() + durationDays * 24 * 60 * 60 * 1000).toISOString();
 
       // Update Firestore using Admin SDK
+      const adminDb = getAdminDb();
       const userDocRef = adminDb.collection("users").doc(uid);
       await userDocRef.set({
         plan,

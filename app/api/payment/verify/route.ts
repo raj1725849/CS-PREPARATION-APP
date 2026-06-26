@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { verifyUserAuth } from "@/lib/firebase-server";
-import { adminDb } from "@/lib/firebase-admin";
+import { getAdminDb } from "@/lib/firebase-admin";
+
+export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
@@ -37,6 +39,7 @@ export async function POST(req: NextRequest) {
     const now = new Date().toISOString();
 
     try {
+      const adminDb = getAdminDb();
       const userDocRef = adminDb.collection("users").doc(uid);
       await userDocRef.set({
         plan,
