@@ -1,6 +1,5 @@
 import { getApps, initializeApp, cert } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
-import { getAuth } from "firebase-admin/auth";
 
 function normalizePrivateKey(privateKey: string) {
   let key = privateKey.trim();
@@ -47,8 +46,4 @@ function getFirebaseAdminApp() {
 
 export function getAdminDb() {
   return getFirestore(getFirebaseAdminApp());
-}
-
-export function getAdminAuth() {
-  return getAuth(getFirebaseAdminApp());
 }
