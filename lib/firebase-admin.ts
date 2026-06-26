@@ -21,22 +21,24 @@ function getFirebaseAdminApp() {
   }
 
   try {
-    if (process.env.FIREBASE_CLIENT_EMAIL && process.env.FIREBASE_PRIVATE_KEY) {
-      const app = initializeApp({
-        credential: cert({
-          projectId: process.env.FIREBASE_PROJECT_ID || "cs-prep-dashboard-v1",
-          clientEmail: process.env.FIREBASE_CLIENT_EMAIL.trim(),
-          privateKey: normalizePrivateKey(process.env.FIREBASE_PRIVATE_KEY),
-        }),
-      });
-      console.log("[FIREBASE_ADMIN] Initialized with service account cert.");
-      return app;
+    const clientEmail = process.env.FIREBASE_CLIENT_EMAIL?.trim();
+    const privateKey = process.env.FIREBASE_PRIVATE_KEY?.trim();
+    const projectId = process.env.FIREBASE_PROJECT_ID?.trim() || "cs-prep-dashboard-v1";
+
+    if (!clientEmail || !privateKey) {
+      throw new Error(
+        "Firebase Admin service account env vars are missing. Set FIREBASE_CLIENT_EMAIL and FIREBASE_PRIVATE_KEY in the production environment."
+      );
     }
 
     const app = initializeApp({
-      projectId: process.env.FIREBASE_PROJECT_ID || "cs-prep-dashboard-v1",
+      credential: cert({
+        projectId,
+        clientEmail,
+        privateKey: normalizePrivateKey(privateKey),
+      }),
     });
-    console.log("[FIREBASE_ADMIN] Initialized with Application Default Credentials.");
+    console.log("[FIREBASE_ADMIN] Initialized with service account cert.");
     return app;
   } catch (err) {
     console.error("[FIREBASE_ADMIN] Initialization failed:", err);
