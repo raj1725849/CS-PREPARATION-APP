@@ -364,7 +364,7 @@ export default function AuthPage() {
                       }`}
                     >
                       <span className="font-semibold text-sm">Monthly Plan</span>
-                      <span className="text-xs text-on-surface-variant mt-1">₹1/mo (Unlimited)</span>
+                      <span className="text-xs text-on-surface-variant mt-1">₹699/mo (Unlimited)</span>
                     </button>
                     <button
                       type="button"

@@ -77,7 +77,7 @@ export default function Hero() {
           className="text-[15px] md:text-[17px] text-lp-muted max-w-[580px] mb-12 leading-[1.75]"
           style={{ willChange: "transform" }}
         >
-          Practice with unlimited ICSI-pattern exam papers, and get your law and tax answers evaluated line-by-line just like an examiner would. Starting at ₹1/month.
+          Practice with unlimited ICSI-pattern exam papers, and get your law and tax answers evaluated line-by-line just like an examiner would. Starting at ₹699/month.
         </motion.p>
 
         <motion.div
