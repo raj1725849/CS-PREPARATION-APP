@@ -13,7 +13,7 @@ export default function Pricing() {
   const plans = [
     {
       title: "Monthly Plan",
-      price: "₹1",
+      price: "₹699",
       period: "/ month",
       perks: [
         "30 AI Question Papers per month",
@@ -174,7 +174,7 @@ export default function Pricing() {
           <div className="flex flex-col md:flex-row items-center justify-around gap-6 divide-y md:divide-y-0 md:divide-x divide-lp-border-medium/30">
             <div className="flex flex-col items-center md:items-start md:px-6 w-full md:w-auto">
               <span className="text-xs uppercase tracking-wider text-lp-muted mb-1 font-semibold">Monthly Plan</span>
-              <span className="text-[15px] font-bold text-lp-text">₹1/month</span>
+              <span className="text-[15px] font-bold text-lp-text">₹699/month</span>
             </div>
             <div className="flex flex-col items-center md:items-start md:px-8 w-full md:w-auto pt-4 md:pt-0">
               <span className="text-xs uppercase tracking-wider text-lp-accent mb-1 font-semibold">6-Month Exam Pass</span>

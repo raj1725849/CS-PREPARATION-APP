@@ -109,8 +109,8 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
 
             const verifyData = await verifyRes.json();
             if (verifyData.verified && verifyData.upgraded) {
-              // 6. Refresh plan context state (updated server-side)
-              await refreshPlan();
+              // 6. Refresh plan context state immediately
+              await refreshPlan(selectedPlan);
               setSuccess(true);
               setTimeout(() => {
                 setSuccess(false);
@@ -151,7 +151,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
     {
       id: "monthly" as const,
       name: "Monthly Plan",
-      price: "₹1",
+      price: "₹699",
       period: "month",
       savings: null,
       features: [

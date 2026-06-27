@@ -11,7 +11,7 @@ interface AuthContextType {
   user: User | null;
   plan: BillingPlan;
   loading: boolean;
-  refreshPlan: () => Promise<void>;
+  refreshPlan: (forcePlan?: BillingPlan) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -30,7 +30,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const refreshPlan = async () => {
+  const refreshPlan = async (forcePlan?: BillingPlan) => {
+    if (forcePlan) {
+      setPlan(forcePlan);
+      return;
+    }
     const profile = await getUserProfile();
     if (profile) {
       setPlan(profile.plan);
