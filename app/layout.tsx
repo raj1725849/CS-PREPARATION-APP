@@ -22,6 +22,9 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "CS Prep - ICSI Executive Practice",
   description: "Company Secretary exam practice system using AI",
+  verification: {
+    google: "RqMwyqAK1B7gFS8hLQmzxnJe4FbUw0ik4bIljk3XAlw",
+  },
 };
 
 export default function RootLayout({
