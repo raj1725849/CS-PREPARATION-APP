@@ -125,106 +125,139 @@ export async function POST(req: NextRequest) {
   const CHUNK_SIZE = 5;
   const totalChunks = Math.ceil(blueprint.slots.length / CHUNK_SIZE);
 
+  const CONCURRENCY_LIMIT = 3;
+  const chunkResults: { paperText: string; questions: any[] }[] = new Array(totalChunks);
+
+  for (let batchStart = 0; batchStart < totalChunks; batchStart += CONCURRENCY_LIMIT) {
+    const batchPromises = [];
+    
+    for (let j = 0; j < CONCURRENCY_LIMIT && batchStart + j < totalChunks; j++) {
+      const chunkIndex = batchStart + j;
+      const startIdx = chunkIndex * CHUNK_SIZE;
+      const endIdx = startIdx + CHUNK_SIZE;
+      const blueprintChunk = blueprint.slots.slice(startIdx, endIdx);
+
+      const chunkPrompt = buildChunkedGeneratePrompt({
+        subject, scope, topic, questionTypes, marks, difficulty, pdfContext, 
+        blueprintChunk, chunkIndex, totalChunks
+      });
+
+      const chunkPromise = (async () => {
+        try {
+          let result;
+          let lastGeminiErr;
+          const maxRetries = getGeminiKeyCount();
+
+          for (let i = 0; i < maxRetries; i++) {
+            try {
+              const model = getFlashModel()
+              // Force JSON output mode in Gemini
+              result = await model.generateContent({
+                contents: [{ role: "user", parts: [{ text: chunkPrompt }] }],
+                generationConfig: {
+                  responseMimeType: "application/json",
+                  temperature: 0.7,
+                  maxOutputTokens: 8192
+                }
+              });
+              break; // Success!
+            } catch (err: any) {
+              lastGeminiErr = err;
+              console.warn(`Gemini chunk ${chunkIndex+1} attempt ${i + 1}/${maxRetries} failed:`, err.message);
+            }
+          }
+
+          if (!result) {
+            throw lastGeminiErr;
+          }
+
+          const responseText = result.response.text();
+          if (!responseText?.trim()) {
+            throw new Error("Gemini returned empty response");
+          }
+
+          let parsedData: any;
+          try {
+            parsedData = parseAiResponse(responseText);
+          } catch (parseErr: any) {
+            throw parseErr;
+          }
+
+          return {
+            chunkIndex,
+            paperText: parsedData.paperText || "",
+            questions: parsedData.questions || []
+          };
+
+        } catch (geminiErr: unknown) {
+          console.warn(`/api/generate Gemini chunk ${chunkIndex+1} failed, falling back to OpenRouter:`, geminiErr)
+          
+          try {
+            const fallbackResponse = await generateWithOpenRouter(
+              chunkPrompt + "\nIMPORTANT: You must return a valid JSON object matching the requested schema. Do not output anything other than JSON."
+            )
+            
+            if (!fallbackResponse?.trim()) {
+              throw new Error("OpenRouter returned empty response")
+            }
+
+            let parsedData: any;
+            try {
+              parsedData = parseAiResponse(fallbackResponse);
+            } catch (parseErr: any) {
+              throw parseErr;
+            }
+
+            return {
+              chunkIndex,
+              paperText: parsedData.paperText || "",
+              questions: parsedData.questions || []
+            };
+
+          } catch (fallbackErr: any) {
+            console.error(`/api/generate OpenRouter chunk ${chunkIndex+1} fallback error:`, fallbackErr)
+            
+            if (fallbackErr instanceof AiParseError || geminiErr instanceof AiParseError) {
+              const primaryError = geminiErr instanceof AiParseError ? geminiErr : fallbackErr;
+              throw primaryError; // Will be caught by outer try/catch
+            }
+
+            throw new Error(`Models failed on chunk ${chunkIndex+1}. Gemini Error: ${(geminiErr as Error).message}. OpenRouter Error: ${fallbackErr.message}`);
+          }
+        }
+      })();
+      
+      batchPromises.push(chunkPromise);
+    }
+    
+    // Wait for the current batch to finish
+    try {
+      const batchResults = await Promise.all(batchPromises);
+      for (const res of batchResults) {
+        chunkResults[res.chunkIndex] = { paperText: res.paperText, questions: res.questions };
+      }
+    } catch (batchErr: any) {
+      if (batchErr instanceof AiParseError) {
+        return NextResponse.json<GenerateError>(
+          { error: batchErr.message, code: "GEMINI_ERROR" },
+          { status: 502 }
+        );
+      }
+      return NextResponse.json<GenerateError>(
+        { error: batchErr.message, code: "GEMINI_ERROR" },
+        { status: 502 }
+      );
+    }
+  }
+
+  // Reassemble the full paper text and questions in order
   let fullPaperText = "";
   let allRawQuestions: any[] = [];
-
-  for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
-    const startIdx = chunkIndex * CHUNK_SIZE;
-    const endIdx = startIdx + CHUNK_SIZE;
-    const blueprintChunk = blueprint.slots.slice(startIdx, endIdx);
-
-    const chunkPrompt = buildChunkedGeneratePrompt({
-      subject, scope, topic, questionTypes, marks, difficulty, pdfContext, 
-      blueprintChunk, chunkIndex, totalChunks
-    });
-
-    try {
-      let result;
-      let lastGeminiErr;
-      const maxRetries = getGeminiKeyCount();
-
-      for (let i = 0; i < maxRetries; i++) {
-        try {
-          const model = getFlashModel()
-          // Force JSON output mode in Gemini
-          result = await model.generateContent({
-            contents: [{ role: "user", parts: [{ text: chunkPrompt }] }],
-            generationConfig: {
-              responseMimeType: "application/json",
-              temperature: 0.7,
-              maxOutputTokens: 8192
-            }
-          });
-          break; // Success!
-        } catch (err: any) {
-          lastGeminiErr = err;
-          console.warn(`Gemini chunk ${chunkIndex+1} attempt ${i + 1}/${maxRetries} failed:`, err.message);
-        }
-      }
-
-      if (!result) {
-        throw lastGeminiErr;
-      }
-
-      const responseText = result.response.text();
-      if (!responseText?.trim()) {
-        throw new Error("Gemini returned empty response");
-      }
-
-      let parsedData: any;
-      try {
-        parsedData = parseAiResponse(responseText);
-      } catch (parseErr: any) {
-        throw parseErr;
-      }
-
-      const paperText = parsedData.paperText || "";
-      const rawQuestions = parsedData.questions || [];
-
-      fullPaperText += (chunkIndex > 0 ? "\n\n" : "") + paperText;
-      allRawQuestions = allRawQuestions.concat(rawQuestions);
-
-    } catch (geminiErr: unknown) {
-      console.warn(`/api/generate Gemini chunk ${chunkIndex+1} failed, falling back to OpenRouter:`, geminiErr)
-      
-      try {
-        const fallbackResponse = await generateWithOpenRouter(
-          chunkPrompt + "\nIMPORTANT: You must return a valid JSON object matching the requested schema. Do not output anything other than JSON."
-        )
-        
-        if (!fallbackResponse?.trim()) {
-          throw new Error("OpenRouter returned empty response")
-        }
-
-        let parsedData: any;
-        try {
-          parsedData = parseAiResponse(fallbackResponse);
-        } catch (parseErr: any) {
-          throw parseErr;
-        }
-
-        const paperText = parsedData.paperText || "";
-        const rawQuestions = parsedData.questions || [];
-
-        fullPaperText += (chunkIndex > 0 ? "\n\n" : "") + paperText;
-        allRawQuestions = allRawQuestions.concat(rawQuestions);
-
-      } catch (fallbackErr: any) {
-        console.error(`/api/generate OpenRouter chunk ${chunkIndex+1} fallback error:`, fallbackErr)
-        
-        if (fallbackErr instanceof AiParseError || geminiErr instanceof AiParseError) {
-          const primaryError = geminiErr instanceof AiParseError ? geminiErr : fallbackErr;
-          return NextResponse.json<GenerateError>(
-            { error: primaryError.message, code: "GEMINI_ERROR" },
-            { status: 502 }
-          )
-        }
-
-        return NextResponse.json<GenerateError>(
-          { error: `Models failed on chunk ${chunkIndex+1}. Gemini Error: ${(geminiErr as Error).message}. OpenRouter Error: ${fallbackErr.message}`, code: "GEMINI_ERROR" },
-          { status: 502 }
-        )
-      }
+  for (let i = 0; i < chunkResults.length; i++) {
+    const res = chunkResults[i];
+    if (res) {
+      fullPaperText += (i > 0 ? "\n\n" : "") + res.paperText;
+      allRawQuestions = allRawQuestions.concat(res.questions);
     }
   }
 
