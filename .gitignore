@@ -42,3 +42,8 @@ next-env.d.ts
 
 # Study Materials
 public/study-material/*.pdf
+
+# Local workspace files
+scratch/
+graphify-out/
+*.log

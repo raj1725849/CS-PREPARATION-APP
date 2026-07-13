@@ -32,6 +32,7 @@ export default function GeneratePage() {
   
   const [loading, setLoading] = useState(false);
   const [loadingMsgIdx, setLoadingMsgIdx] = useState(0);
+  const [loadingText, setLoadingText] = useState("Initializing...");
   const [paper, setPaper] = useState("");
   const [copied, setCopied] = useState(false);
 
@@ -48,7 +49,6 @@ export default function GeneratePage() {
   const handleGenerate = async (e: React.MouseEvent) => {
     e.preventDefault();
     
-    // Check and enforce daily usage limit
     const usageCheck = await checkAndIncrementUsage("generate");
     if (!usageCheck.allowed && usageCheck.limitReached) {
       setIsUpgradeOpen(true);
@@ -58,6 +58,7 @@ export default function GeneratePage() {
     setLoading(true);
     setPaper("");
     setLoadingMsgIdx(0);
+    setLoadingText("Connecting to server...");
 
     const questionTypes = Object.entries(types)
       .filter(([_, checked]) => checked)
@@ -88,8 +89,47 @@ export default function GeneratePage() {
         throw new Error(errData.error || "Failed to generate");
       }
       
-      const data = await res.json();
-      setPaper(data.paper);
+      if (!res.body) {
+        throw new Error("No response body received");
+      }
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      let finalPaper = "";
+      let finalQuestions = [];
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || ""; 
+
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          try {
+            const data = JSON.parse(line);
+            if (data.type === 'status') {
+               setLoadingText(data.message);
+            } else if (data.type === 'chunk') {
+               setPaper(prev => prev + (prev ? "\n\n" : "") + data.paperText);
+            } else if (data.type === 'error') {
+               throw new Error(data.error);
+            } else if (data.type === 'complete') {
+               finalPaper = data.paper;
+               finalQuestions = data.questions;
+               setPaper(finalPaper);
+            }
+          } catch (e: any) {
+            if (e.message && e.message !== "Unexpected end of JSON input") {
+              throw e;
+            }
+          }
+        }
+      }
 
       const session: GenerateSession = {
         id: crypto.randomUUID(),
@@ -101,8 +141,8 @@ export default function GeneratePage() {
         marks: parseInt(marks) as any,
         difficulty: difficulty as any,
         questionTypes: questionTypes.split(", ") as any,
-        paper: data.paper,
-        questions: data.questions,
+        paper: finalPaper,
+        questions: finalQuestions,
       };
       
       await saveSession(session);
@@ -254,7 +294,7 @@ export default function GeneratePage() {
                 <div className="bg-[#1a3a5c] w-full h-full rounded-full origin-left animate-pulse" />
               </div>
               <p className="text-sm text-center text-[#1a3a5c] font-medium animate-pulse">
-                {LOADING_MESSAGES[loadingMsgIdx]}
+                {loadingText}
               </p>
             </div>
           )}
