@@ -6,6 +6,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfi
 import { auth } from "@/lib/firebase";
 import { updateUserProfile } from "@/lib/storage";
 import { loadRazorpayScript, RazorpayResponse } from "@/lib/payment";
+import Logo from "@/components/ui/Logo";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -214,11 +215,8 @@ export default function AuthPage() {
       `}} />
 
       {/* Navigation Shell */}
-      <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 flex items-center justify-center px-margin_mobile md:px-margin_desktop h-16">
-        <div className="flex items-center gap-2 cursor-pointer active:scale-95 group">
-          <span className="material-symbols-outlined text-primary font-headline-lg text-headline-lg">menu_book</span>
-          <span className="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">CS Prep</span>
-        </div>
+      <header className="fixed top-0 w-full z-50 bg-[#141639]/80 backdrop-blur-xl border-b border-white/10 flex items-center justify-center px-margin_mobile md:px-margin_desktop h-16">
+        <Logo size="md" href="/" />
       </header>
 
       <main className="flex-grow flex items-center justify-center pt-24 pb-12 px-margin_mobile">

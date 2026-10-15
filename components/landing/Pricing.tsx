@@ -70,24 +70,19 @@ export default function Pricing() {
   return (
     <section id="pricing" className="px-6 py-16 md:py-24 max-w-[960px] mx-auto w-full">
       <div className="flex flex-col items-center text-center mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease }}
-        >
-          <Chip className="mb-6">Pricing Plans</Chip>
-        </motion.div>
+        <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#AFAEA2] mb-3 select-none">
+          TRANSPARENT VALUE
+        </p>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
-          className="text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.2] font-bold font-sora text-lp-text tracking-tight max-w-[700px] mb-6"
+          className="text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.15] font-display-sans font-black uppercase text-lp-text tracking-tight max-w-[700px] mb-6"
           style={{ willChange: "transform" }}
         >
-          Invest in your CS career. <span className="font-playfair-italic text-lp-accent font-normal">Pick your plan.</span>
+          INVEST IN YOUR CS CAREER. <span className="font-editorial-italic text-[#D21319] normal-case font-normal text-[1.15em]">pick your plan.</span>
         </motion.h2>
 
         <motion.p
@@ -95,7 +90,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
-          className="text-[0.95rem] md:text-[1rem] text-lp-muted max-w-[600px] leading-[1.7]"
+          className="text-[0.95rem] md:text-[1rem] text-[#AFAEA2] max-w-[600px] leading-[1.7]"
           style={{ willChange: "transform" }}
         >
           Simple pricing designed for students preparing for CS Professional and Executive examinations.
@@ -113,14 +108,14 @@ export default function Pricing() {
             className={cn(
               "relative flex flex-col p-8 rounded-[20px] transition-all duration-300",
               plan.highlight 
-                ? "bg-[rgba(232,242,158,0.03)] border-2 border-lp-accent md:scale-[1.04] md:-translate-y-2 z-10 shadow-[0_20px_50px_rgba(232,242,158,0.08)]" 
-                : "bg-lp-bg-card border border-lp-border-subtle hover:border-[rgba(232,242,158,0.3)] hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.05)]"
+                ? "bg-[#222659] border-2 border-[#D21319] md:scale-[1.04] md:-translate-y-2 z-10 shadow-[0_20px_50px_rgba(210,19,25,0.2)]" 
+                : "bg-[#141639] border border-[#AFAEA2]/20 hover:border-[#AFAEA2]/40 hover:-translate-y-1 shadow-lg"
             )}
             style={{ willChange: "transform" }}
           >
             {plan.badge && (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.08em] font-bold bg-lp-accent text-white shadow-md">
+                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.08em] font-bold bg-[#D21319] text-white shadow-md">
                   {plan.badge}
                 </span>
               </div>
@@ -130,15 +125,15 @@ export default function Pricing() {
               <h3 className="text-lg font-sora font-semibold text-lp-text mb-4">{plan.title}</h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold font-sora text-lp-text">{plan.price}</span>
-                <span className="text-[14px] text-lp-muted">{plan.period}</span>
+                <span className="text-[14px] text-[#AFAEA2]">{plan.period}</span>
               </div>
             </div>
 
             <ul className="flex flex-col gap-4 mb-8 flex-1">
               {plan.perks.map((perk, j) => (
                 <li key={j} className="flex items-start gap-3">
-                  <Check size={18} className="text-lp-accent mt-0.5 shrink-0" />
-                  <span className="text-[0.92rem] text-lp-muted leading-tight">{perk}</span>
+                  <Check size={18} className="text-[#D21319] mt-0.5 shrink-0" />
+                  <span className="text-[0.92rem] text-[#AFAEA2] leading-tight">{perk}</span>
                 </li>
               ))}
             </ul>
@@ -151,8 +146,8 @@ export default function Pricing() {
                 className={cn(
                   "relative w-full py-3.5 rounded-[12px] text-[15px] font-bold transition-all duration-300 cursor-pointer",
                   plan.highlight
-                    ? "bg-lp-accent hover:bg-lp-accent-hover text-[#0A231C] shadow-[0_4px_14px_0_rgba(232,242,158,0.25)] hover:shadow-[0_6px_20px_rgba(232,242,158,0.3)]"
-                    : "bg-transparent border border-lp-border-medium hover:border-lp-accent text-lp-text hover:bg-[rgba(232,242,158,0.05)]"
+                    ? "bg-[#D21319] hover:bg-[#b81015] text-white shadow-[0_4px_14px_0_rgba(210,19,25,0.35)] hover:shadow-[0_6px_20px_rgba(210,19,25,0.5)]"
+                    : "bg-transparent border border-[#AFAEA2]/30 hover:border-[#AFAEA2] text-lp-text hover:bg-white/[0.04]"
                 )}
               >
                 {plan.ctaText}
@@ -169,23 +164,23 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease }}
-          className="w-full max-w-[800px] p-6 rounded-[20px] bg-lp-bg-card/50 border border-lp-border-subtle backdrop-blur-sm shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
+          className="w-full max-w-[800px] p-6 rounded-[20px] bg-[#222659]/80 border border-[#AFAEA2]/20 backdrop-blur-sm shadow-[0_12px_30px_rgba(0,0,0,0.2)]"
         >
-          <div className="flex flex-col md:flex-row items-center justify-around gap-6 divide-y md:divide-y-0 md:divide-x divide-lp-border-medium/30">
+          <div className="flex flex-col md:flex-row items-center justify-around gap-6 divide-y md:divide-y-0 md:divide-x divide-[#AFAEA2]/20">
             <div className="flex flex-col items-center md:items-start md:px-6 w-full md:w-auto">
-              <span className="text-xs uppercase tracking-wider text-lp-muted mb-1 font-semibold">Monthly Plan</span>
+              <span className="text-xs uppercase tracking-wider text-[#AFAEA2] mb-1 font-semibold">Monthly Plan</span>
               <span className="text-[15px] font-bold text-lp-text">₹699/month</span>
             </div>
             <div className="flex flex-col items-center md:items-start md:px-8 w-full md:w-auto pt-4 md:pt-0">
-              <span className="text-xs uppercase tracking-wider text-lp-accent mb-1 font-semibold">6-Month Exam Pass</span>
+              <span className="text-xs uppercase tracking-wider text-[#D21319] mb-1 font-semibold">6-Month Exam Pass</span>
               <span className="text-[15px] font-bold text-lp-text flex items-center gap-2">
-                Save ₹995 <span className="text-xs font-normal text-lp-muted">compared to monthly billing</span>
+                Save ₹995 <span className="text-xs font-normal text-[#AFAEA2]">compared to monthly billing</span>
               </span>
             </div>
             <div className="flex flex-col items-center md:items-start md:px-8 w-full md:w-auto pt-4 md:pt-0">
-              <span className="text-xs uppercase tracking-wider text-[#00c853] mb-1 font-semibold">Annual Plan</span>
+              <span className="text-xs uppercase tracking-wider text-green-400 mb-1 font-semibold">Annual Plan</span>
               <span className="text-[15px] font-bold text-lp-text flex items-center gap-2">
-                Save ₹1,889 <span className="text-xs font-normal text-lp-muted">compared to monthly billing</span>
+                Save ₹1,889 <span className="text-xs font-normal text-[#AFAEA2]">compared to monthly billing</span>
               </span>
             </div>
           </div>

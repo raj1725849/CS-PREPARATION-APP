@@ -176,23 +176,27 @@ export default function GeneratePage() {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-[#0f2640]">Subject</label>
               <select 
-                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                className="w-full border border-[#cbd5e1] rounded-lg px-3 py-2.5 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] focus:ring-1 focus:ring-[#D21319] transition-colors cursor-pointer shadow-sm"
                 value={subject}
                 onChange={e => setSubject(e.target.value)}
               >
-                {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
+                {SUBJECTS.map(s => (
+                  <option key={s} value={s} className="text-[#0f2640] bg-white font-medium py-1">
+                    {s}
+                  </option>
+                ))}
               </select>
             </div>
 
             <div className="space-y-2">
               <label className="text-sm font-semibold text-[#0f2640]">Scope</label>
               <select 
-                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                className="w-full border border-[#cbd5e1] rounded-lg px-3 py-2.5 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] focus:ring-1 focus:ring-[#D21319] transition-colors cursor-pointer shadow-sm"
                 value={scope}
                 onChange={e => setScope(e.target.value)}
               >
-                <option value="Full Paper (All Topics)">Full Paper (All Topics)</option>
-                <option value="Specific Topic">Specific Topic</option>
+                <option value="Full Paper (All Topics)" className="text-[#0f2640] bg-white font-medium py-1">Full Paper (All Topics)</option>
+                <option value="Specific Topic" className="text-[#0f2640] bg-white font-medium py-1">Specific Topic</option>
               </select>
             </div>
           </div>
@@ -202,7 +206,7 @@ export default function GeneratePage() {
               <label className="text-sm font-semibold text-[#0f2640]">Topic Details</label>
               <input 
                 type="text"
-                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                className="w-full border border-[#cbd5e1] rounded-lg px-3 py-2.5 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] focus:ring-1 focus:ring-[#D21319] transition-colors shadow-sm"
                 placeholder="e.g. Appointment of Directors, Share Capital, Winding Up..."
                 value={topic}
                 onChange={e => setTopic(e.target.value)}
@@ -216,7 +220,7 @@ export default function GeneratePage() {
               <label className="flex items-center gap-2 text-sm text-[#64748b] cursor-pointer hover:text-[#0f2640] transition-colors">
                 <input 
                   type="checkbox" 
-                  className="accent-[#e8590c] w-4 h-4"
+                  className="accent-[#D21319] w-4 h-4"
                   checked={types.descriptive} 
                   onChange={e => setTypes({...types, descriptive: e.target.checked})} 
                 />
@@ -225,7 +229,7 @@ export default function GeneratePage() {
               <label className="flex items-center gap-2 text-sm text-[#64748b] cursor-pointer hover:text-[#0f2640] transition-colors">
                 <input 
                   type="checkbox" 
-                  className="accent-[#e8590c] w-4 h-4"
+                  className="accent-[#D21319] w-4 h-4"
                   checked={types.shortnotes} 
                   onChange={e => setTypes({...types, shortnotes: e.target.checked})} 
                 />
@@ -234,7 +238,7 @@ export default function GeneratePage() {
               <label className="flex items-center gap-2 text-sm text-[#64748b] cursor-pointer hover:text-[#0f2640] transition-colors">
                 <input 
                   type="checkbox" 
-                  className="accent-[#e8590c] w-4 h-4"
+                  className="accent-[#D21319] w-4 h-4"
                   checked={types.casestudy} 
                   onChange={e => setTypes({...types, casestudy: e.target.checked})} 
                 />
@@ -247,26 +251,26 @@ export default function GeneratePage() {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-[#0f2640]">Total Marks</label>
               <select 
-                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                className="w-full border border-[#cbd5e1] rounded-lg px-3 py-2.5 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] focus:ring-1 focus:ring-[#D21319] transition-colors cursor-pointer shadow-sm"
                 value={marks}
                 onChange={e => setMarks(e.target.value)}
               >
-                <option value="50">50 marks</option>
-                <option value="70">70 marks</option>
-                <option value="100">100 marks</option>
+                <option value="50" className="text-[#0f2640] bg-white font-medium py-1">50 marks</option>
+                <option value="70" className="text-[#0f2640] bg-white font-medium py-1">70 marks</option>
+                <option value="100" className="text-[#0f2640] bg-white font-medium py-1">100 marks</option>
               </select>
             </div>
 
             <div className="space-y-2">
               <label className="text-sm font-semibold text-[#0f2640]">Difficulty</label>
               <select 
-                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                className="w-full border border-[#cbd5e1] rounded-lg px-3 py-2.5 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] focus:ring-1 focus:ring-[#D21319] transition-colors cursor-pointer shadow-sm"
                 value={difficulty}
                 onChange={e => setDifficulty(e.target.value)}
               >
-                <option value="Standard (ICSI Level)">Standard (ICSI Level)</option>
-                <option value="Hard (Twisted Facts)">Hard (Twisted Facts)</option>
-                <option value="Mixed">Mixed</option>
+                <option value="Standard (ICSI Level)" className="text-[#0f2640] bg-white font-medium py-1">Standard (ICSI Level)</option>
+                <option value="Hard (Twisted Facts)" className="text-[#0f2640] bg-white font-medium py-1">Hard (Twisted Facts)</option>
+                <option value="Mixed" className="text-[#0f2640] bg-white font-medium py-1">Mixed</option>
               </select>
             </div>
           </div>
@@ -274,7 +278,7 @@ export default function GeneratePage() {
           <button 
             onClick={handleGenerate}
             disabled={loading}
-            className="w-full bg-[#e8590c] hover:bg-[#c94d0a] disabled:bg-[#94a3b8] text-white px-6 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-0.5"
+            className="w-full bg-[#D21319] hover:bg-[#b81015] disabled:bg-[#94a3b8] text-white px-6 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
           >
             {loading ? (
               <span className="flex items-center gap-2">

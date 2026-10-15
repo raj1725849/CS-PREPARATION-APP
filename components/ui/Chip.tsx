@@ -5,11 +5,12 @@ export default function Chip({ children, className }: { children: ReactNode; cla
   return (
     <span
       className={cn(
-        "inline-flex items-center px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.08em] font-medium",
-        "bg-[rgba(232,242,158,0.08)] text-lp-accent border border-[rgba(232,242,158,0.15)]",
+        "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.08em] font-semibold",
+        "bg-[#141639]/80 text-[#AFAEA2] border border-[#AFAEA2]/25 shadow-sm",
         className
       )}
     >
+      <span className="w-1.5 h-1.5 rounded-full bg-[#D21319] animate-pulse" />
       {children}
     </span>
   );

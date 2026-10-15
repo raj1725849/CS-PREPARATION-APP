@@ -5,7 +5,7 @@ export default function GradientText({ children, className }: { children: ReactN
   return (
     <span
       className={cn(
-        "bg-clip-text text-transparent bg-gradient-to-br from-lp-accent to-[#ffffff]",
+        "text-[#D21319] font-bold tracking-tight",
         className
       )}
     >

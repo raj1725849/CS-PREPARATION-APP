@@ -1,0 +1,25 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer subtle governance frame -->
+  <rect x="8" y="8" width="48" height="48" rx="14" stroke="#AFAEA2" stroke-width="2" stroke-opacity="0.3" />
+  
+  <!-- 'C' Arc in Crisp White -->
+  <path d="M36 18H26C21.5817 18 18 21.5817 18 26V38C18 42.4183 21.5817 46 26 46H36" stroke="#F8F8F6" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- 'S' Flow in Crimson Red -->
+  <path d="M30 22C33.5 22 39 23 39 28C39 33 31 32.5 31 38C31 43 36 44 40 43" stroke="#D21319" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Precision Diamond Apex -->
+  <polygon points="44,20 48,24 44,28 40,24" fill="#D21319" />
+
+  <!-- Inner Pillar Dot -->
+  <circle cx="25" cy="32" r="2.5" fill="#AFAEA2" />
+
+  <!-- Wordmark 'CS' -->
+  <text x="70" y="42" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="28" fill="#F8F8F6" letter-spacing="-0.5px">CS</text>
+
+  <!-- Wordmark 'PREP' -->
+  <text x="114" y="42" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="28" fill="#D21319" letter-spacing="-0.5px">PREP</text>
+
+  <!-- Subtitle -->
+  <text x="71" y="54" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="8.5" fill="#AFAEA2" letter-spacing="3.5px">EXECUTIVE INTELLIGENCE</text>
+</svg>

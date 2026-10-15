@@ -83,11 +83,13 @@ export default function Features() {
       <div className={isDesktop ? "sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center py-6 z-10" : "flex flex-col items-center py-6 z-10 w-full overflow-hidden"}>
         {/* Editorial Header */}
         <div className="flex flex-col items-center text-center mb-6 shrink-0 px-6">
-          <Chip className="mb-4">AI Tutor Capabilities</Chip>
+          <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#AFAEA2] mb-3 select-none">
+            ENGINEERED FOR ICSI STANDARDS
+          </p>
           <h2 
-            className="text-[clamp(1.8rem,4vw,2.5rem)] leading-tight font-bold font-sora text-lp-text tracking-tight max-w-[800px] mb-4"
+            className="text-[clamp(1.8rem,4vw,2.8rem)] leading-tight font-display-sans font-black uppercase text-lp-text tracking-tight max-w-[800px] mb-4"
           >
-            Supercharge <span className="font-playfair-italic text-lp-accent font-normal">your prep</span> with Active Intelligence.
+            SUPERCHARGE <span className="font-editorial-italic text-[#D21319] normal-case font-normal text-[1.15em]">your prep</span> WITH ACTIVE INTELLIGENCE.
           </h2>
           <p className="text-[13px] md:text-[14px] text-lp-muted max-w-[580px] leading-relaxed">
             Specifically tuned for the ICSI syllabus. No generic explanations, just rigorous preparation tailored for CS candidates.
@@ -114,7 +116,7 @@ export default function Features() {
                           : "opacity-20 scale-95 translate-x-0"
                       }`}
                     >
-                      <span className="text-xs uppercase tracking-[0.15em] font-bold text-lp-accent bg-lp-accent/10 px-3 py-1.5 rounded-lg border border-lp-accent/20 mb-4 inline-block">
+                      <span className="text-xs uppercase tracking-[0.15em] font-bold text-[#D21319] bg-[#D21319]/10 px-3 py-1.5 rounded-lg border border-[#D21319]/25 mb-4 inline-block font-sora">
                         {feature.chip}
                       </span>
                       <h3 className="text-xl md:text-2xl font-bold font-sora text-lp-text mt-2 mb-3">
@@ -126,7 +128,7 @@ export default function Features() {
                       <ul className="space-y-2.5">
                         {feature.bullets.map((bullet, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-[11px] md:text-xs text-lp-muted">
-                            <CheckCircle2 size={14} className="text-lp-accent mt-0.5 shrink-0" />
+                            <CheckCircle2 size={14} className="text-[#D21319] mt-0.5 shrink-0" />
                             <span>{bullet}</span>
                           </li>
                         ))}
@@ -134,7 +136,7 @@ export default function Features() {
                       
                       {/* Mobile Inline Visual (rendered directly below text on mobile) */}
                       {!isDesktop && (
-                        <div className="w-full h-[340px] mt-8 rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 backdrop-blur-md relative z-10">
+                        <div className="w-full h-[340px] mt-8 rounded-2xl bg-[#222659]/80 border border-[#AFAEA2]/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col items-center justify-center p-4 backdrop-blur-md relative z-10">
                           <FeatureVisual index={feature.index} />
                         </div>
                       )}
@@ -147,7 +149,7 @@ export default function Features() {
 
           {/* Right Column: Sticky Mockup Visual Showcase (Desktop Only) */}
           {isDesktop && (
-            <div className="w-full h-[380px] rounded-2xl bg-[#0e352a]/60 border border-lp-border-medium shadow-[0_20px_50px_rgba(232,242,158,0.04)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 z-10 backdrop-blur-md">
+            <div className="w-full h-[380px] rounded-2xl bg-[#222659]/80 border border-[#AFAEA2]/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6 z-10 backdrop-blur-md">
             <AnimatePresence mode="wait">
               
               <motion.div
@@ -178,17 +180,17 @@ function FeatureVisual({ index }: { index: number }) {
         <div className="flex justify-between items-center pb-3 border-b border-lp-border-subtle">
           <div>
             <h4 className="font-bold font-sora text-lp-text">ICSI Examiner Report</h4>
-            <p className="text-[10px] text-lp-muted">Q1. Shorter Notice Compliance</p>
+            <p className="text-[10px] text-[#AFAEA2]">Q1. Shorter Notice Compliance</p>
           </div>
           <div className="text-right">
-            <span className="text-[9px] uppercase tracking-wider text-lp-accent font-bold">Marks Awarded</span>
-            <p className="text-lg font-bold text-lp-accent">3.5 <span className="text-xs text-lp-muted">/ 5.0</span></p>
+            <span className="text-[9px] uppercase tracking-wider text-[#D21319] font-bold">Marks Awarded</span>
+            <p className="text-lg font-bold text-[#D21319]">3.5 <span className="text-xs text-[#AFAEA2]">/ 5.0</span></p>
           </div>
         </div>
 
         {/* Score & Verdict Row */}
         <div className="py-2.5 flex items-center justify-between bg-lp-bg-card/40 px-3 rounded-lg border border-lp-border-subtle my-2">
-          <span className="text-[10px] text-lp-muted font-medium">Verdict: <strong className="text-lp-accent">Borderline Pass (70%)</strong></span>
+          <span className="text-[10px] text-[#AFAEA2] font-medium">Verdict: <strong className="text-[#D21319]">Borderline Pass (70%)</strong></span>
           <span className="text-[9px] px-2 py-0.5 rounded bg-green-500/10 text-green-400 border border-green-500/20 font-bold uppercase tracking-wider">Pass</span>
         </div>
 
@@ -199,7 +201,7 @@ function FeatureVisual({ index }: { index: number }) {
             <AlertCircle size={14} className="text-red-400 shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold text-red-300">Deduction (-1.0 mark): Section citation missing</p>
-              <p className="text-[10px] text-lp-muted mt-0.5">Failed to cite Section 101(1) of the Companies Act, 2013 for the 21 clear days requirement.</p>
+              <p className="text-[10px] text-[#AFAEA2] mt-0.5">Failed to cite Section 101(1) of the Companies Act, 2013 for the 21 clear days requirement.</p>
             </div>
           </div>
 
@@ -208,7 +210,7 @@ function FeatureVisual({ index }: { index: number }) {
             <AlertCircle size={14} className="text-amber-400 shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold text-amber-300">Deduction (-0.5 mark): Incomplete reason</p>
-              <p className="text-[10px] text-lp-muted mt-0.5">Vague definition of 'clear days'. Must specify exclusion of day of notice and day of meeting.</p>
+              <p className="text-[10px] text-[#AFAEA2] mt-0.5">Vague definition of 'clear days'. Must specify exclusion of day of notice and day of meeting.</p>
             </div>
           </div>
 
@@ -217,7 +219,7 @@ function FeatureVisual({ index }: { index: number }) {
             <CheckCircle2 size={14} className="text-green-400 shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold text-green-300">Strength (+3.5 marks): Accurate exceptions</p>
-              <p className="text-[10px] text-lp-muted mt-0.5">Perfect explanation of 95% consent rule for AGM and EGM shorter notice.</p>
+              <p className="text-[10px] text-[#AFAEA2] mt-0.5">Perfect explanation of 95% consent rule for AGM and EGM shorter notice.</p>
             </div>
           </div>
         </div>
@@ -230,10 +232,10 @@ function FeatureVisual({ index }: { index: number }) {
       <div className="w-full h-full flex flex-col justify-between text-left font-sans text-xs text-white">
         {/* Exam Paper Header */}
         <div className="text-center pb-4 border-b border-lp-border-subtle space-y-1">
-          <h4 className="font-bold text-[10px] tracking-[0.2em] text-lp-accent uppercase">THE INSTITUTE OF COMPANY SECRETARIES OF INDIA</h4>
-          <p className="text-[9px] uppercase tracking-wider text-lp-muted">EXECUTIVE PROGRAMME &bull; SUBJECT EXAM</p>
+          <h4 className="font-bold text-[10px] tracking-[0.2em] text-[#D21319] uppercase">THE INSTITUTE OF COMPANY SECRETARIES OF INDIA</h4>
+          <p className="text-[9px] uppercase tracking-wider text-[#AFAEA2]">EXECUTIVE PROGRAMME &bull; SUBJECT EXAM</p>
           <p className="text-sm font-extrabold font-sora text-lp-text tracking-tight">COMPANY LAW &amp; COMPLIANCE</p>
-          <div className="flex items-center justify-between text-[8px] text-lp-dim font-bold pt-1">
+          <div className="flex items-center justify-between text-[8px] text-[#AFAEA2] font-bold pt-1">
             <span>TIME ALLOWED: 3 HOURS</span>
             <span>MAXIMUM MARKS: 100</span>
           </div>
@@ -242,7 +244,7 @@ function FeatureVisual({ index }: { index: number }) {
         {/* Exam Paper Document Body */}
         <div className="flex-1 space-y-4 py-4 overflow-y-auto scrollbar-none">
           {/* Instructions */}
-          <div className="text-[10px] italic text-lp-muted border-l-2 border-lp-accent/40 pl-2">
+          <div className="text-[10px] italic text-[#AFAEA2] border-l-2 border-[#D21319]/40 pl-2">
             Note: Attempt all questions. Cite relevant sections of the Companies Act, 2013, Rules, and Secretarial Standards (SS) where applicable.
           </div>
 
@@ -250,9 +252,9 @@ function FeatureVisual({ index }: { index: number }) {
           <div className="space-y-1.5">
             <div className="flex justify-between items-start font-bold">
               <span className="text-lp-text">Q1. (a) case study basis</span>
-              <span className="text-lp-accent font-mono shrink-0">[10 Marks]</span>
+              <span className="text-[#D21319] font-mono shrink-0">[10 Marks]</span>
             </div>
-            <p className="text-[10px] text-lp-muted leading-relaxed">
+            <p className="text-[10px] text-[#AFAEA2] leading-relaxed">
               Peacock Appliances Limited, an unlisted public company, was unable to redeem preference shares on maturity due to lack of distributable profits in the year 2024. State the legal procedures under Section 55(3) of the Act to resolve this.
             </p>
           </div>
@@ -261,9 +263,9 @@ function FeatureVisual({ index }: { index: number }) {
           <div className="space-y-1.5">
             <div className="flex justify-between items-start font-bold">
               <span className="text-lp-text">Q1. (b) descriptive basis</span>
-              <span className="text-lp-accent font-mono shrink-0">[5 Marks]</span>
+              <span className="text-[#D21319] font-mono shrink-0">[5 Marks]</span>
             </div>
-            <p className="text-[10px] text-lp-muted leading-relaxed">
+            <p className="text-[10px] text-[#AFAEA2] leading-relaxed">
               Distinguish between Ordinary Resolution and Special Resolution, specifying voting thresholds and notice requirements under Section 114.
             </p>
           </div>
@@ -289,16 +291,16 @@ function FeatureVisual({ index }: { index: number }) {
 
         {/* Score Summary Metrics */}
         <div className="grid grid-cols-3 gap-2.5 my-3">
-          <div className="bg-lp-bg-card/50 border border-lp-border-subtle p-2.5 rounded-lg text-center">
-            <span className="text-[9px] text-lp-dim uppercase font-bold block">Avg Score</span>
+          <div className="bg-[#141639] border border-[#AFAEA2]/20 p-2.5 rounded-lg text-center">
+            <span className="text-[9px] text-[#AFAEA2] uppercase font-bold block">Avg Score</span>
             <span className="text-base font-extrabold text-lp-text mt-0.5 block">62.8%</span>
           </div>
-          <div className="bg-lp-bg-card/50 border border-lp-border-subtle p-2.5 rounded-lg text-center">
-            <span className="text-[9px] text-lp-dim uppercase font-bold block">Evaluated</span>
-            <span className="text-base font-extrabold text-lp-accent mt-0.5 block">42 papers</span>
+          <div className="bg-[#141639] border border-[#AFAEA2]/20 p-2.5 rounded-lg text-center">
+            <span className="text-[9px] text-[#AFAEA2] uppercase font-bold block">Evaluated</span>
+            <span className="text-base font-extrabold text-[#D21319] mt-0.5 block">42 papers</span>
           </div>
-          <div className="bg-lp-bg-card/50 border border-lp-border-subtle p-2.5 rounded-lg text-center">
-            <span className="text-[9px] text-lp-dim uppercase font-bold block">Mistake Rate</span>
+          <div className="bg-[#141639] border border-[#AFAEA2]/20 p-2.5 rounded-lg text-center">
+            <span className="text-[9px] text-[#AFAEA2] uppercase font-bold block">Mistake Rate</span>
             <span className="text-base font-extrabold text-red-400 mt-0.5 block">-18%</span>
           </div>
         </div>
@@ -307,37 +309,37 @@ function FeatureVisual({ index }: { index: number }) {
         <div className="flex-1 flex flex-col justify-end space-y-3.5">
           {/* Topic Performance Bar Chart */}
           <div className="space-y-2">
-            <h5 className="font-bold text-[9px] text-lp-muted uppercase tracking-wider">Subject Proficiency</h5>
+            <h5 className="font-bold text-[9px] text-[#AFAEA2] uppercase tracking-wider">Subject Proficiency</h5>
             <div className="space-y-1.5">
               {/* Bar 1 */}
               <div className="space-y-0.5">
-                <div className="flex justify-between text-[9px] text-lp-muted">
+                <div className="flex justify-between text-[9px] text-[#AFAEA2]">
                   <span>Company Law</span>
                   <span className="font-semibold text-lp-text">72%</span>
                 </div>
-                <div className="h-1.5 w-full bg-lp-bg-card rounded-full overflow-hidden">
-                  <div className="h-full bg-lp-accent rounded-full" style={{ width: "72%" }} />
+                <div className="h-1.5 w-full bg-[#141639] rounded-full overflow-hidden">
+                  <div className="h-full bg-[#D21319] rounded-full" style={{ width: "72%" }} />
                 </div>
               </div>
 
               {/* Bar 2 */}
               <div className="space-y-0.5">
-                <div className="flex justify-between text-[9px] text-lp-muted">
+                <div className="flex justify-between text-[9px] text-[#AFAEA2]">
                   <span>Securities & Capital Markets</span>
                   <span className="font-semibold text-lp-text">64%</span>
                 </div>
-                <div className="h-1.5 w-full bg-lp-bg-card rounded-full overflow-hidden">
-                  <div className="h-full bg-lp-accent rounded-full" style={{ width: "64%" }} />
+                <div className="h-1.5 w-full bg-[#141639] rounded-full overflow-hidden">
+                  <div className="h-full bg-[#D21319] rounded-full" style={{ width: "64%" }} />
                 </div>
               </div>
 
               {/* Bar 3 */}
               <div className="space-y-0.5">
-                <div className="flex justify-between text-[9px] text-lp-muted">
+                <div className="flex justify-between text-[9px] text-[#AFAEA2]">
                   <span>Tax Laws (Direct & Indirect)</span>
                   <span className="font-semibold text-red-400">42% (Focus area)</span>
                 </div>
-                <div className="h-1.5 w-full bg-lp-bg-card rounded-full overflow-hidden">
+                <div className="h-1.5 w-full bg-[#141639] rounded-full overflow-hidden">
                   <div className="h-full bg-red-400 rounded-full" style={{ width: "42%" }} />
                 </div>
               </div>
@@ -345,12 +347,12 @@ function FeatureVisual({ index }: { index: number }) {
           </div>
 
           {/* Recommendation Panel */}
-          <div className="p-2.5 rounded-lg bg-lp-accent/5 border border-lp-accent/20 flex items-center justify-between text-[10px]">
-            <div className="flex items-center gap-1.5 text-lp-muted">
-              <BarChart3 size={12} className="text-lp-accent" />
-              <span>Suggested focus: <strong>GST Exemptions</strong> in Tax Laws</span>
+          <div className="p-2.5 rounded-lg bg-[#D21319]/10 border border-[#D21319]/25 flex items-center justify-between text-[10px]">
+            <div className="flex items-center gap-1.5 text-[#AFAEA2]">
+              <BarChart3 size={12} className="text-[#D21319]" />
+              <span>Suggested focus: <strong className="text-white">GST Exemptions</strong> in Tax Laws</span>
             </div>
-            <ArrowUpRight size={12} className="text-lp-accent" />
+            <ArrowUpRight size={12} className="text-[#D21319]" />
           </div>
         </div>
       </div>

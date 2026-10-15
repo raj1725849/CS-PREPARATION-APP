@@ -19,10 +19,10 @@ Cinematic, academic-elite, authoritative, minimalist, and focused.
 - Jittery/jumpy panel-swapping scroll animations.
 
 ## Design Principles
-1. **Cinematic Drama & Focus**: Use deep, dark forest tones (#0A231C) with a singular glowing lime-yellow accent (#E8F29E) to establish high-end, premium focus.
-2. **Editorial Typography**: Large Sora headings paired with Playfair Display italic serifs to evoke academic prestige and examiner authority.
+1. **Cinematic Drama & Focus**: Use deep Midnight Navy tones (#1B1E4A) anchored by Warm Stone Grey (#AFAEA2) and high-impact Crimson Red (#D21319) accents to establish high-end, authoritative focus.
+2. **Editorial Typography**: Plus Jakarta Sans headings paired with Playfair Display italic serifs to evoke academic prestige and examiner authority.
 3. **Fluid Morphing**: Section details should transition seamlessly in place, showing progressive changes rather than jarring visual jumps.
 
 ## Accessibility & Inclusion
-- High contrast ratio (WCAG AA) between the dark background (#0A231C) and text (#FFFFFF, #E8F29E).
+- High contrast ratio (WCAG AA) between the dark background (#1B1E4A) and text (#F8F8F6, #AFAEA2, #FFFFFF).
 - Clear, focusable inputs and keyboard navigation support.

@@ -15,9 +15,10 @@
   --color-warning: #ea580c;
   --color-danger: #dc2626;
 
-  --font-sans: var(--font-inter), sans-serif;
-  --font-serif: var(--font-georgia), serif;
-  --font-display: var(--font-playfair), serif;
+  --font-sans: var(--font-jakarta), var(--font-inter), sans-serif;
+  --font-serif: var(--font-instrument), var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-syne), var(--font-jakarta), sans-serif;
+  --font-editorial: var(--font-instrument), var(--font-playfair), Georgia, serif;
 
   /* Stitch Auth Tokens */
   --color-surface-container: #201f1f;
@@ -29,25 +30,25 @@
   --color-on-surface: #e5e2e1;
   --color-on-surface-variant: #c2c7d0;
   --color-primary: #a1c9fd;
-  --color-brand-accent: #e8590c;
-  --color-secondary-container: #f56218;
+  --color-brand-accent: #D21319;
+  --color-secondary-container: #D21319;
   --color-outline-variant: #42474f;
   --color-error: #ffb4ab;
-  --color-secondary: #ffb598;
+  --color-secondary: #AFAEA2;
   --spacing-margin_mobile: 16px;
   --spacing-margin_desktop: 64px;
-  /* Landing Page Tokens */
-  --color-lp-bg: #0A231C;
-  --color-lp-bg-card: #0e352a;
-  --color-lp-bg-alt: #061814;
-  --color-lp-accent: #E8F29E;
-  --color-lp-accent-hover: #d9e28f;
-  --color-lp-text: #FFFFFF;
-  --color-lp-muted: #a8bcb5;
-  --color-lp-dim: #7a8e87;
-  --color-lp-verydim: #52635d;
-  --color-lp-border-subtle: rgba(232, 242, 158, 0.08);
-  --color-lp-border-medium: rgba(232, 242, 158, 0.2);
+  /* Landing Page & Global Brand Tokens */
+  --color-lp-bg: #1B1E4A;
+  --color-lp-bg-card: #222659;
+  --color-lp-bg-alt: #141639;
+  --color-lp-accent: #D21319;
+  --color-lp-accent-hover: #b81015;
+  --color-lp-text: #F8F8F6;
+  --color-lp-muted: #AFAEA2;
+  --color-lp-dim: #7C7B71;
+  --color-lp-verydim: #55544B;
+  --color-lp-border-subtle: rgba(175, 174, 162, 0.14);
+  --color-lp-border-medium: rgba(175, 174, 162, 0.26);
 }
 
 html {
@@ -55,9 +56,21 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text-primary);
+  background-color: var(--color-lp-bg);
+  color: var(--color-lp-text);
   font-family: var(--font-sans);
+}
+
+/* Form Inputs & Dropdown Contrast Standards */
+select,
+input,
+textarea {
+  color: #0f2640;
+}
+
+select option {
+  color: #0f2640;
+  background-color: #ffffff;
 }
 
 /* Explicit Custom Landing Page Utilities for Contrast */
@@ -70,9 +83,16 @@ body {
 .bg-lp-bg-alt { background-color: var(--color-lp-bg-alt) !important; }
 .text-lp-accent { color: var(--color-lp-accent) !important; }
 
-.font-playfair-italic {
-  font-family: var(--font-display), serif;
+.font-playfair-italic,
+.font-editorial-italic {
+  font-family: var(--font-editorial), Georgia, serif;
   font-style: italic;
+  font-weight: 400;
+}
+
+.font-display-sans {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .reveal {

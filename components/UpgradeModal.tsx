@@ -65,7 +65,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
         } Premium Subscription`,
         order_id: order.id,
         theme: {
-          color: "#E8F29E"
+          color: "#D21319"
         },
         prefill: {
           name: user?.displayName || "",
@@ -203,21 +203,21 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md animate-in fade-in duration-300">
-      <div className="bg-[#0A231C] border border-[rgba(232,242,158,0.15)] rounded-2xl w-full max-w-4xl p-6 md:p-8 relative shadow-2xl overflow-y-auto max-h-[90vh]">
+      <div className="bg-[#1B1E4A] border border-[#AFAEA2]/20 rounded-2xl w-full max-w-4xl p-6 md:p-8 relative shadow-2xl overflow-y-auto max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 text-[#a8bcb5] hover:text-white transition-colors cursor-pointer"
+          className="absolute right-4 top-4 text-[#AFAEA2] hover:text-white transition-colors cursor-pointer"
         >
           <X className="w-6 h-6" />
         </button>
 
         {success ? (
           <div className="flex flex-col items-center justify-center py-16 text-center space-y-4 animate-in zoom-in-95 duration-300">
-            <div className="w-16 h-16 bg-[#E8F29E]/20 border border-[#E8F29E]/50 rounded-full flex items-center justify-center text-[#E8F29E]">
+            <div className="w-16 h-16 bg-[#D21319]/20 border border-[#D21319]/50 rounded-full flex items-center justify-center text-[#D21319]">
               <Check className="w-10 h-10" />
             </div>
             <h2 className="text-2xl font-bold text-white font-sora tracking-tight">Upgrade Successful!</h2>
-            <p className="text-[#a8bcb5] max-w-xs font-inter">
+            <p className="text-[#AFAEA2] max-w-xs font-inter">
               Welcome to your new plan. Premium access has been successfully unlocked.
             </p>
           </div>
@@ -227,7 +227,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
               <h2 className="text-2xl md:text-3xl font-bold text-white font-sora tracking-tight">
                 Upgrade to Premium
               </h2>
-              <p className="text-[#a8bcb5] mt-2 font-inter">
+              <p className="text-[#AFAEA2] mt-2 font-inter">
                 Accelerate your CS Exam preparation with custom AI mock tests and real-time detailed evaluations.
               </p>
             </div>
@@ -241,12 +241,12 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
                     key={p.id}
                     className={`flex flex-col rounded-xl p-5 md:p-6 border transition-all relative ${
                       p.popular
-                        ? "border-[#E8F29E] bg-[#0e352a] shadow-lg shadow-[#E8F29E]/5"
-                        : "border-[rgba(232,242,158,0.08)] bg-[#0e352a]/40"
+                        ? "border-[#D21319] bg-[#222659] shadow-lg shadow-[#D21319]/10"
+                        : "border-[#AFAEA2]/20 bg-[#141639]"
                     }`}
                   >
                     {p.popular && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E8F29E] text-[#0A231C] text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full font-sora">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#D21319] text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full font-sora shadow-sm">
                         Most Popular
                       </span>
                     )}
@@ -254,7 +254,7 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
                     <div className="mb-4">
                       <h3 className="text-lg font-bold text-white font-sora">{p.name}</h3>
                       {p.savings && !p.popular && (
-                        <span className="inline-block bg-[#E8F29E]/10 border border-[#E8F29E]/20 text-[#E8F29E] text-[10px] font-bold px-2 py-0.5 rounded-md mt-1 font-sora">
+                        <span className="inline-block bg-[#D21319]/10 border border-[#D21319]/25 text-[#D21319] text-[10px] font-bold px-2 py-0.5 rounded-md mt-1 font-sora">
                           {p.savings}
                         </span>
                       )}
@@ -262,13 +262,13 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
 
                     <div className="flex items-baseline gap-1 mb-5">
                       <span className="text-3xl md:text-4xl font-extrabold text-white font-sora">{p.price}</span>
-                      <span className="text-[#a8bcb5] text-xs font-inter">/ {p.period}</span>
+                      <span className="text-[#AFAEA2] text-xs font-inter">/ {p.period}</span>
                     </div>
 
                     <ul className="space-y-3 mb-6 flex-1 text-left">
                       {p.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-[#a8bcb5] font-inter">
-                          <Check className="w-4 h-4 text-[#E8F29E] flex-shrink-0 mt-0.5" />
+                        <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-[#AFAEA2] font-inter">
+                          <Check className="w-4 h-4 text-[#D21319] flex-shrink-0 mt-0.5" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -279,9 +279,9 @@ export default function UpgradeModal({ isOpen, onClose }: UpgradeModalProps) {
                       disabled={loadingPlan !== null || isActivePlan}
                       className={`w-full py-3 rounded-lg font-medium text-sm transition-all duration-300 cursor-pointer ${
                         isActivePlan
-                          ? "bg-[#E8F29E]/10 border border-[#E8F29E]/20 text-[#E8F29E] cursor-default"
+                          ? "bg-[#D21319]/10 border border-[#D21319]/20 text-[#D21319] cursor-default"
                           : p.popular
-                          ? "bg-[#E8F29E] hover:bg-[#d9e28f] text-[#0A231C] font-bold hover:scale-[1.02] shadow-[0_4px_14px_rgba(232,242,158,0.2)]"
+                          ? "bg-[#D21319] hover:bg-[#b81015] text-white font-bold hover:scale-[1.02] shadow-[0_4px_14px_rgba(210,19,25,0.3)]"
                           : "bg-white/10 hover:bg-white/15 text-white border border-white/10"
                       } disabled:opacity-50`}
                     >

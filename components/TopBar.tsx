@@ -9,10 +9,10 @@ interface TopBarProps {
 
 export default function TopBar({ title, subtitle, breadcrumbs }: TopBarProps) {
   return (
-    <div className="bg-[#0A231C]/80 backdrop-blur-md border-b border-[rgba(232,242,158,0.08)] px-8 py-6 sticky top-0 z-40">
+    <div className="bg-[#1B1E4A]/85 backdrop-blur-md border-b border-[#AFAEA2]/15 px-8 py-6 sticky top-0 z-40">
       <div className="flex flex-col gap-1">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-2 text-xs font-medium text-[#a8bcb5] mb-2">
+        <nav className="flex items-center gap-2 text-xs font-medium text-[#AFAEA2] mb-2">
           {breadcrumbs.map((crumb, index) => {
             const isLast = index === breadcrumbs.length - 1;
             return (
@@ -22,9 +22,9 @@ export default function TopBar({ title, subtitle, breadcrumbs }: TopBarProps) {
                     {crumb.label}
                   </Link>
                 ) : (
-                  <span className={isLast ? "text-white" : ""}>{crumb.label}</span>
+                  <span className={isLast ? "text-white font-semibold" : ""}>{crumb.label}</span>
                 )}
-                {!isLast && <ChevronRight className="w-3 h-3 text-[#a8bcb5]/50" />}
+                {!isLast && <ChevronRight className="w-3 h-3 text-[#AFAEA2]/50" />}
               </div>
             );
           })}
@@ -37,7 +37,7 @@ export default function TopBar({ title, subtitle, breadcrumbs }: TopBarProps) {
         
         {/* Subtitle */}
         {subtitle && (
-          <p className="text-sm text-[#a8bcb5] mt-1 font-inter">{subtitle}</p>
+          <p className="text-sm text-[#AFAEA2] mt-1 font-inter">{subtitle}</p>
         )}
       </div>
     </div>

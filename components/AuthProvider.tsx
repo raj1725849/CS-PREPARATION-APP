@@ -66,14 +66,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => unsubscribe();
   }, [pathname, router]);
 
+  const isPublicPage = pathname === "/" || pathname === "/login";
+
   return (
     <AuthContext.Provider value={{ user, plan, loading, refreshPlan }}>
-      {loading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#f8f9fa] dark:bg-[#0a0a0a]">
-          <div className="w-8 h-8 border-4 border-[#e8590c] border-t-transparent rounded-full animate-spin"></div>
+      {loading && !isPublicPage && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#1B1E4A]"
+          suppressHydrationWarning
+        >
+          <div className="w-9 h-9 border-3 border-[#D21319] border-t-transparent rounded-full animate-spin" />
         </div>
       )}
-      <div style={{ display: loading ? 'none' : 'block' }} className="h-full w-full">
+      <div 
+        style={{ display: (loading && !isPublicPage) ? 'none' : 'block' }} 
+        className="h-full w-full"
+        suppressHydrationWarning
+      >
         {children}
       </div>
     </AuthContext.Provider>

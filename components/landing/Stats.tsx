@@ -36,8 +36,20 @@ export default function Stats() {
 
   return (
     <section className="px-6 py-16 md:py-24 max-w-[960px] mx-auto w-full">
-      <div className="border border-lp-border-medium rounded-[16px] bg-lp-bg-card p-8 md:p-12 overflow-hidden">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <div className="border border-[#AFAEA2]/20 rounded-[20px] bg-[#222659] p-8 md:p-12 shadow-2xl overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#D21319]/5 rounded-full blur-3xl pointer-events-none" />
+        
+        {/* Editorial Section Kicker */}
+        <div className="flex flex-col items-center text-center mb-10 relative z-10">
+          <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#AFAEA2] mb-2 select-none">
+            MEASURED OUTCOMES
+          </p>
+          <h3 className="text-lg md:text-2xl font-display-sans font-black uppercase text-[#F8F8F6]">
+            BUILT FOR <span className="font-editorial-italic normal-case text-[#D21319] text-[1.15em] font-normal">rankers</span>, ACCESSIBLE TO ALL
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative z-10">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -48,12 +60,12 @@ export default function Stats() {
               className="flex flex-col items-center text-center"
               style={{ willChange: "transform" }}
             >
-              <div className="text-[2rem] md:text-[2.5rem] font-bold font-sora text-lp-accent mb-2">
-                {stat.prefix}
+              <div className="text-[2.2rem] md:text-[2.7rem] font-black font-display-sans text-[#F8F8F6] mb-2 tracking-tight">
+                <span className="text-[#D21319]">{stat.prefix}</span>
                 <Counter from={0} to={stat.value} />
-                {stat.suffix}
+                <span className="text-[#D21319]">{stat.suffix}</span>
               </div>
-              <div className="text-[13px] text-lp-muted leading-[1.6]">
+              <div className="text-[13px] text-[#AFAEA2] leading-[1.6] font-medium">
                 {stat.label}
               </div>
             </motion.div>

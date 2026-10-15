@@ -481,11 +481,15 @@ export default function EvaluatePage() {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-[#0f2640]">Subject</label>
               <select 
-                className="w-full border border-[#e2e8f0] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1a3a5c] bg-white transition-colors"
+                className="w-full border border-[#cbd5e1] rounded-lg px-3 py-2.5 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] focus:ring-1 focus:ring-[#D21319] transition-colors cursor-pointer shadow-sm"
                 value={subject}
                 onChange={e => setSubject(e.target.value)}
               >
-                {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
+                {SUBJECTS.map(s => (
+                  <option key={s} value={s} className="text-[#0f2640] bg-white font-medium py-1">
+                    {s}
+                  </option>
+                ))}
               </select>
               <p className="text-[11px] text-[#94a3b8]">Marks are auto-detected from our question bank</p>
             </div>
@@ -675,16 +679,16 @@ export default function EvaluatePage() {
                   <div className="flex items-center gap-3 pl-8">
                     <label className="text-xs font-bold text-blue-800 uppercase tracking-wider shrink-0">Total Marks:</label>
                     <select
-                      className="border border-blue-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 bg-white transition-colors"
+                      className="border border-blue-300 rounded-lg px-3 py-2 text-sm font-medium text-[#0f2640] bg-white focus:outline-none focus:border-[#D21319] transition-colors cursor-pointer shadow-sm"
                       value={manualMarks}
                       onChange={e => setManualMarks(e.target.value)}
                     >
-                      <option value="3">3 marks</option>
-                      <option value="5">5 marks</option>
-                      <option value="7">7 marks</option>
-                      <option value="10">10 marks</option>
-                      <option value="15">15 marks</option>
-                      <option value="20">20 marks</option>
+                      <option value="3" className="text-[#0f2640] bg-white font-medium py-1">3 marks</option>
+                      <option value="5" className="text-[#0f2640] bg-white font-medium py-1">5 marks</option>
+                      <option value="7" className="text-[#0f2640] bg-white font-medium py-1">7 marks</option>
+                      <option value="10" className="text-[#0f2640] bg-white font-medium py-1">10 marks</option>
+                      <option value="15" className="text-[#0f2640] bg-white font-medium py-1">15 marks</option>
+                      <option value="20" className="text-[#0f2640] bg-white font-medium py-1">20 marks</option>
                     </select>
                   </div>
                 </div>

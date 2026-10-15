@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import GradientText from "../ui/GradientText";
+import Logo from "../ui/Logo";
 import { Menu, X } from "lucide-react";
 
 export default function Nav() {
@@ -21,7 +22,7 @@ export default function Nav() {
   const background = useTransform(
     scrollY,
     [0, 60],
-    ["rgba(10, 35, 28, 0)", "rgba(10, 35, 28, 0.95)"]
+    ["rgba(27, 30, 74, 0)", "rgba(27, 30, 74, 0.95)"]
   );
   const backdropBlur = useTransform(
     scrollY,
@@ -31,7 +32,7 @@ export default function Nav() {
   const borderBottom = useTransform(
     scrollY,
     [0, 60],
-    ["1px solid rgba(232, 242, 158, 0)", "1px solid rgba(232, 242, 158, 0.1)"]
+    ["1px solid rgba(175, 174, 162, 0)", "1px solid rgba(175, 174, 162, 0.15)"]
   );
 
   const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -44,27 +45,26 @@ export default function Nav() {
       >
         <div className="flex items-center justify-between w-full max-w-[960px]">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold font-sora tracking-tight text-lp-text">
-            CS<GradientText>PREP</GradientText>
-          </Link>
+          <Logo size="md" href="/" />
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#features" className="text-[14px] text-lp-muted hover:text-lp-text transition-colors duration-200">
+            <Link href="#features" className="text-[14px] text-lp-muted hover:text-lp-text transition-colors duration-200 font-medium">
               Features
             </Link>
-            <Link href="#how-it-works" className="text-[14px] text-lp-muted hover:text-lp-text transition-colors duration-200">
+            <Link href="#how-it-works" className="text-[14px] text-lp-muted hover:text-lp-text transition-colors duration-200 font-medium">
               How it works
             </Link>
-            <Link href="#pricing" className="text-[14px] text-lp-muted hover:text-lp-text transition-colors duration-200">
+            <Link href="#pricing" className="text-[14px] text-lp-muted hover:text-lp-text transition-colors duration-200 font-medium">
               Pricing
             </Link>
             
             <Link href="/login?signup=true">
               <motion.button
                 whileHover={{ y: -1, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ ease }}
-                className="bg-lp-accent hover:bg-lp-accent-hover text-[#0A231C] px-5 py-2.5 rounded-[12px] text-[14px] font-bold transition-all shadow-[0_4px_14px_0_rgba(232,242,158,0.2)]"
+                className="bg-[#D21319] hover:bg-[#b81015] text-white px-5 py-2.5 rounded-[12px] text-[14px] font-bold transition-all shadow-[0_4px_14px_0_rgba(210,19,25,0.3)] hover:shadow-[0_6px_20px_rgba(210,19,25,0.45)] cursor-pointer"
               >
                 Get Started
               </motion.button>
@@ -90,7 +90,7 @@ export default function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25, ease }}
-            className="fixed inset-x-0 top-[70px] mx-6 p-6 rounded-[20px] bg-lp-bg-card/95 backdrop-blur-xl border border-lp-border-medium flex flex-col gap-6 md:hidden z-40 shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            className="fixed inset-x-0 top-[70px] mx-6 p-6 rounded-[20px] bg-[#141639]/95 backdrop-blur-xl border border-lp-border-medium flex flex-col gap-6 md:hidden z-40 shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
           >
             <Link
               href="#features"
@@ -116,7 +116,7 @@ export default function Nav() {
             <Link href="/login?signup=true" onClick={() => setIsOpen(false)} className="w-full mt-2">
               <motion.button
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-lp-accent text-[#0A231C] py-3 rounded-[12px] text-[15px] font-bold shadow-[0_4px_14px_0_rgba(232,242,158,0.2)]"
+                className="w-full bg-[#D21319] hover:bg-[#b81015] text-white py-3 rounded-[12px] text-[15px] font-bold shadow-[0_4px_14px_0_rgba(210,19,25,0.3)] cursor-pointer"
               >
                 Get Started
               </motion.button>

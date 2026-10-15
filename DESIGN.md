@@ -1,26 +1,29 @@
 # Design System
 
 ## Theme
-A highly premium, dark academic theme. Deep forest green backgrounds are paired with crisp white text and a singular glowing lime-yellow accent for focus.
+A highly premium, dark academic theme. Deep Midnight Navy backgrounds are paired with crisp warm white text, textured Warm Stone Grey secondary elements, and high-impact Crimson Red accents.
 
 ## Color Palette
-- **Background**: `#0A231C` (Deep Forest Green)
-- **Cards & Containers**: `#0e352a` (Lighter Deep Green)
-- **Accent**: `#E8F29E` (Glowing Lime-Yellow)
-- **Text Primary**: `#FFFFFF` (White)
-- **Text Muted**: `#a8bcb5` (Sage Green)
-- **Text Dim**: `#7a8e87` (Dark Sage)
-- **Borders & Dividers**: `rgba(232, 242, 158, 0.08)` (Lime tint)
+- **Background**: `#1B1E4A` (Midnight Navy Base)
+- **Cards & Containers**: `#222659` (Elevated Midnight Navy)
+- **Alt & Recessed Surfaces**: `#141639` (Deep Midnight / Sidebar)
+- **Accent**: `#D21319` (Crimson Red)
+- **Accent Hover**: `#b81015` (Crimson Red Hover)
+- **Text Primary**: `#F8F8F6` (Crisp Warm White)
+- **Text Secondary / Muted**: `#AFAEA2` (Warm Stone Grey)
+- **Text Dim**: `#7C7B71` (Deep Stone)
+- **Borders & Dividers**: `rgba(175, 174, 162, 0.14)` (Warm Stone tint)
 
 ## Typography
-- **Primary Headers**: Sora (Sans-serif, bold, geometric, tracked tight)
-- **Editorial Emphasis**: Playfair Display (Serif, italic, elegant)
-- **Body & Controls**: Inter (Sans-serif, high legibility, 65-75ch line length max)
+- **Primary Display Sans**: Syne / Plus Jakarta Sans (Black/Extrabold, architectural uppercase, tight tracking `-0.02em`)
+- **Editorial Italic Display**: Instrument Serif / Playfair Display (Fluid high-contrast italic serif script for emotional emphasis & key action nouns)
+- **Architectural Kickers & Micro-Annotations**: Tracked-out uppercase sans-serif (`tracking-[0.24em]` to `tracking-[0.28em]`, `text-[10px]` to `text-[13px]`, font-semibold)
+- **Body & Controls**: Plus Jakarta Sans / Inter (High legibility, generous line height `1.65-1.75`)
 
 ## Layout & Components
-- **Nav**: Fixed overlay, transparent to deep forest green backdrop blur on scroll, solid lime interactive CTA.
-- **Hero**: Atmospheric full-screen background (`/hero_bg.png`) with volumetric light beam, airy typography, minimal text layout.
+- **Nav**: Fixed overlay, transparent to deep Midnight Navy backdrop blur on scroll, solid Crimson Red interactive CTA.
+- **Hero**: Atmospheric full-screen background (`/hero_bg.png`) with volumetric Midnight Navy radial gradient, airy typography, minimal text layout.
 - **Features (Sticky Scroll)**: 
   - Left column: cards with `min-h-[55vh]` height, transitioning between `opacity-100` and `opacity-30`.
   - Right column: sticky aspect-ratio box with morphing/animating contents (Evaluation Redlines, Mock Document, Proficiencies Bar Chart).
-- **Footer**: SVG grid lines, bold letterpress call-to-action, grid links.
+- **Footer**: SVG grid lines with subtle Warm Stone stroke, bold letterpress call-to-action, grid links.
